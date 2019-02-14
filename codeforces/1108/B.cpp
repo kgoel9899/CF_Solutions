@@ -1,29 +1,41 @@
+#include<iostream>
+#include<cstring>
+#include<iomanip>
+#include<cstdio>
+#include<vector>
+#include<set>
+#include<map>
+#include<queue>
+#include<stack>
+#include<cmath>
+#include<algorithm>
+#include<sstream>
+#include<unordered_set>
 #include<bits/stdc++.h>
+#define MAX 1000000
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-int32_t main() {
-    fast;
-    int t = 1;
-    // cin >> t;
-    while(t--) {
-        int n;
-        cin >> n;
-        vector<int> v(n);
-        for(int i=0;i<n;i++) {
-            cin >> v[i];
-        }
-        sort(v.begin(), v.end());
-        int a = v[n - 1], b = INT_MAX;
-        for(int i=n-2;i>=0;i--) {
-            if(v[i] == v[i + 1] || a % v[i] != 0) {
-                b = v[i];
-                break;
-            }
-        }
-        cout << a << " " << b << endl;
+int main() {
+    int n;
+    cin >> n;
+    int arr[n];
+    for(int i=0;i<n;i++) {
+        cin >> arr[i];
     }
+    sort(arr, arr + n, greater<int>());
+    vector<int> v1, v2;
+    v1.push_back(arr[0]);
+    for(int i=1;i<n;i++) {
+        if(arr[0] % arr[i] == 0) {
+            if(find(v1.begin(), v1.end(), arr[i]) == v1.end()) {
+                v1.push_back(arr[i]);
+            } else {
+                v2.push_back(arr[i]);
+            }
+        } else {
+            v2.push_back(arr[i]);
+        }
+    }
+//    sort(v1.begin(), v1.end(), greater<int>());
+//    sort(v2.begin(), v2.end(), greater<int>());
+    cout << arr[0] << " " << v2[0] << endl;
 }
