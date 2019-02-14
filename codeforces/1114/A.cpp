@@ -29,10 +29,6 @@ int main() {
             break;
         }
         a -= y;
-        if(a < 0) {
-            b += a;
-            a = 0;
-        }
         if(z > (a + b + c)) {
             cout << "NO" << endl;
             break;
