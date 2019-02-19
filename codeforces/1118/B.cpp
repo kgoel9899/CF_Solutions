@@ -17,7 +17,7 @@ int main() {
     int n;
     cin >> n;
     int arr[n];
-    long long odd = 0, even = 0, tempodd = 0, tempeven = 0, total = 0, ansodd = 0, anseven = 0;
+    long long odd = 0, even = 0, tempodd = 0, tempeven = 0, total = 0;
     for(int i=0;i<n;i++) {
         cin >> arr[i];
         total += arr[i];
@@ -27,14 +27,17 @@ int main() {
             even += arr[i];
         }
     }
+    long long tempodd1, tempeven1, ansodd = -1, anseven = -2;
     int ct = 0;
     for(int i=0;i<n;i++) {
+        tempodd1 = odd;
+        tempeven1 = even;
         if(i % 2 == 0) { // odd day
-            ansodd = tempodd + even - tempeven;
+            ansodd = odd - tempodd1 + tempodd + tempeven1 - tempeven;
             anseven = total - ansodd - arr[i];
             tempodd += arr[i];
         } else { // even day
-            anseven = tempeven + odd - tempodd;
+            anseven = even - tempeven1 + tempeven + tempodd1 - tempodd;
             ansodd = total - anseven - arr[i];
             tempeven += arr[i];
         }
