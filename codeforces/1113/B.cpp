@@ -26,7 +26,7 @@ int main() {
     minsumm = totsumm;
     for(int i=0;i<n;i++) {
         for(int j=2;j<=arr[i];j++) {
-            if(!(arr[i] % j)) {
+            if(arr[i] % j == 0) {
                 tempsumm = totsumm - arr[i] - mini + arr[i] / j + mini * j;
                 minsumm = min(minsumm, tempsumm);
             }
