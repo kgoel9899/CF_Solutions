@@ -953,6 +953,21 @@
     ],
     "timestamp": "Dec/21/2020 03:06"
   },
+  "CF50253163": {
+    "contest_id": 1101,
+    "language": "GNU C++14",
+    "path": "codeforces\\1101\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Minimum Integer",
+    "problem_url": "https://codeforces.com/contest/1101/problem/A",
+    "submission_id": "CF50253163",
+    "submission_url": "https://codeforces.com/contest/1101/submission/50253163",
+    "tags": [
+      "math",
+      "*1000"
+    ],
+    "timestamp": "Feb/20/2019 23:46"
+  },
   "CF50256517": {
     "contest_id": 1101,
     "language": "GNU C++14",
