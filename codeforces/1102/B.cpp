@@ -19,7 +19,7 @@ struct node {
     int color = -1;
 };
 bool compare1(node a, node b) {
-    return a.value < b.value;
+    return a.value > b.value;
 }
 bool compare2(node a, node b) {
     return a.index < b.index;
