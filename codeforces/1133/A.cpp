@@ -14,11 +14,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
-    string s3;
+    string s1, s2, s3;
+    cin >> s1 >> s2;
     int m1, h1, m2, h2, m3, h3, diff;
-    char c;
-    cin >> h1 >> c >> m1;
-    cin >> h2 >> c >> m2;
+    h1 = (s1[0] - '0') * 10 + (s1[1] - '0');
+    m1 = (s1[3] - '0') * 10 + (s1[4] - '0');
+    h2 = (s2[0] - '0') * 10 + (s2[1] - '0');
+    m2 = (s2[3] - '0') * 10 + (s2[4] - '0');
     if(m2 < m1) {
         diff = (h2 - h1) * 60 - abs(m2 - m1);
     } else {
