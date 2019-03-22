@@ -953,6 +953,23 @@
     ],
     "timestamp": "Dec/21/2020 03:06"
   },
+  "CF51678325": {
+    "contest_id": 1130,
+    "language": "GNU C++14",
+    "path": "codeforces\\1130\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Connect",
+    "problem_url": "https://codeforces.com/contest/1130/problem/C",
+    "submission_id": "CF51678325",
+    "submission_url": "https://codeforces.com/contest/1130/submission/51678325",
+    "tags": [
+      "brute force",
+      "dfs and similar",
+      "dsu",
+      "*1400"
+    ],
+    "timestamp": "Mar/22/2019 17:03"
+  },
   "CF51708174": {
     "contest_id": 1140,
     "language": "GNU C++14",
