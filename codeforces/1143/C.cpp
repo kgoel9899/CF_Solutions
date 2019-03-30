@@ -15,12 +15,11 @@
 using namespace std;
 int main() {
     fast;
-    int n, flag = 0;;
+    int n;
     cin >> n;
     vector<int>* adj = new vector<int>[n + 1];
     int* par = new int[n + 1];
     int* res = new int[n + 1];
-    int* rem = new int[n + 1];
     for(int i=0;i<n;i++) {
         int p, c;
         cin >> p >> c;
@@ -30,9 +29,11 @@ int main() {
             adj[p].push_back(i + 1);
         }
     }
+    int* rem = new int[n + 1];
     for(int i=0;i<=n;i++) {
         rem[i] = 0;
     }
+    vector<int> v;
     for(int i=1;i<=n;i++) {
         if(res[i] == 1 && rem[i] == 0) {
             int ct = 0;
@@ -43,12 +44,15 @@ int main() {
             }
             if(ct == adj[i].size()) {
                 rem[i] = 1;
-                flag = 1;
-                cout << i << " ";
+                v.push_back(i);
             }
         }
     }
-    if(flag == 0) {
+    if(v.size() == 0) {
         cout << -1 << endl;
+        return 0;
+    }
+    for(int i=0;i<v.size();i++) {
+        cout << v[i] << " ";
     }
 }
