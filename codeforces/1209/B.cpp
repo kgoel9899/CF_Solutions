@@ -4,17 +4,17 @@
 #define MAX 8200
 #define MOD 1000000007
 using namespace std;
- 
+
 struct node {
     int a;
     int b;
     char ch;
 };
- 
+
 bool compare(node x, node y) {
     return x.b < y.b;
 }
- 
+
 int main() {
     int n;
     cin >> n;
@@ -36,7 +36,7 @@ int main() {
     for(int i=0;i<n;i++) {
         check[i] = -1;
     }
-    for(int i=1;i<130;i++) {
+    for(int i=1;i<100000;i++) {
         int temp = ct;
         for(int j=0;j<n;j++) {
             if(check[j] == -1) {
@@ -67,4 +67,5 @@ int main() {
     }
     cout << ans << endl;
 }
- 
+
+
