@@ -953,6 +953,23 @@
     ],
     "timestamp": "Dec/21/2020 03:06"
   },
+  "CF69114184": {
+    "contest_id": 1293,
+    "language": "GNU C++14",
+    "path": "codeforces\\1293\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "JOE is on TV!",
+    "problem_url": "https://codeforces.com/contest/1293/problem/B",
+    "submission_id": "CF69114184",
+    "submission_url": "https://codeforces.com/contest/1293/submission/69114184",
+    "tags": [
+      "combinatorics",
+      "greedy",
+      "math",
+      "*1000"
+    ],
+    "timestamp": "Jan/19/2020 19:34"
+  },
   "CF69371156": {
     "contest_id": 1294,
     "language": "GNU C++14",
