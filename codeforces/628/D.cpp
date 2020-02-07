@@ -4,7 +4,7 @@
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define MAX 200010
 using namespace std;
- 
+
 ll m, d;
 string a, b;
 ll n;
@@ -30,14 +30,8 @@ ll solve(ll arr[], int index, int rem, int small) {
     }
     ll res = 0;
     if(index % 2 == 0) {
-        if(small == 1) {
-            res = (res + (solve(arr, index + 1, (rem * 10 + d) % m, 1)) % MOD) % MOD;
-        } else {
-            if(d == arr[index]) {
-                res = (res + (solve(arr, index + 1, (rem * 10 + d) % m, 0)) % MOD) % MOD;
-            } else if(d < arr[index]){
-                res = (res + (solve(arr, index + 1, (rem * 10 + d) % m, 1)) % MOD) % MOD;
-            }
+        if(small == 1 || arr[index] >= d) {
+            res = (res + (solve(arr, index + 1, (rem * 10 + d) % m, small || (d < arr[index]))) % MOD) % MOD;
         }
     } else {
         int add;
