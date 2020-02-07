@@ -5,12 +5,12 @@
 #define MAX 200010
 using namespace std;
  
-int m, d;
+ll m, d;
 string a, b;
-int n;
-int arra[2005], arrb[2005];
-int dp[2005][2005][2];
-ll solve(int arr[], int index, int rem, int small) {
+ll n;
+ll arra[2001], arrb[2001];
+ll dp[2001][2001][2];
+ll solve(ll arr[], int index, int rem, int small) {
     if(index > n) {
         if(rem == 0) {
             return 1;
@@ -21,8 +21,8 @@ ll solve(int arr[], int index, int rem, int small) {
     if(dp[index][rem][small] != -1) {
         return dp[index][rem][small];
     }
-    int limit = -1;
-    int nsmall;
+    ll limit = -1;
+    ll nsmall;
     if(small == 0) {
         limit = arr[index];
     } else {
@@ -72,7 +72,7 @@ int main() {
             }
         }
     }
-    n = (int)a.size();
+    n = (ll)a.size();
     for(int i=1;i<=n;i++) {
         arra[i] = a[i - 1] - '0';
         arrb[i] = b[i - 1] - '0';
