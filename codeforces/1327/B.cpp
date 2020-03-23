@@ -14,7 +14,9 @@ int main() {
         int n;
         cin >> n;
         vector<int> vis(n + 1, 0);
+        vector<vector<int>> dp;
         vector<int> nott;
+        int flag = 0;
         for(int i=0;i<n;i++) {
             int k;
             cin >> k;
@@ -34,6 +36,7 @@ int main() {
             if(j >= k) {
                 nott.push_back(i);
             }
+            dp.push_back(temp);
         }
         int i = 1;
         for(;i<=n;i++) {
