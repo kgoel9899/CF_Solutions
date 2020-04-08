@@ -953,6 +953,21 @@
     ],
     "timestamp": "Dec/21/2020 03:06"
   },
+  "CF75927685": {
+    "contest_id": 1333,
+    "language": "GNU C++17",
+    "path": "codeforces\\1333\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Little Artem",
+    "problem_url": "https://codeforces.com/contest/1333/problem/A",
+    "submission_id": "CF75927685",
+    "submission_url": "https://codeforces.com/contest/1333/submission/75927685",
+    "tags": [
+      "constructive algorithms",
+      "*1000"
+    ],
+    "timestamp": "Apr/09/2020 01:38"
+  },
   "CF75927709": {
     "contest_id": 1333,
     "language": "GNU C++17",
