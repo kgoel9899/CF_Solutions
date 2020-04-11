@@ -1,56 +1,33 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define ff first
-#define ss second
-#define ll long long
-#define ld long double
-#define pb push_back
-#define mp make_pair
-#define w(x) int t; cin >> t; while(t--)
-#define rep(i, a, b) for(int i = a; i <= b; i++)
-#define repd(i, b, a) for(int i = b; i >= a; i--)
-#define mk(arr,n,type) type* arr = new type[n];
-#define pii pair<int, int>
-#define pll pair<ll, ll>
-#define vi vector<int>
-#define vl vector<ll>
-#define um unordered_map
-#define us unordered_set
-#define pqm priority_queue<int>
-#define pqmi priority_queue<int, vi, greater<int>>
-#define lb(v, val) lower_bound(v.begin(), v.end(), val) - v.begin();
-#define ub(v, val) upper_bound(v.begin(), v.end(), val) - v.begin();
-#define setbits(x) __builtin_popcountll(x)
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define out(flag) flag ? cout << "NO" << endl : cout << "YES" << endl;
-#define MAX 100001
-#define mod 998244353
-#define inf 1e18
-#define PI 3.1415926535
+#define ff                   first
+#define ss                   second
+#define ll                   long long
+#define ld                   double
+#define pb                   push_back
+#define mp                   make_pair
+#define MAX                  100001
+#define mod                  998244353
+#define inf                  1e18
+#define w(x)                 int t; cin >> t; while(t--)
+#define fori(i, a, b)        for(int i = a; i <= b; i++)
+#define ford(i, b, a)        for(int i = b; i >= a; i--)
+#define mk(arr,n,type)       type* arr = new type[n];
+#define pii                  pair<int, int>
+#define vi                   vector<int>
+#define um                   unordered_map<int, int>
+#define setbits(x)           __builtin_popcountll(x)
+#define fast                 ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
-int helper(string s) {
-	string temp = s;
-	reverse(temp.begin(), temp.end());
-	s = s + "#" + temp;
+bool check(string s) {
 	int n = s.size();
-	int lps[n];
-	lps[0] = 0;
-	int len = 0, i = 1;
-	while (i < n) {
-		if (s[len] == s[i]) {
-			len++;
-			lps[i] = len;
-			i++;
-		} else {
-			if (len != 0) len = lps[len - 1];
-			else {
-				lps[i] = 0;
-				i++;
-			}
-		}
+	int j = n - 1;
+	for (int i = 0; i < n / 2; i++) {
+		if (s[i] != s[j]) return false;
+		j--;
 	}
-	return lps[n - 1];
+	return true;
 }
 
 int main() {
@@ -67,22 +44,33 @@ int main() {
 	while (t--) {
 		string s;
 		cin >> s;
-		int n = s.size();
-		int len = 0, i = 0, j = n - 1;
-		for (; i<n, j >= 0, i < j; i++, j--) {
-			if (s[i] == s[j]) len++;
-			else break;
+		int n = s.size(), ct = 0;
+		string pre = "", suff = "";
+		for (int i = 0, j = n - 1; i<n, j >= 0, i < j; i++, j--) {
+			if (s[i] != s[j]) break;
+			else {
+				pre += s[i];
+				suff += s[j];
+				ct++;
+			}
 		}
-		string ans = s.substr(0, len);
-		string temp = s.substr(len, n - 2 * len);
-		int ct1 = helper(temp);
-		string tempr = temp;
-		reverse(tempr.begin(), tempr.end());
-		int ct2 = helper(tempr);
-		if (ct1 >= ct2) ans += temp.substr(0, ct1);
-		else ans += tempr.substr(0, ct2);
-		ans += s.substr(n - len);
-		cout << ans << endl;
+		reverse(suff.begin(), suff.end());
+		string temp1 = "";
+		int maxi1 = 0;
+		for (int i = ct; i < n - ct; i++) {
+			temp1 += s[i];
+			if (check(temp1)) maxi1 = i - (ct - 1);
+		}
+		temp1 = temp1.substr(0, maxi1);
+		string temp2 = "";
+		int maxi2 = 0;
+		for (int i = n - 1 - ct; i >= ct; i--) {
+			temp2 += s[i];
+			if (check(temp2)) maxi2 = n - ct - i;
+		}
+		temp2 = temp2.substr(0, maxi2);
+		if (maxi1 > maxi2) cout << pre + temp1 + suff << endl;
+		else cout << pre + temp2 + suff << endl;
 	}
 
 	return 0;
