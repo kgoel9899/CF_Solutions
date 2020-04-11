@@ -28,12 +28,14 @@ int n, h, l, r;
 int solve(int stime, int nsleeps) {
 	if (nsleeps >= n) return (l <= stime && stime <= r);
 	if (dp[nsleeps][stime] != -1) return dp[nsleeps][stime];
-	ll ans = 0;
-	if (l <= stime && stime <= r) ans = 1;
 	int first = solve((stime + arr[nsleeps]) % h, nsleeps + 1);
 	int second = solve((stime + arr[nsleeps] - 1) % h, nsleeps + 1);
-	ans += max(first, second);
-	return dp[nsleeps][stime] = ans;
+	dp[nsleeps][stime] = max(first, second);
+	if (l <= stime && stime <= r) {
+		dp[nsleeps][stime]++;
+	}
+	return dp[nsleeps][stime];
+
 }
 
 int main() {
