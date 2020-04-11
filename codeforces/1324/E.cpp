@@ -25,6 +25,17 @@ int dp[2001][2001];
 int arr[2001];
 int n, h, l, r;
 
+int solve(int stime, int nsleeps) {
+	if (nsleeps >= n) return (l <= stime && stime <= r);
+	if (dp[nsleeps][stime] != -1) return dp[nsleeps][stime];
+	ll ans = 0;
+	if (l <= stime && stime <= r) ans = 1;
+	int first = solve((stime + arr[nsleeps]) % h, nsleeps + 1);
+	int second = solve((stime + arr[nsleeps] - 1) % h, nsleeps + 1);
+	ans += max(first, second);
+	return dp[nsleeps][stime] = ans;
+}
+
 int main() {
 
 #ifndef ONLINE_JUDGE
@@ -38,25 +49,11 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		cin >> arr[i];
 	}
-	for (int i = 0; i <= n; i++) {
+	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < h; j++) {
 			dp[i][j] = -1;
 		}
 	}
-	dp[0][0] = 0;
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < h; j++) {
-			if (dp[i][j] == -1) continue;
-			int first = (j + arr[i]) % h;
-			int second = (j + arr[i] - 1) % h;
-			dp[i + 1][first] = max(dp[i + 1][first], dp[i][j] + (l <= first && first <= r));
-			dp[i + 1][second] = max(dp[i + 1][second], dp[i][j] + (l <= second && second <= r));
-		}
-	}
-	int ans = 0;
-	for (int i = 0; i < h; i++) {
-		ans = max(ans, dp[n][i]);
-	}
-	cout << ans << endl;
+	cout << max(solve(arr[0], 1), solve(arr[0] - 1, 1));
 	return 0;
 }
