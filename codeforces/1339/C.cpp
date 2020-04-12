@@ -55,6 +55,7 @@ int main() {
 			}
 			ll diff = (ll)(abs(arr[i] - last));
 			ll val = (ll)(floor(log2(diff)));
+			// ll cnt = (ll)(floor(log2(val)));
 			maxi = max(maxi, val + 1);
 		}
 		cout << maxi << endl;
