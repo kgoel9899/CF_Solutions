@@ -39,23 +39,26 @@ int main() {
 		for (ll i = 0; i < n; i++) {
 			cin >> a[i] >> b[i];
 		}
-		ll ans = a[0];
+		ll dp[n];
+		dp[0] = a[0];
 		for (ll i = 1; i < n; i++) {
 			ll diff = a[i] - b[i - 1];
-			if (diff > 0) ans += diff;
+			if (diff > 0) dp[0] += diff;
 		}
 		ll last = n - 1;
-		ll nans = ans;
 		for (ll i = 1; i < n; i++) {
 			ll diff = a[i] - b[i - 1];
-			nans = nans - a[i - 1] + a[i];
-			if (diff > 0) nans -= a[i] - b[i - 1];
+			dp[i] = dp[i - 1] - a[i - 1] + a[i];
+			if (diff > 0) dp[i] -= a[i] - b[i - 1];
 			ll ndiff = a[(last + 1) % n] - b[last % n];
-			if (ndiff > 0) nans += ndiff;
+			if (ndiff > 0) dp[i] += ndiff;
 			last = (last + 1) % n;
-			ans = min(ans, nans);
 		}
-		cout << ans << endl;
+		ll mini = inf;
+		for (ll i = 0; i < n; i++) {
+			mini = min(mini, dp[i]);
+		}
+		cout << mini << endl;
 	}
 
 	return 0;
