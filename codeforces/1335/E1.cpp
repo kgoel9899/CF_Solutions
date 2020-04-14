@@ -1,43 +1,35 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define ff first
-#define ss second
-#define ll long long
-#define ld long double
-#define pb push_back
-#define mp make_pair
-#define w(x) int t; cin >> t; while(t--)
-#define rep(i, a, b) for(int i = a; i <= b; i++)
-#define repd(i, b, a) for(int i = b; i >= a; i--)
-#define mk(arr,n,type) type* arr = new type[n];
-#define pii pair<int, int>
-#define pll pair<ll, ll>
-#define vi vector<int>
-#define vl vector<ll>
-#define um unordered_map
-#define us unordered_set
-#define pqm priority_queue<int>
-#define pqmi priority_queue<int, vi, greater<int>>
-#define lb(v, val) lower_bound(v.begin(), v.end(), val) - v.begin();
-#define ub(v, val) upper_bound(v.begin(), v.end(), val) - v.begin();
-#define setbits(x) __builtin_popcountll(x)
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define out(flag) flag ? cout << "NO" << endl : cout << "YES" << endl;
-#define MAX 100001
-#define mod 998244353
-#define inf 1e18
-#define PI 3.1415926535
+#define ff                   first
+#define ss                   second
+#define ll                   long long
+#define ld                   double
+#define pb                   push_back
+#define mp                   make_pair
+#define MAX                  100001
+#define mod                  998244353
+#define inf                  1e18
+#define w(x)                 int t; cin >> t; while(t--)
+#define fori(i, a, b)        for(int i = a; i <= b; i++)
+#define ford(i, b, a)        for(int i = b; i >= a; i--)
+#define mk(arr,n,type)       type* arr = new type[n];
+#define pii                  pair<int, int>
+#define vi                   vector<int>
+#define um                   unordered_map<int, int>
+#define setbits(x)           __builtin_popcountll(x)
+#define fast                 ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define out(flag)            if(flag == 1) cout << "NO" << endl; else cout << "YES" << endl;
 
 int main() {
- 
+
 #ifndef ONLINE_JUDGE
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
 #endif
- 
+
 	fast;
- 
+
 	int t;
 	cin >> t;
 	while (t--) {
@@ -64,7 +56,10 @@ int main() {
 						int nsz = it1.second.size();
 						int ct = 0;
 						for (int i = 0; i < nsz; i++) {
-							if (it1.second[i] > st && it1.second[i] < end) ct++;
+							if (it1.second[i] > st && it1.second[i] < end) {
+								// cout << "h" << endl;
+								ct++;
+							}
 						}
 						maxi = max(maxi, nans + ct);
 					}
@@ -75,6 +70,6 @@ int main() {
 		}
 		cout << maxi << endl;
 	}
- 
+
 	return 0;
 }
