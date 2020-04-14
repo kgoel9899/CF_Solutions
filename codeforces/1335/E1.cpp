@@ -3,7 +3,7 @@ using namespace std;
 
 #define ff                   first
 #define ss                   second
-#define ll                   long long
+#define int                   long long
 #define ld                   double
 #define pb                   push_back
 #define mp                   make_pair
@@ -21,7 +21,7 @@ using namespace std;
 #define fast                 ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define out(flag)            if(flag == 1) cout << "NO" << endl; else cout << "YES" << endl;
 
-int main() {
+int32_t main() {
 
 #ifndef ONLINE_JUDGE
 	freopen("input.txt", "r", stdin);
@@ -57,7 +57,6 @@ int main() {
 						int ct = 0;
 						for (int i = 0; i < nsz; i++) {
 							if (it1.second[i] > st && it1.second[i] < end) {
-								// cout << "h" << endl;
 								ct++;
 							}
 						}
