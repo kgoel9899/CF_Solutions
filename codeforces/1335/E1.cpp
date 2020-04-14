@@ -3,7 +3,7 @@ using namespace std;
 
 #define ff                   first
 #define ss                   second
-#define int                   long long
+#define ll                   long long
 #define ld                   double
 #define pb                   push_back
 #define mp                   make_pair
@@ -21,7 +21,7 @@ using namespace std;
 #define fast                 ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define out(flag)            if(flag == 1) cout << "NO" << endl; else cout << "YES" << endl;
 
-int32_t main() {
+int main() {
 
 #ifndef ONLINE_JUDGE
 	freopen("input.txt", "r", stdin);
@@ -46,20 +46,29 @@ int32_t main() {
 			int sz = it.second.size();
 			maxi = max(maxi, sz);
 			if (sz == 1) continue;
+			// cout << "h" << endl;
 			int x = 0, y = sz - 1;
+			// cout << x << " " << y << endl;
 			while (x < y) {
+				// cout << "h" << endl;
 				int st = it.second[x], end = it.second[y];
 				int nans = 2 * (x + 1);
 				maxi = max(maxi, nans);
+				// cout << "hh" << endl;
 				for (auto it1 : hash) {
 					if (it1.first != it.first) {
 						int nsz = it1.second.size();
+						// cout << "nsz " << nsz << endl;
+						// cout << it1.first << endl;
 						int ct = 0;
 						for (int i = 0; i < nsz; i++) {
+							// cout << it1.second[i] << endl;
 							if (it1.second[i] > st && it1.second[i] < end) {
+								// cout << "h" << endl;
 								ct++;
 							}
 						}
+						// cout << ct << endl;
 						maxi = max(maxi, nans + ct);
 					}
 				}
