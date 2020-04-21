@@ -43,11 +43,12 @@ int main() {
 
 	int n;
 	cin >> n;
-	vector<int> v(n);
+	int v[n];
 	for (int i = 0; i < n; i++) {
 		cin >> v[i];
 	}
-	vector<int> temp(n, 0), ans(n, 0);
+	int temp[n];
+	int ans[n];
 	ll maxi = INT_MIN;
 	for (int i = 0; i < n; i++) {
 		ll summ = v[i];
