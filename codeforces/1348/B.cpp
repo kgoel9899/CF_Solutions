@@ -61,9 +61,13 @@ int main() {
 			cout << -1 << endl;
 		} else {
 			int ct1 = k - ct;
-			while(ct1--) {
-			    temp.push_back(1);
+			for (int i = 1; i <= n, ct1 > 0; i++) {
+				if (m[i] == 0) {
+					temp.push_back(i);
+					ct1--;
+				}
 			}
+			sort(temp.begin(), temp.end());
 			cout << n * temp.size() << endl;
 			for (int i = 0; i < n; i++) {
 				for (int j = 0; j < temp.size(); j++) {
