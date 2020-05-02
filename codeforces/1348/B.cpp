@@ -61,7 +61,6 @@ int main() {
 			cout << -1 << endl;
 		} else {
 			int ct1 = k - ct;
-			sort(temp.begin(), temp.end());
 			while(ct1--) {
 			    temp.push_back(1);
 			}
