@@ -47,19 +47,23 @@ int main() {
 		int n;
 		cin >> n;
 		vector<int> v;
-		if (n <= 3) cout << -1 << endl;
-		else if (n == 4) cout << "3 1 4 2" << endl;
-		else {
-			for (int i = (n / 2) * 2; i >= 6; i -= 2) {
-				cout << i << " ";
-			}
-			cout << "2 4 ";
-			for (int i = 1; i < (n / 2) * 2; i += 2) {
-				cout << i << " ";
-			}
-			if (n % 2 == 1) cout << n;
-			cout << endl;
+		if (n <= 3) {
+			cout << -1 << endl;
+			continue;
 		}
+		if (n == 4) {
+			cout << "3 1 4 2" << endl;
+			continue;
+		}
+		for (int i = (n / 2) * 2; i >= 6; i -= 2) {
+			cout << i << " ";
+		}
+		cout << "2 4 ";
+		for (int i = 1; i < (n / 2) * 2; i += 2) {
+			cout << i << " ";
+		}
+		if (n % 2 == 1) cout << n;
+		cout << endl;
 	}
 
 	return 0;
