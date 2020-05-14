@@ -60,9 +60,9 @@ int main() {
 		vector<int> v(n);
 		priority_queue<pair<int, int>, vector<pair<int, int>>, compare> pq;
 		int st = 0, end = n - 1;
-		int val = 1;
+		int val = 2;
 		int ind = (st + end) / 2;
-		v[ind] = val++;
+		v[ind] = 1;
 		pq.push(make_pair(ind - st, st));
 		pq.push(make_pair(end - ind, ind + 1));
 		while (!pq.empty() && val <= n) {
