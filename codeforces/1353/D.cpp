@@ -37,6 +37,24 @@ void IO() {
 	fast;
 }
 
+int val = 1;
+
+int helper(vector<int>& v, int st, int end, int val) {
+	if (st > end) return 0;
+	int ind = (st + end) / 2;
+	v[ind] = val;
+	if (end - ind > ind - st) {
+		int v1 = helper(v, ind + 1, end, val + 1);
+		int v2 = helper(v, st, ind - 1, v1 + 1);
+		return v2;
+	} else {
+		int v1 = helper(v, st, ind - 1, val + 1);
+		int v2 = helper(v, ind + 1, end, v1 + 1);
+		return v2;
+	}
+}
+
+
 class compare {
 public:
 	bool operator() (pair<int, int> p1, pair<int, int> p2) {
