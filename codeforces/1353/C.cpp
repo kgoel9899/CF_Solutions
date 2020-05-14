@@ -50,6 +50,13 @@ int main() {
 		for (ll i = 3, j = 1; i <= n; i += 2, j++) {
 			ct += (2 * (i - 2) + 2 * i) * j;
 		}
+		// for (int i = 1, j = 0; i <= n; i += 2, j++) {
+		// 	ct += i * i * j;
+		// }
+		// for (int i = 1; i < n; i++) {
+		// 	ct += i * i;
+		// }
+		// cout << 2 * ct + ((n) * (n + 1)) / 2 - n << endl;
 		cout << ct << endl;
 	}
 
