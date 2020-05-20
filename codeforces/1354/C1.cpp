@@ -27,7 +27,7 @@ using namespace std;
 #define MAX 100001
 #define mod 998244353
 #define inf 1e18
-#define PI 3.14159265358979
+#define PI 3.1415926535
 
 int main() {
 
