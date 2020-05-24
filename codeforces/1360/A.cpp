@@ -53,6 +53,13 @@ int main() {
 		ll diff = 2 * b - a;
 		if (diff < 0) cout << a * a << endl;
 		else cout << (a + diff) * (a + diff) << endl;
+		// if (a == b) {
+		// 	cout << 4 * a * a << endl;
+		// 	continue;
+		// }
+		// if (b * 2 == a) cout << a * a << endl;
+		// else if (b * 2 > a) cout << (a + 1) * (a + 1) << endl;
+		// else cout << a * a << endl;
 	}
 
 	return 0;
