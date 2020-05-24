@@ -61,6 +61,17 @@ int main() {
 							break;
 						}
 					}
+					// else if (i != n - 1) {
+					// 	if (v[i + 1][j] == '0') {
+					// 		flag = 1;
+					// 		break;
+					// 	}
+					// } else if (j != n - 1) {
+					// 	if (v[i][j + 1] == '0') {
+					// 		flag = 1;
+					// 		break;
+					// 	}
+					// }
 				}
 			}
 			if (flag == 1) break;
