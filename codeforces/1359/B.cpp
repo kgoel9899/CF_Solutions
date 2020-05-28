@@ -40,19 +40,6 @@ void IO() {
 
 vector<pair<int, int>> dir = {{0, -1}, {0, 1}};
 
-bool check(vector<vector<int>>& v, int n, int m, int i, int j) {
-	for (int k = 0; k < 2; k++) {
-		int ni = i + dir[k].first;
-		int nj = j + dir[k].second;
-		if (ni >= 0 && ni < n && nj >= 0 && nj < m && v[ni][nj] == 0) {
-			v[i][j] = 1;
-			v[ni][nj] = 1;
-			return true;
-		}
-	}
-	return false;
-}
-
 int main() {
 
 	IO();
@@ -76,7 +63,16 @@ int main() {
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				if (v[i][j] == 0) {
-					if (check(v, n, m, i, j)) ct1++;
+					for (int k = 0; k < 2; k++) {
+						int ni = i + dir[k].first;
+						int nj = j + dir[k].second;
+						if (ni >= 0 && ni < n && nj >= 0 && nj < m && v[ni][nj] == 0) {
+							v[i][j] = 1;
+							v[ni][nj] = 1;
+							ct1++;
+							break;
+						}
+					}
 				}
 			}
 		}
