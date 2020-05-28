@@ -48,9 +48,16 @@ int main() {
 		int n, m, k;
 		cin >> n >> m >> k;
 		int jok = min(n / k, m);
+		// cout << jok << endl;
 		m -= jok;
 		if (m == 0) cout << jok << endl;
-		else  cout << jok - ceil((float)m / (k - 1)) << endl;
+		else {
+			// cout << ceil(m / (k - 1)) << endl;
+			cout << jok - ceil((float)m / (k - 1)) << endl;
+			// m -= (k - 2);
+			// m = max(m, 0);
+			// cout << max(0, min(jok - 1, jok - m)) << endl;
+		}
 	}
 
 	return 0;
