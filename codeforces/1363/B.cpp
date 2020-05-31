@@ -37,37 +37,39 @@ void IO() {
 #endif
 	fast;
 }
-
 int main() {
 
 	IO();
 
 	int t;
 	cin >> t;
-	while (t--) {
+	while (t) {
+		t--;
 		string s;
 		cin >> s;
-		int n = s.size();
-		int ans1 = INT_MAX, ans2 = INT_MAX, temp1 = 0, temp2 = 0, ct1 = 0, ct2 = 0;
-		for (int i = 0; i < n; i++) {
-			if (i > 0 && s[i - 1] == '1') temp1++;
-			ct1 = 0;
-			if (s[i] == '0') ct1++;
-			for (int j = i + 1; j < n; j++) {
-				if (s[j] == '0') ct1++;
-			}
-			ans1 = min(ans1, temp1 + ct1);
+		int n = s.length(), one = 0, zero = 0;
+		vector<vector<int>> dp(n, vector<int>(2));
+		if (s[0] == '1') dp[0][1] = 1;
+		else dp[0][0] = 1;
+		for (int i = 1; i < n; i++) {
+			dp[i][0] = dp[i - 1][0];
+			dp[i][1] = dp[i - 1][1];
+			if (s[i] == '1') dp[i][1] += 1;
+			else dp[i][0] += 1;
 		}
-		for (int i = 0; i < n; i++) {
-			if (i > 0 && s[i - 1] == '0') temp2++;
-			ct2 = 0;
-			if (s[i] == '1') ct2++;
-			for (int j = i + 1; j < n; j++) {
-				if (s[j] == '1') ct2++;
+		if (dp[n - 1][0] == 0 || dp[n - 1][1] == 0) cout << 0 << endl;
+		else {
+			int ans = min(dp[n - 1][0], dp[n - 1][1]);
+			for (int i = 0; i < n; i++) {
+				int x = dp[i][0];
+				ans = min(ans, i + 1 - x + dp[n - 1][0] - x);
 			}
-			ans2 = min(ans2, temp2 + ct2);
+			for (int i = 0; i < n; i++) {
+				int x = dp[i][1];
+				ans = min(ans, i + 1 - x + dp[n - 1][1] - x);
+			}
+			cout << ans << endl;
 		}
-		cout << min(ans1, ans2) << endl;
 	}
 
 	return 0;
