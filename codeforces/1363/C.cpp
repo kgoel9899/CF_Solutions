@@ -38,17 +38,6 @@ void IO() {
 	fast;
 }
 
-void dfs(vector<vector<int>>& adj, vector<int>& vis, vector<int>& count, int x) {
-	vis[x] = 1;
-	count[x] = 1;
-	for (int i = 0; i < adj[x].size(); i++) {
-		if (vis[adj[x][i]] == 0) {
-			dfs(adj, vis, count, adj[x][i]);
-			count[x] += count[adj[x][i]];
-		}
-	}
-	return;
-}
 
 int main() {
 
@@ -61,30 +50,16 @@ int main() {
 		cin >> n >> x;
 		if (n == 1) cout << "Ayush" << endl;
 		else {
-			vector<vector<int>> adj(n + 1);
 			vector<int> tot(n + 1);
 			for (int i = 0; i < n - 1; i++) {
 				int a, b;
 				cin >> a >> b;
-				adj[a].push_back(b);
-				adj[b].push_back(a);
 				tot[a]++;
 				tot[b]++;
 			}
-			// cout << 11 << endl;
 			if (tot[x] <= 1) cout << "Ayush" << endl;
 			else {
-				vector<int> vis(n + 1), count(n + 1);
-				dfs(adj, vis, count, x);
-				for (int i = 1; i <= n; i++) {
-					if (count[i] != 0) count[i]--;
-				}
-				int ct = 0;
-				for (int i = 0; i < adj[x].size(); i++) {
-					ct += count[adj[x][i]];
-				}
-				ct += adj[x].size() - 1;
-				if (ct % 2 == 1) cout << "Ashish" << endl;
+				if (n % 2 == 1) cout << "Ashish" << endl;
 				else cout << "Ayush" << endl;
 			}
 		}
@@ -92,18 +67,3 @@ int main() {
 
 	return 0;
 }
-
-// 1
-// 13 1
-// 1 2
-// 1 6
-// 1 7
-// 1 9
-// 7 8
-// 2 5
-// 2 3
-// 3 4
-// 9 10
-// 9 13
-// 10 11
-// 11 12
