@@ -56,11 +56,12 @@ int main() {
 		}
 		if (odd == 0) cout << "No" << endl;
 		else {
-		    if (odd % 2 == 0) odd--;
 			if (x % 2 == 0) {
+				if (odd % 2 == 0) odd--;
 				if (x - min(odd, x - 1) <= even) cout << "Yes" << endl;
 				else cout << "No" << endl;
 			} else {
+				if (odd % 2 == 0) odd--;
 				if (x - min(odd, x) <= even) cout << "Yes" << endl;
 				else cout << "No" << endl;
 			}
