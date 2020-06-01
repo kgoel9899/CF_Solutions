@@ -71,6 +71,7 @@ int main() {
 				tot[a]++;
 				tot[b]++;
 			}
+			// cout << 11 << endl;
 			if (tot[x] <= 1) cout << "Ayush" << endl;
 			else {
 				vector<int> vis(n + 1), count(n + 1);
@@ -91,3 +92,18 @@ int main() {
 
 	return 0;
 }
+
+// 1
+// 13 1
+// 1 2
+// 1 6
+// 1 7
+// 1 9
+// 7 8
+// 2 5
+// 2 3
+// 3 4
+// 9 10
+// 9 13
+// 10 11
+// 11 12
