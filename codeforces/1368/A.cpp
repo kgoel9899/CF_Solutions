@@ -47,23 +47,36 @@ int main() {
 	while (t--) {
 		ll a, b, n;
 		cin >> a >> b >> n;
-		ll ta = a, tb = b, ct1 = 0, ct2 = 0, x = 0;
+		ll ta = a, tb = b;
+		ll ct1 = INT_MAX, ct2 = INT_MAX;
+		// while (ta <= n) {
+		// 	ta += b;
+		// 	ct1++;
+		// }
+		// while (tb <= n) {
+		// 	tb += a;
+		// 	ct2++;
+		// }
+		ta = a;
+		tb = b;
+		ll ct3 = 0, x = 0;
 		while (ta <= n && tb <= n) {
 			if (x % 2 == 0) ta += tb;
 			else tb += ta;
-			ct1++;
+			ct3++;
 			x++;
 		}
+		ll ct4 = 0;
 		x = 0;
 		ta = a;
 		tb = b;
 		while (ta <= n && tb <= n) {
 			if (x % 2 == 0) tb += ta;
 			else ta += tb;
-			ct2++;
+			ct4++;
 			x++;
 		}
-		cout << min(ct1, ct2) << endl;
+		cout << min(ct1, min(ct2, min(ct3, ct4))) << endl;
 	}
 
 	return 0;
