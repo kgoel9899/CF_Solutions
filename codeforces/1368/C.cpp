@@ -50,6 +50,8 @@ int main() {
 	}
 	for (int i = 2, j = 1; i < n + 3; i++, j++) {
 		cout << i << " " << j << endl;
+	}
+	for (int i = 2, j = 1; i < n + 3; i++, j++) {
 		cout << j << " " << i << endl;
 	}
 
