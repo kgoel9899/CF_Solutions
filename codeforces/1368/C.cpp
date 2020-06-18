@@ -44,7 +44,7 @@ int main() {
 
 	int n;
 	cin >> n;
-	cout << (n + 1) * 3 + 1 << endl;
+	cout << (n + 1) * 2 + 2 + n << endl;
 	for (int i = 1; i < n + 3; i++) {
 		cout << i << " " << i << endl;
 	}
