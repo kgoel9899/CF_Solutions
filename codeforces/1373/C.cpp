@@ -42,15 +42,15 @@ int main() {
 
 	IO();
 
-	int t;
+	ll t;
 	cin >> t;
 	while (t--) {
 		string s;
 		cin >> s;
-		int n = s.size();
-		unordered_map<int, int> m;
-		int temp = 0, ans = INT_MAX;
-		for (int i = 0; i < n; i++) {
+		ll n = s.size();
+		unordered_map<ll, ll> m;
+		ll temp = 0, ans = INT_MAX;
+		for (ll i = 0; i < n; i++) {
 			if (s[i] == '+') temp++;
 			else temp--;
 			ans = min(ans, temp);
@@ -58,9 +58,8 @@ int main() {
 		}
 		if (ans >= 0) cout << n << endl;
 		else {
-			ll res = 0;
-			int fi = -1;
-			for (int i = 0; i < abs(ans); i++) {
+			ll res = 0, fi = -1;
+			for (ll i = 0; i < (ll)abs(ans); i++) {
 				res += m[fi];
 				fi--;
 			}
