@@ -42,41 +42,35 @@ int main() {
 
 	IO();
 
-	ll t;
+	int t;
 	cin >> t;
 	while (t--) {
-		ll n, k;
+		int n, k;
 		cin >> n >> k;
-		vector<ll> v(n);
-		map<ll, ll> m;
-		ll maxi = -1, num = -1;
-		for (ll i = 0; i < n; i++) {
+		vector<int> v(n);
+		vector<int> vv;
+		for (int i = 0; i < n; i++) {
 			cin >> v[i];
-			if (v[i] % k == 0) {
-				continue;
-			} else {
-				ll temp = (v[i] / k + 1) * k - v[i];
-				m[temp]++;
-				// if (m[temp] >= maxi) {
-				// 	maxi = m[temp];
-				// 	if (temp > num) num = temp;
-				// }
+			if (v[i] % k != 0) {
+				int temp = (v[i] / k + 1) * k - v[i];
+				vv.push_back(temp);
 			}
 		}
-		map<ll, ll>::iterator it = m.begin();
+		sort(vv.begin(), vv.end());
 		ll ans = 0;
-		while (it != m.end()) {
-			ans = max(ans, it->first + k * (it->second - 1));
-			it++;
+		if (vv.size() == 0) cout << 0 << endl;
+		else {
+			int curr = vv[0], ct = 1;
+			for (int i = 1; i < vv.size(); i++) {
+				if (curr != vv[i]) {
+					ans = max(ans, curr + (ll)k * (ct - 1));
+					curr = vv[i];
+					ct = 1;
+				} else ct++;
+			}
+			ans = max(ans, curr + (ll)k * (ct - 1));
+			cout << ans + 1 << endl;
 		}
-		if (ans == 0) cout << 0 << endl;
-		else cout << ans + 1 << endl;
-		// if (maxi == -1) cout << 0 << endl;
-		// else {
-		// 	cout << num << " " << maxi << endl;
-		// 	ll ans = num + k * (maxi - 1);
-		// 	cout << ans + 1 << endl;
-		// }
 	}
 
 	return 0;
