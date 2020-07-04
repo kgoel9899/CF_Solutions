@@ -64,6 +64,35 @@ int main() {
 		}
 		if (flag == 1) cout << "NO" << endl;
 		else {
+			// vector<pair<int, int>> v = m[4];
+			// if(v.size() > 0) {
+			// 	for(int i=0;i<v.size();i++) {
+			// 		int x = v[i].first;
+			// 		int y = v[i].second;
+			// 		if(x == 0 || x == n - 1 || y == 0 || y == m - 1) {
+			// 			flag = 1;
+			// 			break;
+			// 		} else {
+			// 			if(v[x + 1][y] == 0) v[x + 1][y] = 1;
+			// 			if(v[x - 1][y] == 0) v[x - 1][y] = 1;
+			// 			if(v[x][y - 1] == 0) v[x][y - 1] = 1;
+			// 			if(v[x][y + 1] == 0) v[x][y + 1] = 1;
+			// 		}
+			// 	}
+			// }
+			// v = m[3];
+			// if(v.size() > 0) {
+			// 	for(int i=0;i<v.size();i++) {
+			// 		int x = v[i].first;
+			// 		int y = v[i].second;
+			// 		if((x == 0 && y == 0) || (x == 0 && y == m - 1) || (x == n - 1 && y == 0) || (x == n - 1 && y == m - 1)) {
+			// 			flag = 1;
+			// 			break;
+			// 		} else {
+
+			// 		}
+			// 	}
+			// }
 			cout << "YES" << endl;
 			for (ll i = 0; i < n; i++) {
 				for (ll j = 0; j < m; j++) {
