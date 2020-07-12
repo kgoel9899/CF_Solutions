@@ -953,6 +953,21 @@
     ],
     "timestamp": "Dec/21/2020 03:06"
   },
+  "CF86704356": {
+    "contest_id": 1380,
+    "language": "GNU C++17",
+    "path": "codeforces\\1380\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Universal Solution",
+    "problem_url": "https://codeforces.com/contest/1380/problem/B",
+    "submission_id": "CF86704356",
+    "submission_url": "https://codeforces.com/contest/1380/submission/86704356",
+    "tags": [
+      "greedy",
+      "*1400"
+    ],
+    "timestamp": "Jul/13/2020 01:48"
+  },
   "CF87091325": {
     "contest_id": 1385,
     "language": "GNU C++17",
