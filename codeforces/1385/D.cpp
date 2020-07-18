@@ -25,7 +25,9 @@ void IO() {
 	fast;
 }
 
-int helper(string& s, int l, int r, char c) {
+string s;
+
+int helper(int l, int r, char c) {
 	if (l + 1 == r) {
 		if (s[l] == c) return 0;
 		else return 1;
@@ -38,8 +40,8 @@ int helper(string& s, int l, int r, char c) {
 	for (int i = mid; i < r; i++) {
 		if (s[i] != c) ct2++;
 	}
-	int left = helper(s, l, mid, (char)(c + 1));
-	int right = helper(s, mid, r, (char)(c + 1));
+	int left = helper(l, mid, (char)(c + 1));
+	int right = helper(mid, r, (char)(c + 1));
 	return min(ct2 + left, ct1 + right);
 }
 
@@ -52,9 +54,10 @@ int main() {
 	while (t--) {
 		int n;
 		cin >> n;
-		string s;
-		cin >> s;
-		cout << helper(s, 0, n, 'a') << endl;
+		string s1;
+		cin >> s1;
+		s = s1;
+		cout << helper(0, n, 'a') << endl;
 	}
 
 	return 0;
