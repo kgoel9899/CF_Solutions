@@ -28,12 +28,13 @@ int main() {
 		}
 		int q;
 		cin >> q;
-		int c2 = 0, c4 = 0, c6 = 0, c8 = 0;
+		int ct = 0, c2 = 0, c4 = 0, c6 = 0, c8 = 0;
 		for (auto i : m) {
 			if (i.second >= 8) c8++;
 			else if (i.second >= 6) c6++;
 			else if (i.second >= 4) c4++;
 			else if (i.second >= 2) c2++;
+			else ct++;
 		}
 		while (q--) {
 			char c;
@@ -53,7 +54,10 @@ int main() {
 				} else if (ne == 4) {
 					c4++;
 					c2--;
-				} else if (ne == 2) c2++;
+				} else if (ne == 2) {
+					c2++;
+					ct--;
+				}
 			} else {
 				int prev = m[x];
 				m[x]--;
@@ -67,7 +71,10 @@ int main() {
 				} else if (ne == 3) {
 					c4--;
 					c2++;
-				} else if (ne == 1) c2--;
+				} else if (ne == 1) {
+					c2--;
+					ct++;
+				}
 			}
 			bool ans = (c8 >= 1) || ((c6 > 1) || (c6 == 1 && (c4 >= 1 || c2 >= 1))) || ((c4 > 1) || (c4 == 1 && c2 >= 2));
 			if (ans) cout << "YES" << endl;
