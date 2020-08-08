@@ -41,29 +41,33 @@ int main() {
 			int x;
 			cin >> x;
 			if (c == '+') {
+				int prev = m[x];
 				m[x]++;
-				if (m[x] == 8) {
+				int ne = m[x];
+				if (ne == 8) {
 					c8++;
 					c6--;
-				} else if (m[x] == 6) {
+				} else if (ne == 6) {
 					c6++;
 					c4--;
-				} else if (m[x] == 4) {
+				} else if (ne == 4) {
 					c4++;
 					c2--;
-				} else if (m[x] == 2) c2++;
+				} else if (ne == 2) c2++;
 			} else {
+				int prev = m[x];
 				m[x]--;
-				if (m[x] == 7) {
+				int ne = m[x];
+				if (ne == 7) {
 					c8--;
 					c6++;
-				} else if (m[x] == 5) {
+				} else if (ne == 5) {
 					c6--;
 					c4++;
-				} else if (m[x] == 3) {
+				} else if (ne == 3) {
 					c4--;
 					c2++;
-				} else if (m[x] == 1) c2--;
+				} else if (ne == 1) c2--;
 			}
 			bool ans = (c8 >= 1) || ((c6 > 1) || (c6 == 1 && (c4 >= 1 || c2 >= 1))) || ((c4 > 1) || (c4 == 1 && c2 >= 2));
 			if (ans) cout << "YES" << endl;
