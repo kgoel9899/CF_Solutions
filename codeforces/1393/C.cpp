@@ -32,6 +32,8 @@ int main() {
 			if (i.second == maxi) ct++;
 		}
 		int temp = n - ct * maxi;
+		// if (ct == 2) cout << temp << endl;
+		// cout << temp << " " << maxi << endl;
 		cout << temp / (maxi - 1) + ct - 1 << endl;
 	}
 }
