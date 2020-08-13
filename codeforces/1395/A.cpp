@@ -20,23 +20,32 @@ int main() {
 	while (t--) {
 		ll r, g, b, w;
 		cin >> r >> g >> b >> w;
-		ll odd = 0;
-		if (r % 2 == 1) odd++;
-		if (g % 2 == 1) odd++;
-		if (b % 2 == 1) odd++;
-		if (w % 2 == 1) odd++;
+		ll ev = 0, odd = 0;
+		if (r % 2 == 0) ev++;
+		else odd++;
+		if (g % 2 == 0) ev++;
+		else odd++;
+		if (b % 2 == 0) ev++;
+		else odd++;
+		if (w % 2 == 0) ev++;
+		else odd++;
 		if (odd <= 1) cout << "YES" << endl;
 		else {
 			odd = 0;
+			ev = 0;
 			if (r > 0 && g > 0 && b > 0) {
 				r--;
 				g--;
 				b--;
 				w += 3;
-				if (r % 2 == 1) odd++;
-        		if (g % 2 == 1) odd++;
-        		if (b % 2 == 1) odd++;
-        		if (w % 2 == 1) odd++;
+				if (r % 2 == 0) ev++;
+				else odd++;
+				if (g % 2 == 0) ev++;
+				else odd++;
+				if (b % 2 == 0) ev++;
+				else odd++;
+				if (w % 2 == 0) ev++;
+				else odd++;
 				if (odd <= 1) cout << "YES" << endl;
 				else cout << "NO" << endl;
 			} else cout << "NO" << endl;
