@@ -46,21 +46,20 @@ int main() {
 		vector<ll> st;
 		dfs(adj, st, n, 1, 0);
 		ll ans = 0;
+		sort(pf.begin(), pf.end(), greater<ll>());
+		sort(st.begin(), st.end(), greater<ll>());
 		if (m > n - 1) {
-			sort(pf.begin(), pf.end());
-			sort(st.begin(), st.end());
 			ll nans = 1;
-			for (ll i = n - 2; i < m; i++) {
+			for (ll i = 0; i <= m - n + 1; i++) {
 				nans = (nans * pf[i]) % MOD;
 			}
-			pf[n - 2] = nans;
-			for (ll i = 0; i < n - 1; i++) {
-				ans = (ans + (pf[i] * st[i]) % MOD) % MOD;
+			pf[m - n + 1] = nans;
+			ll j = 0;
+			for (ll i = m - n + 1; i < m; i++) {
+				ans = (ans + (pf[i] * st[j++]) % MOD) % MOD;
 			}
 		}
 		else {
-			sort(pf.begin(), pf.end(), greater<ll>());
-			sort(st.begin(), st.end(), greater<ll>());
 			for (ll i = 0; i < n - 1; i++) {
 				if (i >= m) ans = (ans + st[i]) % MOD;
 				else ans = (ans + (pf[i] * st[i]) % MOD) % MOD;
