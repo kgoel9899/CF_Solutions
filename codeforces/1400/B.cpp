@@ -43,12 +43,16 @@ int main() {
 				F -= take1s * s;
 				CNTS -= take1s;
 				ll take1w = min(CNTW, F / w);
+				// F -= take1w * w;
+				// CNTW -= take1w;
 				temp += take1s + take1w;
 			} else {
 				ll take1w = min(CNTW, F / w);
 				F -= take1w * w;
 				CNTW -= take1w;
 				ll take1s = min(CNTS, F / s);
+				// F -= take1s * s;
+				// CNTS -= take1s;
 				temp += take1s + take1w;
 			}
 			ans = max(ans, temp);
