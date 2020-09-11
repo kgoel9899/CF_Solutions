@@ -49,6 +49,7 @@ int main() {
 				vis[f] = 1;
 				for (int j = 0; j < adj[f].size(); j++) {
 					if (vis[adj[f][j]] == 1) continue;
+					// q.push(adj[f][j]);
 					t1.push_back(adj[f][j]);
 				}
 				for (int j = last; j < last + t1.size(); j++) {
