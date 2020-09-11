@@ -6,8 +6,15 @@ using namespace std;
 #define ld long double
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
-int main() {
+void IO() {
+#ifndef ONLINE_JUDGE
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+#endif
 	fast;
+}
+int main() {
+	IO();
 	int t = 1;
 	// cin >> t;
 	while (t--) {
