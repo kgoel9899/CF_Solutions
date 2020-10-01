@@ -953,6 +953,22 @@
     ],
     "timestamp": "Dec/21/2020 03:06"
   },
+  "CF94400395": {
+    "contest_id": 1095,
+    "language": "GNU C++17",
+    "path": "codeforces\\1095\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Powers Of Two",
+    "problem_url": "https://codeforces.com/contest/1095/problem/C",
+    "submission_id": "CF94400395",
+    "submission_url": "https://codeforces.com/contest/1095/submission/94400395",
+    "tags": [
+      "bitmasks",
+      "greedy",
+      "*1400"
+    ],
+    "timestamp": "Oct/01/2020 16:54"
+  },
   "CF94402438": {
     "contest_id": 1095,
     "language": "GNU C++17",
