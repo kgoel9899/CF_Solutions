@@ -953,6 +953,22 @@
     ],
     "timestamp": "Dec/21/2020 03:06"
   },
+  "CF94640542": {
+    "contest_id": 988,
+    "language": "GNU C++17",
+    "path": "codeforces\\988\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Equal Sums",
+    "problem_url": "https://codeforces.com/contest/988/problem/C",
+    "submission_id": "CF94640542",
+    "submission_url": "https://codeforces.com/contest/988/submission/94640542",
+    "tags": [
+      "implementation",
+      "sortings",
+      "*1400"
+    ],
+    "timestamp": "Oct/04/2020 17:02"
+  },
   "CF94669265": {
     "contest_id": 1422,
     "language": "GNU C++17",
