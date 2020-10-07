@@ -14,7 +14,7 @@ int32_t main() {
 		int n;
 		cin >> n;
 		vector<int> v(n);
-		int g = 1;
+		int g;
 		for(int i=0;i<n;i++) {
 			cin >> v[i];
 			if(i == 0) g = v[0];
@@ -31,27 +31,21 @@ int32_t main() {
 				}
 			}
 		}
-		map<int, int> m;
+		set<int> s;
+		int flag = 0;
 		for(int i=0;i<n;i++) {
 			int x = v[i];
-			set<int> temp;
 			while(x > 1) {
-				temp.insert(sieve[x]);
+				if(s.count(sieve[x]) > 0) {
+					flag = 1;
+					break;
+				}
+				s.insert(x);
 				x /= sieve[x];
 			}
-			for(auto j : temp) {
-				m[j]++;
-			}
 		}
-		int flag = 0;
-		for(auto i : m) {
-			if(i.second > 1) {
-				flag = 1;
-				break;
-			}
-		}
-		if(flag == 0) cout << "pairwise coprime" << endl;
-		else if(g == 1) cout << "setwise coprime" << endl;
-		else cout << "not coprime" << endl;
+		if(g != 1) cout << "not coprime" << endl;
+		else if(flag == 1) cout << "setwise coprime" << endl;
+		else cout << "pairwise coprime" << endl;
 	}
 }
