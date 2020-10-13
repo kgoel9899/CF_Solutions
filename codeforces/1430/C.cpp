@@ -6,7 +6,6 @@ using namespace std;
 #define ld long double
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
-
 int32_t main() {
 	fast;
 	int t = 1;
