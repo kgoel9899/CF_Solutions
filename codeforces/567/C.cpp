@@ -22,13 +22,17 @@ int32_t main() {
 		m1[v[0]]++;
 		dp1[0] = 0;
 		for(int i=1;i<n-1;i++) {
-			if(v[i] % k == 0 && m1.find(v[i] / k) != m1.end()) dp1[i] = m1[v[i] / k];
+			if(v[i] % k == 0) {
+				if(m1.find(v[i] / k) != m1.end()) dp1[i] = m1[v[i] / k];
+			}
 			m1[v[i]]++;
 		}
 		dp2[n - 1] = 0;
 		m2[v[n - 1]]++;
 		for(int i=n-2;i>=0;i--) {
-			if(m2.find(v[i] * k) != m2.end()) dp2[i] = m2[v[i] * k];
+			// if(v[i] != 0) {
+				if(m2.find(v[i] * k) != m2.end()) dp2[i] = m2[v[i] * k];
+			// }
 			m2[v[i]]++;
 		}
 		int ans = 0;
