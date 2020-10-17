@@ -31,5 +31,6 @@ int32_t main() {
         }
         if(a != 0) cout << a + b % 2 << endl;
         else cout << b % 2 << endl;
+        // cout << a << " " << b << endl;
     }
 }
