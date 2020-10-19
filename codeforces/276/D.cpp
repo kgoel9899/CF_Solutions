@@ -19,7 +19,8 @@ int32_t main() {
         else if(n > l) cout << (n ^ (n - 1)) << endl;
         else {
             while(x > 0) {
-                int f = ((l >> x) & 1), s = ((r >> x) & 1);
+                int f = ((l >> x) & 1);
+                int s = ((r >> x) & 1);
                 if(f != s) break;
                 x--;
             }
