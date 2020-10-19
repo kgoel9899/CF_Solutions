@@ -22,3 +22,7 @@ int32_t main() {
         cout << "R " << n - 1 << endl;
     }
 }
+// abcd -> abcdcb -> cdcbabcdcb -> cdcbabcdcbcdcbabcd -> cdcbabcdcbcdcbabcd
+// abcd -> babcd -> babcdcba -> babcdcbab
+
+// abac -> babac -> babacaba -> 
