@@ -68,7 +68,7 @@ int main() {
 			int prod = 1, fin = 0;
 			for(int i=col.size()-1;i>=0;i--) {
 				fin += (col[i] - 'A' + 1) * prod;
-				prod *= 26;
+				if(i != 0) prod *= 26;
 			}
 			ans += to_string(fin);
 			cout << ans << endl;
