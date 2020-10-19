@@ -30,18 +30,25 @@ int32_t main() {
             }
         }
         if(ans.size() > 0) ans.erase(ans.begin());
+        // ans.push_back({last, n});
         sort(ans.begin(), ans.end(), compare);
+        // for(auto i : ans) {
+        //     cout << i.first << " " << i.second << endl;
+        // }
         for(auto i : ans) {
             for(int j=i.first+1;j<i.second&&k>0;j++,k--) {
                 s[j] = 'W';
             }
         }
-        for(int i=end+1;i<n&&k>0;i++,k--) {
-            s[i] = 'W';
-        }
-        for(int i=fi-1;i>=0&&k>0;i--,k--) {
-            s[i] = 'W';
-        }
+        // if(end != -1) {
+            for(int i=end+1;i<n&&k>0;i++,k--) {
+                s[i] = 'W';
+            }
+            for(int i=fi-1;i>=0&&k>0;i--,k--) {
+                s[i] = 'W';
+            }
+        // }
+        // cout << s << endl;
         int ct = 0, br = 0;
         for(int i=0;i<n;i++) {
             if(s[i] == 'W') {
