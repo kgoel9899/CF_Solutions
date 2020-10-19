@@ -37,7 +37,6 @@ int main() {
 				if(v[i][j] == '.' && ct > k) dfs(v, n, m, i, j, k);
 			}
 		}
-		
 		for(int i=0;i<n;i++) {
 			for(int j=0;j<m;j++) {
 				if(v[i][j] == 'O') cout << '.';
