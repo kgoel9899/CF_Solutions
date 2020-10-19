@@ -35,6 +35,14 @@ int32_t main() {
         }
         sort(v.begin(), v.end(), greater<int>());
         sort(temp.begin(), temp.end(), greater<int>());
+        // for(auto i : v) {
+        //     cout << i << " ";
+        // }
+        // cout << endl;
+        // for(auto i : temp) {
+        //     cout << i << " ";
+        // }
+        // cout << endl;
         int ans = 0, x = 0;
         for(auto i : temp) {
             ans += i * v[x++];
