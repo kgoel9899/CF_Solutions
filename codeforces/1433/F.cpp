@@ -18,10 +18,10 @@ int32_t main() {
                 cin >> v[i][j];
             }
         }
-        for(int i=0;i<n;i++) {
-            for(int j=0;j<m;j++) {
-                for(int k=0;k<=m/2;k++) {
-                    for(int l=0;l<tot;l++) {
+        for(int i=0;i<N;i++) {
+            for(int j=0;j<N;j++) {
+                for(int k=0;k<N;k++) {
+                    for(int l=0;l<N;l++) {
                         dp[i][j][k][l] = -INF;
                     }
                 }
