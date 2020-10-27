@@ -953,6 +953,26 @@
     ],
     "timestamp": "Dec/21/2020 03:06"
   },
+  "CF96943311": {
+    "contest_id": 1437,
+    "language": "GNU C++17",
+    "path": "codeforces\\1437\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Chef Monocarp",
+    "problem_url": "https://codeforces.com/contest/1437/problem/C",
+    "submission_id": "CF96943311",
+    "submission_url": "https://codeforces.com/contest/1437/submission/96943311",
+    "tags": [
+      "dp",
+      "flows",
+      "graph matchings",
+      "greedy",
+      "math",
+      "sortings",
+      "*1800"
+    ],
+    "timestamp": "Oct/28/2020 03:09"
+  },
   "CF96965880": {
     "contest_id": 656,
     "language": "GNU C++17",
