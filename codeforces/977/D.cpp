@@ -26,6 +26,13 @@ int32_t main() {
                 }
             }
         }
+        // for(int i=0;i<n;i++) {
+        //     cout << v[i] << ": ";
+        //     for(auto j : adj[i]) {
+        //         cout << v[j] << " ";
+        //     }
+        //     cout << endl;
+        // }
         queue<int> q;
         for(int i=0;i<n;i++) {
             if(indeg[i] == 0) q.push(i);
@@ -33,12 +40,20 @@ int32_t main() {
         vector<int> ans;
         while(!q.empty()) {
             int f = q.front();
+            // cout << f << " ";
             q.pop();
             ans.push_back(v[f]);
             for(auto i : adj[f]) {
+                // indeg[i]--;
                 if(--indeg[i] == 0) q.push(i);
             }
+            // for(int i=0;i<adj[f].size();i++) {
+            //     indeg[adj[f][i]]--;
+            //     if(indeg[adj[f][i]] == 0) q.push(adj[f][i]);
+            // }
         }
+        // cout << endl;
+        // cout << ans.size() << endl;
         for(auto i : ans) {
             cout << i << " ";
         }

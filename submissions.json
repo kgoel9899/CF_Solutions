@@ -953,6 +953,23 @@
     ],
     "timestamp": "Dec/21/2020 03:06"
   },
+  "CF97376655": {
+    "contest_id": 977,
+    "language": "GNU C++17",
+    "path": "codeforces\\977\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Divide by three, multiply by two",
+    "problem_url": "https://codeforces.com/contest/977/problem/D",
+    "submission_id": "CF97376655",
+    "submission_url": "https://codeforces.com/contest/977/submission/97376655",
+    "tags": [
+      "dfs and similar",
+      "math",
+      "sortings",
+      "*1400"
+    ],
+    "timestamp": "Nov/01/2020 23:10"
+  },
   "CF97376675": {
     "contest_id": 977,
     "language": "GNU C++17",
