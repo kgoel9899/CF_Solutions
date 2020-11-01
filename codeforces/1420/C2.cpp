@@ -1,68 +1,77 @@
-#include<bits/stdc++.h>
+#include<iostream>
+
 using namespace std;
-#define MOD 1000000007
+
 #define int long long
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
-const int N = 3e5 + 10;
-vector<int> v(N);
-int ans = 0, n;
-void erase(int i) {
-    if(i == 0 || i == n + 1) return;
-    if(v[i] > v[i - 1] && v[i] > v[i + 1]) ans -= v[i];
-    if(v[i] < v[i - 1] && v[i] < v[i + 1]) ans += v[i];
+
+int a[1000000+5];
+
+int n;
+
+int ans=0;
+
+inline void insert(int i)
+{
+    if (i==0||i==n+1) return;
+    if (a[i-1]<a[i]&&a[i]>a[i+1]) ans+=a[i];
+    if (a[i-1]>a[i]&&a[i]<a[i+1]) ans-=a[i];
 }
-void insert(int i) {
-    if(i == 0 || i == n + 1) return;
-    if(v[i] > v[i - 1] && v[i] > v[i + 1]) ans += v[i];
-    if(v[i] < v[i - 1] && v[i] < v[i + 1]) ans -= v[i];
+
+inline void erase(int i)
+{
+    if (i==0||i==n+1) return;
+    if (a[i-1]<a[i]&&a[i]>a[i+1]) ans-=a[i];
+    if (a[i-1]>a[i]&&a[i]<a[i+1]) ans+=a[i];
 }
-int32_t main() {
-    fast;
-    int t = 1;
-    cin >> t;
-    while(t--) {
+
+int32_t main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    int t;
+    cin>>t;
+    while (t--)
+    {
         int q;
-        cin >> n >> q;
-        for(int i=1;i<=n;i++) {
-            cin >> v[i];
+        cin>>n>>q;
+        for (int i=1; i<=n; i++)
+        {
+            cin>>a[i];
         }
-        v[0] = -1;
-        v[n + 1] = -1;
-        ans = 0;
-        for(int i=1;i<=n;i++) {
-            if(v[i] > v[i - 1] && v[i] > v[i + 1]) ans += v[i];
-            else if(v[i] < v[i - 1] && v[i] < v[i + 1]) ans -= v[i];
+        a[0]=-1;
+        a[n+1]=-1;
+        ans=0;
+        for (int i=1; i<=n; i++)
+        {
+            if (a[i-1]<a[i]&&a[i]>a[i+1]) ans+=a[i];
+            if (a[i-1]>a[i]&&a[i]<a[i+1]) ans-=a[i];
         }
-        cout << ans << endl;
-        while(q--) {
-            int l, r;
-            cin >> l >> r;
+        cout<<ans<<'\n';
+        while (q--)
+        {
+            int l,r;
+            cin>>l>>r;
+            erase(l-1);
             erase(l);
-            erase(l - 1);
-            erase(l + 1);
-            if(l != r) {
-                if(l + 2 == r) erase(r);
-                else if(l + 2 < r) {
-                    erase(r);
-                    erase(r - 1);
-                }
-                erase(r + 1);
+            erase(l+1);
+            if (l!=r)
+            {
+                if (r-1!=l+1&&r-1!=l) erase(r-1);
+                if (r!=l+1) erase(r);
+                erase(r+1);
             }
-            swap(v[l], v[r]);
+            swap(a[l],a[r]);
+            insert(l-1);
             insert(l);
-            insert(l - 1);
-            insert(l + 1);
-            if(l != r) {
-                if(l + 2 == r) insert(r);
-                else if(l + 2 < r) {
-                    insert(r);
-                    insert(r - 1);
-                }
-                insert(r + 1);
+            insert(l+1);
+            if (l!=r)
+            {
+                if (r-1!=l+1&&r-1!=l) insert(r-1);
+                if (r!=l+1) insert(r);
+                insert(r+1);
             }
-            cout << ans << endl;
+            cout<<ans<<'\n';
         }
     }
 }
