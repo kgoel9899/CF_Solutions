@@ -32,3 +32,8 @@ int32_t main() {
         cout << ans % MOD << endl;
     }
 }
+
+
+
+// 0 1 2 3
+// 1 2 3 4
