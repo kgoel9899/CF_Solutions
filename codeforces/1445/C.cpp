@@ -42,6 +42,7 @@ int32_t main() {
                 map<int, int> m;
                 int qq = q;
                 for(int i=2;i<=sqrt(qq)+2;i++) {
+                    assert(i < N);
                     if(sieve[i] == 1) {
                         int ct = 0;
                         while(q % i == 0) {
@@ -52,6 +53,7 @@ int32_t main() {
                     }
                 }
                 if(q >= N || sieve[q] == 1) m[q] = 1;
+                q = qq;
                 map<int, int> m1;
                 int pp = p;
                 for(auto i : m) {
@@ -64,7 +66,8 @@ int32_t main() {
                     if(ct != 0) m1[pr] = ct;
                 }
                 map<int, int>::iterator it = m.begin(), it1 = m1.begin();
-                int save = 0, ans = 0;
+                int save = 0;
+                int ans = 0;
                 while(it != m.end()) {
                     save = it->first;
                     ans = max(ans, pp / (int)pow(it->first, it1->second - it->second + 1));
