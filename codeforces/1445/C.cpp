@@ -5,7 +5,7 @@ using namespace std;
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
 const int INF = 1e18;
-const int N = 1e5;
+const int N = 1e6 + 5;
 int32_t main() {
     int t = 1;
     cin >> t;
@@ -37,10 +37,13 @@ int32_t main() {
             cout << ans << endl;
         } else {
             int temp = __gcd(p, q);
+            // cout << temp << endl;
+            // return 0;
             if(q != temp) cout << p << endl;
             else {
                 map<int, int> m;
                 int qq = q;
+                // return 0;
                 for(int i=2;i<=sqrt(qq)+2;i++) {
                     assert(i < N);
                     if(sieve[i] == 1) {
@@ -50,8 +53,25 @@ int32_t main() {
                             ct++;
                         }
                         if(ct != 0) m[i] = ct;
+                        // int ni = q / i;
+                        // cout << ni << endl;
+                        // assert(ni < N);
+                        // if(ct != 0 && ni < N && sieve[ni] == 1) {
+                        //     ct = 0;
+                        //     // if(q == 0)
+                        //     while(q % ni == 0) {
+                        //         q /= ni;
+                        //         ct++;
+                        //     }
+                        //     if(ct != 0) m[ni] = ct;
+                        // }
                     }
                 }
+                // cout << q << endl;
+                // if(q == qq) {
+                //     cout << p << endl;
+                //     continue;
+                // }
                 if(q >= N || sieve[q] == 1) m[q] = 1;
                 q = qq;
                 map<int, int> m1;
@@ -59,6 +79,7 @@ int32_t main() {
                 for(auto i : m) {
                     int pr = i.first;
                     int ct = 0;
+                    // if(p == 0) break;
                     while(p % pr == 0) {
                         ct++;
                         p /= pr;
