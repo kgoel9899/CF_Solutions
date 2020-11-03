@@ -16,6 +16,18 @@ int32_t main() {
         for(int i=0;i<n;i++) {
             cin >> v[i];
         }
+        int inc = 1;
+        for(int i=1;i<n;i++) {
+            if(v[i] < v[i - 1]) inc = 0;
+        }
+        int dec = 1;
+        for(int i=1;i<n;i++) {
+            if(v[i] > v[i - 1]) dec = 0;
+        }
+        if(inc == 1 || dec == 1) {
+            cout << "YES" << endl;
+            continue;
+        }
         int i = n - 2;
         for(;i>=0;i--) {
             if(v[i] > v[i + 1]) break;
