@@ -28,13 +28,25 @@ int32_t main() {
         for(int i=0;i+2<n;i+=2) {
             ans.push_back({i + 1, i + 2, i + 3});
         }
-        if(n % 2 == 0) n--;
-        for(int i=n-3;i-2>=0;i-=2) {
-            ans.push_back({i + 1, i, i - 1});
-        }
+        // return 0;
+        // if(n % 2 == 1) {
+            // cout << n << " " << endl;
+            if(n % 2 == 0) n--;
+            for(int i=n-3;i-2>=0;i-=2) {
+                // cout << "asdfg " << i << endl;
+                ans.push_back({i + 1, i, i - 1});
+            }
+        // }
         cout << ans.size() << endl;
         for(auto i : ans) {
             cout << i[0] << " " << i[1] << " " << i[2] << endl;
         }
     }
 }
+
+// 4 2 1 7 2
+// 7 7 7 7 2
+// 7 7 2 2 2
+
+// 1 2 3 4 5 6
+// a a b b b c
