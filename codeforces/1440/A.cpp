@@ -30,3 +30,9 @@ int32_t main() {
         else cout << ans << endl;
     }
 }
+
+// x * (-c1 + h + c0) < 0
+
+// (-c1 + h + c0) < 0
+
+// (-c0 + h + c1) < 0
