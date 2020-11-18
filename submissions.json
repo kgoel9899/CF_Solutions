@@ -953,6 +953,23 @@
     ],
     "timestamp": "Dec/21/2020 03:06"
   },
+  "CF98811497": {
+    "contest_id": 489,
+    "language": "GNU C++17",
+    "path": "codeforces\\489\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "SwapSort",
+    "problem_url": "https://codeforces.com/contest/489/problem/A",
+    "submission_id": "CF98811497",
+    "submission_url": "https://codeforces.com/contest/489/submission/98811497",
+    "tags": [
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1200"
+    ],
+    "timestamp": "Nov/18/2020 18:25"
+  },
   "CF98812976": {
     "contest_id": 920,
     "language": "GNU C++17",
