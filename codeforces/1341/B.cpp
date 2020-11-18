@@ -22,6 +22,10 @@ int32_t main() {
         for(int i=0;i<=n;i++) {
             int add = 0;
             if(i >= k) {
+                // for(auto j : s) {
+                //     cout << j << " ";
+                // }
+                // cout << endl;
                 if(s.count(i - k) != 0) {
                     curr--;
                     add++;
@@ -34,6 +38,8 @@ int32_t main() {
                     mx = curr;
                     ans = i - k;
                 }
+                // cout << curr << " " << ans << endl;
+                // cout << endl;
                 curr += add;
                 add = 0;
                 if(s.count(i - k) != 0) curr--;
