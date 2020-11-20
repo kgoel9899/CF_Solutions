@@ -953,6 +953,24 @@
     ],
     "timestamp": "Dec/21/2020 03:06"
   },
+  "CF99045169": {
+    "contest_id": 546,
+    "language": "GNU C++17",
+    "path": "codeforces\\546\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Soldier and Badges",
+    "problem_url": "https://codeforces.com/contest/546/problem/B",
+    "submission_id": "CF99045169",
+    "submission_url": "https://codeforces.com/contest/546/submission/99045169",
+    "tags": [
+      "brute force",
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1200"
+    ],
+    "timestamp": "Nov/20/2020 21:31"
+  },
   "CF99046450": {
     "contest_id": 546,
     "language": "GNU C++17",
