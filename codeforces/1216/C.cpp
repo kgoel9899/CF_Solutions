@@ -23,13 +23,13 @@ int32_t main() {
         int bx = min(x2, x4);
         int by = min(y2, y4);
         int temp = (bx - ax) * (by - ay);
-        if(ax >= x1 && ax <= x2 && ay >= y1 && ay <= y2 && bx >= x1 && bx <= x2 && by >= y1 && by <= y2) ar -= temp;
+        if(temp >= 0 && ax >= x1 && ax <= x2 && ay >= y1 && ay <= y2 && bx >= x1 && bx <= x2 && by >= y1 && by <= y2) ar -= temp;
         ax = max(x1, x5);
         ay = max(y1, y5);
         bx = min(x2, x6);
         by = min(y2, y6);
         temp = (bx - ax) * (by - ay);
-        if(ax >= x1 && ax <= x2 && ay >= y1 && ay <= y2 && bx >= x1 && bx <= x2 && by >= y1 && by <= y2) ar -= temp;
+        if(temp >= 0 && ax >= x1 && ax <= x2 && ay >= y1 && ay <= y2 && bx >= x1 && bx <= x2 && by >= y1 && by <= y2) ar -= temp;
         if((x5 <= x4 && y6 <= y4) || (x3 <= x6 && y4 <= y6)) {
             ax = max({x3, x5, x1});
             ay = max({y3, y5, y1});
