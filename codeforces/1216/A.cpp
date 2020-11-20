@@ -13,6 +13,10 @@ int32_t main() {
     while(t--) {
         int n;
         cin >> n;
+        // vector<int> v(n);
+        // for(int i=0;i<n;i++) {
+        //     cin >> v[i];
+        // }
         string s;
         cin >> s;
         int a = 0, b = 0;
