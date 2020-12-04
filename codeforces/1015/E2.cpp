@@ -18,6 +18,10 @@ int32_t main() {
         for(int i=0;i<n;i++) {
             cin >> v[i];
         }
+        // for(auto i : v) {
+        //     cout << i << endl;
+        // }
+        // return 0;
         vector<vector<int>> ans;
         for(int i=0;i<n;i++) {
             for(int j=0;j<m;j++) {
