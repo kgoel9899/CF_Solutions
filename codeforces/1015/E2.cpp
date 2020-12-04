@@ -18,15 +18,10 @@ int32_t main() {
         for(int i=0;i<n;i++) {
             cin >> v[i];
         }
-        // for(auto i : v) {
-        //     cout << i << endl;
-        // }
-        // return 0;
         vector<vector<int>> ans;
         for(int i=0;i<n;i++) {
             for(int j=0;j<m;j++) {
                 if(v[i][j] == '*') {
-                    // cout << "here" << endl;
                     int up = 0, down = 0, left = 0, right = 0;
                     for(int a=i+1;a<n;a++) {
                         if(v[a][j] == '.') break;
@@ -63,13 +58,6 @@ int32_t main() {
                 }
             }
         }
-        // for(auto i : vis) {
-        //     for(auto j : i) {
-        //         cout << j << " ";
-        //     }
-        //     cout << endl;
-        // }
-        // return 0;
         int flag = 0;
         for(int i=0;i<n;i++) {
             for(int j=0;j<m;j++) {
