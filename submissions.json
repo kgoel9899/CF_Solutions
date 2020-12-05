@@ -1,4 +1,20 @@
 {
+  "AC18604333": {
+    "contest_id": "abc162",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc162\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Sum of gcd of Tuples (Easy)",
+    "problem_url": "https://atcoder.jp/contests/abc162/tasks/abc162_c",
+    "submission_id": "AC18604333",
+    "submission_url": "https://atcoder.jp/contests/abc162/submissions/18604333",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Dec/06/2020 02:04"
+  },
   "AC18604336": {
     "contest_id": "abc165",
     "language": "C++ (GCC 9.2.1)",
