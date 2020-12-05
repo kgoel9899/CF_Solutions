@@ -1,4 +1,20 @@
 {
+  "AC18604307": {
+    "contest_id": "abc162",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc162\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Lucky 7",
+    "problem_url": "https://atcoder.jp/contests/abc162/tasks/abc162_a",
+    "submission_id": "AC18604307",
+    "submission_url": "https://atcoder.jp/contests/abc162/submissions/18604307",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Dec/06/2020 02:00"
+  },
   "AC18604316": {
     "contest_id": "abc162",
     "language": "C++ (GCC 9.2.1)",
