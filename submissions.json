@@ -1,4 +1,19 @@
 {
+  "CF101119196": {
+    "contest_id": 417,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\417\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Crash",
+    "problem_url": "https://codeforces.com/contest/417/problem/B",
+    "submission_id": "CF101119196",
+    "submission_url": "https://codeforces.com/contest/417/submission/101119196",
+    "tags": [
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Dec/13/2020 22:17"
+  },
   "CF101119456": {
     "contest_id": 779,
     "language": "GNU C++17 (64)",
