@@ -1,4 +1,20 @@
 {
+  "AC18815264": {
+    "contest_id": "dp",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\dp\\J.cpp",
+    "platform": "AtCoder",
+    "problem_index": "J",
+    "problem_name": "Sushi",
+    "problem_url": "https://atcoder.jp/contests/dp/tasks/dp_j",
+    "submission_id": "AC18815264",
+    "submission_url": "https://atcoder.jp/contests/dp/submissions/18815264",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Dec/17/2020 01:27"
+  },
   "AC18815532": {
     "contest_id": "dp",
     "language": "C++ (GCC 9.2.1)",
