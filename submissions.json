@@ -1,4 +1,19 @@
 {
+  "CF101808216": {
+    "contest_id": 1096,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1096\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Easy Problem",
+    "problem_url": "https://codeforces.com/contest/1096/problem/D",
+    "submission_id": "CF101808216",
+    "submission_url": "https://codeforces.com/contest/1096/submission/101808216",
+    "tags": [
+      "dp",
+      "*1800"
+    ],
+    "timestamp": "Dec/20/2020 04:24"
+  },
   "CF101836977": {
     "contest_id": 1369,
     "language": "GNU C++17 (64)",
