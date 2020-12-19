@@ -1,4 +1,20 @@
 {
+  "AC18898446": {
+    "contest_id": "abc186",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc186\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Brick",
+    "problem_url": "https://atcoder.jp/contests/abc186/tasks/abc186_a",
+    "submission_id": "AC18898446",
+    "submission_url": "https://atcoder.jp/contests/abc186/submissions/18898446",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Dec/19/2020 23:50"
+  },
   "AC18898464": {
     "contest_id": "abc186",
     "language": "C++ (GCC 9.2.1)",
