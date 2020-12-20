@@ -19,7 +19,7 @@ int32_t main() {
             cin >> v[i];
             s += v[i];
         }
-        for(int i=0;i<n;i++) {
+        for(int i=0;i<=n;i++) {
             if(s % (n - i) == 0) {
                 int curr = 0, flag = 0;
                 for(int j=0;j<n;j++) {
