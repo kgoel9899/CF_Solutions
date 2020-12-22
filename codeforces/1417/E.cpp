@@ -15,19 +15,19 @@ int32_t main() {
         int n;
         cin >> n;
         vector<vector<int>> v(N);
-        int ind = 1;
+        int ind = -1;
         for(int i=0;i<n;i++) {
             int num;
             cin >> num;
-            v[ind].push_back(num);
+            v[ind + 1].push_back(num);
         }
         vector<int> ans;
-        int ret = 0, ct = 1;
+        int ret = 0, ct = 0;
         for(int i=31;i>=0;i--) {
-            int l = ind, r = ct;
-            ind = ct + 1;
+            int temp = ind + 1;
+            ind = ct;
             int ansone = 0, anszero = 0;
-            for(int j=l;j<=r;j++) {
+            for(int j=temp;j<=ind;j++) {
                 vector<int> ones, zeros;
                 int invone = 0, invzero = 0;
                 int sz = v[j].size();
@@ -58,10 +58,10 @@ int32_t main() {
             else ans.push_back(1);
         }
         reverse(ans.begin(), ans.end());
-        int num = 0, pw = 1;
-        for(auto i : ans) {
-            num += i * pw;
-            pw *= 2;
+        int num = 0, power2 = 1;
+        for(int i=0;i<ans.size();i++)   {
+            num += ans[i] * power2;
+            power2 *= 2;
         }
         cout << ret << " " << num << endl;
     }
