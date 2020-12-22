@@ -29,12 +29,18 @@ int32_t main() {
         for(int i=2;i<=n;i++) {
             if(v[i] % i == 0) {
                 int div = v[i] / i;
+                v[i] = 0;
+                v[1] += div * i;
                 ans.push_back({i, 1, div});
             } else {
                 int div = v[i] / i;
                 div++;
                 int reqd = i * div - v[i];
+                v[1] -= reqd;
+                v[i] += reqd;
                 ans.push_back({1, i, reqd});
+                v[1] += div * i;
+                v[i] = 0;
                 ans.push_back({i, 1, div});
             }
         }
