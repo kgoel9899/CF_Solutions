@@ -32,6 +32,11 @@ int32_t main() {
             if(rst[i - 1] <= st[i]) dp[i][0] = min(dp[i][0], dp[i - 1][1]);
             if(st[i - 1] <= rst[i]) dp[i][1] = min(dp[i][1], dp[i - 1][0] + c[i]);
             if(rst[i - 1] <= rst[i]) dp[i][1] = min(dp[i][1], dp[i - 1][1] + c[i]);
+            // for(int j=0;j<2;j++) {
+            //     for(int k=0;k<2;k++) {
+            //         if(s)
+            //     }
+            // }
         }
         int ans = min(dp[n][0], dp[n][1]);
         if(ans == INF) ans = -1;
