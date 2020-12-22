@@ -16,6 +16,7 @@ int32_t main() {
     // cin >> t;
     while(t--) {
         cin >> R >> G >> B;
+        memset(dp, 0, sizeof(dp));
         for(int i=1;i<=R;i++) {
             cin >> r[i];
         }
@@ -28,6 +29,18 @@ int32_t main() {
         sort(r.begin() + 1, r.end(), greater<int>());
         sort(g.begin() + 1, g.end(), greater<int>());
         sort(b.begin() + 1, b.end(), greater<int>());
+        // for(int i=1;i<=R;i++) {
+        //     cout << r[i] << " ";
+        // }
+        // cout << endl;
+        // for(int i=1;i<=G;i++) {
+        //     cout << g[i] << " ";
+        // }
+        // cout << endl;
+        // for(int i=1;i<=B;i++) {
+        //     cout << b[i] << " ";
+        // }
+        // cout << endl;
         int ans = 0;
         for(int i=0;i<=R;i++) {
             for(int j=0;j<=G;j++) {
@@ -35,6 +48,8 @@ int32_t main() {
                     if(i != 0 && j != 0) dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j - 1][k] + r[i] * g[j]);
                     if(i != 0 && k != 0) dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j][k - 1] + r[i] * b[k]);
                     if(j != 0 && k != 0) dp[i][j][k] = max(dp[i][j][k], dp[i][j - 1][k - 1] + g[j] * b[k]);
+                    
+                    // cout << dp[i][j][k] << endl;
                     ans = max(ans, dp[i][j][k]);
                 }
             }
