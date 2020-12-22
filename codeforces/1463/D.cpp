@@ -61,5 +61,19 @@ int32_t main() {
             if(mn[i] + mx[n - i] == 2) ans++;
         }
         cout << ans << endl;
+        // for(auto i : mx) {
+        //     cout << i << " ";
+        // }
+        // cout << endl;
+        // for(auto i : vis) {
+        //     cout << i << " ";
+        // }
+        // cout << endl;
     }
 }
+/*
+
+1 2 3 4 5 6 7 8 9 10
+_     _ _       _ _
+
+*/
