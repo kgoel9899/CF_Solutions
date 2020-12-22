@@ -10,50 +10,34 @@ const int N = 205;
 int R, G, B;
 vector<int> r(N), g(N), b(N);
 int dp[N][N][N];
+int helper(int x, int y, int z) {
+    if(x == R && y == G && z == B) return dp[x][y][z] = 0;
+    if(dp[x][y][z] != -1) return dp[x][y][z];
+    int ans1 = 0, ans2 = 0, ans3 = 0;
+    if(x < R && y < G) ans1 = r[x] * g[y] + helper(x + 1, y + 1, z);
+    if(x < R && z < B) ans2 = r[x] * b[z] + helper(x + 1, y, z + 1);
+    if(y < G && z < B) ans3 = g[y] * b[z] + helper(x, y + 1, z + 1);
+    return dp[x][y][z] = max({ans1, ans2, ans3});
+}
 int32_t main() {
     fast;
     int t = 1;
     // cin >> t;
     while(t--) {
         cin >> R >> G >> B;
-        memset(dp, 0, sizeof(dp));
-        for(int i=1;i<=R;i++) {
+        memset(dp, -1, sizeof(dp));
+        for(int i=0;i<R;i++) {
             cin >> r[i];
         }
-        for(int i=1;i<=G;i++) {
+        for(int i=0;i<G;i++) {
             cin >> g[i];
         }
-        for(int i=1;i<=B;i++) {
+        for(int i=0;i<B;i++) {
             cin >> b[i];
         }
-        sort(r.begin() + 1, r.end(), greater<int>());
-        sort(g.begin() + 1, g.end(), greater<int>());
-        sort(b.begin() + 1, b.end(), greater<int>());
-        // for(int i=1;i<=R;i++) {
-        //     cout << r[i] << " ";
-        // }
-        // cout << endl;
-        // for(int i=1;i<=G;i++) {
-        //     cout << g[i] << " ";
-        // }
-        // cout << endl;
-        // for(int i=1;i<=B;i++) {
-        //     cout << b[i] << " ";
-        // }
-        // cout << endl;
-        int ans = 0;
-        for(int i=0;i<=R;i++) {
-            for(int j=0;j<=G;j++) {
-                for(int k=0;k<=B;k++) {
-                    if(i != 0 && j != 0) dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j - 1][k] + r[i] * g[j]);
-                    if(i != 0 && k != 0) dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j][k - 1] + r[i] * b[k]);
-                    if(j != 0 && k != 0) dp[i][j][k] = max(dp[i][j][k], dp[i][j - 1][k - 1] + g[j] * b[k]);
-                    
-                    // cout << dp[i][j][k] << endl;
-                    ans = max(ans, dp[i][j][k]);
-                }
-            }
-        }
-        cout << ans << endl;
+        sort(r.begin(), r.end(), greater<int>());
+        sort(g.begin(), g.end(), greater<int>());
+        sort(b.begin(), b.end(), greater<int>());
+        cout << helper(0, 0, 0) << endl;
     }
 }
