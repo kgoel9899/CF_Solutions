@@ -24,8 +24,8 @@ int32_t main() {
         vector<int> ans;
         int ret = 0, ct = 1;
         for(int i=31;i>=0;i--) {
-            int l = ct, r = ind;
-            ct = ind + 1;
+            int l = ind, r = ct;
+            ind = ct + 1;
             int ansone = 0, anszero = 0;
             for(int j=l;j<=r;j++) {
                 vector<int> ones, zeros;
@@ -44,13 +44,13 @@ int32_t main() {
                 }
                 if(zeros.size() > 1) {
                     reverse(zeros.begin(), zeros.end());
-                    v[ind + 1] = zeros;
-                    ind++;
+                    v[ct + 1] = zeros;
+                    ct++;
                 }
                 if(ones.size() > 1) {
                     reverse(ones.begin(), ones.end());
-                    v[ind + 1] = ones;
-                    ind++;
+                    v[ct + 1] = ones;
+                    ct++;
                 }
             }
             ret += min(ansone, anszero);
