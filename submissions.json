@@ -1038,6 +1038,24 @@
     ],
     "timestamp": "Dec/22/2020 20:07"
   },
+  "CF102059511": {
+    "contest_id": 1253,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1253\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Sweets Eating",
+    "problem_url": "https://codeforces.com/contest/1253/problem/C",
+    "submission_id": "CF102059511",
+    "submission_url": "https://codeforces.com/contest/1253/submission/102059511",
+    "tags": [
+      "dp",
+      "greedy",
+      "math",
+      "sortings",
+      "*1500"
+    ],
+    "timestamp": "Dec/22/2020 21:53"
+  },
   "CF102061416": {
     "contest_id": 706,
     "language": "GNU C++17 (64)",
