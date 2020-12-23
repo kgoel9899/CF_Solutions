@@ -14,17 +14,17 @@ int n, k;
 int bit[K][N];
 vector<int> v(N);
 int mx;
-void update(int kval, int ind, int val) {
-    while(ind <= mx) {
-        bit[kval][ind] += val;
-        ind += (ind & (-ind));
+void update(int kval, int num, int val) {
+    while(num <= mx) {
+        bit[kval][num] += val;
+        num += (num & (-num));
     }
 }
-int query(int kval, int ind) {
+int query(int kval, int num) {
     int ans = 0;
-    while(ind > 0) {
-        ans += bit[kval][ind];
-        ind -= (ind & (-ind));
+    while(num > 0) {
+        ans += bit[kval][num];
+        num -= (num & (-num));
     }
     return ans;
 }
