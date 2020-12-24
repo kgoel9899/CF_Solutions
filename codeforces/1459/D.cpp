@@ -9,7 +9,6 @@ using namespace std;
 #define endl "\n"
 const int INF = 1e9;
 const int N = 100 * 100 + 5;
-int dp[2][101][N];
 int32_t main() {
     fast;
     int t = 1;
@@ -17,37 +16,30 @@ int32_t main() {
     while(t--) {
         int n;
         cin >> n;
-        vector<int> a(n + 1), b(n + 1);
+        vector<pair<int, int>> v(n + 1);
         int sum = 0;
         for(int i=1;i<=n;i++) {
-            cin >> a[i] >> b[i];
-            sum += b[i];
+            cin >> v[i].first >> v[i].second;
+            sum += v[i].second;
         }
-        for(int i=0;i<2;i++) {
-            for(int j=0;j<=n;j++) {
-                for(int k=0;k<N;k++) {
-                    dp[i][j][k] = -INF;
-                }
-            }
+        vector<vector<vector<int>>> dp(n + 1, vector<vector<int>>(n + 1, vector<int>(N, -INF)));
+        for(int i=0;i<=n;i++) {
+            dp[i][0][0] = 0;
         }
-        dp[0][0][0] = dp[1][0][0] = 0;
-        int flag = 0;
         for(int i=1;i<=n;i++) {
             for(int j=1;j<=n;j++) {
                 for(int k=1;k<N;k++) {
                     if(j > i) continue;
-                    dp[flag][j][k] = max(dp[flag][j][k], dp[flag ^ 1][j][k]);
-                    if(k - a[i] >= 0) dp[flag][j][k] = max(dp[flag][j][k], dp[flag ^ 1][j - 1][k - a[i]] +b[i]);
+                    dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j][k]);
+                    if(k - v[i].first >= 0) dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j - 1][k - v[i].first] + v[i].second);
                 }
             }
-            flag ^= 1;
         }
-        flag ^= 1;
         setpres;
         for(int i=1;i<=n;i++) {
             double ans = 0.0;
             for(int j=1;j<N;j++) {
-                ans = max(ans, min((double)j, (dp[flag][i][j] + sum) / 2.0));
+                ans = max(ans, min((double)j, (dp[n][i][j] + sum) / 2.0));
             }
             cout << ans << " ";
         }
