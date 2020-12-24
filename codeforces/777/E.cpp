@@ -8,7 +8,7 @@ using namespace std;
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
 const int INF = 1e18;
-const int N = 2e5 + 5;//a, b
+const int N = 2e5 + 5;
 vector<pair<pair<int, int>, int>> v, fin;
 int n, a, b, h;
 map<int, int> m;

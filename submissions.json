@@ -1324,6 +1324,25 @@
     ],
     "timestamp": "Dec/24/2020 15:21"
   },
+  "CF102248102": {
+    "contest_id": 777,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\777\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Hanoi Factory",
+    "problem_url": "https://codeforces.com/contest/777/problem/E",
+    "submission_id": "CF102248102",
+    "submission_url": "https://codeforces.com/contest/777/submission/102248102",
+    "tags": [
+      "brute force",
+      "data structures",
+      "dp",
+      "greedy",
+      "sortings",
+      "*2000"
+    ],
+    "timestamp": "Dec/24/2020 21:27"
+  },
   "CF102248233": {
     "contest_id": 777,
     "language": "GNU C++17 (64)",
