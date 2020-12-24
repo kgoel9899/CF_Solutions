@@ -1398,6 +1398,18 @@
     ],
     "timestamp": "Dec/24/2020 23:02"
   },
+  "CF102263692": {
+    "contest_id": 1459,
+    "language": "GNU C++17",
+    "path": "codeforces\\1459\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Glass Half Spilled",
+    "problem_url": "https://codeforces.com/contest/1459/problem/D",
+    "submission_id": "CF102263692",
+    "submission_url": "https://codeforces.com/contest/1459/submission/102263692",
+    "tags": [],
+    "timestamp": "Dec/25/2020 01:43"
+  },
   "CF102263719": {
     "contest_id": 1459,
     "language": "GNU C++17 (64)",
