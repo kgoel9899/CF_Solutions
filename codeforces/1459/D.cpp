@@ -9,6 +9,7 @@ using namespace std;
 #define endl "\n"
 const int INF = 1e9;
 const int N = 100 * 100 + 5;
+int dp[101][101][N];
 int32_t main() {
     fast;
     int t = 1;
@@ -22,7 +23,7 @@ int32_t main() {
             cin >> v[i].first >> v[i].second;
             sum += v[i].second;
         }
-        vector<vector<vector<int>>> dp(n + 1, vector<vector<int>>(n + 1, vector<int>(N, -INF)));
+        memset(dp, -30000, sizeof(dp));
         for(int i=0;i<=n;i++) {
             dp[i][0][0] = 0;
         }
