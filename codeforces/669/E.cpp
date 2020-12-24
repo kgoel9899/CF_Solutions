@@ -8,7 +8,7 @@ using namespace std;
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
 const int INF = 1e18;
-const int N = 1e9 + 5;
+const int N = 1e5 + 5;
 int n;
 map<int, map<int, int>> m;
 void update(int ind, int num, int val) {
@@ -29,11 +29,28 @@ int32_t main() {
     fast;
     int t = 1;
     // cin >> t;
+    vector<vector<int>> v;
+    map<int, int> mp;
     while(t--) {
         cin >> n;
         while(n--) {
             int a, t, x;
             cin >> a >> t >> x;
+            v.push_back({a, t, x});
+            mp[t];
+        }
+        n = v.size();
+        int rank = 1;
+        for(auto i : mp) {
+            mp[i.first] = rank++;
+        }
+        for(int i=0;i<n;i++) {
+            v[i][1] = mp[v[i][1]];
+        }
+        for(int i=0;i<n;i++) {
+            int a = v[i][0];
+            int t = v[i][1];
+            int x = v[i][2];
             if(a == 1) update(t, x, 1);
             else if(a == 2) update(t, x, -1);
             else cout << query(t, x) << endl;
