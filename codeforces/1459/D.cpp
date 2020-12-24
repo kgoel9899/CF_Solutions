@@ -9,6 +9,7 @@ using namespace std;
 #define endl "\n"
 const int INF = 1e9;
 const int N = 100 * 100 + 5;
+int dp[2][101][N];
 int32_t main() {
     fast;
     int t = 1;
@@ -22,7 +23,13 @@ int32_t main() {
             cin >> a[i] >> b[i];
             sum += b[i];
         }
-        vector<vector<vector<int>>> dp(2, vector<vector<int>>(n + 1, vector<int>(N, -INF)));
+        for(int i=0;i<2;i++) {
+            for(int j=0;j<=n;j++) {
+                for(int k=0;k<N;k++) {
+                    dp[i][j][k] = -INF;
+                }
+            }
+        }
         dp[0][0][0] = dp[1][0][0] = 0;
         int flag = 0;
         for(int i=1;i<=n;i++) {
