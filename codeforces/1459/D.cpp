@@ -7,7 +7,7 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
-const int INF = 1e18;
+const int INF = 1e9;
 const int N = 100 * 100 + 5;
 int32_t main() {
     fast;
