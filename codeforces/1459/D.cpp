@@ -28,8 +28,7 @@ int32_t main() {
         }
         for(int i=1;i<=n;i++) {
             for(int j=1;j<=n;j++) {
-                for(int k=1;k<N;k++) {
-                    if(j > i) continue;
+                for(int k=0;k<N;k++) {
                     dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j][k]);
                     if(k - v[i].first >= 0) dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j - 1][k - v[i].first] + v[i].second);
                 }
@@ -38,7 +37,7 @@ int32_t main() {
         setpres;
         for(int i=1;i<=n;i++) {
             double ans = 0.0;
-            for(int j=1;j<N;j++) {
+            for(int j=0;j<N;j++) {
                 ans = max(ans, min((double)j, (dp[n][i][j] + sum) / 2.0));
             }
             cout << ans << " ";
