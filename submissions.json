@@ -1595,6 +1595,22 @@
     ],
     "timestamp": "Dec/28/2020 17:55"
   },
+  "CF102545866": {
+    "contest_id": 296,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\296\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Greg and Graph",
+    "problem_url": "https://codeforces.com/contest/296/problem/D",
+    "submission_id": "CF102545866",
+    "submission_url": "https://codeforces.com/contest/296/submission/102545866",
+    "tags": [
+      "dp",
+      "graphs",
+      "*1700"
+    ],
+    "timestamp": "Dec/28/2020 19:52"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
