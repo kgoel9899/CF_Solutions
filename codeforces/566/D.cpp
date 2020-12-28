@@ -31,7 +31,6 @@ int32_t main() {
     while(t--) {
         int n, q;
         cin >> n >> q;
-        s.insert(-1);
         for(int i=1;i<=n;i++) {
             par[i] = i;
             sizee[i] = 1;
