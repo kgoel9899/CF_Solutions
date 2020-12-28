@@ -12,6 +12,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+547 | [D - Restructuring Company](https://codeforces.com/contest/566/problem/D) | [GNU C++17 (64)](./codeforces/566/D.cpp) | `data structures` `dsu` `*1900` | Dec/28/2020 17:55 | 
 546 | [D - Glass Half Spilled](https://codeforces.com/contest/1459/problem/D) | [GNU C++17 (64)](./codeforces/1459/D.cpp) | `brute force` `dp` `greedy` `*2000` | Dec/25/2020 02:11 | 
 545 | [A - In Search of an Easy Problem](https://codeforces.com/contest/1030/problem/A) | [GNU C++17 (64)](./codeforces/1030/A.cpp) | `implementation` `*800` | Dec/25/2020 02:10 | 
 544 | [A - Vanya and Fence](https://codeforces.com/contest/677/problem/A) | [GNU C++17 (64)](./codeforces/677/A.cpp) | `implementation` `*800` | Dec/25/2020 02:08 | 
