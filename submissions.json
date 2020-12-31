@@ -1599,6 +1599,22 @@
     ],
     "timestamp": "Dec/20/2020 00:01"
   },
+  "AC19079798": {
+    "contest_id": "abc161",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc161\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Popular Vote",
+    "problem_url": "https://atcoder.jp/contests/abc161/tasks/abc161_b",
+    "submission_id": "AC19079798",
+    "submission_url": "https://atcoder.jp/contests/abc161/submissions/19079798",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Dec/31/2020 14:31"
+  },
   "AC19080017": {
     "contest_id": "abc161",
     "language": "C++ (GCC 9.2.1)",
