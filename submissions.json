@@ -1663,6 +1663,22 @@
     ],
     "timestamp": "Dec/31/2020 14:43"
   },
+  "AC19080130": {
+    "contest_id": "abc161",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc161\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Lunlun Number",
+    "problem_url": "https://atcoder.jp/contests/abc161/tasks/abc161_d",
+    "submission_id": "AC19080130",
+    "submission_url": "https://atcoder.jp/contests/abc161/submissions/19080130",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/31/2020 14:51"
+  },
   "AC19117408": {
     "contest_id": "abc187",
     "language": "C++ (GCC 9.2.1)",

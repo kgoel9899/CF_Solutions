@@ -13,16 +13,17 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-661 | [D - Choose Me](https://atcoder.jp/contests/abc187/tasks/abc187_d) | [C++ (GCC 9.2.1)](./atcoder/abc187/D.cpp) | `AtCoder` `*400` | Jan/02/2021 21:43 | 
-660 | [C - 1-SAT](https://atcoder.jp/contests/abc187/tasks/abc187_c) | [C++ (GCC 9.2.1)](./atcoder/abc187/C.cpp) | `AtCoder` `*300` | Jan/02/2021 17:38 | 
-659 | [B - Gentle Pairs](https://atcoder.jp/contests/abc187/tasks/abc187_b) | [C++ (GCC 9.2.1)](./atcoder/abc187/B.cpp) | `AtCoder` `*200` | Jan/02/2021 17:33 | 
-658 | [A - Large Digits](https://atcoder.jp/contests/abc187/tasks/abc187_a) | [C++ (GCC 9.2.1)](./atcoder/abc187/A.cpp) | `AtCoder` `*100` | Jan/02/2021 17:31 | 
-657 | [D - Firecrackers](https://codeforces.com/contest/1468/problem/D) | [GNU C++17 (64)](./codeforces/1468/D.cpp) | `binary search` `sortings` `*1700` | Jan/02/2021 16:41 | 
-656 | [F - Full Turn](https://codeforces.com/contest/1468/problem/F) | [GNU C++17](./codeforces/1468/F.cpp) | `geometry` `hashing` `number theory` `*1700` | Jan/02/2021 15:56 | 
-655 | [K - The Robot](https://codeforces.com/contest/1468/problem/K) | [GNU C++17 (64)](./codeforces/1468/K.cpp) | `brute force` `implementation` `*1600` | Jan/02/2021 15:42 | 
-654 | [C - Berpizza](https://codeforces.com/contest/1468/problem/C) | [GNU C++17](./codeforces/1468/C.cpp) | `data structures` `implementation` `*1400` | Jan/02/2021 15:16 | 
-653 | [N - Waste Sorting](https://codeforces.com/contest/1468/problem/N) | [GNU C++17 (64)](./codeforces/1468/N.cpp) | `greedy` `implementation` `*900` | Jan/02/2021 15:14 | 
-652 | [E - Four Segments](https://codeforces.com/contest/1468/problem/E) | [GNU C++17 (64)](./codeforces/1468/E.cpp) | `greedy` `*800` | Jan/02/2021 15:05 | 
+662 | [D - Choose Me](https://atcoder.jp/contests/abc187/tasks/abc187_d) | [C++ (GCC 9.2.1)](./atcoder/abc187/D.cpp) | `AtCoder` `*400` | Jan/02/2021 21:43 | 
+661 | [C - 1-SAT](https://atcoder.jp/contests/abc187/tasks/abc187_c) | [C++ (GCC 9.2.1)](./atcoder/abc187/C.cpp) | `AtCoder` `*300` | Jan/02/2021 17:38 | 
+660 | [B - Gentle Pairs](https://atcoder.jp/contests/abc187/tasks/abc187_b) | [C++ (GCC 9.2.1)](./atcoder/abc187/B.cpp) | `AtCoder` `*200` | Jan/02/2021 17:33 | 
+659 | [A - Large Digits](https://atcoder.jp/contests/abc187/tasks/abc187_a) | [C++ (GCC 9.2.1)](./atcoder/abc187/A.cpp) | `AtCoder` `*100` | Jan/02/2021 17:31 | 
+658 | [D - Firecrackers](https://codeforces.com/contest/1468/problem/D) | [GNU C++17 (64)](./codeforces/1468/D.cpp) | `binary search` `sortings` `*1700` | Jan/02/2021 16:41 | 
+657 | [F - Full Turn](https://codeforces.com/contest/1468/problem/F) | [GNU C++17](./codeforces/1468/F.cpp) | `geometry` `hashing` `number theory` `*1700` | Jan/02/2021 15:56 | 
+656 | [K - The Robot](https://codeforces.com/contest/1468/problem/K) | [GNU C++17 (64)](./codeforces/1468/K.cpp) | `brute force` `implementation` `*1600` | Jan/02/2021 15:42 | 
+655 | [C - Berpizza](https://codeforces.com/contest/1468/problem/C) | [GNU C++17](./codeforces/1468/C.cpp) | `data structures` `implementation` `*1400` | Jan/02/2021 15:16 | 
+654 | [N - Waste Sorting](https://codeforces.com/contest/1468/problem/N) | [GNU C++17 (64)](./codeforces/1468/N.cpp) | `greedy` `implementation` `*900` | Jan/02/2021 15:14 | 
+653 | [E - Four Segments](https://codeforces.com/contest/1468/problem/E) | [GNU C++17 (64)](./codeforces/1468/E.cpp) | `greedy` `*800` | Jan/02/2021 15:05 | 
+652 | [D - Lunlun Number](https://atcoder.jp/contests/abc161/tasks/abc161_d) | [C++ (GCC 9.2.1)](./atcoder/abc161/D.cpp) | `AtCoder` `*400` | Dec/31/2020 14:51 | 
 651 | [C - Replacing Integer](https://atcoder.jp/contests/abc161/tasks/abc161_c) | [C++ (GCC 9.2.1)](./atcoder/abc161/C.cpp) | `AtCoder` `*300` | Dec/31/2020 14:43 | 
 650 | [B - Popular Vote](https://atcoder.jp/contests/abc161/tasks/abc161_b) | [C++ (GCC 9.2.1)](./atcoder/abc161/B.cpp) | `AtCoder` `*200` | Dec/31/2020 14:31 | 
 649 | [A - ABC Swap](https://atcoder.jp/contests/abc161/tasks/abc161_a) | [C++ (GCC 9.2.1)](./atcoder/abc161/A.cpp) | `AtCoder` `*100` | Dec/31/2020 14:21 | 
