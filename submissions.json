@@ -3324,6 +3324,22 @@
     ],
     "timestamp": "Dec/28/2020 19:52"
   },
+  "CF103017002": {
+    "contest_id": 1468,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1468\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Four Segments",
+    "problem_url": "https://codeforces.com/contest/1468/problem/E",
+    "submission_id": "CF103017002",
+    "submission_url": "https://codeforces.com/contest/1468/submission/103017002",
+    "tags": [
+      "greedy",
+      "*800"
+    ],
+    "timestamp": "Jan/02/2021 15:05"
+  },
   "CF103017639": {
     "contest_id": 1468,
     "language": "GNU C++17 (64)",
