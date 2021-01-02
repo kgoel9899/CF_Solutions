@@ -3324,6 +3324,24 @@
     ],
     "timestamp": "Dec/28/2020 19:52"
   },
+  "CF103020073": {
+    "contest_id": 1468,
+    "language": "GNU C++17",
+    "path": "codeforces\\1468\\F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Full Turn",
+    "problem_url": "https://codeforces.com/contest/1468/problem/F",
+    "submission_id": "CF103020073",
+    "submission_url": "https://codeforces.com/contest/1468/submission/103020073",
+    "tags": [
+      "geometry",
+      "hashing",
+      "number theory",
+      "*1700"
+    ],
+    "timestamp": "Jan/02/2021 15:54"
+  },
   "CF103020148": {
     "contest_id": 1468,
     "language": "GNU C++17",

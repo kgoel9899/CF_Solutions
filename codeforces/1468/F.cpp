@@ -15,7 +15,6 @@ template<typename A> ostream& operator<<(ostream &cout, vector<ar<A,2>> const &v
 
 int32_t main()
 {
-    send help
     int t;
     cin>>t;
     while(t--)
@@ -73,6 +72,13 @@ int32_t main()
                 if(m.find({-f1,-f2})!=m.end())
                     ans+=x.second*m[{-f1,-f2}];
             }
+            // else if(f1>0)
+            // {
+            //     if(m.find({-f1,-f2})!=m.end())
+            //         ans+=m[{-f1,-f2}];
+            // }
+            // if(m.find({-1*x.first[0],x.first[1]})!=m.end())
+            //     ans+=m[{-1*x.first[0],x.first[1]}];
         }
         cout<<ans/2<<"\n";
     }
