@@ -1663,6 +1663,22 @@
     ],
     "timestamp": "Dec/31/2020 14:43"
   },
+  "AC19121037": {
+    "contest_id": "abc187",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc187\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Gentle Pairs",
+    "problem_url": "https://atcoder.jp/contests/abc187/tasks/abc187_b",
+    "submission_id": "AC19121037",
+    "submission_url": "https://atcoder.jp/contests/abc187/submissions/19121037",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Jan/02/2021 17:33"
+  },
   "AC19125411": {
     "contest_id": "abc187",
     "language": "C++ (GCC 9.2.1)",
