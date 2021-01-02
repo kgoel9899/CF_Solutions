@@ -1663,6 +1663,22 @@
     ],
     "timestamp": "Dec/31/2020 14:43"
   },
+  "AC19168742": {
+    "contest_id": "abc187",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc187\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Choose Me",
+    "problem_url": "https://atcoder.jp/contests/abc187/tasks/abc187_d",
+    "submission_id": "AC19168742",
+    "submission_url": "https://atcoder.jp/contests/abc187/submissions/19168742",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jan/02/2021 21:43"
+  },
   "AC19168746": {
     "contest_id": "abc187",
     "language": "C++ (GCC 9.2.1)",

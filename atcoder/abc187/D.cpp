@@ -8,6 +8,12 @@ using namespace std;
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
 const int INF = 1e18;
+bool comp(pair<int, int>& a, pair<int, int>& b) {
+    if(a.first == b.first) {
+        return a.second > b.second;
+    }
+    return a.first > b.first;
+}
 int32_t main() {
     fast;
     int t = 1;
