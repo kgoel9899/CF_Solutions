@@ -3324,6 +3324,23 @@
     ],
     "timestamp": "Dec/28/2020 19:52"
   },
+  "CF103017639": {
+    "contest_id": 1468,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1468\\N.cpp",
+    "platform": "Codeforces",
+    "problem_index": "N",
+    "problem_name": "Waste Sorting",
+    "problem_url": "https://codeforces.com/contest/1468/problem/N",
+    "submission_id": "CF103017639",
+    "submission_url": "https://codeforces.com/contest/1468/submission/103017639",
+    "tags": [
+      "greedy",
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Jan/02/2021 15:14"
+  },
   "CF103017738": {
     "contest_id": 1468,
     "language": "GNU C++17",
