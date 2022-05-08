@@ -12298,6 +12298,27 @@
     ],
     "timestamp": "Apr/28/2022 23:16"
   },
+  "CF156283114": {
+    "contest_id": 1670,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1670\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Where is the Pizza?",
+    "problem_url": "https://codeforces.com/contest/1670/problem/C",
+    "submission_id": "CF156283114",
+    "submission_url": "https://codeforces.com/contest/1670/submission/156283114",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "implementation",
+      "math",
+      "*1400"
+    ],
+    "timestamp": "May/08/2022 17:14"
+  },
   "CF156552093": {
     "contest_id": 1678,
     "language": "GNU C++20 (64)",
