@@ -47,7 +47,6 @@ int32_t main() {
             int full;
             cin >> full;
             if(full >= mid) {
-                // [mid + 1, end]
                 cout << "? " << mid << " " << end << endl;
                 int half;
                 cin >> half;
@@ -56,10 +55,9 @@ int32_t main() {
                     beg = mid;
                 } else {
                     // max is in other
-                    end = mid;
+                    end = mid - 1;
                 }
             } else {
-                // [l, mid]
                 cout << "? " << beg << " " << mid << endl;
                 int half;
                 cin >> half;
@@ -68,7 +66,7 @@ int32_t main() {
                     end = mid;
                 } else {
                     // max is in other
-                    beg = mid;
+                    beg = mid + 1;
                 }
             }
         }
