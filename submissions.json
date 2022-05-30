@@ -12298,6 +12298,25 @@
     ],
     "timestamp": "Apr/28/2022 23:16"
   },
+  "CF158861987": {
+    "contest_id": 1407,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1407\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Chocolate Bunny",
+    "problem_url": "https://codeforces.com/contest/1407/problem/C",
+    "submission_id": "CF158861987",
+    "submission_url": "https://codeforces.com/contest/1407/submission/158861987",
+    "tags": [
+      "constructive algorithms",
+      "interactive",
+      "math",
+      "two pointers",
+      "*1600"
+    ],
+    "timestamp": "May/30/2022 15:36"
+  },
   "CF158865691": {
     "contest_id": 1010,
     "language": "GNU C++20 (64)",

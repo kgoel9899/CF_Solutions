@@ -1,46 +1,55 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define MAX 100001
 #define MOD 1000000007
-#define ll long long
-#define ld long double
+#define mod 998244353
+#define int long long
+#define setpres cout << fixed << setprecision(10)
+#define all(x) (x).begin(), (x).end()
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-void IO() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
+// #define endl "\n"
+const int INF = 1e18;
+
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
 #endif
-	fast;
-}
-int main() {
-	IO();
-	int t = 1;
-	// cin >> t;
-	while (t--) {
-		int n;
-		cin >> n;
-		vector<int> ans(n);
-		int mx = 0;
-		for (int i = 1; i < n; i++) {
-			cout << "? " << mx + 1 << " " << i + 1 << endl;
-			cout.flush();
-			int x, y;
-			cin >> x;
-			cout << "? " << i + 1 << " " << mx + 1 << endl;
-			cout.flush();
-			cin >> y;
-			if (x > y) {
-				ans[mx] = x;
-				mx = i;
-			} else ans[i] = y;
-		}
-		ans[mx] = n;
-		cout << "! ";
-		for (int i = 0; i < n; i++) {
-			cout << ans[i] << " ";
-		}
-		cout << endl;
-		cout.flush();
-	}
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
+// editorial
+int32_t main() {
+    fast;
+    int tt = 1;
+    // cin >> tt;
+    while(tt--) {
+        int n;
+        cin >> n;
+        vector<int> ans(n + 1, -1);
+        int mx = 1;
+        for(int i=2;i<=n;i++) {
+            cout << "? " << mx << " " << i << endl;
+            int x;
+            cin >> x;
+            cout << "? " << i << " " << mx << endl;
+            int y;
+            cin >> y;
+            if(x > y) {
+                ans[mx] = x;
+                mx = i;
+            } else ans[i] = y;
+        }
+        for(int i=1;i<=n;i++) {
+            if(ans[i] == -1) ans[i] = n;
+        }
+        cout << "! ";
+        for(int i=1;i<=n;i++) {
+            cout << ans[i] << " ";
+        }
+        cout << endl;
+    }
 }
