@@ -12298,6 +12298,23 @@
     ],
     "timestamp": "Apr/28/2022 23:16"
   },
+  "CF158895559": {
+    "contest_id": 1458,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1458\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Row GCD",
+    "problem_url": "https://codeforces.com/contest/1458/problem/A",
+    "submission_id": "CF158895559",
+    "submission_url": "https://codeforces.com/contest/1458/submission/158895559",
+    "tags": [
+      "math",
+      "number theory",
+      "*1600"
+    ],
+    "timestamp": "May/30/2022 22:18"
+  },
   "CF159087638": {
     "contest_id": 576,
     "language": "GNU C++20 (64)",
