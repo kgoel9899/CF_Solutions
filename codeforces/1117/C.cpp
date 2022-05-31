@@ -25,12 +25,14 @@ int x, y;
 bool check(int x1, int y1, int x2, int y2, int n, int mid, string& s) {
     int tx = x * (mid / n);
     int ty = y * (mid / n);
+    if(mid == 1) dbg(tx, ty);
     for(int i=0;i<mid%n;i++) {
         if(s[i] == 'U') ty++;
         else if(s[i] == 'D') ty--;
         else if(s[i] == 'L') tx--;
         else tx++;
     }
+    if(mid == 1) dbg(tx, ty);
     x1 += tx;
     y1 += ty;
     return abs(x2 - x1) + abs(y2 - y1) <= mid;
@@ -53,10 +55,12 @@ int32_t main() {
             else if(i == 'L') x--;
             else x++;
         }
-        int beg = 0, end = 1e15;
+        // dbg(x, y);
+        int beg = 0, end = 1e18;
         int ans = -1;
         while(beg <= end) {
             int mid = (beg + end) / 2;
+            // dbg(mid);
             if(check(x1, y1, x2, y2, n, mid, s)) {
                 ans = mid;
                 end = mid - 1;
