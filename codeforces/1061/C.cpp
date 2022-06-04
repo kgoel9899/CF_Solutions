@@ -1,60 +1,44 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+ 
+#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
-const int INF = 1e18;
+#define int long long
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
+const int N=1e6+5;
+const int MOD=1e9+7;
 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+int n, a[N], cnt[N], ans=0;
 
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
-
-int32_t main() {
-    fast;
-    int tt = 1;
-    // cin >> tt;
-    while(tt--) {
-        int n;
-        cin >> n;
-        vector<int> v(n);
-        for(int i=0;i<n;i++) {
-            cin >> v[i];
-        }
-        const int N = 1e6 + 5;
-        vector<vector<int>> pr(N);
-        for(int i=1;i<N;i++) {
-            for(int j=i;j<N;j+=i) {
-                pr[j].push_back(i);
-            }
-        }
-        vector<int> dp(n + 1);
-        dp[0] = 1;
-        for(int i=1;i<=n;i++) {
-            int val = v[i - 1];
-            for(int j=(int)pr[val].size()-1;j>=0;j--) {
-                int ind = pr[val][j];
-                if(ind > n) continue;
-                dp[ind] = dp[ind] + dp[ind - 1];
-                dp[ind] %= MOD;
-            }
-        }
-        int ans = 0;
-        for(int i=1;i<=n;i++) {
-            ans += dp[i];
-            ans %= MOD;
-        }
-        cout << ans << endl;
-    }
+int32_t main()
+{
+	IOS;
+	cin>>n;
+	cnt[0]=1;
+	for(int i=1;i<=n;i++)
+	{
+		cin>>a[i];
+		vector<int> cur;
+		for(int j=1;j*j<=a[i];j++)
+		{		
+			if(a[i]%j==0)
+			{
+				cur.push_back(j);
+				if(j != a[i]/j)
+					cur.push_back(a[i]/j);
+			}
+		}
+		sort(cur.begin(), cur.end());
+		reverse(cur.begin(), cur.end());
+		for(auto &it:cur)
+		{
+			cnt[it]+=cnt[it-1];
+			cnt[it]%=MOD;
+		}
+	}	
+	for(int i=1;i<=n;i++)
+		ans+=cnt[i];
+	ans %= MOD;
+	cout<<ans;
+	return 0;
 }
