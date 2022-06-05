@@ -12298,6 +12298,23 @@
     ],
     "timestamp": "Apr/28/2022 23:16"
   },
+  "CF159582113": {
+    "contest_id": 1228,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1228\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Primes and Multiplication",
+    "problem_url": "https://codeforces.com/contest/1228/problem/C",
+    "submission_id": "CF159582113",
+    "submission_url": "https://codeforces.com/contest/1228/submission/159582113",
+    "tags": [
+      "math",
+      "number theory",
+      "*1700"
+    ],
+    "timestamp": "Jun/06/2022 01:41"
+  },
   "CF159660855": {
     "contest_id": 1681,
     "language": "GNU C++20 (64)",
