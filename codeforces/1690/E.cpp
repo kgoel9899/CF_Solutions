@@ -38,6 +38,40 @@ int32_t main() {
             rem[i % k].push_back(i);
         }
         int ans = 0;
+        dbg(rem);
+        for(int i=1;i<(k+1)/2;i++) {
+            int x = rem[i].size(), y = rem[k - i].size();
+            while(x > 0 && y > 0) {
+                x--;
+                y--;
+                ans += (rem[i].back() + rem[k - i].back()) / k;
+                rem[i].pop_back();
+                rem[k - i].pop_back();
+            }
+        }
+        if(k % 2 == 0) {
+            int x = rem[k / 2].size();
+            while(x >= 2) {
+                x -= 2;
+                int temp = rem[k / 2].back();
+                rem[k / 2].pop_back();
+                temp += rem[k / 2].back();
+                rem[k / 2].pop_back();
+                ans += temp / k;
+            }
+        }
+        if(rem[0].size()) {
+            int x = rem[0].size();
+            while(x >= 2) {
+                x -= 2;
+                int temp = rem[0].back();
+                rem[0].pop_back();
+                temp += rem[0].back();
+                rem[0].pop_back();
+                ans += temp / k;
+            }
+        }
+        dbg(rem);
         multiset<int> s;
         for(auto i : rem) {
             for(auto j : i) {
