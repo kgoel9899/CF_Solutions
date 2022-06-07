@@ -32,18 +32,28 @@ int32_t main() {
         for(int i=0;i<n;i++) {
             cin >> v[i];
         }
-        multiset<int> s;
-        int ans = 0;
+        sort(all(v));
+        vector<vector<int>> rem(k);
         for(auto i : v) {
-            ans += i / k;
-            s.insert(i % k);
+            rem[i % k].push_back(i);
         }
+        int ans = 0;
+        multiset<int> s;
+        for(auto i : rem) {
+            for(auto j : i) {
+                ans += j / k;
+                s.insert(j % k);
+            }
+        }
+        dbg(s);
         while(s.size()) {
             int curr = *s.begin();
             s.erase(s.begin());
             int left = k - curr;
             auto it = s.lower_bound(left);
+            dbg(curr, left, s);
             if(it == s.end()) continue;
+            dbg(s);
             ans += (*it + curr) / k;
             s.erase(it);
         }
