@@ -34,7 +34,7 @@ int32_t main() {
         }
         const int N = 1e6 + 5;
         vector<vector<int>> pr(N);
-        for(int i=N-1;i>=1;i--) {
+        for(int i=1;i<N;i++) {
             for(int j=i;j<N;j+=i) {
                 pr[j].push_back(i);
             }
@@ -43,7 +43,7 @@ int32_t main() {
         dp[0] = 1;
         for(int i=1;i<=n;i++) {
             int val = v[i - 1];
-            for(int j=0;j<pr[val].size();j++) {
+            for(int j=(int)pr[val].size()-1;j>=0;j--) {
                 int ind = pr[val][j];
                 if(ind > n) continue;
                 dp[ind] = dp[ind] + dp[ind - 1];
