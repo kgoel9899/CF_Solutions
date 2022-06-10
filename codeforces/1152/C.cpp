@@ -40,14 +40,21 @@ int32_t main() {
         dbg(v);
         int ans = INF, k = 0;
         for(auto i : v) {
-            if(a % i != b % i) continue; // (a + k) % i = (b + k) % i = 0a
-            int temp = i - a % i;
-            if(temp == i) temp = 0;
-            int na = a + temp, nb = b + temp;
-            int curr = (na * nb) / __gcd(na, nb);
-            if(curr < ans) {
-                ans = curr;
-                k = temp;
+            if(a % i != b % i) continue;
+            if(a % i == 0) {
+                int curr = (a * b) / __gcd(a, b);
+                if(curr < ans) {
+                    ans = curr;
+                    k = 0;
+                }
+            } else {
+                int temp = i - a % i;
+                int na = a + temp, nb = b + temp;
+                int curr = (na * nb) / __gcd(na, nb);
+                if(curr < ans) {
+                    ans = curr;
+                    k = temp;
+                }
             }
         }
         cout << k << endl;
