@@ -46,6 +46,7 @@ int32_t main() {
                 level[i] = 1;
                 m[level[i]]++;
                 vis[i] = 1;
+                // dbg(i);
             }
         }
         while(!q.empty()) {
@@ -54,12 +55,17 @@ int32_t main() {
             for(auto i : adj[f]) {
                 if(vis[i]) continue;
                 indeg[i]--;
+                // dbg(i);
                 if(indeg[i] == 1) {
                     vis[i] = 1;
                     level[i] = level[f] + 1;
                     q.push(i);
                     m[level[i]]++;
                 }
+                // if(level[i] != -1) continue;
+                // q.push(i);
+                // level[i] = level[f] + 1;
+                // m[level[i]]++;
             }
         }
         if(n == 1) n = 0;
