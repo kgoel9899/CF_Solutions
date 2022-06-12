@@ -44,22 +44,13 @@ int32_t main() {
             int div1 = v[l][1] / p - (v[l][0] - 1) / p;
             int div2 = v[r][1] / p - (v[r][0] - 1) / p;
             
-            // A = probability that ith num is divisible by p
-            // B = probability that jth num is divisible by p
+            int not1 = tot1 - div1;
+            int not2 = tot2 - div2;
             
-            // 1 - A*B
-            // int not1 = tot1 - div1;
-            // int not2 = tot2 - div2;
+            double pr = (not1 / (double) tot1);
+            pr *= (not2 / (double) tot2);
+            pr = 1 - pr;
             
-            // double pr = (not1 / (double) tot1);
-            // pr *= (not2 / (double) tot2);
-            // pr = 1 - pr;
-            
-            // A U B = A + B - A*B, independent events
-            double pr_div1 = div1 / (double) tot1;
-            double pr_div2 = div2 / (double) tot2;
-            
-            double pr = pr_div1 +  pr_div2 - pr_div1 * pr_div2;
             s += pr;
         }
         cout << s * 2000 << endl;
