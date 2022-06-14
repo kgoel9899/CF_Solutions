@@ -84,6 +84,6 @@ int32_t main() {
         dfs(1, -1);
         dbg(node1);
         if(ok) cout << "YES" << endl;
-        else cout << "NO" << endl; 
+        else cout << "NO" << endl;
     }
 }
