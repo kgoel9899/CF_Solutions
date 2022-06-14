@@ -37,7 +37,7 @@ void dfs(int curr, int par) {
         pars.push_back(par);
         return;
     }
-    if(node1 != -1) { // check only after 1 node has been found
+    if(node1 != -1) {
         if(pars.back() == curr) { // we are in the same subtree
             if(treexor[curr] == 0) ok = 1;
             pars.push_back(par);
