@@ -21,27 +21,28 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-int n, k, xr, node1, ok;
-vector<int> v, sub, pars;
+int n, k;
+vector<int> a, treexor, pars;
 vector<vector<int>> adj;
+int xorr, node1, ok;
 void dfs(int curr, int par) {
-    sub[curr] = v[curr];
+    treexor[curr] = a[curr];
     for(auto i : adj[curr]) {
         if(i == par) continue;
         dfs(i, curr);
-        sub[curr] ^= sub[i];
+        treexor[curr] ^= treexor[i];
     }
-    if(node1 == -1 && sub[curr] == xr) {
+    if(node1 == -1 && treexor[curr] == xorr) {
         node1 = curr;
         pars.push_back(par);
         return;
     }
-    if(node1 != -1) {
-        if(pars.back() == curr) {
-            if(sub[curr] == 0) ok = 1;
+    if(node1 != -1) { // check only after 1 node has been found
+        if(pars.back() == curr) { // we are in the same subtree
+            if(treexor[curr] == 0) ok = 1;
             pars.push_back(par);
-        } else {
-            if(sub[curr] == xr) ok = 1;
+        } else { // different subtree
+            if(treexor[curr] == xorr) ok = 1;
         }
     }
 }
@@ -51,22 +52,25 @@ int32_t main() {
     cin >> tt;
     while(tt--) {
         cin >> n >> k;
-        xr = 0;
-        v.clear();
-        v.resize(n + 1);
+        a.clear();
+        a.resize(n + 1);
+        xorr = 0;
+        node1 = -1;
+        ok = 0;
+        for(int i=1;i<=n;i++) {
+            cin >> a[i];
+            xorr ^= a[i];
+        }
         adj.clear();
         adj.resize(n + 1);
-        for(int i=1;i<=n;i++) {
-            cin >> v[i];
-            xr ^= v[i];
-        }
+        pars.clear();
         for(int i=0;i<n-1;i++) {
-            int a, b;
-            cin >> a >> b;
-            adj[a].push_back(b);
-            adj[b].push_back(a);
+            int u, v;
+            cin >> u >> v;
+            adj[u].push_back(v);
+            adj[v].push_back(u);
         }
-        if(xr == 0) {
+        if(xorr == 0) { // 2 components
             cout << "YES" << endl;
             continue;
         }
@@ -74,13 +78,12 @@ int32_t main() {
             cout << "NO" << endl;
             continue;
         }
-        sub.clear();
-        sub.resize(n + 1);
-        pars.clear();
-        node1 = -1;
-        ok = 0;
-        dfs(1, 0);
+        // 3 components
+        treexor.clear();
+        treexor.resize(n + 1);
+        dfs(1, -1);
+        dbg(node1);
         if(ok) cout << "YES" << endl;
-        else cout << "NO" << endl;
+        else cout << "NO" << endl; 
     }
 }
