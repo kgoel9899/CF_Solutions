@@ -22,22 +22,24 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 int n;
-vector<vector<pair<int, int>>> adj;
-vector<int> dp;
+vector<vector<pair<int, int>>> adj; // second: 1 = same, -1 = reverse
+vector<int> sub;
 void dfs(int curr, int par) {
     for(auto i : adj[curr]) {
         if(i.first == par) continue;
         dfs(i.first, curr);
-        if(i.second == 0) dp[curr]++;
-        dp[curr] += dp[i.first];
+        sub[curr] += sub[i.first];
+        if(i.second == -1) sub[curr]++;
     }
 }
 void dfs2(int curr, int par) {
+    dbg(curr, par);
     for(auto i : adj[curr]) {
         if(i.first == par) continue;
-        dp[i.first] = dp[curr];
-        if(i.second == 0) dp[i.first]--;
-        else dp[i.first]++;
+        sub[i.first] = sub[curr];
+        if(i.second == -1) sub[i.first]--;
+        else sub[i.first]++;
+        dbg(i.first, curr);
         dfs2(i.first, curr);
     }
 }
@@ -52,23 +54,23 @@ int32_t main() {
         for(int i=0;i<n-1;i++) {
             int a, b;
             cin >> a >> b;
-            adj[a].push_back({b, 1}); // 1 = valid
-            adj[b].push_back({a, 0}); // 0 = invalid
+            adj[a].push_back({b, 1});
+            adj[b].push_back({a, -1});
         }
-        dp.clear();
-        dp.resize(n + 1);
-        dfs(1, 0);
-        int ans = INF;
-        dbg(dp);
-        dfs2(1, 0);
-        dbg(dp);
-        for(int i=1;i<=n;i++) {
-            ans = min(ans, dp[i]);
-        }
-        cout << ans << endl;
-        for(int i=1;i<=n;i++) {
-            if(dp[i] == ans) cout << i << " ";
-        }
-        cout << endl;
     }
+    sub.clear();
+    sub.resize(n + 1);
+    dfs(1, 0);
+    dbg(sub);
+    dfs2(1, 0);
+    dbg(sub);
+    int ans = INF;
+    for(int i=1;i<=n;i++) {
+        if(sub[i] < ans) ans = sub[i];
+    }
+    cout << ans << endl;
+    for(int i=1;i<=n;i++) {
+        if(sub[i] == ans) cout << i << " ";
+    }
+    cout << endl;
 }
