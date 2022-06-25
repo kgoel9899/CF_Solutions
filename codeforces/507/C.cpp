@@ -30,6 +30,7 @@ int32_t main() {
         cin >> h >> n;
         int ans = 0;
         int ch = 0; // 0 = L, 1 = R
+        // cout << (1ll << 35) << endl;
         while(h) {
             int left_leaves = (1ll << (h - 1));
             dbg(h, n, left_leaves);
@@ -40,8 +41,8 @@ int32_t main() {
                 if(ch == 1) {
                     // visit the complete right part
                     ans += (1ll << h) - 1;
-                }
-                ch = 1;
+                    // ch = 0;
+                } else ch = 1;
             } else {
                 // it is in the right part
                 dbg("here2", ch, n);
@@ -50,12 +51,15 @@ int32_t main() {
                 dbg(ch);
                 if(ch == 0) {
                     // visit the complete left part
+                    // ans++;
                     ans += (1ll << h) - 1;
-                }
-                ch = 0;
+                    // n -= left_leaves;
+                    // ch = 1;
+                } else ch = 0;
             }
             h--;
             dbg(ans);
+            // ch ^= 1;
         }
         cout << ans << endl;
     }
