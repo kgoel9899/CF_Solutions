@@ -29,15 +29,15 @@ void dfs(int curr, int par) {
     for(auto i : adj[curr]) {
         if(i == par) continue;
         dfs(i, curr);
-        inc = max(inc, dp[i][1]);
-        dec = max(dec, dp[i][0]);
+        inc = max(inc, dp[i][0]);
+        dec = max(dec, dp[i][1]);
     }
-    dp[curr][0] += dec;
-    dp[curr][1] += inc;
-    int val = v[curr] + dp[curr][1] - dp[curr][0];
-    dbg(val, curr);
-    if(val < 0) dp[curr][1] += abs(val);
-    else if(val > 0) dp[curr][0] += abs(val);
+    v[curr] += inc;
+    v[curr] -= dec;
+    if(v[curr] < 0) inc += abs(v[curr]);
+    else dec += abs(v[curr]);
+    dp[curr][0] += inc;
+    dp[curr][1] += dec;
 }
 int32_t main() {
     fast;
@@ -60,8 +60,7 @@ int32_t main() {
         }
         dp.clear();
         dp.resize(n + 1, vector<int>(2));
-        dfs(1, 0);
-        dbg(dp);
+        dfs(1, -1);
         cout << dp[1][0] + dp[1][1] << endl;
     }
 }
