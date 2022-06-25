@@ -29,36 +29,33 @@ int32_t main() {
         int h, n;
         cin >> h >> n;
         int ans = 0;
-        int ch = 0; // 0 = L, 1 = R .. direction to move w.r.t. to the current node
+        int ch = 0; // 0 = L, 1 = R
         while(h) {
             int left_leaves = (1ll << (h - 1));
+            dbg(h, n, left_leaves);
             if(n <= left_leaves) {
+                dbg("here", ch, n);
                 // it is in the left part
-                ans++; // for the current node
+                ans++;
                 if(ch == 1) {
                     // visit the complete right part
                     ans += (1ll << h) - 1;
                 }
-                // if ch == 0, then we would have moved left so the next direction is right -> ch = 1;
-                // if ch == 1, then after including the complete right part, we would have moved left of the current node
-                // so the next direction is right -> ch = 1;
-                // both the cases -> ch = 1;
                 ch = 1;
             } else {
                 // it is in the right part
-                ans++; // for the current node
-                n -= left_leaves; // because it is in the right part, subtract the leaves in the left part to maintain consistency
+                dbg("here2", ch, n);
+                ans++;
+                n -= left_leaves;
+                dbg(ch);
                 if(ch == 0) {
                     // visit the complete left part
                     ans += (1ll << h) - 1;
                 }
-                // if ch == 1, then we would have moved right so the next direction is left -> ch = 0;
-                // if ch == 0, then after including the complete left part, we would have moved right of the current node
-                // so the next direction is left -> ch = 0;
-                // both the cases -> ch = 0;
                 ch = 0;
             }
             h--;
+            dbg(ans);
         }
         cout << ans << endl;
     }
