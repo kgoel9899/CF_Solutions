@@ -135,9 +135,13 @@ int32_t main() {
         for(int j=1;j<LOG;j++) {
             for(int i=1;i<=n;i++) {
                 int intermediate = up[i][j - 1];
+                if(i == 5) dbg(i, j, intermediate);
                 if(intermediate != -1) up_people[i][j] = merge(up_people[i][j - 1], up_people[intermediate][j - 1]);
             }
         }
+        dbg(up);
+        dbg(people);
+        dbg(up_people);
         while(q--) {
             int u, v, a;
             cin >> u >> v >> a;
@@ -145,7 +149,7 @@ int32_t main() {
             vector<int> ans;
             int diff = dist[u] - dist[lca];
             for(int i=LOG-1;i>=0;i--) {
-                if((diff & (1 << i)) && u != -1) {
+                if(diff && (diff & (1 << i)) && u != -1) {
                     ans = merge(ans, up_people[u][i]);
                     u = up[u][i];
                     diff -= (1 << i);
@@ -153,7 +157,7 @@ int32_t main() {
             }
             diff = dist[v] - dist[lca];
             for(int i=LOG-1;i>=0;i--) {
-                if((diff & (1 << i)) && v != -1) {
+                if(diff && (diff & (1 << i)) && v != -1) {
                     ans = merge(ans, up_people[v][i]);
                     v = up[v][i];
                     diff -= (1 << i);
