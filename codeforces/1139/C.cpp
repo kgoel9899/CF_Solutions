@@ -1,77 +1,93 @@
-#include<iostream>
-#include<cstring>
-#include<vector>
-#include<set>
-#include<map>
-#include<queue>
-#include<stack>
-#include<cmath>
-#include<algorithm>
-#include<unordered_set>
 #include<bits/stdc++.h>
-#define MOD 1000000007
-#define ll long long
-#define IO ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 using namespace std;
-ll modRecursive(ll a, ll b, ll c){
-    if(b == 0){
-        return 1;
-    }
-    if(b % 2 ==0){
-        return modRecursive((a * a) % c, b / 2, c);
-    } else {
-        return ((a % c) * (modRecursive((a * a) % c, b / 2, c))) % c;
-    }
+#define MOD 1000000007
+#define mod 998244353
+#define int long long
+#define setpres cout << fixed << setprecision(10)
+#define all(x) (x).begin(), (x).end()
+#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define endl "\n"
+const int INF = 1e18;
+
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
+int n, k;
+vector<vector<pair<int, int>>> adj;
+int modRecursive(int a, int b, int c) {
+    if(b == 0) return 1;
+    if(b == 1) return a;
+    int temp = modRecursive(a, b / 2, c);
+    if(b % 2 == 0) return (temp * temp) % c;
+    else return (a * ((temp * temp) % c)) % c;
 }
-void dfs(ll start, vector<ll>* edges, ll n, set<ll>& visited, set<ll> * component) {
-    visited.insert(start);
-    component->insert(start);
-    vector<ll>::iterator it = edges[start].begin();
-    for(;it != edges[start].end(); it++) {
-        ll i = *it;
-        if (visited.count(i) > 0) {
-            continue;
-        }
-        dfs(i, edges,n, visited, component);
-    }
+vector<int> par, sz;
+void make_set(int u) {
+    par[u] = u;
+    sz[u] = 1;
 }
-set<set<ll>*>* getComponents(vector<ll>* edges, ll n) {
-    set<ll> visited;
-    set<set<ll>*>* output = new set<set<ll>*>();
-    for (ll i=0;i<n;i++) {
-        if (visited.count(i) == 0) {
-            set<ll> * component = new set<ll>();
-            dfs(i, edges,n, visited, component);
-            output->insert(component);
-        }
-    }
-    return output;
+int find_set(int u) {
+    if(par[u] == u) return u;
+    return par[u] = find_set(par[u]);
 }
-int main() {
-    IO;
-    ll n, k;
-    cin >> n >> k;
-    ll ct = modRecursive(n, k, MOD);
-    vector<ll>* edges = new vector<ll>[n];
-    for (ll i=0;i<n-1;i++) {
-        ll j, k, x;
-        cin >> j >> k >> x;
-        if(x == 0) {
-            edges[j - 1].push_back(k - 1);
-            edges[k - 1].push_back(j - 1);
+void union_sets(int u, int v) {
+    u = find_set(u);
+    v = find_set(v);
+    if(u == v) return;
+    if(sz[u] < sz[v]) swap(u, v);
+    par[v] = u;
+    sz[u] += sz[v];
+}
+int32_t main() {
+    fast;
+    int tt = 1;
+    // cin >> tt;
+    while(tt--) {
+        cin >> n >> k;
+        adj.clear();
+        adj.resize(n + 1);
+        for(int i=0;i<n-1;i++) {
+            int a, b, c;
+            cin >> a >> b >> c;
+            adj[a].push_back({b, c});
+            // adj[b].push_back({a, c});
         }
+        int tot = modRecursive(n, k, MOD);
+        par.clear();
+        par.resize(n + 1);
+        sz.clear();
+        sz.resize(n + 1);
+        for(int i=1;i<=n;i++) {
+            make_set(i);
+        }
+        for(int i=1;i<=n;i++) {
+            for(auto j : adj[i]) {
+                if(j.second == 0) union_sets(i, j.first);
+            }
+        }
+        map<int, int> m;
+        int sum = 0;
+        for(int i=1;i<=n;i++) {
+            m[find_set(i)]++;
+        }
+        for(auto i : m) {
+            tot -= modRecursive(i.second, k, MOD);
+            tot += MOD;
+            tot %= MOD;
+            sum += i.second;
+        }
+        tot -= (n - sum);
+        tot += MOD;
+        tot %= MOD;
+        cout << tot << endl; 
     }
-    set<set<ll>*>* components = getComponents(edges, n);
-    set<set<ll>*>::iterator it = components->begin();
-    while (it != components->end()) {
-        set<ll>* component = *it;
-        ct -= modRecursive(component->size(), k, MOD);
-        ct += MOD;
-        ct %= MOD;
-        delete component;
-        it++;
-    }
-    delete components;
-    delete [] edges;
-    cout << ct << endl;
 }
