@@ -1,69 +1,50 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-#define ff first
-#define ss second
-#define ll long long
-#define ld long double
-#define pb push_back
-#define mp make_pair
-#define w(x) int t; cin >> t; while(t--)
-#define rep(i, a, b) for(int i = a; i <= b; i++)
-#define repd(i, b, a) for(int i = b; i >= a; i--)
-#define mk(arr,n,type) type* arr = new type[n];
-#define pii pair<int, int>
-#define pll pair<ll, ll>
-#define vi vector<int>
-#define vl vector<ll>
-#define um unordered_map
-#define us unordered_set
-#define pqm priority_queue<int>
-#define pqmi priority_queue<int, vi, greater<int>>
-#define lb(v, val) lower_bound(v.begin(), v.end(), val) - v.begin();
-#define ub(v, val) upper_bound(v.begin(), v.end(), val) - v.begin();
-#define setbits(x) __builtin_popcountll(x)
+#define MOD 1000000007
+#define mod 998244353
+#define int long long
+#define setpres cout << fixed << setprecision(10)
+#define all(x) (x).begin(), (x).end()
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
-#define out(flag) flag ? cout << "NO" << endl : cout << "YES" << endl;
-#define MAX 100001
-#define mod 998244353
-#define inf 1e18
-#define PI 3.1415926535
+const int INF = 1e18;
 
-void IO() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
 #endif
-	fast;
-}
 
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
 
-int main() {
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-	IO();
-
-	int t;
-	cin >> t;
-	while (t--) {
-		int n, x;
-		cin >> n >> x;
-		if (n == 1) cout << "Ayush" << endl;
-		else {
-			vector<int> tot(n + 1);
-			for (int i = 0; i < n - 1; i++) {
-				int a, b;
-				cin >> a >> b;
-				tot[a]++;
-				tot[b]++;
-			}
-			if (tot[x] <= 1) cout << "Ayush" << endl;
-			else {
-				if (n % 2 == 1) cout << "Ashish" << endl;
-				else cout << "Ayush" << endl;
-			}
-		}
-	}
-
-	return 0;
+int32_t main() {
+    fast;
+    int tt = 1;
+    cin >> tt;
+    while(tt--) {
+        int n, k;
+        cin >> n >> k;
+        vector<vector<int>> adj(n + 1);
+        vector<int> deg(n + 1);
+        for(int i=0;i<n-1;i++) {
+            int a, b;
+            cin >> a >> b;
+            adj[a].push_back(b);
+            adj[b].push_back(a);
+            deg[a]++;
+            deg[b]++;
+        }
+        if(deg[k] <= 1) {
+            cout << "Ayush" << endl;
+            continue;
+        }
+        int rem = n - 3;
+        // we have 3 nodes now
+        if(rem % 2 == 0) cout << "Ashish" << endl;
+        else cout << "Ayush" << endl;
+    }
 }
