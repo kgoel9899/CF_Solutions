@@ -1,68 +1,68 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-#define ff first
-#define ss second
-#define ll long long
-#define ld long double
-#define pb push_back
-#define mp make_pair
-#define w(x) int t; cin >> t; while(t--)
-#define rep(i, a, b) for(int i = a; i <= b; i++)
-#define repd(i, b, a) for(int i = b; i >= a; i--)
-#define mk(arr,n,type) type* arr = new type[n];
-#define pii pair<int, int>
-#define pll pair<ll, ll>
-#define vi vector<int>
-#define vl vector<ll>
-#define um unordered_map
-#define us unordered_set
-#define pqm priority_queue<int>
-#define pqmi priority_queue<int, vi, greater<int>>
-#define lb(v, val) lower_bound(v.begin(), v.end(), val) - v.begin();
-#define ub(v, val) upper_bound(v.begin(), v.end(), val) - v.begin();
-#define setbits(x) __builtin_popcountll(x)
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define out(flag) flag ? cout << "NO" << endl : cout << "YES" << endl;
-#define MAX 100001
+#define MOD 1000000007
 #define mod 998244353
-#define inf 1e18
-#define PI 3.1415926535
+#define int long long
+#define setpres cout << fixed << setprecision(10)
+#define all(x) (x).begin(), (x).end()
+#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define endl "\n"
+const int INF = 1e18;
 
-void IO() {
-	fast;
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
+string s, t, ans;
+void solve(int i, int j, string curr) {
+    if(i == s.size() && j == t.size()) {
+        if(curr.size() > ans.size()) ans = curr;
+        return;
+    }
+    if(i > s.size() || j > t.size()) return;
+    if(s[i] == t[j]) solve(i + 1, j + 1, curr + s[i]);
+    else {
+        solve(i + 1, j, curr);
+        solve(i, j + 1, curr);
+    }
 }
-
-int main() {
-
-	IO();
-
-	string s, t;
-	cin >> s >> t;
-	int ns = s.size(), nt = t.size();
-	vector<vector<int>> dp(ns + 1, vector<int>(nt + 1));
-	for (int i = 1; i <= ns; i++) {
-		for (int j = 1; j <= nt; j++) {
-			if (s[i - 1] == t[j - 1]) {
-				dp[i][j] = 1 + dp[i - 1][j - 1];
-			} else {
-				dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
-			}
-		}
-	}
-	// cout << dp[ns][nt] << endl;
-	string ans = "";
-	int i = ns, j = nt;
-	while (i > 0 && j > 0) {
-		if (dp[i][j] == dp[i][j - 1]) j--;
-		else if (dp[i - 1][j] == dp[i][j]) i--;
-		else {
-			ans += s[i - 1];
-			i--, j--;
-		}
-	}
-	reverse(ans.begin(), ans.end());
-	cout << ans << endl;
-
-	return 0;
+int32_t main() {
+    fast;
+    int tt = 1;
+    // cin >> tt;
+    while(tt--) {
+        cin >> s >> t;
+        ans = "";
+        // string curr = "";
+        // solve(0, 0, curr);
+        vector<vector<int>> dp(s.size() + 1, vector<int>(t.size() + 1)); // dp[i][j] = s[0..i-1] and t[0..j-1] length of lcs
+        for(int i=1;i<=s.size();i++) {
+            for(int j=1;j<=t.size();j++) {
+                if(s[i - 1] == t[j - 1]) dp[i][j] = 1 + dp[i - 1][j - 1];
+                else dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+            }
+        }
+        // cout << dp[s.size()][t.size()] << endl;
+        int i = s.size(), j = t.size();
+        while(i > 0 && j > 0) {
+            if(s[i - 1] == t[j - 1]) {
+                ans += s[i - 1];
+                i--;
+                j--;
+            } else {
+                if(dp[i - 1][j] > dp[i][j - 1]) i--;
+                else j--;
+            }
+        }
+        reverse(all(ans));
+        cout << ans << endl;
+    }
 }
