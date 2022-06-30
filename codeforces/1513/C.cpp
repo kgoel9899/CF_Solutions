@@ -34,24 +34,13 @@ int32_t main() {
     int tt = 1;
     cin >> tt;
     dp.clear();
-    // dp.resize(10, vector<int>(2e5 + 5, -1));
-    dp.resize(10, vector<int>(2e5 + 5)); // dp[i][j] = length after applying j ops to digit i
-    for(int i=0;i<=9;i++) {
-        dp[i][0] = 1;
-    }
-    for(int j=1;j<2e5+5;j++) {
-        for(int i=0;i<=9;i++) {
-            if(i < 9) dp[i][j] = dp[i + 1][j - 1];
-            else dp[i][j] = (dp[1][j - 1] + dp[0][j - 1]) % MOD;
-        }
-    }
+    dp.resize(10, vector<int>(2e5 + 5, -1));
     while(tt--) {
         cin >> n >> m;
         string s = to_string(n);
         int ans = 0;
         for(auto i : s) {
-            // ans += solve(i - '0', m);
-            ans += dp[i - '0'][m];
+            ans += solve(i - '0', m);
             ans %= MOD;
         }
         cout << ans << endl;
