@@ -52,83 +52,47 @@ int32_t main() {
                 cin >> v[i][j];
             }
         }
-        
-        // editorial greedy
-        int xr = 0;
-        for(int i=0;i<n;i++) {
-            xr ^= v[i][0];
-        }
-        if(xr != 0) {
-            cout << "TAK" << endl;
-            for(int i=0;i<n;i++) {
-                cout << 1 << " ";
-            }
-            cout << endl;
-            continue;
-        }
-        int row = -1, col = -1;
-        for(int i=0;i<n;i++) {
-            for(int j=1;j<m;j++) {
-                if(v[i][j] != v[i][0]) {
-                    row = i;
-                    col = j;
-                    break;
+        dp.clear();
+        dp.resize(n + 1, vector<pair<int, int>>(1024));
+        // Iterative
+        dp[0][0] = {1, -1}; // we don't have anything, xor 0 is possible and index = -1
+        for(int i=1;i<=n;i++) {
+            for(int j=0;j<1024;j++) {
+                bool ans = false;
+                int ind = -1;
+                for(int k=1;k<=m;k++) {
+                    if(dp[i - 1][j ^ v[i - 1][k - 1]].first) {
+                        ans = true;
+                        ind = k;
+                    }
                 }
+                dp[i][j] = {ans, ind};
             }
-            if(row != -1) break;
         }
-        if(row != -1) {
+        bool ans = false;
+        int xr = 0;
+        for(int i=1;i<1024;i++) {
+            if(dp[n][i].first) {
+                ans = true;
+                xr = i;
+            }
+        }
+        if(ans) {
             cout << "TAK" << endl;
-            for(int i=0;i<n;i++) {
-                if(i == row) cout << col + 1 << " ";
-                else cout << 1 << " ";
+            vector<int> prt;
+            int row = n;
+            while(row > 0) {
+                int curr = dp[row][xr].second;
+                prt.push_back(curr);
+                xr ^= v[row - 1][curr - 1];
+                row--;
+            }
+            reverse(all(prt));
+            for(auto i : prt) {
+                cout << i << " ";
             }
             cout << endl;
-            continue;
-        }
-        cout << "NIE" << endl;
-        
-        // dp.clear();
-        // dp.resize(n + 1, vector<pair<int, int>>(1024));
-        // // Iterative
-        // dp[0][0] = {1, -1}; // we don't have anything, xor 0 is possible and index = -1
-        // for(int i=1;i<=n;i++) {
-        //     for(int j=0;j<1024;j++) {
-        //         bool ans = false;
-        //         int ind = -1;
-        //         for(int k=1;k<=m;k++) {
-        //             if(dp[i - 1][j ^ v[i - 1][k - 1]].first) {
-        //                 ans = true;
-        //                 ind = k;
-        //             }
-        //         }
-        //         dp[i][j] = {ans, ind};
-        //     }
-        // }
-        // bool ans = false;
-        // int xr = 0;
-        // for(int i=1;i<1024;i++) {
-        //     if(dp[n][i].first) {
-        //         ans = true;
-        //         xr = i;
-        //     }
-        // }
-        // if(ans) {
-        //     cout << "TAK" << endl;
-        //     vector<int> prt;
-        //     int row = n;
-        //     while(row > 0) {
-        //         int curr = dp[row][xr].second;
-        //         prt.push_back(curr);
-        //         xr ^= v[row - 1][curr - 1];
-        //         row--;
-        //     }
-        //     reverse(all(prt));
-        //     for(auto i : prt) {
-        //         cout << i << " ";
-        //     }
-        //     cout << endl;
-        // } else cout << "NIE" << endl;
+        } else cout << "NIE" << endl;
         
         // Memoization
         // dp.resize(n + 1, vector<pair<int, int>>(1024, {-1, -1}));
