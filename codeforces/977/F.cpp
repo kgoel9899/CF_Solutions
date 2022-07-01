@@ -1,40 +1,57 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define MOD 1000000007
+#define mod 998244353
 #define int long long
+#define setpres cout << fixed << setprecision(10)
+#define all(x) (x).begin(), (x).end()
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
 const int INF = 1e18;
+
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
 int32_t main() {
-    int t = 1;
-    // cin >> t;
-    while(t--) {
+    fast;
+    int tt = 1;
+    // cin >> tt;
+    while(tt--) {
         int n;
         cin >> n;
         vector<int> v(n);
         for(int i=0;i<n;i++) {
             cin >> v[i];
         }
-        map<int, int> m;
-        int mx = 0, save = -1;
+        map<int, int> dp;
+        dp[v[0]] = 1;
+        int ans = 1, val = v[0];
+        for(int i=1;i<n;i++) {
+            if(dp.find(v[i] - 1) == dp.end()) dp[v[i]] = 1;
+            else dp[v[i]] = max(dp[v[i]], dp[v[i] - 1] + 1);
+            if(ans < dp[v[i]]) {
+                ans = dp[v[i]];
+                val = v[i];
+            }
+        }
+        dbg(dp);
+        dbg(ans, val);
+        int st = val - ans + 1;
+        cout << ans << endl;
         for(int i=0;i<n;i++) {
-            m[v[i]] = m[v[i] - 1] + 1;
-            if(m[v[i]] > mx) {
-                mx = m[v[i]];
-                save = v[i];
+            if(v[i] == st) {
+                cout << i + 1 << " ";
+                st++;
             }
-        }
-        vector<int> ans;
-        for(int i=n-1;i>=0;i--) {
-            if(v[i] == save) {
-                ans.push_back(i + 1);
-                save--;
-            }
-        }
-        reverse(ans.begin(), ans.end());
-        cout << ans.size() << endl;
-        for(auto i : ans) {
-            cout << i << " ";
         }
         cout << endl;
     }
