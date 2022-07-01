@@ -25,7 +25,6 @@ int n, m;
 vector<vector<int>> v;
 vector<vector<pair<int, int>>> dp;
 // dp[i][k] = till ith row a xor of k is possible or not
-
 pair<int, int> solve(int ind, int xr) {
     if(ind == n) return {xr != 0, 1};
     if(dp[ind][xr].first != -1) return dp[ind][xr];
@@ -54,7 +53,6 @@ int32_t main() {
         }
         dp.clear();
         dp.resize(n + 1, vector<pair<int, int>>(1024));
-        // Iterative
         dp[0][0] = {1, -1}; // we don't have anything, xor 0 is possible and index = -1
         for(int i=1;i<=n;i++) {
             for(int j=0;j<1024;j++) {
@@ -70,6 +68,7 @@ int32_t main() {
             }
         }
         bool ans = false;
+        dbg(dp);
         int xr = 0;
         for(int i=1;i<1024;i++) {
             if(dp[n][i].first) {
@@ -77,7 +76,9 @@ int32_t main() {
                 xr = i;
             }
         }
+        dbg(ans, xr);
         if(ans) {
+            assert(xr != 0);
             cout << "TAK" << endl;
             vector<int> prt;
             int row = n;
@@ -94,7 +95,6 @@ int32_t main() {
             cout << endl;
         } else cout << "NIE" << endl;
         
-        // Memoization
         // dp.resize(n + 1, vector<pair<int, int>>(1024, {-1, -1}));
         // pair<int, int> ans = solve(0, 0);
         // // dbg(dp);
