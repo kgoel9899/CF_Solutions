@@ -42,6 +42,8 @@ int32_t main() {
         for(auto i : s) {
             m[i]++;
         }
+        // dbg(m);
+        // dbg(nxt);
         int ok = 1;
         for(auto i : t) {
             if(m.find(i) == m.end()) {
@@ -53,18 +55,22 @@ int32_t main() {
             cout << -1 << endl;
             continue;
         }
+        // dbg(nxt);
         int ans = 0, curr = 0;
         for(auto i : t) {
             if(curr == n) {
                 curr = 0;
                 ans++;
             }
+            // assert(curr < n);
             curr = nxt[curr][i - 'a'];
             if(curr == n) {
                 ans++;
                 curr = nxt[0][i - 'a'];
             }
             curr++;
+            // dbg(i, curr);
+            dbg(i, curr, ans);
         }
         ans++;
         cout << ans << endl;
