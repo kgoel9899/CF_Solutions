@@ -52,62 +52,19 @@ int32_t main() {
             }
         }
         dp.clear();
-        dp.resize(n + 1, vector<pair<int, int>>(1024));
-        dp[0][0] = {1, -1}; // we don't have anything, xor 0 is possible and index = -1
-        for(int i=1;i<=n;i++) {
-            for(int j=0;j<1024;j++) {
-                bool ans = false;
-                int ind = -1;
-                for(int k=1;k<=m;k++) {
-                    if(dp[i - 1][j ^ v[i - 1][k - 1]].first) {
-                        ans = true;
-                        ind = k;
-                    }
-                }
-                dp[i][j] = {ans, ind};
-            }
-        }
-        bool ans = false;
-        dbg(dp);
-        int xr = 0;
-        for(int i=1;i<1024;i++) {
-            if(dp[n][i].first) {
-                ans = true;
-                xr = i;
-            }
-        }
-        dbg(ans, xr);
-        if(ans) {
-            assert(xr != 0);
+        dp.resize(n + 1, vector<pair<int, int>>(1024, {-1, -1}));
+        pair<int, int> ans = solve(0, 0);
+        // dbg(dp);
+        if(ans.first) {
             cout << "TAK" << endl;
-            vector<int> prt;
-            int row = n;
-            while(row > 0) {
+            int row = 0, xr = 0;
+            while(row < n) {
                 int curr = dp[row][xr].second;
-                prt.push_back(curr);
-                xr ^= v[row - 1][curr - 1];
-                row--;
-            }
-            reverse(all(prt));
-            for(auto i : prt) {
-                cout << i << " ";
+                cout << curr + 1 << " ";
+                xr ^= v[row][curr];
+                row++;
             }
             cout << endl;
         } else cout << "NIE" << endl;
-        
-        // dp.resize(n + 1, vector<pair<int, int>>(1024, {-1, -1}));
-        // pair<int, int> ans = solve(0, 0);
-        // // dbg(dp);
-        // if(ans.first) {
-        //     cout << "TAK" << endl;
-        //     int row = 0, xr = 0;
-        //     while(row < n) {
-        //         int curr = dp[row][xr].second;
-        //         cout << curr + 1 << " ";
-        //         xr ^= v[row][curr];
-        //         row++;
-        //     }
-        //     cout << endl;
-        // } else cout << "NIE" << endl;
     }
 }
