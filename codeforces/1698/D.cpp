@@ -57,4 +57,5 @@ int32_t main() {
         cout << "! " << ans << endl;
     }
 }
-// odd number of elements match then here is the answer otherwise other side
+// odd size = odd number of elements match then here is the answer otherwise other side
+// even size = odd number of elements match then here is the answer otherwise other side
