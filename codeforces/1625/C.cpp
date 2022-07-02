@@ -21,7 +21,6 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-
 // dp[i][k] = time to reach i if we removed k posts uptill now, post at ith (if any) is not removed
 
 // final ans = min(dp[n][0] ...... dp[n][k]);
