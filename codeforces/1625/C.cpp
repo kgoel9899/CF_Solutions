@@ -21,6 +21,7 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
+
 // dp[i][k] = time to reach i if we removed k posts uptill now, post at ith (if any) is not removed
 
 // final ans = min(dp[n][0] ...... dp[n][k]);
@@ -29,6 +30,7 @@ int n, l, k;
 vector<int> d, s;
 vector<vector<int>> dp;
 int solve(int ind, int rem) {
+    dbg(ind, rem);
     if(rem < 0) return INF;
     if(ind == 0) return 0;
     if(dp[ind][rem] != -1) return dp[ind][rem];
@@ -36,6 +38,7 @@ int solve(int ind, int rem) {
     for(int i=ind-1;i>=max(0ll,ind-rem-1);i--) {
         // last board taken is i
         int removed = ind - i - 1;
+        dbg(i, ind, rem, removed);
         ans = min(ans, s[i] * (d[ind] - d[i]) + solve(i, rem - removed));
     }
     return dp[ind][rem] = ans;
@@ -58,12 +61,33 @@ int32_t main() {
         }
         d.push_back(l);
         int ans = INF;
+        dbg(d);
+        dbg(s);
         dp.clear();
-        dp.resize(n + 5, vector<int>(n + 5, -1));
-        for(int i=0;i<=k;i++) {
-            ans = min(ans, solve(n, i));
+        dp.resize(n + 5, vector<int>(n + 5, INF));
+        
+        // Iterative
+        dp[0][0] = 0;
+        for(int i=1;i<=n;i++) {
+            for(int j=0;j<=k;j++) {
+                for(int kk=i-1;kk>=max(0ll,i-j-1);kk--) {
+                    // last board taken is k
+                    int removed = i - kk - 1;
+                    dp[i][j] = min(dp[i][j], s[kk] * (d[i] - d[kk]) + dp[kk][j - removed]);
+                }
+            }
         }
-        // ans = solve(n, k);
+        for(int i=0;i<=k;i++) {
+            ans = min(ans, dp[n][i]);
+        }
         cout << ans << endl;
+        
+        // Memoization
+        // dp.resize(n + 5, vector<int>(n + 5, -1));
+        // for(int i=0;i<=k;i++) {
+        //     dbg("here");
+        //     ans = min(ans, solve(n, i));
+        // }
+        // cout << ans << endl;
     }
 }
