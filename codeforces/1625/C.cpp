@@ -63,30 +63,11 @@ int32_t main() {
         dbg(d);
         dbg(s);
         dp.clear();
-        dp.resize(n + 5, vector<int>(n + 5, INF));
-        
-        // Iterative
-        dp[0][0] = 0;
-        for(int i=1;i<=n;i++) {
-            for(int j=0;j<=k;j++) {
-                for(int kk=i-1;kk>=max(0ll,i-j-1);kk--) {
-                    // last board taken is k
-                    int removed = i - kk - 1;
-                    dp[i][j] = min(dp[i][j], s[kk] * (d[i] - d[kk]) + dp[kk][j - removed]);
-                }
-            }
-        }
-        for(int i=0;i<=k;i++) {
-            ans = min(ans, dp[n][i]);
-        }
-        cout << ans << endl;
-        
-        // Memoization
-        // dp.resize(n + 5, vector<int>(n + 5, -1));
+        dp.resize(n + 5, vector<int>(n + 5, -1));
         // for(int i=0;i<=k;i++) {
         //     dbg("here");
-        //     ans = min(ans, solve(n, i));
+            ans = min(ans, solve(n, k));
         // }
-        // cout << ans << endl;
+        cout << ans << endl;
     }
 }
