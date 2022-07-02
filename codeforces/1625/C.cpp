@@ -28,6 +28,18 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 int n, l, k;
 vector<int> d, s;
 vector<vector<int>> dp;
+int solve(int ind, int rem) {
+    if(rem < 0) return INF;
+    if(ind == 0) return 0;
+    if(dp[ind][rem] != -1) return dp[ind][rem];
+    int ans = INF;
+    for(int i=ind-1;i>=max(0ll,ind-rem-1);i--) {
+        // last board taken is i
+        int removed = ind - i - 1;
+        ans = min(ans, s[i] * (d[ind] - d[i]) + solve(i, rem - removed));
+    }
+    return dp[ind][rem] = ans;
+}
 int32_t main() {
     fast;
     int tt = 1;
@@ -47,20 +59,11 @@ int32_t main() {
         d.push_back(l);
         int ans = INF;
         dp.clear();
-        dp.resize(n + 5, vector<int>(n + 5, INF));
-        dp[0][0] = 0;
-        for(int i=1;i<=n;i++) {
-            for(int j=0;j<=k;j++) {
-                for(int kk=i-1;kk>=max(0ll,i-j-1);kk--) {
-                    // last board taken is k
-                    int removed = i - kk - 1;
-                    dp[i][j] = min(dp[i][j], s[kk] * (d[i] - d[kk]) + dp[kk][j - removed]);
-                }
-            }
-        }
+        dp.resize(n + 5, vector<int>(n + 5, -1));
         for(int i=0;i<=k;i++) {
-            ans = min(ans, dp[n][i]);
+            ans = min(ans, solve(n, i));
         }
+        ans = solve(n, k);
         cout << ans << endl;
     }
 }
