@@ -63,7 +63,7 @@ int32_t main() {
         for(int i=0;i<=k;i++) {
             ans = min(ans, solve(n, i));
         }
-        ans = solve(n, k);
+        // ans = solve(n, k);
         cout << ans << endl;
     }
 }
