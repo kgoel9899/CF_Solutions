@@ -61,7 +61,6 @@ int32_t main() {
         for(int i=0;i<=k;i++) {
             ans = min(ans, dp[n][i]);
         }
-        // ans = dp[n][k];
         cout << ans << endl;
     }
 }
