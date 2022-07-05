@@ -38,17 +38,21 @@ int32_t main() {
         map<pair<int, int>, int> mpx, mpy;
         mpx[{0, 0}]++;
         mpy[{n - 1, m - 1}]++;
+        dbg(mpx);
+        dbg(mpy);
         while(mpx.size() != 0 || mpy.size() != 0) {
             map<pair<int, int>, int> tempx, tempy;
             int one = 0, zero = 0;
             for(auto i : mpx) {
                 if(mpy.find(i.first) == mpy.end()) {
+                    // assert(i.second == 1);
                     if(v[i.first.first][i.first.second] == 1) one++;
                     else zero++;
                 }
             }
             for(auto i : mpy) {
                 if(mpx.find(i.first) == mpx.end()) {
+                    // assert(i.second == 1);
                     if(v[i.first.first][i.first.second] == 1) one++;
                     else zero++;
                 }
@@ -68,6 +72,8 @@ int32_t main() {
                 ny = i.first.second - 1;
                 if(ny >= 0) tempy[{nx, ny}]++;
             }
+            dbg(tempx, ans, one, zero);
+            dbg(tempy, ans);
             mpx = tempx;
             mpy = tempy;
         }
