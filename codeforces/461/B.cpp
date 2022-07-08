@@ -1,74 +1,93 @@
-#include<bits/stdc++.h>
+// https://codeforces.com/contest/461/submission/29958717
+#include <bits/stdc++.h>
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+ 
+#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
-const int INF = 1e18;
+#define Max(x,y,z) max(x,max(y,z))
+#define Min(x,y,z) min(x,min(y,z))
+#define fr(i,s,e) for(i=s;i<e;i++)
+#define rf(i,s,e) for(i=s-1;i>=e;i--)
+#define pb push_back
+#define eb emblace_back
+#define mp make_pair
+#define ff first
+#define ss second
+#define trace1(x)                cerr<<#x<<": "<<x<<endl
+#define trace2(x, y)             cerr<<#x<<": "<<x<<" | "<<#y<<": "<<y<<endl
+#define trace3(x, y, z)          cerr<<#x<<":" <<x<<" | "<<#y<<": "<<y<<" | "<<#z<<": "<<z<<endl
+#define trace4(a, b, c, d)       cerr<<#a<<": "<<a<<" | "<<#b<<": "<<b<<" | "<<#c<<": "<<c<<" | "<<#d<<": "<<d<<endl
+#define trace5(a, b, c, d, e)    cerr<<#a<<": "<<a<<" | "<<#b<<": "<<b<<" | "<<#c<<": "<<c<<" | "<<#d<<": "<<d<<" | "<<#e<< ": "<<e<<endl
+#define trace6(a, b, c, d, e, f) cerr<<#a<<": "<<a<<" | "<<#b<<": "<<b<<" | "<<#c<<": "<<c<<" | "<<#d<<": "<<d<<" | "<<#e<< ": "<<e<<" | "<<#f<<": "<<f<<endl
+ 
+typedef long long ll;
+typedef long double ld;
+typedef unsigned int uint;
+typedef unsigned long long ull;
+typedef pair<int, int> pii;
+typedef pair<long long, long long> pll;
+typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef vector<vvi> vvvi;
+typedef vector<vvvi> vvvvi;
+typedef vector<long long> vll;
+typedef vector<vll> vvll;
+typedef vector<vvll> vvvll;
+typedef vector<vvvll> vvvvll;
+typedef vector<char> vc;
+typedef vector<vc> vvc;
+typedef vector<vvc> vvvc;
+typedef vector<pair<long long,long long> > vpll;
+typedef vector<vector<pair<ll,ll> > > vvpll;
+typedef vector<bool> vb;
+typedef vector<vb> vvb;
+ 
+#define PI 3.141592653589793
+#define MOD 1000000007
+ 
+template<typename T> T gcd(T a,T b) { if(a==0) return b; return gcd(b%a,a); }
+template<typename T> T pow(T a,T b, ll m){T ans=1; while(b>0){ if(b%2==1) ans=(ans*a)%m; b/=2; a=(a*a)%m; } return ans%m; }
+ 
+const int N=1e5+5;
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
+long long dp[N][2];
+vector<int> g[N];
+int a[N];
+int col[N];
 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
-
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
-
-// https://abitofcs.blogspot.com/2014/12/dynamic-programming-on-tree-forming-up.html
-int n;
-vector<vector<int>> adj, dp;
-vector<int> col;
-void dfs(int curr, int par) {
-    if(col[curr] == 1) dp[curr][1] = 1;
-    else dp[curr][0] = 1;
-    for(auto i : adj[curr]) {
-        if(i == par) continue;
-        dfs(i, curr);
-        int black = dp[curr][1];
-        int white = dp[curr][0];
-        
-        // include i
-        dp[curr][1] = black * dp[i][0] + white * dp[i][1];
-        dp[curr][1] %= MOD;
-        dp[curr][0] = white * dp[i][0];
-        dp[curr][0] %= MOD;
-        
-        // exclude i
-        dp[curr][1] += black * dp[i][1];
-        dp[curr][1] %= MOD;
-        dp[curr][0] += white * dp[i][1];
-        dp[curr][0] %= MOD;
-    }
+void dfs(int k, int par)
+{
+	dp[k][0]=(!col[k]);
+	dp[k][1]=col[k];
+	for(auto it:g[k])
+	{
+		if(it==par)
+			continue;
+		dfs(it,k);
+		long long white=dp[it][0];
+		long long black=dp[it][1];
+		dp[k][1]=(dp[k][0] * black)%MOD + (dp[k][1] * white)%MOD + (dp[k][1] * black)%MOD;
+		dp[k][1]%=MOD;
+		dp[k][0]=(dp[k][0] * white)%MOD + (dp[k][0] * black)%MOD;
+		dp[k][0]%=MOD;
+	}
 }
-int32_t main() {
-    fast;
-    int tt = 1;
-    // cin >> tt;
-    while(tt--) {
-        cin >> n;
-        adj.clear();
-        adj.resize(n);
-        for(int i=0;i<n-1;i++) {
-            int a;
-            cin >> a;
-            adj[a].push_back(i + 1);
-            adj[i + 1].push_back(a);
-        }
-        col.clear();
-        col.resize(n);
-        for(int i=0;i<n;i++) {
-            cin >> col[i];
-        }
-        dp.clear();
-        dp.resize(n, vector<int>(2));
-        dfs(0, -1);
-        cout << dp[0][1] << endl;
-    }
+int main()
+{
+	IOS;
+	int n;
+	cin>>n;
+	for(int i=1;i<n;i++)
+	{
+		cin>>a[i];
+		g[i].pb(a[i]);
+		g[a[i]].pb(i);
+	}
+	for(int i=0;i<n;i++)
+	{
+		cin>>col[i];
+	}
+	dfs(0,0);
+	cout<<dp[0][1];
+	return 0;
 }
