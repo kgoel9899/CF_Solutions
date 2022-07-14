@@ -22,6 +22,7 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 int cost(string& a, string& b, string& c, string& d, int n) {
+    // compare with a
     int ans = 0;
     for(int i=1;i<n-1;i++) {
         int ct = 0;
@@ -63,7 +64,8 @@ int32_t main() {
                 d += v[j][col];
             }
             col++;
-            ans += cost(a, b, c, d, a.size());
+            dbg(a, b, c, d);
+            ans += min({cost(a, b, c, d, a.size()), cost(b, a, c, d, a.size()), cost(c, b, a, d, a.size()), cost(d, b, c, a, a.size())});
             int o = 0, z = 0;
             if(a[0] == '0') z++;
             else o++;
