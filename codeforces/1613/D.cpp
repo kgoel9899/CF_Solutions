@@ -56,7 +56,7 @@ int32_t main() {
         vector<int> dp1(n + 2, 0), dp2(n + 2, 0);
         dp1[0] = 1;
         for(auto i : v) {
-            // i am putting 'i'
+            // i am putting i
             if(i > 0) {
                 dp2[i - 1] = dp1[i - 1] + 2 * dp2[i - 1];
                 dp2[i - 1] %= mod;
