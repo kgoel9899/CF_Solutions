@@ -21,10 +21,10 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-// hint from editorial
 vector<int> sz;
 vector<vector<int>> dp;
 bool solve(int ind, int first, int req, int n) {
+    // dbg(ind);
     if(first == req) return true;
     if(first > req) return false;
     if(ind == n) return false;
@@ -59,9 +59,22 @@ int32_t main() {
             }
         }
         reverse(all(sz));
+        dbg(sz);
         dp.clear();
         dp.resize(sz.size(), vector<int>(n + 1, -1));
         if(solve(0, 0, n, sz.size())) cout << "YES" << endl;
         else cout << "NO" << endl;
     }
 }
+// 1 2
+// 4 3
+
+// 1 2
+
+// 1 3 4 2
+
+
+// 4 3
+// 1 2
+
+// 1 2 4 3
