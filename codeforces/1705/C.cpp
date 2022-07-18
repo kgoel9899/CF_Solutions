@@ -37,6 +37,12 @@ int32_t main() {
             cin >> l >> r;
             v.push_back({l, r});
         }
+        vector<int> pref;
+        pref.push_back(n);
+        for(int i=0;i<v.size();i++) {
+            pref.push_back(pref.back() + v[i].second - v[i].first + 1);
+        }
+        // dbg(pref);
         while(q--) {
             int k;
             cin >> k;
@@ -49,7 +55,10 @@ int32_t main() {
             for(;i<v.size();i++) {
                 int len = v[i].second - v[i].first + 1;
                 tot += len;
-                if(tot >= k) break;
+                if(tot >= k) {
+                    break;
+                }
+                // tot += len;
             }
             assert(i < v.size());
             // dbg(i, tot);
@@ -68,7 +77,9 @@ int32_t main() {
                 }
                 prev = v[i].second - (tot - prev);
                 tot -= v[i].second - v[i].first + 1;
+                // dbg(prev, tot);
                 i--;
+                // break;
             }
             // dbg(prev);
             assert(prev >= 1 && prev <= n);
@@ -76,16 +87,23 @@ int32_t main() {
         }
     }
 }
+
 // mark mar kmar
 
 // m m mm mmm
+
 
 // mark
 // mark ark
 // mark ark kark
 // mark mar kmar
 
+
 // mark
 
 // mark ar
 // mark ar markar
+
+
+// mark
+// mark k k
