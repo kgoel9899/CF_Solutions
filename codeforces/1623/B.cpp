@@ -28,7 +28,7 @@ void dfs(int l, int r) {
     if(l > r) return;
     if(l == r) {
         ans.push_back({l, r, l});
-        s.erase({l, r});
+        // s.erase({l, r});
         return;
     }
     int ok = 0;
@@ -38,14 +38,15 @@ void dfs(int l, int r) {
         if(i + 1 <= r && s.count({i + 1, r}) == 0) ok2 = 0;
         if(ok1 && ok2) {
             ans.push_back({l, r, i});
-            s.erase({l, i - 1});
-            s.erase({i + 1, r});
+            // s.erase({l, i - 1});
+            // s.erase({i + 1, r});
             ok = 1;
             dfs(l, i - 1);
             dfs(i + 1, r);
             break;
         }
     }
+    // dbg(l, r, ok);
     assert(ok);
 }
 int32_t main() {
@@ -60,6 +61,7 @@ int32_t main() {
             cin >> a >> b;
             s.insert({a, b});
         }
+        dbg(s);
         ans.clear();
         dfs(1, n);
         for(auto i : ans) {
