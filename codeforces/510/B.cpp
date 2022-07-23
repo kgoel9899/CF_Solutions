@@ -24,6 +24,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 vector<pair<int, int>> dirs = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 bool dfs(int i, int j, int pi, int pj, int n, int m, char& orig, vector<string>& v, vector<vector<int>>& vis) {
     vis[i][j] = 1;
+    dbg(i, j, orig);
     for(auto k : dirs) {
         int nx = i + k.first;
         int ny = j + k.second;
@@ -51,6 +52,7 @@ int32_t main() {
             for(int j=0;j<m;j++) {
                 if(vis[i][j]) continue;
                 ans |= dfs(i, j, -1, -1, n, m, v[i][j], v, vis);
+                dbg(ans);
             }
         }
         if(ans) cout << "Yes" << endl;
