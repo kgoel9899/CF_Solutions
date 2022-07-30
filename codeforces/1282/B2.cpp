@@ -37,24 +37,23 @@ int32_t main() {
     while(tt--) {
         int n, p, k;
         cin >> n >> p >> k;
-        vector<int> v(n);
-        for(int i=0;i<n;i++) {
+        vector<int> v(n + 1);
+        for(int i=1;i<=n;i++) {
             cin >> v[i];
         }
         sort(all(v));
-        vector<int> dp(n);
-        for(int i=0;i<k-1;i++) {
+        vector<int> dp(n + 1);
+        for(int i=1;i<=k-1;i++) {
             dp[i] += v[i];
-            if(i) dp[i] += dp[i - 1];
+            dp[i] += dp[i - 1];
         }
-        dp[k - 1] = v[k - 1];
         int ans = 0;
-        for(int i=0;i<n;i++) {
+        for(int i=1;i<=n;i++) {
             if(i - k >= 0) {
                 dp[i] += v[i];
                 dp[i] += dp[i - k];
             }
-            if(dp[i] <= p) ans = i + 1;
+            if(dp[i] <= p) ans = i;
         }
         cout << ans << endl;
         // vector<vector<int>> dp(n, vector<int>(p + 1, -1));
