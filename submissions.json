@@ -12298,6 +12298,25 @@
     ],
     "timestamp": "Apr/28/2022 23:16"
   },
+  "CF166769817": {
+    "contest_id": 1714,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1714\\G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Path Prefixes",
+    "problem_url": "https://codeforces.com/contest/1714/problem/G",
+    "submission_id": "CF166769817",
+    "submission_url": "https://codeforces.com/contest/1714/submission/166769817",
+    "tags": [
+      "binary search",
+      "data structures",
+      "dfs and similar",
+      "trees",
+      "*1700"
+    ],
+    "timestamp": "Aug/03/2022 11:51"
+  },
   "CF166906563": {
     "contest_id": 1714,
     "language": "GNU C++20 (64)",
