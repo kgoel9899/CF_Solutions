@@ -42,8 +42,8 @@ int32_t main() {
             int tl = -1, tr = -1, ind = -1;
             for(int i=l;i<=r;i++) {
                 for(int j=0;j<n;j++) {
-                    if(i + v[j].size() <= orig && t.substr(i, (int)v[j].size()) == v[j]) {
-                        if(tr < (i + (int)v[j].size())) {
+                    if(i + v[j].size() <= orig && t.substr(i, v[j].size()) == v[j]) {
+                        if(tr < i + v[j].size()) {
                             tr = i + v[j].size();
                             tl = i;
                             ind = j;
