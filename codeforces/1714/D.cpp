@@ -37,8 +37,9 @@ int32_t main() {
         }
         vector<vector<int>> ans;
         int l = 0, r = 0;
+        int pos = 0;
         int ok = 1;
-        while(true) {
+        while(pos < orig) {
             int tl = -1, tr = -1, ind = -1;
             for(int i=l;i<=r;i++) {
                 for(int j=0;j<n;j++) {
@@ -57,8 +58,8 @@ int32_t main() {
             }
             ans.push_back({ind + 1, tl + 1});
             r = tr;
+            pos = tr;
             l = tl + 1;
-            if(tr == orig) break;
         }
         if(!ok) {
             cout << -1 << endl;
