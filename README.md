@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1167 | [C - Sort Zero](https://codeforces.com/contest/1712/problem/C) | [GNU C++20 (64)](./codeforces/1712/C.cpp) | `dp` `greedy` `sortings` | Aug/13/2022 23:04 | 
 1166 | [D - Coins and Queries](https://codeforces.com/contest/1003/problem/D) | [GNU C++20 (64)](./codeforces/1003/D.cpp) | `greedy` `*1600` | Aug/12/2022 13:05 | 
 1165 | [C - Build Permutation](https://codeforces.com/contest/1713/problem/C) | [GNU C++20 (64)](./codeforces/1713/C.cpp) | `constructive algorithms` `dp` `math` `*1200` | Aug/11/2022 18:48 | 
 1164 | [A - Gregor and Cryptography](https://codeforces.com/contest/1549/problem/A) | [GNU C++20 (64)](./codeforces/1549/A.cpp) | `math` `number theory` `*800` | Aug/10/2022 23:02 | 
