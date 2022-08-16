@@ -16059,6 +16059,25 @@
     ],
     "timestamp": "Aug/15/2022 03:07"
   },
+  "CF168557675": {
+    "contest_id": 1675,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1675\\F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Vlad and Unfinished Business",
+    "problem_url": "https://codeforces.com/contest/1675/problem/F",
+    "submission_id": "CF168557675",
+    "submission_url": "https://codeforces.com/contest/1675/submission/168557675",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "greedy",
+      "trees",
+      "*1800"
+    ],
+    "timestamp": "Aug/16/2022 20:52"
+  },
   "CF168733191": {
     "contest_id": 1719,
     "language": "GNU C++20 (64)",
