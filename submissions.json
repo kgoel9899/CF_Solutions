@@ -16059,6 +16059,24 @@
     ],
     "timestamp": "Aug/15/2022 03:07"
   },
+  "CF168733191": {
+    "contest_id": 1719,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1719\\D1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D1",
+    "problem_name": "Burenka and Traditions (easy version)",
+    "problem_url": "https://codeforces.com/contest/1719/problem/D1",
+    "submission_id": "CF168733191",
+    "submission_url": "https://codeforces.com/contest/1719/submission/168733191",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "dp",
+      "greedy"
+    ],
+    "timestamp": "Aug/17/2022 23:33"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
