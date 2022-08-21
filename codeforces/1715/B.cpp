@@ -25,10 +25,13 @@ int32_t main() {
     fast;
     int tt = 1;
     cin >> tt;
+    int x = 1;
     while(tt--) {
         int n, k, b, s;
         cin >> n >> k >> b >> s;
+        // if(x == 47) cout << "#" << n << "#" << k << "#" << b << "#" << s << endl;
         int tempb = b;
+        x++;
         vector<int> ans(n);
         for(int i=0;i<n;i++) {
             if(b) {
@@ -46,6 +49,7 @@ int32_t main() {
                 s -= (k - 1);
             }
         }
+        dbg(s, ans);
         int i = 0;
         while(i < n && s != 0) {
             if(s > 0) {
@@ -53,15 +57,20 @@ int32_t main() {
                 ans[i] += min(s, k - 1);
                 s -= min(s, k - 1);
                 tempb--;
+                i++;
             } else {
-                if(tempb != 0) tempb--;
-                else {
-                    assert(ans[i] == k - 1);
-                    ans[i] -= min(abs(s), k - 1);
-                    s += min(abs(s), k - 1);
+                if(tempb != 0) {
+                    i++;
+                    tempb--;
+                    continue;
                 }
+                dbg(ans[i]);
+                assert(ans[i] == k - 1);
+                ans[i] -= min(abs(s), k - 1);
+                s += min(abs(s), k - 1);
+                // ans[i] += 
+                i++;
             }
-            i++;
         }
         if(s != 0) {
             cout << -1 << endl;
