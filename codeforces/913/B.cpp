@@ -21,49 +21,35 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-int n;
-vector<vector<int>> adj;
-vector<int> leaf;
-int ans;
-void dfs(int curr, int par) {
-    dbg(curr);
-    int ct = 0;
-    for(auto i : adj[curr]) {
-        if(i == par) continue;
-        ct++;
-        dfs(i, curr);
-    }
-    if(ct == 0) leaf[curr] = 1;
-    else {
-        ct = 0;
-        for(auto i : adj[curr]) {
-            if(i == par) continue;
-            if(leaf[i]) ct++;
-        }
-        if(ct < 3) ans = ans & 0;
-    }
-}
 int32_t main() {
     fast;
     int tt = 1;
     // cin >> tt;
     while(tt--) {
+        int n;
         cin >> n;
-        adj.clear();
-        adj.resize(n + 1);
-        leaf.clear();
-        leaf.resize(n + 1);
+        vector<vector<int>> adj(n + 1);
         for(int i=2;i<=n;i++) {
-            int a;
-            cin >> a;
-            adj[a].push_back(i);
-            adj[i].push_back(a);
+            int x;
+            cin >> x;
+            adj[x].push_back(i);
         }
         dbg(adj);
-        ans = 1;
-        dfs(1, 0);
-        dbg(leaf);
-        if(ans) cout << "Yes" << endl;
+        vector<int> leaf(n + 1);
+        for(int i=1;i<=n;i++) {
+            if(adj[i].size() == 0) leaf[i] = 1;
+        }
+        int ok = 1;
+        for(int i=1;i<=n;i++) {
+            if(!leaf[i]) {
+                int ct = 0;
+                for(auto j : adj[i]) {
+                    ct += leaf[j];
+                }
+                if(ct < 3) ok = 0;
+            }
+        }
+        if(ok) cout << "Yes" << endl;
         else cout << "No" << endl;
     }
 }
