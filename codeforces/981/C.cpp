@@ -35,26 +35,31 @@ int32_t main() {
             adj[a].push_back(b);
             adj[b].push_back(a);
         }
-        int root = 1, ct = 0;
+        int ct = 0, start = 0;
+        vector<int> leaf;
         for(int i=1;i<=n;i++) {
             if(adj[i].size() >= 3) {
                 ct++;
-                root = i;
+                start = i;
             }
+            if(adj[i].size() == 1) leaf.push_back(i);
         }
-        if(ct >= 2) {
+        if(ct > 1) {
             cout << "No" << endl;
             continue;
         }
-        vector<vector<int>> ans;
-        for(int i=1;i<=n;i++) {
-            if(i == root) continue;
-            if(adj[i].size() == 1) ans.push_back({root, i});
-        }
         cout << "Yes" << endl;
-        cout << ans.size() << endl;
-        for(auto i : ans) {
-            cout << i[0] << " " << i[1] << endl;
+        dbg(leaf);
+        if(ct == 1) {
+            cout << leaf.size() << endl;
+            for(auto i : leaf) {
+                cout << start << " " << i << endl;
+            }
+            cout << endl;
+        } else {
+            assert(leaf.size() == 2);
+            cout << 1 << endl;
+            cout << leaf[0] << " " << leaf[1] << endl;
         }
     }
 }
