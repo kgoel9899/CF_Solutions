@@ -22,24 +22,25 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 int n, m;
-vector<vector<int>> adj;
 vector<int> v;
-int ans = 0;
-void dfs(int curr, int par, int mx, int curr_mx) {
-    if(v[curr] == 1) curr_mx++;
-    else curr_mx = 0;
-    mx = max(mx, curr_mx);
-    int ct = 0;
+vector<vector<int>> adj;
+vector<pair<int, int>> d; // {curr, max}
+int ans;
+void dfs(int curr, int par) {
+    if(par == -1) {
+        if(v[curr] == 1) d[curr] = {1, 1};
+    } else {
+        if(v[curr] == 1) d[curr] = {d[par].first + 1, max(d[par].second, d[par].first + 1)};
+        else d[curr] = {0, d[par].second};
+    }
+    int leaf = 1;
     for(auto i : adj[curr]) {
         if(i == par) continue;
-        dfs(i, curr, mx, curr_mx);
-        ct++;
+        dfs(i, curr);
+        leaf = 0;
     }
-    dbg(curr, mx, curr_mx);
-    if(ct == 0) {
-        // leaf
-        if(mx <= m) ans++;
-        dbg(curr);
+    if(leaf) {
+        if(d[curr].second <= m) ans++;
     }
 }
 int32_t main() {
@@ -48,21 +49,24 @@ int32_t main() {
     // cin >> tt;
     while(tt--) {
         cin >> n >> m;
-        adj.clear();
-        adj.resize(n + 1);
         v.clear();
         v.resize(n + 1);
         for(int i=1;i<=n;i++) {
             cin >> v[i];
         }
-        for(int i=0;i<n-1;i++) {
+        adj.clear();
+        adj.resize(n + 1);
+        for(int i=1;i<=n-1;i++) {
             int a, b;
             cin >> a >> b;
             adj[a].push_back(b);
             adj[b].push_back(a);
         }
+        d.clear();
+        d.resize(n + 1, {0, 0});
         ans = 0;
-        dfs(1, 0, 0, 0);
+        dfs(1, -1);
+        dbg(d);
         cout << ans << endl;
     }
 }
