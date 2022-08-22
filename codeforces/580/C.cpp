@@ -27,6 +27,7 @@ vector<vector<int>> adj;
 vector<pair<int, int>> d; // {curr, max}
 int ans;
 void dfs(int curr, int par) {
+    dbg(curr);
     if(par == -1) {
         if(v[curr] == 1) d[curr] = {1, 1};
     } else {
@@ -40,7 +41,10 @@ void dfs(int curr, int par) {
         leaf = 0;
     }
     if(leaf) {
-        if(d[curr].second <= m) ans++;
+        if(d[curr].second <= m) {
+            dbg(22222, curr);
+            ans++;
+        }
     }
 }
 int32_t main() {
@@ -62,6 +66,7 @@ int32_t main() {
             adj[a].push_back(b);
             adj[b].push_back(a);
         }
+        dbg(adj);
         d.clear();
         d.resize(n + 1, {0, 0});
         ans = 0;
