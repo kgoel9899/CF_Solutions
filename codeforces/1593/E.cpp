@@ -29,51 +29,34 @@ int32_t main() {
         int n, k;
         cin >> n >> k;
         vector<vector<int>> adj(n + 1);
-        vector<int> level(n + 1), vis(n + 1), indeg(n + 1);
+        vector<int> deg(n + 1);
         for(int i=0;i<n-1;i++) {
             int a, b;
             cin >> a >> b;
             adj[a].push_back(b);
             adj[b].push_back(a);
-            indeg[a]++;
-            indeg[b]++;
+            deg[a]++;
+            deg[b]++;
         }
+        int ans = n;
         queue<int> q;
-        map<int, int> m;
         for(int i=1;i<=n;i++) {
-            if(indeg[i] == 1) {
-                q.push(i);
-                level[i] = 1;
-                m[level[i]]++;
-                vis[i] = 1;
-                // dbg(i);
-            }
+            if(deg[i] == 1) q.push(i);
         }
-        while(!q.empty()) {
-            int f = q.front();
-            q.pop();
-            for(auto i : adj[f]) {
-                if(vis[i]) continue;
-                indeg[i]--;
-                // dbg(i);
-                if(indeg[i] == 1) {
-                    vis[i] = 1;
-                    level[i] = level[f] + 1;
-                    q.push(i);
-                    m[level[i]]++;
+        while(!q.empty() && k) {
+            int sz = q.size();
+            while(sz--) {
+                auto f = q.front();
+                q.pop();
+                ans--;
+                for(auto i : adj[f]) {
+                    deg[i]--;
+                    if(deg[i] == 1) q.push(i);
                 }
-                // if(level[i] != -1) continue;
-                // q.push(i);
-                // level[i] = level[f] + 1;
-                // m[level[i]]++;
             }
-        }
-        if(n == 1) n = 0;
-        for(auto i : m) {
-            n -= i.second;
             k--;
-            if(k == 0) break;
         }
-        cout << n << endl;
+        if(n == 1) ans = 0;
+        cout << ans << endl;
     }
 }
