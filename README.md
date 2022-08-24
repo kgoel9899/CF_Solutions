@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1178 | [C - Kuro and Walking Route](https://codeforces.com/contest/979/problem/C) | [GNU C++20 (64)](./codeforces/979/C.cpp) | `dfs and similar` `trees` `*1600` | Aug/25/2022 14:15 | 
+1179 | [C - Kuro and Walking Route](https://codeforces.com/contest/979/problem/C) | [GNU C++20 (64)](./codeforces/979/C.cpp) | `dfs and similar` `trees` `*1600` | Aug/25/2022 14:15 | 
+1178 | [A - Palindromic Indices](https://codeforces.com/contest/1682/problem/A) | [GNU C++20 (64)](./codeforces/1682/A.cpp) | `greedy` `strings` `*800` | Aug/24/2022 19:28 | 
 1177 | [C - Kefa and Park](https://codeforces.com/contest/580/problem/C) | [GNU C++20 (64)](./codeforces/580/C.cpp) | `dfs and similar` `graphs` `trees` `*1500` | Aug/23/2022 01:50 | 
 1176 | [C - Minimum  Varied Number](https://codeforces.com/contest/1714/problem/C) | [GNU C++20 (64)](./codeforces/1714/C.cpp) | `greedy` `*800` | Aug/22/2022 23:41 | 
 1175 | [C - Useful Decomposition](https://codeforces.com/contest/981/problem/C) | [GNU C++20 (64)](./codeforces/981/C.cpp) | `implementation` `trees` `*1400` | Aug/22/2022 13:14 | 
