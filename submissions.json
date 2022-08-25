@@ -16266,6 +16266,23 @@
     ],
     "timestamp": "Aug/23/2022 01:50"
   },
+  "CF169588473": {
+    "contest_id": 979,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\979\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Kuro and Walking Route",
+    "problem_url": "https://codeforces.com/contest/979/problem/C",
+    "submission_id": "CF169588473",
+    "submission_url": "https://codeforces.com/contest/979/submission/169588473",
+    "tags": [
+      "dfs and similar",
+      "trees",
+      "*1600"
+    ],
+    "timestamp": "Aug/25/2022 14:15"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
