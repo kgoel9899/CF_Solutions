@@ -26,25 +26,20 @@ int32_t main() {
     int tt = 1;
     cin >> tt;
     while(tt--) {
-        int n, k;
-        cin >> n >> k;
+        int n, x;
+        cin >> n >> x;
         vector<vector<int>> adj(n + 1);
-        vector<int> deg(n + 1);
         for(int i=0;i<n-1;i++) {
             int a, b;
             cin >> a >> b;
             adj[a].push_back(b);
             adj[b].push_back(a);
-            deg[a]++;
-            deg[b]++;
         }
-        if(deg[k] <= 1) {
+        if(adj[x].size() <= 1) {
             cout << "Ayush" << endl;
             continue;
         }
-        int rem = n - 3;
-        // we have 3 nodes now
-        if(rem % 2 == 0) cout << "Ashish" << endl;
-        else cout << "Ayush" << endl;
+        if((n - 2) % 2 == 0) cout << "Ayush" << endl;
+        else cout << "Ashish" << endl;
     }
 }
