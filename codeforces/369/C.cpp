@@ -22,17 +22,20 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 int n;
-vector<vector<int>> adj;
-vector<int> sz, ans;
-map<int, set<int>> m;
-void dfs(int curr, int par) {
-    if(m.find(par) != m.end() && m[par].count(curr) != 0) sz[par]++;
+vector<vector<pair<int, int>>> adj;
+unordered_map<int, unordered_set<int>> m;
+vector<int> ans;
+bool dfs(int curr, int par) {
+    bool ok = false;
     for(auto i : adj[curr]) {
-        if(i == par) continue;
-        dfs(i, curr);
-        sz[curr] += sz[i];
+        if(i.first == par) continue;
+        ok |= dfs(i.first, curr);
     }
-    if(sz[curr] == 0 && m.find(par) != m.end() && m[par].count(curr) != 0) ans.push_back(curr);
+    if(ok) return ok;
+    if(m[curr].find(par) != m[curr].end()) {
+        ans.push_back(curr);
+        return true;
+    } else return false;
 }
 int32_t main() {
     fast;
@@ -42,20 +45,18 @@ int32_t main() {
         cin >> n;
         adj.clear();
         adj.resize(n + 1);
-        sz.clear();
-        sz.resize(n + 1);
         m.clear();
-        ans.clear();
         for(int i=0;i<n-1;i++) {
             int a, b, c;
             cin >> a >> b >> c;
-            adj[a].push_back(b);
-            adj[b].push_back(a);
+            adj[a].push_back({b, c});
+            adj[b].push_back({a, c});
             if(c == 2) {
                 m[a].insert(b);
                 m[b].insert(a);
             }
         }
+        ans.clear();
         dfs(1, -1);
         cout << ans.size() << endl;
         for(auto i : ans) {
