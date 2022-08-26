@@ -23,7 +23,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 
 int n;
 vector<vector<pair<int, int>>> adj;
-unordered_map<int, unordered_set<int>> m;
+unordered_map<int, set<int>> m;
 vector<int> ans;
 bool dfs(int curr, int par) {
     bool ok = false;
