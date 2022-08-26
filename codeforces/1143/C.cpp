@@ -1,58 +1,57 @@
-#include<iostream>
-#include<cstring>
-#include<vector>
-#include<set>
-#include<map>
-#include<queue>
-#include<stack>
-#include<cmath>
-#include<algorithm>
-#include<unordered_set>
 #include<bits/stdc++.h>
-#define MOD 1000000007
-#define ll long long
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 using namespace std;
-int main() {
+#define MOD 1000000007
+#define mod 998244353
+#define int long long
+#define setpres cout << fixed << setprecision(10)
+#define all(x) (x).begin(), (x).end()
+#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define endl "\n"
+const int INF = 1e18;
+
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
+int32_t main() {
     fast;
-    int n;
-    cin >> n;
-    vector<int>* adj = new vector<int>[n + 1];
-    int* par = new int[n + 1];
-    int* res = new int[n + 1];
-    for(int i=0;i<n;i++) {
-        int p, c;
-        cin >> p >> c;
-        par[i + 1] = p;
-        res[i + 1] = c;
-        if(p != -1) {
-            adj[p].push_back(i + 1);
+    int tt = 1;
+    // cin >> tt;
+    while(tt--) {
+        int n;
+        cin >> n;
+        vector<vector<int>> adj(n + 1);
+        vector<int> c(n + 1);
+        for(int i=1;i<=n;i++) {
+            int a;
+            cin >> a >> c[i];
+            if(a != -1) adj[a].push_back(i);
         }
-    }
-    int* rem = new int[n + 1];
-    for(int i=0;i<=n;i++) {
-        rem[i] = 0;
-    }
-    vector<int> v;
-    for(int i=1;i<=n;i++) {
-        if(res[i] == 1 && rem[i] == 0) {
-            int ct = 0;
-            for(int j=0;j<adj[i].size();j++) {
-                if(res[adj[i][j]] == 1) {
-                    ct++;
-                }
-            }
-            if(ct == adj[i].size()) {
-                rem[i] = 1;
-                v.push_back(i);
+        dbg(adj);
+        vector<int> sub(n + 1);
+        for(int i=1;i<=n;i++) {
+            for(auto j : adj[i]) {
+                if(c[j] == 0) sub[i]++;
             }
         }
-    }
-    if(v.size() == 0) {
-        cout << -1 << endl;
-        return 0;
-    }
-    for(int i=0;i<v.size();i++) {
-        cout << v[i] << " ";
+        dbg(sub);
+        int ok = 0;
+        for(int i=1;i<=n;i++) {
+            if(c[i] != 1) continue;
+            if(sub[i] == 0) {
+                ok = 1;
+                cout << i << " ";
+            }
+        }
+        if(!ok) cout << -1;
+        cout << endl;
     }
 }
