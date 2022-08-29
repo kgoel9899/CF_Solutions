@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1182 | [D - Inconvenient Pairs](https://codeforces.com/contest/1569/problem/D) | [GNU C++20 (64)](./codeforces/1569/D.cpp) | `binary search` `data structures` `implementation` `sortings` `two pointers` `*1900` | Aug/29/2022 22:44 | 
 1181 | [C - Kuro and Walking Route](https://codeforces.com/contest/979/problem/C) | [GNU C++20 (64)](./codeforces/979/C.cpp) | `dfs and similar` `trees` `*1600` | Aug/25/2022 14:15 | 
 1180 | [A - Palindromic Indices](https://codeforces.com/contest/1682/problem/A) | [GNU C++20 (64)](./codeforces/1682/A.cpp) | `greedy` `strings` `*800` | Aug/24/2022 19:28 | 
 1179 | [C - Timofey and a tree](https://codeforces.com/contest/764/problem/C) | [GNU C++20 (64)](./codeforces/764/C.cpp) | `dfs and similar` `graphs` `implementation` `trees` `*1600` | Aug/24/2022 00:36 | 
