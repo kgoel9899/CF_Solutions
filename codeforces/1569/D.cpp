@@ -45,6 +45,19 @@ int32_t main() {
         sort(all(y));
         dbg(x);
         dbg(y);
+        set<int> hors(all(hor));
+        set<int> vers(all(ver));
+        dbg(hors);
+        dbg(vers);
+        // vector<int> x1, y1;
+        // for(auto i : x) {
+        //     if(vers.find(i) == vers.end()) x1.push_back(i);
+        // }
+        // dbg(x1);
+        // for(auto i : y) {
+        //     if(hors.find(i) == hors.end()) y1.push_back(i);
+        // }
+        // dbg(y1);
         int ans = 0;
         for(int i=1;i<n;i++) {
             int a = upper_bound(all(x), ver[i - 1]) - x.begin();
@@ -62,10 +75,7 @@ int32_t main() {
             int tot = b - a + 1;
             ans += (tot * (tot - 1)) / 2;
         }
-        set<int> hors(all(hor));
-        set<int> vers(all(ver));
-        dbg(hors);
-        dbg(vers);
+        dbg(v);
         map<int, vector<int>> verm, horm;
         for(auto& i : v) {
             int a = i.first, b = i.second;
@@ -73,6 +83,8 @@ int32_t main() {
             if(vers.find(a) != vers.end()) verm[a].push_back(b);
             if(hors.find(b) != hors.end()) horm[b].push_back(a);
         }
+        dbg(horm);
+        dbg(verm);
         for(auto& i : horm) {
             sort(all(i.second));
         }
@@ -82,9 +94,10 @@ int32_t main() {
         dbg(horm);
         dbg(verm);
         for(auto& i : horm) {
+            int sz = i.second.size();
             int ct = 0, last = -1;
-            for(auto& j : i.second) {
-                int ind = lower_bound(all(ver), j) - ver.begin();
+            for(int j=0;j<sz;j++) {
+                int ind = lower_bound(all(ver), i.second[j]) - ver.begin();
                 if(ind != last) {
                     ans -= (ct * (ct - 1)) / 2;
                     last = ind;
@@ -92,11 +105,20 @@ int32_t main() {
                 } else ct++;
             }
             ans -= (ct * (ct - 1)) / 2;
+            // for(int j=1;j<n;j++) {
+            //     int a = upper_bound(all(i.second), ver[j - 1]) - i.second.begin();
+            //     int b = lower_bound(all(i.second), ver[j]) - i.second.begin();
+            //     b--;
+            //     if(a >= b) continue;
+            //     int tot = b - a + 1;
+            //     ans -= (tot * (tot - 1)) / 2;
+            // }
         }
         for(auto& i : verm) {
+            int sz = i.second.size();
             int ct = 0, last = -1;
-            for(auto& j : i.second) {
-                int ind = lower_bound(all(hor), j) - hor.begin();
+            for(int j=0;j<sz;j++) {
+                int ind = lower_bound(all(hor), i.second[j]) - hor.begin();
                 if(ind != last) {
                     ans -= (ct * (ct - 1)) / 2;
                     last = ind;
@@ -104,6 +126,14 @@ int32_t main() {
                 } else ct++;
             }
             ans -= (ct * (ct - 1)) / 2;
+            // for(int j=1;j<m;j++) {
+            //     int a = upper_bound(all(i.second), hor[j - 1]) - i.second.begin();
+            //     int b = lower_bound(all(i.second), hor[j]) - i.second.begin();
+            //     b--;
+            //     if(a >= b) continue;
+            //     int tot = b - a + 1;
+            //     ans -= (tot * (tot - 1)) / 2;
+            // }
         }
         cout << ans << endl;
     }
