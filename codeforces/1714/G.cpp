@@ -22,37 +22,30 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 int n;
-vector<int> dist, asum, bsum, ans;
 vector<vector<vector<int>>> adj;
-void dfs(int curr, int p, int d) {
-    dist[curr] = d;
+vector<int> a, b, ans, path;
+void dfs(int curr) {
     for(auto i : adj[curr]) {
-        int to = i[0], a = i[1], b = i[2];
-        if(to == p) continue;
-        asum[to] = asum[curr] + a;
-        bsum[to] = bsum[curr] + b;
-        // dbg(to);
-        dfs(to, curr, d + 1);
+        a[i[0]] = a[curr] + i[1];
+        b[i[0]] = b[curr] + i[2];
+        dfs(i[0]);
     }
 }
-void dfs2(int curr, int p, vector<int>& temp) {
-    temp.push_back(curr);
-    int beg = 0, end = (int)temp.size() - 1;
-    int fin = -1;
+void dfs2(int curr) {
+    path.push_back(curr);
+    int beg = 0, end = (int)path.size() - 1;
+    int val = a[curr];
     while(beg <= end) {
         int mid = (beg + end) / 2;
-        if(bsum[temp[mid]] <= asum[curr]) {
-            fin = temp[mid];
+        if(b[path[mid]] <= val) {
+            ans[curr] = mid;
             beg = mid + 1;
         } else end = mid - 1;
     }
-    // dbg(i[0], temp, fin);
-    if(fin != -1) ans[curr] = dist[fin];
     for(auto i : adj[curr]) {
-        if(i[0] == p) continue;
-        dfs2(i[0], curr, temp);
+        dfs2(i[0]);
     }
-    temp.pop_back();
+    path.pop_back();
 }
 int32_t main() {
     fast;
@@ -63,25 +56,22 @@ int32_t main() {
         adj.clear();
         adj.resize(n + 1);
         for(int i=2;i<=n;i++) {
-            int a, b, c;
-            cin >> a >> b >> c;
-            adj[a].push_back({i, b, c});
-            adj[i].push_back({a, b, c});
+            int p, aa, bb;
+            cin >> p >> aa >> bb;
+            adj[p].push_back({i, aa, bb});
         }
-        dist.clear();
-        dist.resize(n + 1);
-        asum.clear();
-        asum.resize(n + 1);
-        bsum.clear();
-        bsum.resize(n + 1);
-        dfs(1, 0, 0);
-        // dbg(dist);
-        // dbg(asum);
-        // dbg(bsum);
+        // dbg(adj);
+        a.clear();
+        a.resize(n + 1);
+        b.clear();
+        b.resize(n + 1);
+        dfs(1);
+        // dbg(a);
+        // dbg(b);
         ans.clear();
         ans.resize(n + 1);
-        vector<int> temp;
-        dfs2(1, 0, temp);
+        path.clear();
+        dfs2(1);
         for(int i=2;i<=n;i++) {
             cout << ans[i] << " ";
         }
