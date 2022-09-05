@@ -21,29 +21,24 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-int n, k;
-vector<vector<int>> adj, dp;
-vector<int> par;
-void dfs(int curr, int p) {
-    par[curr] = p;
-    dp[curr][0] = 1;
+int n, k, ans;
+vector<vector<int>> adj, dist;
+void dfs(int curr, int par) {
+    dist[curr][0] = 1;
     for(auto i : adj[curr]) {
-        if(i == p) continue;
+        if(i == par) continue;
         dfs(i, curr);
-    }
-    for(auto i : adj[curr]) {
-        if(i == p) continue;
         for(int j=1;j<=k;j++) {
-            dp[curr][j] += dp[i][j - 1];
+            dist[curr][j] += dist[i][j - 1];
         }
     }
-}
-int solve(int curr, int kk) {
-    int p = par[curr];
-    if(p == 0) return 0;
-    if(kk == 1) return 1;
-    int ans = dp[p][kk - 1] - dp[curr][kk - 2];
-    return ans + solve(p, kk - 1);
+    for(auto i : adj[curr]) {
+        if(i == par) continue;
+        for(int j=1;j<k;j++) {
+            int other = k - j;
+            ans += dist[i][j - 1] * (dist[curr][other] - dist[i][other - 1]);
+        }
+    }
 }
 int32_t main() {
     fast;
@@ -59,22 +54,14 @@ int32_t main() {
             adj[a].push_back(b);
             adj[b].push_back(a);
         }
-        if(k == 1) {
-            cout << n - 1 << endl;
-            continue;
-        }
-        dp.clear();
-        dp.resize(n + 1, vector<int>(k + 1));
-        par.clear();
-        par.resize(n + 1, -1);
-        dfs(1, 0);
-        dbg(dp);
-        int ans = 0;
+        dist.clear();
+        dist.resize(n + 1, vector<int>(k + 1));
+        ans = 0;
+        dfs(1, -1);
+        ans /= 2;
         for(int i=1;i<=n;i++) {
-            ans += dp[i][k];
-            ans += solve(i, k);
-            dbg(i, ans);
+            ans += dist[i][k];
         }
-        cout << ans / 2 << endl;
+        cout << ans << endl;
     }
 }
