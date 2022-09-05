@@ -58,7 +58,9 @@ int32_t main() {
         dist.resize(n + 1, vector<int>(k + 1));
         ans = 0;
         dfs(1, -1);
+        dbg(dist);
         ans /= 2;
+        dbg(ans);
         for(int i=1;i<=n;i++) {
             ans += dist[i][k];
         }
