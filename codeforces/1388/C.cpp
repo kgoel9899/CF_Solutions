@@ -39,8 +39,7 @@ void dfs(int curr, int par) {
         sum += good[i];
     }
     int x = h[curr] + sub[curr];
-    int y = sub[curr] - h[curr];
-    if(x % 2 || x / 2 < sum || x / 2 > sub[curr] || y % 2 || y < 0 || y / 2 > sub[curr]) {
+    if(x % 2 || x / 2 < sum || x / 2 > sub[curr]) {
         ok = 0;
         return;
     }
