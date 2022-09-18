@@ -80,14 +80,8 @@ int solve(int i, int j) {
         return dp[i][j] = 1;
     }
 
-    unordered_map<int, int> m;
-    m[ans1]++;
-    m[ans2]++;
-    m[ans3]++;
-    m[ans4]++;
-
-    if(m[2] >= 3) {
-        // bob wins in atleast 3 cases
+    if((ans1 == 2 || ans2 == 2) && (ans3 == 2 || ans4 == 2)) {
+        // bob wins in atleast 1 scenario when Alice picks i or j
         return dp[i][j] = 2;
     }
 
