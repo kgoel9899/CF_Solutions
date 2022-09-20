@@ -2927,6 +2927,22 @@
     ],
     "timestamp": "Jul/11/2022 12:23"
   },
+  "AC35013247": {
+    "contest_id": "dp",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\dp\\M.cpp",
+    "platform": "AtCoder",
+    "problem_index": "M",
+    "problem_name": "Candies",
+    "problem_url": "https://atcoder.jp/contests/dp/tasks/dp_m",
+    "submission_id": "AC35013247",
+    "submission_url": "https://atcoder.jp/contests/dp/submissions/35013247",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Sep/20/2022 16:11"
+  },
   "AC35020677": {
     "contest_id": "dp",
     "language": "C++ (GCC 9.2.1)",
