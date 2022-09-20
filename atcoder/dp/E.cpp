@@ -51,7 +51,7 @@ int32_t main() {
             dp[i][0] = 0;
         }
         for(int i=1;i<=n;i++) {
-            for(int j=s;j>=1;j--) {
+            for(int j=1;j<=s;j++) {
                 dp[i][j] = dp[i - 1][j];
                 if(j - v[i - 1] >= 0) dp[i][j] = min(dp[i][j], wt[i - 1] + dp[i - 1][j - v[i - 1]]);
             }
