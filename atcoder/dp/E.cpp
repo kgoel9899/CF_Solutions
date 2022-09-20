@@ -48,6 +48,7 @@ int32_t main() {
         }
         dp.clear();
         dp.resize(s + 1, INF);
+        // dp.resize(n + 1, vector<int>(s + 1, INF));
         for(int i=0;i<=n;i++) {
             dp[0] = 0;
         }
