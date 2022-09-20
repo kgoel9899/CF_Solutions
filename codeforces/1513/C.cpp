@@ -34,22 +34,14 @@ int32_t main() {
     cin >> tt;
     const int N = 2e5 + 5;
     dp.clear();
-    dp.resize(10, vector<int>(N, 1));
-    for(int j=1;j<N;j++) {
-        for(int i=0;i<10;i++) {
-            if(i == 9) dp[i][j] = (dp[1][j - 1] + dp[0][j - 1]) % MOD;
-            else dp[i][j] = dp[i + 1][j - 1];
-        }
-    }
-    // dp.resize(10, vector<int>(N, -1));
+    dp.resize(10, vector<int>(N, -1));
     while(tt--) {
         int n, m;
         cin >> n >> m;
         string s = to_string(n);
         int ans = 0;
         for(auto& i : s) {
-            ans += dp[i - '0'][m];
-            // ans += solve(i - '0', m);
+            ans += solve(i - '0', m);
             ans %= MOD;
         }
         cout << ans << endl;
