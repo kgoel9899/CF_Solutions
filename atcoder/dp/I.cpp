@@ -3,33 +3,73 @@ using namespace std;
 #define MOD 1000000007
 #define mod 998244353
 #define int long long
+#define setpres cout << fixed << setprecision(10)
+#define all(x) (x).begin(), (x).end()
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
 const int INF = 1e18;
+
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
+int n;
+vector<double> v;
+vector<vector<double>> dp;
+double solve(int curr, int head) {
+    if(curr == n - 1) {
+        if(head == 1) return v[curr];
+        else if(head == 0) return 1 - v[curr];
+        else return 0.0;
+    }
+    if(dp[curr][head] < 1.5) return dp[curr][head];
+    double op1 = (1.0 - v[curr]) * solve(curr + 1, head);
+    double op2 = 0.0;
+    if(head) op2 = v[curr] * solve(curr + 1, head - 1);
+    return dp[curr][head] = op1 + op2;
+}
 int32_t main() {
     fast;
-    int t = 1;
-    // cin >> t;
-    while(t--) {
-        int n;
+    int tt = 1;
+    // cin >> tt;
+    setpres;
+    while(tt--) {
         cin >> n;
-        vector<double> v(n + 1);
-        for(int i=1;i<=n;i++) {
+        v.clear();
+        v.resize(n);
+        for(int i=0;i<n;i++) {
             cin >> v[i];
         }
-        vector<vector<double>> dp(n + 1, vector<double>(n + 1, 0.0));
+        dp.clear();
+        dp.resize(n + 1, vector<double>(n + 1));
         dp[0][0] = 1.0;
         for(int i=1;i<=n;i++) {
-            for(int j=0;j<=i;j++) {
-                if(j == 0) dp[i][j] = dp[i - 1][j] * (1 - v[i]);
-                else dp[i][j] = dp[i - 1][j] * (1 - v[i]) + dp[i - 1][j - 1] * v[i];
+            dp[i][0] = dp[i - 1][0] * (1 - v[i - 1]);
+        }
+        for(int i=1;i<=n;i++) {
+            for(int j=1;j<=i;j++) {
+                dp[i][j] = v[i - 1] * dp[i - 1][j - 1] + (1 - v[i - 1]) * dp[i - 1][j];
             }
         }
         double ans = 0;
-        for(int i=n;i>n/2;i--) {
+        for(int i=n/2+1;i<=n;i++) {
             ans += dp[n][i];
         }
-        cout << fixed << setprecision(10);
         cout << ans << endl;
+        
+        // dp.resize(n, vector<double>(n + 1, 2));
+        // double ans = 0;
+        // for(int i=n/2+1;i<=n;i++) {
+        //     ans += solve(0, i);
+        // }
+        // cout << ans << endl;
     }
 }
