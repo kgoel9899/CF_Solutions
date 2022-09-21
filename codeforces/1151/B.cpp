@@ -24,19 +24,18 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 int n, m;
 vector<vector<int>> v;
 vector<vector<pair<int, int>>> dp;
-// dp[i][k] = till ith row a xor of k is possible or not
-pair<int, int> solve(int ind, int xr) {
-    if(ind == n) return {xr != 0, 1};
-    if(dp[ind][xr].first != -1) return dp[ind][xr];
-    int save = -1, ans = 0;
+pair<int, int> solve(int curr, int xr) {
+    if(curr == n) return {xr != 0, -1};
+    if(dp[curr][xr].first != -1) return dp[curr][xr];
+    int ind = -1, ok = 0;
     for(int i=0;i<m;i++) {
-        if(solve(ind + 1, xr ^ v[ind][i]).first > 0) {
-            save = i;
-            ans = 1;
+        if(solve(curr + 1, xr ^ v[curr][i]).first) {
+            ind = i;
+            ok = 1;
             break;
         }
     }
-    return dp[ind][xr] = {ans, save};
+    return dp[curr][xr] = {ok, ind};
 }
 int32_t main() {
     fast;
@@ -52,19 +51,48 @@ int32_t main() {
             }
         }
         dp.clear();
-        dp.resize(n + 1, vector<pair<int, int>>(1024, {-1, -1}));
+        dp.resize(n, vector<pair<int, int>>(1025, {-1, -1}));
         pair<int, int> ans = solve(0, 0);
-        // dbg(dp);
         if(ans.first) {
             cout << "TAK" << endl;
             int row = 0, xr = 0;
             while(row < n) {
-                int curr = dp[row][xr].second;
-                cout << curr + 1 << " ";
-                xr ^= v[row][curr];
+                int ind = dp[row][xr].second;
+                cout << ind + 1 << " ";
+                xr ^= v[row][ind];
                 row++;
             }
-            cout << endl;
         } else cout << "NIE" << endl;
+
+        // int xr = 0;
+        // for(int i=0;i<n;i++) {
+        //     xr ^= v[i][0];
+        // }
+        // if(xr > 0) {
+        //     cout << "TAK" << endl;
+        //     for(int i=0;i<n;i++) {
+        //         cout << 1 << " ";
+        //     }
+        //     cout << endl;
+        // } else {
+        //     int row = -1, col;
+        //     for(int i=0;i<n;i++) {
+        //         for(int j=1;j<m;j++) {
+        //             if(v[i][j] != v[i][0]) {
+        //                 row = i;
+        //                 col = j;
+        //             }
+        //         }
+        //     }
+        //     if(row == -1) cout << "NIE" << endl;
+        //     else {
+        //         cout << "TAK" << endl;
+        //         for(int i=0;i<n;i++) {
+        //             if(i == row) cout << col + 1 << " ";
+        //             else cout << 1 << " ";
+        //         }
+        //         cout << endl;
+        //     }
+        // }
     }
 }
