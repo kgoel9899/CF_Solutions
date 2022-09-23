@@ -26,8 +26,6 @@ vector<vector<vector<int>>> dp;
 int solve(int curr, int age, int dir) {
     if(age == 0) return 0;
     if(curr == -1 || curr == n) return 1;
-    assert(curr >= 0 && curr < n);
-    assert(age > 0);
     if(dp[curr][age][dir] != -1) return dp[curr][age][dir];
     if(dir) return dp[curr][age][dir] = (solve(curr + 1, age, 1) + solve(curr - 1, age - 1, 0)) % MOD;
     else return dp[curr][age][dir] = (solve(curr - 1, age, 0) + solve(curr + 1, age - 1, 1)) % MOD;
