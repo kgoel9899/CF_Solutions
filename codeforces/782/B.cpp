@@ -48,8 +48,9 @@ int32_t main() {
         double beg = 0, end = 1e12;
         double ans = INF;
         const double eps = 1e-7;
-        while(end - beg >= eps) {
+        while(beg <= end) {
             double mid = (beg + end) / 2;
+            dbg(mid);
             if(check(mid, n, a, b)) {
                 ans = mid;
                 end = mid - eps;
