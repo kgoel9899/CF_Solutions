@@ -22,24 +22,21 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 int n;
-vector<vector<pair<int, int>>> adj; // second: 1 = same, -1 = reverse
-vector<int> sub;
+vector<vector<pair<int, int>>> adj;
+vector<int> ans;
 void dfs(int curr, int par) {
-    for(auto i : adj[curr]) {
+    for(auto& i : adj[curr]) {
         if(i.first == par) continue;
+        if(i.second == -1) ans[1]++;
         dfs(i.first, curr);
-        sub[curr] += sub[i.first];
-        if(i.second == -1) sub[curr]++;
     }
 }
 void dfs2(int curr, int par) {
-    dbg(curr, par);
-    for(auto i : adj[curr]) {
+    for(auto& i : adj[curr]) {
         if(i.first == par) continue;
-        sub[i.first] = sub[curr];
-        if(i.second == -1) sub[i.first]--;
-        else sub[i.first]++;
-        dbg(i.first, curr);
+        ans[i.first] = ans[curr];
+        if(i.second == 1) ans[i.first]++;
+        else ans[i.first]--;
         dfs2(i.first, curr);
     }
 }
@@ -57,20 +54,23 @@ int32_t main() {
             adj[a].push_back({b, 1});
             adj[b].push_back({a, -1});
         }
+        ans.clear();
+        ans.resize(n + 1);
+        dfs(1, 0);
+        dfs2(1, 0);
+        dbg(ans);
+        int mn = INF;
+        for(int i=1;i<=n;i++) {
+            mn = min(mn, ans[i]);
+        }
+        vector<int> fin;
+        for(int i=1;i<=n;i++) {
+            if(ans[i] == mn) fin.push_back(i);
+        }
+        cout << mn << endl;
+        for(auto i : fin) {
+            cout << i << " ";
+        }
+        cout << endl;
     }
-    sub.clear();
-    sub.resize(n + 1);
-    dfs(1, 0);
-    dbg(sub);
-    dfs2(1, 0);
-    dbg(sub);
-    int ans = INF;
-    for(int i=1;i<=n;i++) {
-        if(sub[i] < ans) ans = sub[i];
-    }
-    cout << ans << endl;
-    for(int i=1;i<=n;i++) {
-        if(sub[i] == ans) cout << i << " ";
-    }
-    cout << endl;
 }
