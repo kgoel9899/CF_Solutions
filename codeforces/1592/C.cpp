@@ -21,29 +21,26 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-int n, k;
-vector<int> a, treexor, pars;
+int n, k, xr, ok, deepest;
+vector<int> a, sub, pars;
 vector<vector<int>> adj;
-int xorr, node1, ok;
 void dfs(int curr, int par) {
-    treexor[curr] = a[curr];
+    sub[curr] = a[curr];
     for(auto i : adj[curr]) {
         if(i == par) continue;
         dfs(i, curr);
-        treexor[curr] ^= treexor[i];
+        sub[curr] ^= sub[i];
     }
-    if(node1 == -1 && treexor[curr] == xorr) {
-        node1 = curr;
-        pars.push_back(par);
-        return;
-    }
-    if(node1 != -1) {
-        if(pars.back() == curr) { // we are in the same subtree
-            if(treexor[curr] == 0) ok = 1;
+    if(deepest == -1) {
+        if(sub[curr] == xr) {
             pars.push_back(par);
-        } else { // different subtree
-            if(treexor[curr] == xorr) ok = 1;
+            deepest = curr;
         }
+    } else {
+        if(pars.back() == curr) {
+            if(sub[curr] == 0) ok = 1;
+            pars.push_back(par);
+        } else if(sub[curr] == xr) ok = 1;
     }
 }
 int32_t main() {
@@ -54,23 +51,20 @@ int32_t main() {
         cin >> n >> k;
         a.clear();
         a.resize(n + 1);
-        xorr = 0;
-        node1 = -1;
-        ok = 0;
+        xr = 0;
         for(int i=1;i<=n;i++) {
             cin >> a[i];
-            xorr ^= a[i];
+            xr ^= a[i];
         }
         adj.clear();
         adj.resize(n + 1);
-        pars.clear();
         for(int i=0;i<n-1;i++) {
             int u, v;
             cin >> u >> v;
             adj[u].push_back(v);
             adj[v].push_back(u);
         }
-        if(xorr == 0) { // 2 components
+        if(xr == 0) {
             cout << "YES" << endl;
             continue;
         }
@@ -78,11 +72,12 @@ int32_t main() {
             cout << "NO" << endl;
             continue;
         }
-        // 3 components
-        treexor.clear();
-        treexor.resize(n + 1);
-        dfs(1, -1);
-        dbg(node1);
+        sub.clear();
+        sub.resize(n + 1);
+        pars.clear();
+        ok = 0;
+        deepest = -1;
+        dfs(1, 0);
         if(ok) cout << "YES" << endl;
         else cout << "NO" << endl;
     }
