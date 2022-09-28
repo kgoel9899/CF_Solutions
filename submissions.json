@@ -17583,6 +17583,24 @@
     ],
     "timestamp": "Sep/26/2022 02:57"
   },
+  "CF173842312": {
+    "contest_id": 161,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\161\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Distance in Tree",
+    "problem_url": "https://codeforces.com/contest/161/problem/D",
+    "submission_id": "CF173842312",
+    "submission_url": "https://codeforces.com/contest/161/submission/173842312",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "trees",
+      "*1800"
+    ],
+    "timestamp": "Sep/28/2022 22:32"
+  },
   "CF173844021": {
     "contest_id": 161,
     "language": "GNU C++20 (64)",
