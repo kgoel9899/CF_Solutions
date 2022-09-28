@@ -21,27 +21,22 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-// similar to tree diameter
 int n, ans;
+vector<int> v, sub;
 vector<vector<pair<int, int>>> adj;
-vector<int> w, dp; // dp[i] = max ans in the subtree of i
 void dfs(int curr, int par) {
-    dp[curr] = w[curr];
-    for(auto i : adj[curr]) {
-        if(i.first == par) continue;
-        dfs(i.first, curr);
-    }
     int a = 0, b = 0;
     for(auto i : adj[curr]) {
         if(i.first == par) continue;
-        int diff = dp[i.first] + w[curr] - i.second;
-        if(diff >= a) {
+        dfs(i.first, curr);
+        int temp = sub[i.first] + v[curr] - i.second;
+        if(temp > a) {
             b = a;
-            a = diff;
-        } else if(diff >= b) b = diff;
+            a = temp;
+        } else if(temp > b) b = temp;
     }
-    dp[curr] = max(dp[curr], a);
-    ans = max({ans, a, b, a + b - w[curr], w[curr]});
+    sub[curr] = max(v[curr], a);
+    ans = max({ans, a, b, a + b - v[curr], v[curr]});
 }
 int32_t main() {
     fast;
@@ -49,14 +44,12 @@ int32_t main() {
     // cin >> tt;
     while(tt--) {
         cin >> n;
-        w.clear();
-        w.resize(n + 1);
-        dp.clear();
-        dp.resize(n + 1);
         adj.clear();
         adj.resize(n + 1);
+        v.clear();
+        v.resize(n + 1);
         for(int i=1;i<=n;i++) {
-            cin >> w[i];
+            cin >> v[i];
         }
         for(int i=0;i<n-1;i++) {
             int a, b, c;
@@ -64,9 +57,10 @@ int32_t main() {
             adj[a].push_back({b, c});
             adj[b].push_back({a, c});
         }
+        sub.clear();
+        sub.resize(n + 1);
         ans = 0;
         dfs(1, 0);
-        dbg(dp);
         cout << ans << endl;
     }
 }
