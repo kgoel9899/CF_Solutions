@@ -3087,6 +3087,22 @@
     ],
     "timestamp": "Sep/26/2022 01:31"
   },
+  "AC35219892": {
+    "contest_id": "dp",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\dp\\K.cpp",
+    "platform": "AtCoder",
+    "problem_index": "K",
+    "problem_name": "Stones",
+    "problem_url": "https://atcoder.jp/contests/dp/tasks/dp_k",
+    "submission_id": "AC35219892",
+    "submission_url": "https://atcoder.jp/contests/dp/submissions/35219892",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Sep/28/2022 20:36"
+  },
   "CF100335942": {
     "contest_id": 1015,
     "language": "GNU C++17 (64)",
