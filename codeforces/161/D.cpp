@@ -22,21 +22,21 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 int n, k, ans;
-vector<vector<int>> adj, dist;
+vector<vector<int>> adj, nodes;
 void dfs(int curr, int par) {
-    dist[curr][0] = 1;
+    nodes[curr][0]++;
     for(auto i : adj[curr]) {
         if(i == par) continue;
         dfs(i, curr);
-        for(int j=1;j<=k;j++) {
-            dist[curr][j] += dist[i][j - 1];
+        for(int j=0;j<k;j++) {
+            nodes[curr][j + 1] += nodes[i][j];
         }
     }
     for(auto i : adj[curr]) {
         if(i == par) continue;
         for(int j=1;j<k;j++) {
-            int other = k - j;
-            ans += dist[i][j - 1] * (dist[curr][other] - dist[i][other - 1]);
+            int j1 = k - j;
+            ans += (nodes[curr][j] - nodes[i][j - 1]) * nodes[i][j1 - 1];
         }
     }
 }
@@ -54,15 +54,13 @@ int32_t main() {
             adj[a].push_back(b);
             adj[b].push_back(a);
         }
-        dist.clear();
-        dist.resize(n + 1, vector<int>(k + 1));
+        nodes.clear();
+        nodes.resize(n + 1, vector<int>(k + 1));
         ans = 0;
-        dfs(1, -1);
-        dbg(dist);
+        dfs(1, 0);
         ans /= 2;
-        dbg(ans);
         for(int i=1;i<=n;i++) {
-            ans += dist[i][k];
+            ans += nodes[i][k];
         }
         cout << ans << endl;
     }
