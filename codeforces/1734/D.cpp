@@ -36,6 +36,7 @@ int32_t main() {
         int i = k - 1, j = k + 1;
         int sum = v[k];
         while(true) {
+            dbg("newwww");
             int temp1 = sum, mx1 = sum;
             int id = i, ind1 = i;
             while(id >= 0 && temp1 + v[id] >= 0) {
@@ -64,6 +65,8 @@ int32_t main() {
                 cout << "YES" << endl;
                 break;
             }
+            dbg(mx1, id);
+            dbg(mx2, jd);
             if(mx1 == sum && mx2 == sum) {
                 cout << "NO" << endl;
                 break;
