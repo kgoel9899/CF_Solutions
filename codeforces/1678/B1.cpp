@@ -23,39 +23,17 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 
 int n;
 string s;
-vector<vector<vector<pair<int, int>>>> dp;
-// {operations, segments}
-pair<int, int> solve(int curr, int val, int prev) {
-    if(curr == n) return {0, 0};
-    if(dp[curr][val][prev].first != -1) return dp[curr][val][prev];
+vector<vector<int>> dp;
+int solve(int curr, int val) {
+    if(curr == n) return 0;
+    if(dp[curr][val] != -1) return dp[curr][val];
+    int other = min(solve(curr + 2, val), solve(curr + 2, val ^ 1));
     int a = s[curr] - '0';
     int b = s[curr + 1] - '0';
-    bool add = (val != prev);
-    auto op1 = solve(curr + 2, val, val);
-    auto op2 = solve(curr + 2, val ^ 1, val);
-    if(a != b) {
-        if(op1.first < op2.first) return dp[curr][val][prev] = {1 + op1.first, add + op1.second};
-        else if(op1.first > op2.first) return dp[curr][val][prev] = {1 + op2.first, add + op2.second};
-        else {
-            if(op1.second <= op2.second) return dp[curr][val][prev] = {1 + op1.first, add + op1.second};
-            else return dp[curr][val][prev] = {1 + op2.first, add + op2.second};
-        }
-    } else {
-        if(a == val) {
-            if(op1.first < op2.first) return dp[curr][val][prev] = {op1.first, add + op1.second};
-            else if(op1.first > op2.first) return dp[curr][val][prev] = {op2.first, add + op2.second};
-            else {
-                if(op1.second <= op2.second) return dp[curr][val][prev] = {op1.first, add + op1.second};
-                else return dp[curr][val][prev] = {op2.first, add + op2.second};
-            }
-        } else {
-            if(op1.first < op2.first) return dp[curr][val][prev] = {2 + op1.first, add + op1.second};
-            else if(op1.first > op2.first) return dp[curr][val][prev] = {2 + op2.first, add + op2.second};
-            else {
-                if(op1.second <= op2.second) return dp[curr][val][prev] = {2 + op1.first, add + op1.second};
-                else return dp[curr][val][prev] = {2 + op2.first, add + op2.second};
-            }
-        }
+    if(a != b) return dp[curr][val] = 1 + other;
+    else {
+        if(a == val) return dp[curr][val] = other;
+        else return dp[curr][val] = 2 + other;
     }
 }
 int32_t main() {
@@ -66,8 +44,7 @@ int32_t main() {
         cin >> n;
         cin >> s;
         dp.clear();
-        dp.resize(n, vector<vector<pair<int, int>>>(2, vector<pair<int, int>>(2, {-1, INF})));
-        auto ans = min(solve(0, 0, 1), solve(0, 1, 0));
-        cout << ans.first << endl;
+        dp.resize(n, vector<int>(2, -1));
+        cout << min(solve(0, 0), solve(0, 1)) << endl;
     }
 }
