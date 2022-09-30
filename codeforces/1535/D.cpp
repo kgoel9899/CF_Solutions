@@ -70,6 +70,7 @@ int32_t main() {
         tree.clear();
         tree.resize(2 * tot + 5);
         build(0, tot - 1, 1);
+        dbg(tree);
         int q;
         cin >> q;
         while(q--) {
@@ -86,6 +87,7 @@ int32_t main() {
                 tn *= 2;
             }
             node += tn - ind + 1;
+            dbg(ind, node);
             update(node);
             cout << tree[1] << endl;
         }
