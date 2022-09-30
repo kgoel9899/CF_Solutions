@@ -21,65 +21,72 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-int k;
+int n, tot;
+string s;
 vector<int> tree;
-string s, fin;
-void build(int node, int low, int high) {
-    if(low == high) {
+int get(int node) {
+    int tn = tot / 2, ind = 1;
+    while(tn > node) {
+        ind += tn;
+        tn /= 2;
+    }
+    ind += node - tn;
+    return ind;
+}
+void build(int st, int end, int node) {
+    if(st == end) {
         tree[node] = 1;
         return;
     }
-    int mid = (low + high) / 2;
-    build(2 * node, low, mid);
-    build(2 * node + 1, mid + 1, high);
-    dbg(node);
-    if(fin[node] == '0') tree[node] = tree[2 * node];
-    else if(fin[node] == '1') tree[node] = tree[2 * node + 1];
+    int mid = (st + end) / 2;
+    build(st, mid, 2 * node);
+    build(mid + 1, end, 2 * node + 1);
+    int pos = get(node);
+    dbg(node, pos, s[pos]);
+    if(s[pos] == '0') tree[node] = tree[2 * node];
+    else if(s[pos] == '1') tree[node] = tree[2 * node + 1];
     else tree[node] = tree[2 * node] + tree[2 * node + 1];
 }
 void update(int node) {
     if(node == 0) return;
-    if(fin[node] == '0') tree[node] = tree[2 * node];
-    else if(fin[node] == '1') tree[node] = tree[2 * node + 1];
+    int pos = get(node);
+    if(s[pos] == '0') tree[node] = tree[2 * node];
+    else if(s[pos] == '1') tree[node] = tree[2 * node + 1];
     else tree[node] = tree[2 * node] + tree[2 * node + 1];
     update(node / 2);
 }
+// [0110][?1][1]
+// [4567][23][1]
 int32_t main() {
     fast;
     int tt = 1;
     // cin >> tt;
     while(tt--) {
-        cin >> k;
+        cin >> n;
         cin >> s;
         s = '#' + s;
-        fin = s;
-        int len = (1 << k) / 2, last = 1, fill = s.size() - len;
-        map<int, int> m;
-        while(len != 0) {
-            int temp = fill;
-            for(int i=last;i<last+len;i++,temp++) {
-                fin[temp] = s[i];
-                m[i] = temp;
-            }
-            last += len;
-            len /= 2;
-            fill -= len;
-        }
-        dbg(fin);
+        tot = s.size();
+        dbg(s, tot);
         tree.clear();
-        int sz = (1 << k);
-        tree.resize(2 * sz);
-        build(1, 0, sz - 1);
-        dbg(tree);
+        tree.resize(2 * tot + 5);
+        build(0, tot - 1, 1);
         int q;
         cin >> q;
-        dbg(m);
         while(q--) {
-            int p;
-            char c;
-            cin >> p >> c;
-            fin[m[p]] = c;
-            update(m[p]);
+            int ind;
+            char val;
+            cin >> ind >> val;
+            s[ind] = val;
+            int node = 0;
+            int tn = 1;
+            ind = tot - ind;
+            while(ind > tn) {
+                node += tn;
+                ind -= tn;
+                tn *= 2;
+            }
+            node += tn - ind + 1;
+            update(node);
             cout << tree[1] << endl;
         }
     }

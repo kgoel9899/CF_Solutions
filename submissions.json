@@ -17732,6 +17732,26 @@
     ],
     "timestamp": "Sep/28/2022 23:41"
   },
+  "CF174073128": {
+    "contest_id": 1535,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1535\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Playoff Tournament",
+    "problem_url": "https://codeforces.com/contest/1535/problem/D",
+    "submission_id": "CF174073128",
+    "submission_url": "https://codeforces.com/contest/1535/submission/174073128",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "dp",
+      "implementation",
+      "trees",
+      "*1800"
+    ],
+    "timestamp": "Sep/30/2022 17:11"
+  },
   "CF174286480": {
     "contest_id": 1733,
     "language": "GNU C++20 (64)",
