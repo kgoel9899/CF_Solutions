@@ -22,22 +22,24 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 int n;
-vector<vector<int>> adj, dp;
+vector<vector<int>> adj;
 vector<int> v;
+vector<pair<int, int>> dp;
+// {inc, dec}
 void dfs(int curr, int par) {
     int inc = 0, dec = 0;
     for(auto i : adj[curr]) {
         if(i == par) continue;
         dfs(i, curr);
-        inc = max(inc, dp[i][0]);
-        dec = max(dec, dp[i][1]);
+        inc = max(inc, dp[i].first);
+        dec = max(dec, dp[i].second);
     }
-    v[curr] += inc;
-    v[curr] -= dec;
-    if(v[curr] < 0) inc += abs(v[curr]);
-    else dec += abs(v[curr]);
-    dp[curr][0] += inc;
-    dp[curr][1] += dec;
+    dp[curr].first += inc;
+    dp[curr].second += dec;
+    int new_val = v[curr] + dp[curr].first - dp[curr].second;
+    dbg(curr, new_val, v[curr], dp[curr].first, dp[curr].second);
+    if(new_val >= 0) dp[curr].second += new_val;
+    else dp[curr].first += abs(new_val);
 }
 int32_t main() {
     fast;
@@ -47,20 +49,20 @@ int32_t main() {
         cin >> n;
         adj.clear();
         adj.resize(n + 1);
-        v.clear();
-        v.resize(n + 1);
         for(int i=0;i<n-1;i++) {
             int a, b;
             cin >> a >> b;
             adj[a].push_back(b);
             adj[b].push_back(a);
         }
+        v.clear();
+        v.resize(n + 1);
         for(int i=1;i<=n;i++) {
             cin >> v[i];
         }
         dp.clear();
-        dp.resize(n + 1, vector<int>(2));
-        dfs(1, -1);
-        cout << dp[1][0] + dp[1][1] << endl;
+        dp.resize(n + 1);
+        dfs(1, 0);
+        cout << dp[1].first + dp[1].second << endl;
     }
 }
