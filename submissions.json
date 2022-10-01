@@ -17732,6 +17732,23 @@
     ],
     "timestamp": "Sep/28/2022 23:41"
   },
+  "CF174286816": {
+    "contest_id": 1733,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1733\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Parity Shuffle Sorting",
+    "problem_url": "https://codeforces.com/contest/1733/problem/C",
+    "submission_id": "CF174286816",
+    "submission_url": "https://codeforces.com/contest/1733/submission/174286816",
+    "tags": [
+      "constructive algorithms",
+      "sortings",
+      "*1300"
+    ],
+    "timestamp": "Oct/02/2022 00:02"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
