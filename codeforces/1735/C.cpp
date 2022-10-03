@@ -71,6 +71,7 @@ int32_t main() {
             }
             if(!found) {
                 assert(in[cc] == 0);
+                // dbg(i);
                 char next = 'A';
                 for(int j=0;j<26;j++) { 
                     if(j == cc) continue;
@@ -81,6 +82,7 @@ int32_t main() {
                 }
 
                 int nnext = next - 'a';
+                // dbg(next, c);
                 adj[nnext][cc] = 1;
                 out[nnext]++;
                 in[cc]++;
