@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1220 | [C - Phase Shift](https://codeforces.com/contest/1735/problem/C) | [GNU C++20 (64)](./codeforces/1735/C.cpp) | `dfs and similar` `dsu` `graphs` `greedy` `implementation` `strings` | Oct/04/2022 00:17 | 
 1219 | [C - Parity Shuffle Sorting](https://codeforces.com/contest/1733/problem/C) | [GNU C++20 (64)](./codeforces/1733/C.cpp) | `constructive algorithms` `sortings` `*1300` | Oct/02/2022 00:02 | 
 1218 | [D - Playoff Tournament](https://codeforces.com/contest/1535/problem/D) | [GNU C++20 (64)](./codeforces/1535/D.cpp) | `data structures` `dfs and similar` `dp` `implementation` `trees` `*1800` | Sep/30/2022 17:11 | 
 1217 | [B - Zero Tree](https://codeforces.com/contest/274/problem/B) | [GNU C++20 (64)](./codeforces/274/B.cpp) | `dfs and similar` `dp` `greedy` `trees` `*1800` | Sep/30/2022 13:37 | 
