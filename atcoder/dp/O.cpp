@@ -24,17 +24,19 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 int n;
 vector<vector<int>> v;
 vector<int> dp;
-int solve(int bitmask) {
-    if(bitmask == (1 << n) - 1) return 1;
-    if(dp[bitmask] != -1) return dp[bitmask];
+int solve(int mask) {
+    if(mask == (1 << n) - 1) return 1;
+    if(dp[mask] != -1) return dp[mask];
+    int ct = __builtin_popcount(mask);
     int ans = 0;
-    for(int i=0;i<n;i++) { // permute on women
-        if(((bitmask >> i) & 1) == 0 && v[__builtin_popcountll(bitmask)][i]) {
-            ans += solve(bitmask | (1 << i));
+    for(int i=0;i<n;i++) {
+        if(((mask >> i) & 1) == 1) continue;
+        if(v[ct][i]) {
+            ans += solve(mask | (1 << i));
             ans %= MOD;
         }
     }
-    return dp[bitmask] = ans;
+    return dp[mask] = ans;
 }
 int32_t main() {
     fast;
@@ -50,7 +52,7 @@ int32_t main() {
             }
         }
         dp.clear();
-        dp.resize(1 << n, -1);
+        dp.resize((1 << n), -1);
         cout << solve(0) << endl;
     }
 }
