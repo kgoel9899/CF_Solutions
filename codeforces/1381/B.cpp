@@ -21,60 +21,45 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-vector<int> sz;
+int n;
+vector<int> v, groups;
 vector<vector<int>> dp;
-bool solve(int ind, int first, int req, int n) {
-    // dbg(ind);
-    if(first == req) return true;
-    if(first > req) return false;
-    if(ind == n) return false;
-    if(dp[ind][first] != -1) return dp[ind][first];
-    return dp[ind][first] = solve(ind + 1, first + sz[ind], req, n) || solve(ind + 1, first, req, n);
+bool solve(int curr, int sum, int nn) {
+    if(sum > n) return false;
+    if(curr == nn) return sum == n;
+    if(dp[curr][sum] != -1) return dp[curr][sum];
+    return dp[curr][sum] = solve(curr + 1, sum, nn) || solve(curr + 1, sum + groups[curr], nn);
 }
 int32_t main() {
     fast;
     int tt = 1;
     cin >> tt;
     while(tt--) {
-        int n;
         cin >> n;
-        vector<int> v(2 * n);
+        v.clear();
+        v.resize(2 * n);
         for(int i=0;i<2*n;i++) {
             cin >> v[i];
         }
-        sz.clear();
-        vector<int> vis(2 * n + 1);
-        int val = 2 * n, last = 2 * n;
-        for(int i=2*n-1;i>=0;i--) {
-            vis[v[i]] = 1;
-            if(v[i] == val) {
-                for(int j=val-1;j>=1;j--) {
-                    if(vis[j] == 0) {
-                        val = j;
-                        break;
-                    }
-                }
-                sz.push_back(last - i);
-                last = i;
-            }
+        set<int> s;
+        for(int i=1;i<=2*n;i++) {
+            s.insert(i);
         }
-        reverse(all(sz));
-        dbg(sz);
+        groups.clear();
+        int len = 1;
+        for(int i=2*n-1;i>=0;i--) {
+            if(v[i] == *s.rbegin()) {
+                groups.push_back(len);
+                len = 0;
+            }
+            s.erase(v[i]);
+            len++;
+        }
+        reverse(all(groups));
+        dbg(groups);
         dp.clear();
-        dp.resize(sz.size(), vector<int>(n + 1, -1));
-        if(solve(0, 0, n, sz.size())) cout << "YES" << endl;
+        dp.resize(groups.size(), vector<int>(n + 1, -1));
+        if(solve(0, 0, groups.size())) cout << "YES" << endl;
         else cout << "NO" << endl;
     }
 }
-// 1 2
-// 4 3
-
-// 1 2
-
-// 1 3 4 2
-
-
-// 4 3
-// 1 2
-
-// 1 2 4 3
