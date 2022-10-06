@@ -21,14 +21,12 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-// editorial idea
-int n, k;
+int n, k, ans;
+set<int> s;
 vector<int> sub;
-map<int, int> m;
 vector<vector<int>> adj;
-int ans;
 void dfs(int curr, int par) {
-    sub[curr] = m[curr];
+    if(s.find(curr) != s.end()) sub[curr] = 1;
     for(auto i : adj[curr]) {
         if(i == par) continue;
         dfs(i, curr);
@@ -42,24 +40,25 @@ int32_t main() {
     // cin >> tt;
     while(tt--) {
         cin >> n >> k;
-        m.clear();
-        for(int i=0;i<2*k;i++) {
-            int a;
-            cin >> a;
-            m[a] = 1;
-        }
+        s.clear();
         adj.clear();
         adj.resize(n + 1);
+        for(int i=0;i<2*k;i++) {
+            int num;
+            cin >> num;
+            s.insert(num);
+        }
         for(int i=0;i<n-1;i++) {
-            int a, b;
-            cin >> a >> b;
-            adj[a].push_back(b);
-            adj[b].push_back(a);
+            int u, v;
+            cin >> u >> v;
+            adj[u].push_back(v);
+            adj[v].push_back(u);
         }
         sub.clear();
         sub.resize(n + 1);
         ans = 0;
-        dfs(1, -1);
+        dfs(1, 0);
+        dbg(sub);
         cout << ans << endl;
     }
 }
