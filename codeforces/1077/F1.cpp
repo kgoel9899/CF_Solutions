@@ -24,17 +24,15 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 int n, k, x;
 vector<int> v;
 vector<vector<vector<int>>> dp;
-int solve(int ind, int last, int ct) {
-    if(ct > x) return -INF;
-    if(ind - last > k) return -INF;
-    if(ind == n + 1) {
-        if(ct == x) return 0;
+int solve(int curr, int done, int last) {
+    if(curr == n) {
+        if(done == x && n - last <= k) return 0;
         else return -INF;
     }
-    if(dp[ind][last][ct] != -INF) return dp[ind][last][ct];
-    int op1 = v[ind] + solve(ind + 1, ind, ct + 1);
-    int op2 = solve(ind + 1, last, ct);
-    return dp[ind][last][ct] = max(op1, op2);
+    if(done > x) return -INF;
+    if(curr - last > k) return -INF;
+    if(dp[curr][done][last + 1] != -1) return dp[curr][done][last + 1];
+    return dp[curr][done][last + 1] = max(solve(curr + 1, done, last), v[curr] + solve(curr + 1, done + 1, curr));
 }
 int32_t main() {
     fast;
@@ -43,14 +41,14 @@ int32_t main() {
     while(tt--) {
         cin >> n >> k >> x;
         v.clear();
-        v.resize(n + 1);
-        for(int i=1;i<=n;i++) {
+        v.resize(n);
+        for(int i=0;i<n;i++) {
             cin >> v[i];
         }
         dp.clear();
-        dp.resize(n + 2, vector<vector<int>>(n + 2, vector<int>(x + 2, -INF)));
-        int ans = solve(1, 0, 0);
-        if(ans < 0) ans = -1;
-        cout << ans << endl;
+        dp.resize(n, vector<vector<int>>(x + 1, vector<int>(n + 1, -1)));
+        int ans = solve(0, 0, -1);
+        if(ans < 0) cout << -1 << endl;
+        else cout << ans << endl;
     }
 }
