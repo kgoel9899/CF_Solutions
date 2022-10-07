@@ -7,7 +7,7 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
-const int INF = 1e9;
+const int INF = 1e18;
 
 #ifdef DEBUG
 #define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
@@ -21,26 +21,14 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-// editorial
 int n;
 vector<int> v;
 int dp[5001][5001][2];
-int solve(int l, int r, int dir) {
+int solve(int l, int r, int col) {
     if(l == r) return 0;
-    if(dp[l][r][dir] != -1) return dp[l][r][dir];
-    int op1 = INF, op2 = INF;
-    if(dir == 0) {
-        if(l + 1 < n) {
-            op1 = min(op1, (v[l + 1] != v[l]) + solve(l + 1, r, 0));
-            op1 = min(op1, (v[l] != v[r]) + solve(l + 1, r, 1));
-        }
-    } else {
-        if(r - 1 >= 0) {
-            op2 = min(op2, (v[l] != v[r]) + solve(l, r - 1, 0));
-            op2 = min(op2, (v[r - 1] != v[r]) + solve(l, r - 1, 1));
-        }
-    }
-    return dp[l][r][dir] = min(op1, op2);
+    if(dp[l][r][col] != -1) return dp[l][r][col];
+    if(col == 0) return dp[l][r][col] = min((v[l + 1] != v[l]) + solve(l + 1, r, 0), (v[r] != v[l]) + solve(l + 1, r, 1));
+    else return dp[l][r][col] = min((v[r] != v[r - 1]) + solve(l, r - 1, 1), (v[r] != v[l]) + solve(l, r - 1, 0));
 }
 int32_t main() {
     fast;
@@ -52,14 +40,6 @@ int32_t main() {
         v.resize(n);
         for(int i=0;i<n;i++) {
             cin >> v[i];
-        }
-        int ok = 1;
-        for(int i=1;i<n;i++) {
-            if(v[i] != v[i - 1]) ok = 0;
-        }
-        if(ok) {
-            cout << 0 << endl;
-            continue;
         }
         memset(dp, -1, sizeof dp);
         cout << min(solve(0, n - 1, 0), solve(0, n - 1, 1)) << endl;
