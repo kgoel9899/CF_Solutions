@@ -41,6 +41,7 @@ int32_t main() {
         for(int i=0;i<n;i++) {
             cin >> v[i];
         }
+        dbg(v);
         memset(dp, -1, sizeof dp);
         cout << min(solve(0, n - 1, 0), solve(0, n - 1, 1)) << endl;
     }
