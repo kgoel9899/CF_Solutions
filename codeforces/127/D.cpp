@@ -29,31 +29,31 @@ int32_t main() {
         string s;
         cin >> s;
         int n = s.size();
-        vector<int> pi(n);
-        for(int i=1;i<n;i++) {
-            int j = pi[i - 1];
-            while(j > 0 && s[i] != s[j]) {
-                j = pi[j-1];
+        vector<int> z(n);
+        for(int i=1,l=0,r=0;i<n;i++) {
+            if(i <= r) z[i] = min(r - i + 1, z[i - l]);
+            while(i + z[i] < n && s[z[i]] == s[i + z[i]]) {
+                ++z[i];
             }
-            if(s[i] == s[j]) j++;
-            pi[i] = j;
+            if(i + z[i] - 1 > r) {
+                l = i;
+                r = i + z[i] - 1;
+            }
         }
-        dbg(pi);
-        if(pi[n - 1] == 0) {
-            cout << "Just a legend" << endl;
-            continue;
-        }
-        int ok = 0;
-        for(int i=1;i<n-1;i++) {
-            if(pi[i] == pi[n - 1]) {
-                ok = 1;
+        int ans = 0, mx_z = z[1];
+        for(int i=2;i<n;i++) {
+            // i..n-1 is valid or not
+            if(z[i] == 0) continue;
+            int len = n - i;
+            int mx_z_till_now = mx_z;
+            mx_z = max(mx_z, z[i]);
+            if(z[i] != len) continue;
+            if(mx_z_till_now >= len) {
+                ans = len;
                 break;
             }
         }
-        if(ok) cout << s.substr(0, pi[n - 1]);
-        else {
-            if(pi[pi[n - 1] - 1] == 0) cout << "Just a legend" << endl;
-            else cout << s.substr(0, pi[pi[n - 1] - 1]) << endl;
-        }
+        if(ans == 0) cout << "Just a legend" << endl;
+        else cout << s.substr(0, ans) << endl;
     }
 }
