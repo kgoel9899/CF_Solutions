@@ -23,24 +23,23 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 
 int n;
 vector<int> v;
-// map<vector<int>, int> dp;
-// int solve(int curr, int prev, int skip) {
-//     if(curr == n) {
-//         if(prev == -1) return 0;
-//         else return 1;
-//     }
-//     if(dp.find({curr, prev, skip}) != dp.end()) return dp[{curr, prev, skip}];
+// vector<vector<vector<int>>> dp;
+// int solve(int curr, int mex, int skip) {
+//     if(curr == n) return 1;
+//     if(dp[curr][mex][skip] != -1) return dp[curr][mex][skip];
 //     int ans = 0;
-//     ans += solve(curr + 1, prev, skip);
-//     if(v[curr] == prev) ans += solve(curr + 1, v[curr], skip);
-//     ans %= mod;
-//     if(v[curr] == prev + 2) {
-//         if(skip == -1 || v[curr] == skip + 1) ans += solve(curr + 1, v[curr], prev + 1);
+//     if(skip) {
+//         ans = solve(curr + 1, mex, skip);
+//         if(v[curr] == mex - 1 || v[curr] == mex + 1) ans *= 2;
+//         ans %= mod;
+//     } else {
+//         if(v[curr] == mex) ans = solve(curr + 1, mex, skip) + solve(curr + 1, mex + 1, skip);
+//         else if(v[curr] == mex - 1) ans = 2 * solve(curr + 1, mex, skip);
+//         else if(v[curr] == mex + 1) ans = solve(curr + 1, mex, skip) + solve(curr + 1, mex, 1);
+//         else return dp[curr][mex][skip] = solve(curr + 1, mex, skip);
+//         ans %= mod;
 //     }
-//     else if(v[curr] == prev - 2 && skip != -1) ans += solve(curr + 1, v[curr], skip);
-//     else if(v[curr] == prev + 1 && skip == -1) ans += solve(curr + 1, v[curr], skip);
-//     ans %= mod;
-//     return dp[{curr, prev, skip}] = ans;
+//     return dp[curr][mex][skip] = ans;
 // }
 int32_t main() {
     fast;
@@ -53,17 +52,22 @@ int32_t main() {
         for(int i=0;i<n;i++) {
             cin >> v[i];
         }
-        vector<int> dp1(n + 2, 0), dp2(n + 2, 0);
-        dp1[0] = 1;
+        vector<int> dp1(n + 2), dp2(n + 2);
+        dp1[0] = 1; // counting empty subsequence, will be subtracted finally
         for(auto i : v) {
-            // i am putting i
-            if(i > 0) {
-                dp2[i - 1] = dp1[i - 1] + 2 * dp2[i - 1];
+            // i am putting 'i'
+
+            if(i) {
+                dp2[i - 1] *= 2; // we have already skipped the kth element - 0011..i-2 i-2 ii i-2 i-2 + i put or not
+                dp2[i - 1] += dp1[i - 1]; // skipping the kth element for the first time - 0011..i-2 i-2 + i put
                 dp2[i - 1] %= mod;
             }
-            dp1[i + 1] = dp1[i] + 2 * dp1[i + 1];
+
+            dp1[i + 1] *= 2; // if the mex is already 'i + 1' then we can either put i or dont put it - 0011..ii + i put or not
+            dp1[i + 1] += dp1[i]; // previously the mex was i and after putting i it will be i + 1 - 0011..i-1 + i put
             dp1[i + 1] %= mod;
-            dp2[i + 1] = 2 * dp2[i + 1];
+
+            dp2[i + 1] *= 2; // we have already skipped the kth element - 0011..ii i+2 i+2 + i put or not
             dp2[i + 1] %= mod;
         }
         int ans = 0;
@@ -72,6 +76,33 @@ int32_t main() {
             ans %= mod;
         }
         cout << (ans - 1 + mod) % mod << endl;
-        // cout << solve(0, -1, -1) << endl;
+
+        // dp.clear();
+        // dp.resize(n, vector<vector<int>>(n + 1, vector<int>(2, -1)));
+
+        // // int ans = 0;
+        // // for(int i=0;i<n;i++) {
+        // //     if(v[i] == 0) ans += solve(i + 1, 1, 0);
+        // //     else if(v[i] == 1) ans += solve(i + 1, 0, 1);
+        // //     ans %= mod;
+        // // }
+        // // cout << ans << endl;
+
+        // cout << solve(0, 0, 0) - 1 << endl;
     }
 }
+// 4
+// 0 1 2 3
+// 0
+// 0 1
+// 0 1 2
+// 0 1 2 3
+// 0 2
+// 0 1 3
+
+// 3
+// 0 1 3
+// 0
+// 0 1
+// 0 1 3
+// 1
