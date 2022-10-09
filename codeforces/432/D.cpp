@@ -41,43 +41,32 @@ int32_t main() {
             }
         }
         dbg(z);
-        
-        // counting substrings with kmp
-        // vector<int> pi(n);
-        // for(int i=1;i<n;i++) {
-        //     int j = pi[i - 1];
-        //     while(j > 0 && s[i] != s[j]) {
-        //         j = pi[j-1];
-        //     }
-        //     if(s[i] == s[j]) j++;
-        //     pi[i] = j;
-        // }
-        // dbg(pi);
-        // for(int i=0;i<n;i++) {
-        //     ct[pi[i]]++;
-        // }
-        // for(int i=n-1;i>0;i--) {
-        //     ct[pi[i - 1]] += ct[i];
-        // }
-        // for(int i=0;i<=n;i++) {
-        //     ct[i]++;
-        // }
-        // dbg(ct);
-
-        // counting substrings with z
+        vector<int> pi(n);
+        for(int i=1;i<n;i++) {
+            int j = pi[i - 1];
+            while(j > 0 && s[i] != s[j]) {
+                j = pi[j-1];
+            }
+            if(s[i] == s[j]) j++;
+            pi[i] = j;
+        }
+        dbg(pi);
         vector<int> ct(n + 1);
         for(int i=0;i<n;i++) {
-            ct[z[i]]++;
+            ct[pi[i]]++;
         }
-        for(int i=n-1;i>=0;i--) {
-            ct[i] += ct[i + 1];
+        for(int i=n-1;i>0;i--) {
+            ct[pi[i - 1]] += ct[i];
+        }
+        for(int i=0;i<=n;i++) {
+            ct[i]++;
         }
         dbg(ct);
         vector<vector<int>> ans;
         for(int i=n-1;i>=1;i--) {
             if(z[i] == n - i) {
                 // pefix/suffix of length z[i]
-                ans.push_back({z[i], ct[z[i]] + 1});
+                ans.push_back({z[i], ct[z[i]]});
             }
         }
         ans.push_back({n, 1});
