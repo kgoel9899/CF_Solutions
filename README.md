@@ -13,10 +13,11 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1229 | [D - Reset K Edges](https://codeforces.com/contest/1739/problem/D) | [GNU C++20 (64)](./codeforces/1739/D.cpp) | `binary search` `data structures` `dfs and similar` `graphs` `greedy` `trees` `*1900` | Oct/10/2022 11:38 | 
 1228 | [D - MEX Sequences](https://codeforces.com/contest/1613/problem/D) | [GNU C++20 (64)](./codeforces/1613/D.cpp) | `dp` `math` `*1900` | Oct/09/2022 15:56 | 
 1227 | [D - Prefixes and Suffixes](https://codeforces.com/contest/432/problem/D) | [GNU C++20 (64)](./codeforces/432/D.cpp) | `dp` `string suffix structures` `strings` `two pointers` `*2000` | Oct/09/2022 14:43 | 
-1226 | [D - Password](https://codeforces.com/contest/127/problem/D) | [GNU C++20 (64)](./codeforces/127/D.cpp) | `hashing` `strings` `*1700` | Oct/09/2022 03:51 | 
-1225 | [B - Password](https://codeforces.com/contest/126/problem/B) | [GNU C++20 (64)](./codeforces/126/B.cpp) | `binary search` `dp` `hashing` `string suffix structures` `strings` `*1700` | Oct/09/2022 03:51 | 
+1226 | [B - Password](https://codeforces.com/contest/126/problem/B) | [GNU C++20 (64)](./codeforces/126/B.cpp) | `binary search` `dp` `hashing` `string suffix structures` `strings` `*1700` | Oct/09/2022 03:51 | 
+1225 | [D - Password](https://codeforces.com/contest/127/problem/D) | [GNU C++20 (64)](./codeforces/127/D.cpp) | `hashing` `strings` `*1700` | Oct/09/2022 03:51 | 
 1224 | [C - Even Number Addicts](https://codeforces.com/contest/1738/problem/C) | [GNU C++20 (64)](./codeforces/1738/C.cpp) | `dp` `games` `greedy` `math` `*1500` | Oct/08/2022 02:42 | 
 1223 | [B - Prefix Sum Addicts](https://codeforces.com/contest/1738/problem/B) | [GNU C++20 (64)](./codeforces/1738/B.cpp) | `constructive algorithms` `greedy` `math` `sortings` `*1200` | Oct/07/2022 21:06 | 
 1222 | [D - Flood Fill](https://codeforces.com/contest/1114/problem/D) | [GNU C++20 (64)](./codeforces/1114/D.cpp) | `dp` `*1900` | Oct/07/2022 20:24 | 
