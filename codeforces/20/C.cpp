@@ -36,28 +36,24 @@ int32_t main() {
             adj[b].push_back({a, c});
         }
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-        vector<int> dist(n + 1, INF), par(n + 1, -1);
-        par[1] = 0;
-        dist[1] = 0;
         pq.push({0, 1});
+        vector<int> dist(n + 1, INF);
+        dist[1] = 0;
+        vector<int> par(n + 1);
         while(!pq.empty()) {
             auto f = pq.top();
             pq.pop();
-            int v = f.second;
-            int d_v = f.first;
-            if(d_v != dist[v]) continue;
-            for(auto i : adj[v]) {
-                int to = i.first;
-                int len = i.second;
-                if(d_v + len < dist[to]) {
-                    dist[to] = d_v + len;
-                    pq.push({dist[to], to});
-                    par[to] = v;
+            int to = f.second;
+            int d = f.first;
+            if(d != dist[to]) continue;
+            for(auto i : adj[to]) {
+                if(d + i.second < dist[i.first]) {
+                    dist[i.first] = d + i.second;
+                    pq.push({d + i.second, i.first});
+                    par[i.first] = to;
                 }
             }
         }
-        dbg(dist);
-        dbg(par);
         if(dist[n] == INF) {
             cout << -1 << endl;
             continue;
