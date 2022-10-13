@@ -28,26 +28,27 @@ void dfs(int l, int r) {
     if(l > r) return;
     if(l == r) {
         ans.push_back({l, r, l});
-        // s.erase({l, r});
         return;
     }
-    int ok = 0;
     for(int i=l;i<=r;i++) {
-        int ok1 = 1, ok2 = 1;
-        if(l <= i - 1 && s.count({l, i - 1}) == 0) ok1 = 0;
-        if(i + 1 <= r && s.count({i + 1, r}) == 0) ok2 = 0;
-        if(ok1 && ok2) {
-            ans.push_back({l, r, i});
-            // s.erase({l, i - 1});
-            // s.erase({i + 1, r});
-            ok = 1;
-            dfs(l, i - 1);
-            dfs(i + 1, r);
-            break;
+        if(i == l) {
+            if(s.find({l + 1, r}) != s.end()) {
+                ans.push_back({l, r, l});
+                dfs(l + 1, r);
+            }
+        } else if(i == r) {
+            if(s.find({l, r - 1}) != s.end()) {
+                ans.push_back({l, r, r});
+                dfs(l, r - 1);
+            }
+        } else {
+            if((s.find({l, i - 1}) != s.end()) && (s.find({i + 1, r}) != s.end())) {
+                ans.push_back({l, r, i});
+                dfs(l, i - 1);
+                dfs(i + 1, r);
+            }
         }
     }
-    // dbg(l, r, ok);
-    assert(ok);
 }
 int32_t main() {
     fast;
@@ -61,14 +62,10 @@ int32_t main() {
             cin >> a >> b;
             s.insert({a, b});
         }
-        dbg(s);
         ans.clear();
         dfs(1, n);
         for(auto i : ans) {
-            for(auto j : i) {
-                cout << j << " ";
-            }
-            cout << endl;
+            cout << i[0] << " " << i[1] << " " << i[2] << endl;
         }
     }
 }
