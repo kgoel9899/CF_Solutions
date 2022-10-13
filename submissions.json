@@ -18306,6 +18306,22 @@
     ],
     "timestamp": "Oct/11/2022 17:37"
   },
+  "CF176062206": {
+    "contest_id": 1742,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1742\\F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Smaller",
+    "problem_url": "https://codeforces.com/contest/1742/problem/F",
+    "submission_id": "CF176062206",
+    "submission_url": "https://codeforces.com/contest/1742/submission/176062206",
+    "tags": [
+      "greedy",
+      "strings"
+    ],
+    "timestamp": "Oct/14/2022 00:19"
+  },
   "CF176067002": {
     "contest_id": 1365,
     "language": "GNU C++20 (64)",
