@@ -21,39 +21,39 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-int n, m;
-void update(int i, int j, vector<string>& v) {
-    if(i >= 0 && i < n && j >= 0 && j < m && v[i][j] == '.') v[i][j] = '#';
-}
 int32_t main() {
     fast;
     int tt = 1;
     cin >> tt;
-    int x = 1;
     while(tt--) {
+        int n, m;
         cin >> n >> m;
         vector<string> v(n);
         for(int i=0;i<n;i++) {
             cin >> v[i];
         }
         int good = 0;
+        vector<pair<int, int>> dirs = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
         for(int i=0;i<n;i++) {
             for(int j=0;j<m;j++) {
                 if(v[i][j] == 'B') {
-                    update(i + 1, j, v);
-                    update(i - 1, j, v);
-                    update(i, j + 1, v);
-                    update(i, j - 1, v);
+                    for(auto& k : dirs) {
+                        int nx = i + k.first;
+                        int ny = j + k.second;
+                        if(nx >= 0 && nx < n && ny >= 0 && ny < m && v[nx][ny] == '.') v[nx][ny] = '#';
+                    }
                 } else if(v[i][j] == 'G') good++;
             }
         }
-        vector<pair<int, int>> dirs = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-        queue<pair<int, int>> q;
-        if(v[n - 1][m - 1] == '.') {
-            q.push({n - 1, m - 1});
-            v[n - 1][m - 1] = '#';
+        if(v[n - 1][m - 1] == '#') {
+            if(good) cout << "No" << endl;
+            else cout << "Yes" << endl;
+            continue;
         }
-        int bad = 0;
+        queue<pair<int, int>> q;
+        q.push({n - 1, m - 1});
+        v[n - 1][m - 1] = '#';
+        int ok = 1;
         while(!q.empty()) {
             auto f = q.front();
             q.pop();
@@ -61,18 +61,21 @@ int32_t main() {
                 int nx = f.first + i.first;
                 int ny = f.second + i.second;
                 if(nx >= 0 && nx < n && ny >= 0 && ny < m && v[nx][ny] != '#') {
+                    q.push({nx, ny});
                     if(v[nx][ny] == 'G') good--;
-                    if(v[nx][ny] == 'B') {
-                        bad = 1;
+                    else if(v[nx][ny] == 'B') {
+                        ok = 0;
                         break;
                     }
                     v[nx][ny] = '#';
-                    q.push({nx, ny});
                 }
             }
-            if(bad) break;
+            if(!ok) break;
         }
-        if(good == 0 && !bad) cout << "Yes" << endl;
-        else cout << "No" << endl;
+        if(!ok) cout << "No" << endl;
+        else {
+            if(good == 0) cout << "Yes" << endl;
+            else cout << "No" << endl;
+        }
     }
 }
