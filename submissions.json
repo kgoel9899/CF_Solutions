@@ -18430,6 +18430,24 @@
     ],
     "timestamp": "Oct/15/2022 01:33"
   },
+  "CF176475165": {
+    "contest_id": 638,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\638\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Making Genome in Berland",
+    "problem_url": "https://codeforces.com/contest/638/problem/B",
+    "submission_id": "CF176475165",
+    "submission_url": "https://codeforces.com/contest/638/submission/176475165",
+    "tags": [
+      "*special problem",
+      "dfs and similar",
+      "strings",
+      "*1500"
+    ],
+    "timestamp": "Oct/16/2022 16:21"
+  },
   "CF176475269": {
     "contest_id": 638,
     "language": "GNU C++20 (64)",

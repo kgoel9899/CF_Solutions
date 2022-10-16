@@ -46,12 +46,15 @@ int32_t main() {
                 used.insert(y);
             }
         }
+        dbg(adj);
+        dbg(in);
         string ans = "";
         set<int> done;
         for(int i=0;i<26;i++) {
             if(used.find(i) != used.end() && in[i] == 0 && done.find(i) == done.end()) {
                 queue<int> q;
                 q.push(i);
+                dbg(i);
                 while(!q.empty()) {
                     auto f = q.front();
                     q.pop();
