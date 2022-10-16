@@ -13,8 +13,9 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1235 | [C - The Tag Game](https://codeforces.com/contest/813/problem/C) | [GNU C++20 (64)](./codeforces/813/C.cpp) | `dfs and similar` `graphs` `*1700` | Oct/16/2022 17:59 | 
-1234 | [A - Ring road](https://codeforces.com/contest/24/problem/A) | [GNU C++20 (64)](./codeforces/24/A.cpp) | `graphs` `*1400` | Oct/16/2022 17:08 | 
+1236 | [C - The Tag Game](https://codeforces.com/contest/813/problem/C) | [GNU C++20 (64)](./codeforces/813/C.cpp) | `dfs and similar` `graphs` `*1700` | Oct/16/2022 17:59 | 
+1235 | [A - Ring road](https://codeforces.com/contest/24/problem/A) | [GNU C++20 (64)](./codeforces/24/A.cpp) | `graphs` `*1400` | Oct/16/2022 17:08 | 
+1234 | [B - Making Genome in Berland](https://codeforces.com/contest/638/problem/B) | [GNU C++20 (64)](./codeforces/638/B.cpp) | `*special problem` `dfs and similar` `strings` `*1500` | Oct/16/2022 16:22 | 
 1233 | [C - Fox And Names](https://codeforces.com/contest/510/problem/C) | [GNU C++20 (64)](./codeforces/510/C.cpp) | `dfs and similar` `graphs` `sortings` `*1600` | Oct/15/2022 01:33 | 
 1232 | [B - Game on Ranges](https://codeforces.com/contest/1623/problem/B) | [GNU C++20 (64)](./codeforces/1623/B.cpp) | `brute force` `dfs and similar` `implementation` `sortings` `*1100` | Oct/14/2022 01:58 | 
 1231 | [D - Solve The Maze](https://codeforces.com/contest/1365/problem/D) | [GNU C++20 (64)](./codeforces/1365/D.cpp) | `constructive algorithms` `dfs and similar` `dsu` `graphs` `greedy` `implementation` `shortest paths` `*1700` | Oct/14/2022 01:09 | 
