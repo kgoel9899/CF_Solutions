@@ -22,19 +22,19 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 int n, x, ans;
-vector<int> a, b/*, sub, mx, parent*/;
+vector<int> a, b, sub, mx, parent;
 vector<vector<int>> adj;
 void dfs1(int curr, int par, int d) {
     a[curr] = d;
-    // mx[curr] = curr;
-    // parent[curr] = par;
+    mx[curr] = curr;
+    parent[curr] = par;
     for(auto i : adj[curr]) {
         if(i == par) continue;
         dfs1(i, curr, d + 1);
-        // if(1 + sub[i] > sub[curr]) {
-        //     sub[curr] = 1 + sub[i];
-        //     mx[curr] = mx[i];
-        // }
+        if(1 + sub[i] > sub[curr]) {
+            sub[curr] = 1 + sub[i];
+            mx[curr] = mx[i];
+        }
     }
 }
 void dfs2(int curr, int par, int d) {
@@ -62,33 +62,25 @@ int32_t main() {
         a.resize(n + 1);
         b.clear();
         b.resize(n + 1);
+        sub.clear();
+        sub.resize(n + 1);
+        mx.clear();
+        mx.resize(n + 1);
+        parent.clear();
+        parent.resize(n + 1);
         dfs1(1, 0, 0);
         dfs2(x, 0, 0);
-        ans = 0;
-        for(int i=1;i<=n;i++) {
-            if(a[i] > b[i]) ans = max(ans, 2 * a[i]);
+        int up = (a[x] - 1) / 2;
+        ans = up; // for bob
+        while(up > 0) {
+            x = parent[x];
+            up--;
         }
+        dbg(x);
+        ans += a[mx[x]] - a[x]; // for bob
+        int alice = a[mx[x]];
+        ans += (alice - ans);
+        ans += alice;
         cout << ans << endl;
-
-        // sub.clear();
-        // sub.resize(n + 1);
-        // mx.clear();
-        // mx.resize(n + 1);
-        // parent.clear();
-        // parent.resize(n + 1);
-        // dfs1(1, 0, 0);
-        // dfs2(x, 0, 0);
-        // int up = (a[x] - 1) / 2;
-        // ans = up; // for bob
-        // while(up > 0) {
-        //     x = parent[x];
-        //     up--;
-        // }
-        // dbg(x);
-        // ans += a[mx[x]] - a[x]; // for bob
-        // int alice = a[mx[x]];
-        // ans += (alice - ans);
-        // ans += alice;
-        // cout << ans << endl;
     }
 }
