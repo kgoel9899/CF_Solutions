@@ -70,8 +70,13 @@ int32_t main() {
         parent.resize(n + 1);
         dfs1(1, 0, 0);
         dfs2(x, 0, 0);
+        dbg(a);
+        dbg(sub);
+        dbg(mx);
+        dbg(parent);
         int up = (a[x] - 1) / 2;
         ans = up; // for bob
+        int start = up;
         while(up > 0) {
             x = parent[x];
             up--;
