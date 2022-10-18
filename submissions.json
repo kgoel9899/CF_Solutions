@@ -18588,6 +18588,26 @@
     ],
     "timestamp": "Oct/16/2022 17:59"
   },
+  "CF176834645": {
+    "contest_id": 638,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\638\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Road Improvement",
+    "problem_url": "https://codeforces.com/contest/638/problem/C",
+    "submission_id": "CF176834645",
+    "submission_url": "https://codeforces.com/contest/638/submission/176834645",
+    "tags": [
+      "*special problem",
+      "dfs and similar",
+      "graphs",
+      "greedy",
+      "trees",
+      "*1800"
+    ],
+    "timestamp": "Oct/18/2022 11:15"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",

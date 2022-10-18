@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1240 | [C - Road Improvement](https://codeforces.com/contest/638/problem/C) | [GNU C++20 (64)](./codeforces/638/C.cpp) | `*special problem` `dfs and similar` `graphs` `greedy` `trees` `*1800` | Oct/18/2022 11:15 | 
 1239 | [C - The Tag Game](https://codeforces.com/contest/813/problem/C) | [GNU C++20 (64)](./codeforces/813/C.cpp) | `dfs and similar` `graphs` `*1700` | Oct/16/2022 17:59 | 
 1238 | [A - Ring road](https://codeforces.com/contest/24/problem/A) | [GNU C++20 (64)](./codeforces/24/A.cpp) | `graphs` `*1400` | Oct/16/2022 17:08 | 
 1237 | [B - Making Genome in Berland](https://codeforces.com/contest/638/problem/B) | [GNU C++20 (64)](./codeforces/638/B.cpp) | `*special problem` `dfs and similar` `strings` `*1500` | Oct/16/2022 16:22 | 
