@@ -13,10 +13,11 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1248 | [D - Police Stations](https://codeforces.com/contest/796/problem/D) | [GNU C++20 (64)](./codeforces/796/D.cpp) | `constructive algorithms` `dfs and similar` `dp` `graphs` `shortest paths` `trees` `*2100` | Oct/21/2022 12:30 | 
-1247 | [C - Cycle In Maze](https://codeforces.com/contest/769/problem/C) | [GNU C++20 (64)](./codeforces/769/C.cpp) | `*special problem` `dfs and similar` `graphs` `greedy` `shortest paths` `*1700` | Oct/21/2022 10:40 | 
-1246 | [D - Ant on the Tree](https://codeforces.com/contest/29/problem/D) | [GNU C++20 (64)](./codeforces/29/D.cpp) | `constructive algorithms` `dfs and similar` `trees` `*2000` | Oct/20/2022 23:42 | 
-1245 | [B - Balanced Substring](https://codeforces.com/contest/873/problem/B) | [GNU C++20 (64)](./codeforces/873/B.cpp) | `dp` `implementation` `*1500` | Oct/19/2022 13:11 | 
+1249 | [D - Police Stations](https://codeforces.com/contest/796/problem/D) | [GNU C++20 (64)](./codeforces/796/D.cpp) | `constructive algorithms` `dfs and similar` `dp` `graphs` `shortest paths` `trees` `*2100` | Oct/21/2022 12:30 | 
+1248 | [C - Cycle In Maze](https://codeforces.com/contest/769/problem/C) | [GNU C++20 (64)](./codeforces/769/C.cpp) | `*special problem` `dfs and similar` `graphs` `greedy` `shortest paths` `*1700` | Oct/21/2022 10:40 | 
+1247 | [D - Ant on the Tree](https://codeforces.com/contest/29/problem/D) | [GNU C++20 (64)](./codeforces/29/D.cpp) | `constructive algorithms` `dfs and similar` `trees` `*2000` | Oct/20/2022 23:42 | 
+1246 | [B - Balanced Substring](https://codeforces.com/contest/873/problem/B) | [GNU C++20 (64)](./codeforces/873/B.cpp) | `dp` `implementation` `*1500` | Oct/19/2022 13:11 | 
+1245 | [C - Save the Magazines](https://codeforces.com/contest/1743/problem/C) | [GNU C++20 (64)](./codeforces/1743/C.cpp) | `constructive algorithms` `dp` `greedy` `*1100` | Oct/19/2022 10:47 | 
 1244 | [C - Road Improvement](https://codeforces.com/contest/638/problem/C) | [GNU C++20 (64)](./codeforces/638/C.cpp) | `*special problem` `dfs and similar` `graphs` `greedy` `trees` `*1800` | Oct/18/2022 11:15 | 
 1243 | [E1 - Divisible Numbers (easy version)](https://codeforces.com/contest/1744/problem/E1) | [GNU C++20 (64)](./codeforces/1744/E1.cpp) | `brute force` `math` `number theory` `*1500` | Oct/18/2022 10:56 | 
 1242 | [C - Mail Stamps](https://codeforces.com/contest/29/problem/C) | [GNU C++20 (64)](./codeforces/29/C.cpp) | `data structures` `dfs and similar` `graphs` `implementation` `*1700` | Oct/17/2022 20:23 | 
