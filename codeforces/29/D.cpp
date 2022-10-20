@@ -21,7 +21,7 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-const int LOG = 10;
+const int LOG = 15;
 int dfs(int curr, int par, int d, vector<int>& node_leaves, vector<int>& dist, vector<vector<int>>& up, vector<vector<int>>& adj) {
     int ans = 0, ok = 0;
     up[curr][0] = par;
