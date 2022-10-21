@@ -18681,6 +18681,27 @@
     ],
     "timestamp": "Oct/18/2022 11:15"
   },
+  "CF177270037": {
+    "contest_id": 796,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\796\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Police Stations",
+    "problem_url": "https://codeforces.com/contest/796/problem/D",
+    "submission_id": "CF177270037",
+    "submission_url": "https://codeforces.com/contest/796/submission/177270037",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "dp",
+      "graphs",
+      "shortest paths",
+      "trees",
+      "*2100"
+    ],
+    "timestamp": "Oct/21/2022 12:30"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
