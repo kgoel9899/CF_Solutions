@@ -18793,6 +18793,23 @@
     ],
     "timestamp": "Oct/21/2022 12:30"
   },
+  "CF177481258": {
+    "contest_id": 1744,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1744\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Even-Odd Increments ",
+    "problem_url": "https://codeforces.com/contest/1744/problem/B",
+    "submission_id": "CF177481258",
+    "submission_url": "https://codeforces.com/contest/1744/submission/177481258",
+    "tags": [
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Oct/22/2022 22:46"
+  },
   "CF177647535": {
     "contest_id": 1692,
     "language": "GNU C++20 (64)",
