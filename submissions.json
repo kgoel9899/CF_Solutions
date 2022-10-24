@@ -18793,6 +18793,22 @@
     ],
     "timestamp": "Oct/21/2022 12:30"
   },
+  "CF177794193": {
+    "contest_id": 1692,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1692\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Where's the Bishop?",
+    "problem_url": "https://codeforces.com/contest/1692/problem/C",
+    "submission_id": "CF177794193",
+    "submission_url": "https://codeforces.com/contest/1692/submission/177794193",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Oct/24/2022 23:03"
+  },
   "CF177853158": {
     "contest_id": 1732,
     "language": "GNU C++20 (64)",
