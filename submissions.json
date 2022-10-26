@@ -18861,6 +18861,27 @@
     ],
     "timestamp": "Oct/25/2022 14:59"
   },
+  "CF177958014": {
+    "contest_id": 194,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\194\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Cutting Figure",
+    "problem_url": "https://codeforces.com/contest/194/problem/C",
+    "submission_id": "CF177958014",
+    "submission_url": "https://codeforces.com/contest/194/submission/177958014",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "graphs",
+      "implementation",
+      "matrices",
+      "strings",
+      "*1700"
+    ],
+    "timestamp": "Oct/26/2022 12:46"
+  },
   "CF178034797": {
     "contest_id": 427,
     "language": "GNU C++20 (64)",
