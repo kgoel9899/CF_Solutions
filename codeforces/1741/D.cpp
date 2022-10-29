@@ -22,6 +22,8 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 int solve(int l, int r, vector<int>& v) {
+    // dbg(l, r);
+    // return 0;
     if(l >= r) return 0;
     int mid = (l + r) / 2;
     int left = solve(l, mid, v);
@@ -38,14 +40,15 @@ int solve(int l, int r, vector<int>& v) {
         mx2 = max(mx2, v[i]);
     }
     int ans = left + right;
-    if(mx2 < mn1) {
-        // swap
-        for(int i=l,j=mid+1;i<=mid;i++,j++) {
-            swap(v[i], v[j]);
-        }
-        return ans + 1;
-    } else if(mx1 < mn2) return ans;
-    else return -1;
+    if(mx2 < mn1 || mx1 < mn2) {
+        if(mx2 < mn1) {
+            // swap
+            for(int i=l,j=mid+1;i<=mid;i++,j++) {
+                swap(v[i], v[j]);
+            }
+            return ans + 1;
+        } else return ans;
+    } else return -1;
 }
 int32_t main() {
     fast;
