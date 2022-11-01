@@ -21,23 +21,6 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-vector<int> par, sz;
-void make_set(int u) {
-    par[u] = u;
-    sz[u] = 1;
-}
-int find_set(int u) {
-    if(u == par[u]) return u;
-    return par[u] = find_set(par[u]);
-}
-void union_sets(int u, int v) {
-    u = find_set(u);
-    v = find_set(v);
-    if(u == v) return;
-    if(sz[u] < sz[v]) swap(u, v);
-    sz[u] += sz[v];
-    par[v] = u;
-}
 int modRecursive(int a, int b, int c) {
     if(b == 0) return 1;
     if(b == 1) return a % c;
@@ -52,26 +35,18 @@ int32_t main() {
     while(tt--) {
         int n, m, k;
         cin >> n >> m >> k;
-        par.clear();
-        par.resize(n + 1);
-        sz.clear();
-        sz.resize(n + 1);
-        for(int i=1;i<=n;i++) {
-            make_set(i);
+        if(k == 1 || k > n) {
+            cout << modRecursive(m, n, MOD) << endl;
+            continue;
         }
-        for(int i=1;i<=n;i++) {
-            int l = i, r = i + k - 1;
-            if(r > n) break;
-            while(l < r) {
-                union_sets(l, r);
-                l++;
-                r--;
-            }
+        if(k == n) {
+            cout << modRecursive(m, (n + 1) / 2, MOD) << endl;
+            continue;
         }
-        set<int> s;
-        for(int i=1;i<=n;i++) {
-            s.insert(find_set(i));
+        if(k % 2 && n >= 3) {
+            cout << m * m << endl;
+            continue;
         }
-        cout << modRecursive(m, s.size(), MOD) << endl;
+        cout << m << endl;
     }
 }
