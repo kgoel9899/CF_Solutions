@@ -24,7 +24,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 int n, m;
 string s;
 vector<vector<int>> adj, dp;
-vector<int> indeg, vis;
+vector<int> in, vis;
 bool cycle(int curr) {
     if(vis[curr] == 1) return true;
     if(vis[curr] == 2) return false;
@@ -38,14 +38,12 @@ bool cycle(int curr) {
 }
 void dfs(int curr) {
     vis[curr] = 1;
-    vector<int> temp(26);
-    for(auto i : adj[curr]) {
+    for(auto& i : adj[curr]) {
         if(!vis[i]) dfs(i);
         for(int j=0;j<26;j++) {
-            temp[j] = max(temp[j], dp[i][j]);
+            dp[curr][j] = max(dp[curr][j], dp[i][j]);
         }
     }
-    dp[curr] = temp;
     dp[curr][s[curr] - 'a']++;
 }
 int32_t main() {
@@ -58,57 +56,38 @@ int32_t main() {
         s = '#' + s;
         adj.clear();
         adj.resize(n + 1);
-        indeg.clear();
-        indeg.resize(n + 1);
+        in.clear();
+        in.resize(n + 1);
         for(int i=0;i<m;i++) {
             int a, b;
             cin >> a >> b;
             adj[a].push_back(b);
-            indeg[b]++;
+            in[b]++;
         }
         vis.clear();
         vis.resize(n + 1);
-        int ok = 1;
+        bool ans = false;
         for(int i=1;i<=n;i++) {
-            if(cycle(i)) {
-                ok = 0;
-                break;
-            }
+            if(!vis[i]) ans |= cycle(i);
         }
-        if(!ok) {
+        if(ans) {
             cout << -1 << endl;
             continue;
         }
+        vis.clear();
+        vis.resize(n + 1);
         dp.clear();
         dp.resize(n + 1, vector<int>(26));
-        fill(all(vis), 0);
-        int ans = 0;
+        int mx = 0;
         for(int i=1;i<=n;i++) {
-            if(indeg[i] == 0) {
-                // dbg(i);
+            if(in[i] == 0) {
+                dbg(i);
                 dfs(i);
                 for(int j=0;j<26;j++) {
-                    ans = max(ans, dp[i][j]);
+                    mx = max(mx, dp[i][j]);
                 }
             }
         }
-        // for(int i=1;i<=n;i++) {
-        //     cout << "Node " << i << endl;
-        //     for(int j=0;j<26;j++) {
-        //         if(dp[i][j]) cout << char('a' + j) << ": " << dp[i][j] << endl;
-        //     }
-        //     cout << endl;
-        // }
-        cout << ans << endl;
+        cout << mx << endl;
     }
 }
-/*
-
-1
-1 10 9 - xxq
-1 2 10 9 - xzxq
-1 2 8 - xzz
-1 2 6 5 - xzzy
-
-
-*/
