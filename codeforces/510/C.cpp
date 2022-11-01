@@ -32,44 +32,43 @@ int32_t main() {
         for(int i=0;i<n;i++) {
             cin >> v[i];
         }
+        int done = 0;
         vector<vector<int>> adj(26);
         vector<int> in(26);
-        int ok = 1;
         for(int i=1;i<n;i++) {
-            int l = 0, r = 0;
-            while(l < v[i - 1].size() && r < v[i].size()) {
-                if(v[i - 1][l] != v[i][r]) break;
-                l++;
-                r++;
+            int ind = 0, ok = 1;
+            int x = v[i - 1].size(), y = v[i].size();
+            while(ind < x && ind < y) {
+                if(v[i - 1][ind] != v[i][ind]) {
+                    adj[v[i - 1][ind] - 'a'].push_back(v[i][ind] - 'a');
+                    in[v[i][ind] - 'a']++;
+                    break;
+                }
+                ind++;
             }
-            if(l == v[i - 1].size() && r == v[i].size()) continue;
-            if(r == v[i].size()) {
-                ok = 0;
+            if(!ok || (ind == min(x, y) && x > y)) {
+                cout << "Impossible" << endl;
+                done = 1;
                 break;
             }
-            if(l == v[i - 1].size()) continue;
-            adj[v[i - 1][l] - 'a'].push_back(v[i][r] - 'a');
-            in[v[i][r] - 'a']++;
         }
-        if(!ok) {
-            cout << "Impossible" << endl;
-            continue;
-        }
-        string ans = "";
-        queue<int> q;
-        for(int i=0;i<26;i++) {
-            if(in[i] == 0) q.push(i);
-        }
-        while(!q.empty()) {
-            auto f = q.front();
-            q.pop();
-            ans += char('a' + f);
-            for(auto i : adj[f]) {
-                in[i]--;
+        if(!done) {
+            dbg(adj);
+            queue<int> q;
+            for(int i=0;i<26;i++) {
                 if(in[i] == 0) q.push(i);
             }
+            string ans = "";
+            while(!q.empty()) {
+                auto f = q.front();
+                q.pop();
+                ans += char('a' + f);
+                for(auto& i : adj[f]) {
+                    if(--in[i] == 0) q.push(i);
+                }
+            }
+            if(ans.size() == 26) cout << ans << endl;
+            else cout << "Impossible" << endl;
         }
-        if(ans.size() == 26) cout << ans << endl;
-        else cout << "Impossible" << endl;
     }
 }
