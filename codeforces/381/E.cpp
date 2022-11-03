@@ -29,14 +29,6 @@ struct Node {
         clo = 0;
     }
 };
-Node merge(Node& one, Node& two) {
-    Node result;
-    int temp = min(one.op, two.clo);
-    result.mx = one.mx + two.mx + 2 * temp;
-    result.op = one.op + two.op - temp;
-    result.clo = one.clo + two.clo - temp;
-    return result;
-}
 void build(int l, int r, int node, string& s, vector<Node>& tree) {
     if(l == r) {
         tree[node].mx = 0;
@@ -47,7 +39,10 @@ void build(int l, int r, int node, string& s, vector<Node>& tree) {
     int mid = (l + r) / 2;
     build(l, mid, 2 * node, s, tree);
     build(mid + 1, r, 2 * node + 1, s, tree);
-    tree[node] = merge(tree[2 * node], tree[2 * node + 1]);
+    int temp = min(tree[2 * node].op, tree[2 * node + 1].clo);
+    tree[node].mx = tree[2 * node].mx + tree[2 * node + 1].mx + 2 * temp;
+    tree[node].op = tree[2 * node].op + tree[2 * node + 1].op - temp;
+    tree[node].clo = tree[2 * node].clo + tree[2 * node + 1].clo - temp;
 }
 Node query(int l, int r, int node, int st, int end, vector<Node>& tree) {
     if(l > end || r < st) return Node();
@@ -55,7 +50,12 @@ Node query(int l, int r, int node, int st, int end, vector<Node>& tree) {
     int mid = (l + r) / 2;
     Node op1 = query(l, mid, 2 * node, st, end, tree);
     Node op2 = query(mid + 1, r, 2 * node + 1, st, end, tree);
-    return merge(op1, op2);
+    Node result;
+    int temp = min(op1.op, op2.clo);
+    result.mx = op1.mx + op2.mx + 2 * temp;
+    result.op = op1.op + op2.op - temp;
+    result.clo = op1.clo + op2.clo - temp;
+    return result;
 }
 int32_t main() {
     fast;
