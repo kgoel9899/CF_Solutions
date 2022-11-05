@@ -8,49 +8,68 @@ using namespace std;
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
 const int INF = 1e18;
-const int N = 1005;
-vector<int> par(N), sizee(N);
-int find_set(int v) {
-    if(v == par[v]) return v;
-    return par[v] = find_set(par[v]);
+
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
+int n;
+vector<int> par, sz;
+void make_set(int u) {
+    par[u] = u;
+    sz[u] = 1;
 }
-void union_sets(int a, int b) {
-    a = find_set(a);
-    b = find_set(b);
-    if(a != b) {
-        if(sizee[a] < sizee[b]) swap(a, b);
-        par[b] = a;
-        sizee[a] += sizee[b];
-    }
+int find_set(int u) {
+    if(u == par[u]) return u;
+    return par[u] = find_set(par[u]);
+}
+void union_sets(int u, int v) {
+    u = find_set(u);
+    v = find_set(v);
+    if(u == v) return;
+    if(sz[u] < sz[v]) swap(u, v);
+    sz[u] += sz[v];
+    par[v] = par[u];
 }
 int32_t main() {
     fast;
-    int t = 1;
-    // cin >> t;
-    while(t--) {
-        int n;
+    int tt = 1;
+    // cin >> tt;
+    while(tt--) {
         cin >> n;
+        par.clear();
+        par.resize(n + 1);
+        sz.clear();
+        sz.resize(n + 1);
         for(int i=1;i<=n;i++) {
-            par[i] = i;
-            sizee[i] = 1;
+            make_set(i);
         }
-        vector<pair<int, int>> v1, v2;
+        vector<pair<int, int>> extra;
         for(int i=0;i<n-1;i++) {
             int a, b;
             cin >> a >> b;
-            if(find_set(a) == find_set(b)) v1.push_back({a, b});
+            if(find_set(a) == find_set(b)) extra.push_back({a, b});
             else union_sets(a, b);
         }
-        for(int i=2;i<=n;i++) {
-            if(find_set(1) != find_set(i)) {
-                v2.push_back({1, i});
-                union_sets(1, i);
-            }
+        dbg(extra);
+        set<int> s;
+        vector<int> heads;
+        for(int i=1;i<=n;i++) {
+            int p = find_set(i);
+            if(s.find(p) == s.end()) heads.push_back(p);
+            s.insert(p);
         }
-        cout << v1.size() << endl;
-        // assert(v1.size() == v2.size());
-        for(int i=0;i<v1.size();i++) {
-            cout << v1[i].first << " " << v1[i].second << " " << v2[i].first << " " << v2[i].second << endl;
+        cout << extra.size() << endl;
+        for(int i=0;i<extra.size();i++) {
+            cout << extra[i].first << " " << extra[i].second << " " << heads[i] << " " << heads[i + 1] << endl;
         }
     }
 }
