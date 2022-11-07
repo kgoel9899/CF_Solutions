@@ -13,8 +13,9 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1267 | [D - Mike and Feet](https://codeforces.com/contest/548/problem/D) | [GNU C++20 (64)](./codeforces/548/D.cpp) | `binary search` `data structures` `dp` `*1900` | Nov/06/2022 23:06 | 
-1266 | [B - Mike and Feet](https://codeforces.com/contest/547/problem/B) | [GNU C++20 (64)](./codeforces/547/B.cpp) | `binary search` `data structures` `dp` `dsu` `*1900` | Nov/06/2022 23:06 | 
+1268 | [C - Swap Game](https://codeforces.com/contest/1747/problem/C) | [GNU C++20 (64)](./codeforces/1747/C.cpp) | `games` `*1200` | Nov/07/2022 23:50 | 
+1267 | [B - Mike and Feet](https://codeforces.com/contest/547/problem/B) | [GNU C++20 (64)](./codeforces/547/B.cpp) | `binary search` `data structures` `dp` `dsu` `*1900` | Nov/06/2022 23:06 | 
+1266 | [D - Mike and Feet](https://codeforces.com/contest/548/problem/D) | [GNU C++20 (64)](./codeforces/548/D.cpp) | `binary search` `data structures` `dp` `*1900` | Nov/06/2022 23:06 | 
 1265 | [D - Design Tutorial: Inverse the Problem](https://codeforces.com/contest/472/problem/D) | [GNU C++20 (64)](./codeforces/472/D.cpp) | `dfs and similar` `dsu` `shortest paths` `trees` `*1900` | Nov/05/2022 16:05 | 
 1264 | [D - Roads not only in Berland](https://codeforces.com/contest/25/problem/D) | [GNU C++20 (64)](./codeforces/25/D.cpp) | `dsu` `graphs` `trees` `*1900` | Nov/05/2022 13:28 | 
 1263 | [D - Rating Compression](https://codeforces.com/contest/1450/problem/D) | [GNU C++20 (64)](./codeforces/1450/D.cpp) | `binary search` `data structures` `greedy` `implementation` `two pointers` `*1800` | Nov/05/2022 03:29 | 
