@@ -8,39 +8,52 @@ using namespace std;
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
 const int INF = 1e18;
+
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
 int32_t main() {
     fast;
-    int t = 1;
-    // cin >> t;
-    while(t--) {
+    int tt = 1;
+    // cin >> tt;
+    while(tt--) {
         int n;
         cin >> n;
-        vector<vector<int>> v(n, vector<int>(n));
-        for(int i=0;i<n;i++) {
-            for(int j=0;j<n;j++) {
+        vector<vector<int>> v(n + 1, vector<int>(n + 1));
+        for(int i=1;i<=n;i++) {
+            for(int j=1;j<=n;j++) {
                 cin >> v[i][j];
             }
         }
-        vector<int> inp(n);
+        vector<int> rem(n);
         for(int i=0;i<n;i++) {
-            cin >> inp[i];
+            cin >> rem[i];
         }
-        reverse(all(inp));
-        vector<int> ans(n);
-        vector<int> vis(n);
-        for(int k=0;k<n;k++) {
-            int num = inp[k];
-            vis[num - 1] = 1;
-            for(int i=0;i<n;i++) {
-                for(int j=0;j<n;j++) {
-                    v[i][j] = min(v[i][j], v[i][num - 1] + v[num - 1][j]);
-                    if(vis[i] == 1 && vis[j] == 1) ans[k] += v[i][j];
+        vector<int> fin, vis(n + 1);
+        for(int x=n-1;x>=0;x--) {
+            int ans = 0;
+            int k = rem[x];
+            vis[k] = 1;
+            for(int i=1;i<=n;i++) {
+                for(int j=1;j<=n;j++) {
+                    v[i][j] = min(v[i][j], v[i][k] + v[k][j]);
+                    if(vis[i] && vis[j]) ans += v[i][j];
                 }
             }
+            fin.push_back(ans);
         }
-        reverse(all(ans));
-        for(auto i : ans) {
-            cout << i << " ";
+        reverse(all(fin));
+        for(int i=0;i<n;i++) {
+            cout << fin[i] << " ";
         }
         cout << endl;
     }
