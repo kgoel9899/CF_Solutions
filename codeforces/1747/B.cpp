@@ -28,19 +28,12 @@ int32_t main() {
     while(tt--) {
         int n;
         cin >> n;
-        int ans = n / 2;
-        if(n % 2) ans++;
-        cout << ans << endl;
-        int i = 1, j = n * 3 - 1;
-        for(int x=0;x<ans-n%2;x++) {
-            cout << i << " " << j << endl;
-            i += 3;
-            j -= 3;
+        cout << n / 2 + n % 2 << endl;
+        int l = 1, r = 3 * n;
+        while(l < r){
+            cout << l << " " << r << endl;
+            l += 3;
+            r -= 3;
         }
-        if(n % 2) cout << i << " " << i + 2 << endl;
     }
 }
-// BANBANBANBANBAN
-// AANAANBANBBNBBN
-// BANBANBANBAN
-// BANBANBAN
