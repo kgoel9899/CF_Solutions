@@ -55,7 +55,7 @@ int32_t main() {
         vis.resize(n + 1, -1);
         dbg(adj);
         bool ans = true;
-        for(int i=1;i<=n;i++) {
+        for(int i=0;i<n;i++) {
             if(vis[i] == -1) ans &= bipartite(i, 0);
         }
         if(ans) {
