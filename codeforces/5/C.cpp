@@ -3,38 +3,48 @@ using namespace std;
 #define MOD 1000000007
 #define mod 998244353
 #define int long long
+#define setpres cout << fixed << setprecision(10)
+#define all(x) (x).begin(), (x).end()
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
 const int INF = 1e18;
+
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
 int32_t main() {
     fast;
-    int t = 1;
-    // cin >> t;
-    while(t--) {
+    int tt = 1;
+    // cin >> tt;
+    while(tt--) {
         string s;
         cin >> s;
         int n = s.size();
-        s = '#' + s;
-        vector<int> c(n + 1, -1), d(n + 1, -1);
-        stack<int> st;
-        int ans = 0, ct = 0;
-        for(int i=1;i<=n;i++) {
-            if(s[i] == '(') st.push(i);
-            else {
-                if(!st.empty()) {
-                    int t = st.top();
-                    st.pop();
-                    c[i] = t;
-                    d[i] = t;
-                    if(s[d[i] - 1] == ')' && c[d[i] - 1] != -1) c[i] = c[d[i] - 1];
-                    ans = max(ans, i - c[i] + 1);
-                }
+        vector<int> dp(n);
+        for(int i=1;i<n;i++) {
+            if(s[i] == ')') {
+                if(s[i - 1] == '(') dp[i] = 2 + (i - 2 >= 0 ? dp[i - 2] : 0);
+                else if(i - dp[i - 1] - 1 >= 0 && s[i - dp[i - 1] - 1] == '(') dp[i] = dp[i - 1] + 2 + (i - dp[i - 1] - 2 >= 0 ? dp[i - dp[i - 1] - 2] : 0);
             }
         }
-        for(int i=1;i<=n;i++) {
-            if(s[i] == ')' && c[i] != -1 && i - c[i] + 1 == ans) ct++;
+        dbg(dp);
+        int len = 0, ct = 0;
+        for(int i=0;i<n;i++) {
+            if(dp[i] > len) {
+                len = dp[i];
+                ct = 1;
+            } else if(dp[i] == len) ct++;
         }
-        if(ans == 0) ct = 1;
-        cout << ans << " " << ct << endl;
+        if(len == 0) cout << "0 1" << endl;
+        else cout << len << " " << ct << endl;
     }
 }
