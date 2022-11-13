@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1273 | [C - Longest Regular Bracket Sequence](https://codeforces.com/contest/5/problem/C) | [GNU C++20 (64)](./codeforces/5/C.cpp) | `constructive algorithms` `data structures` `dp` `greedy` `sortings` `strings` `*1900` | Nov/13/2022 22:31 | 
+1274 | [C - Longest Regular Bracket Sequence](https://codeforces.com/contest/5/problem/C) | [GNU C++20 (64)](./codeforces/5/C.cpp) | `constructive algorithms` `data structures` `dp` `greedy` `sortings` `strings` `*1900` | Nov/13/2022 22:31 | 
+1273 | [B - Maximum of Maximums of Minimums](https://codeforces.com/contest/870/problem/B) | [GNU C++20 (64)](./codeforces/870/B.cpp) | `greedy` `*1200` | Nov/13/2022 19:25 | 
 1272 | [F - Graph Without Long Directed Paths](https://codeforces.com/contest/1144/problem/F) | [GNU C++20 (64)](./codeforces/1144/F.cpp) | `dfs and similar` `graphs` `*1700` | Nov/12/2022 01:41 | 
 1271 | [E1 - String Coloring (easy version)](https://codeforces.com/contest/1296/problem/E1) | [GNU C++20 (64)](./codeforces/1296/E1.cpp) | `constructive algorithms` `dp` `graphs` `greedy` `sortings` `*1800` | Nov/11/2022 20:49 | 
 1270 | [C - Hongcow Builds A Nation](https://codeforces.com/contest/745/problem/C) | [GNU C++20 (64)](./codeforces/745/C.cpp) | `constructive algorithms` `dfs and similar` `graphs` `*1500` | Nov/10/2022 23:40 | 
