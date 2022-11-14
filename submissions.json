@@ -19610,6 +19610,24 @@
     ],
     "timestamp": "Nov/13/2022 22:31"
   },
+  "CF181010746": {
+    "contest_id": 514,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\514\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "R2D2 and Droid Army",
+    "problem_url": "https://codeforces.com/contest/514/problem/D",
+    "submission_id": "CF181010746",
+    "submission_url": "https://codeforces.com/contest/514/submission/181010746",
+    "tags": [
+      "binary search",
+      "data structures",
+      "two pointers",
+      "*2000"
+    ],
+    "timestamp": "Nov/14/2022 23:49"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",

@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1276 | [D - R2D2 and Droid Army](https://codeforces.com/contest/514/problem/D) | [GNU C++20 (64)](./codeforces/514/D.cpp) | `binary search` `data structures` `two pointers` `*2000` | Nov/14/2022 23:49 | 
 1275 | [C - Longest Regular Bracket Sequence](https://codeforces.com/contest/5/problem/C) | [GNU C++20 (64)](./codeforces/5/C.cpp) | `constructive algorithms` `data structures` `dp` `greedy` `sortings` `strings` `*1900` | Nov/13/2022 22:31 | 
 1274 | [B - Maximum of Maximums of Minimums](https://codeforces.com/contest/870/problem/B) | [GNU C++20 (64)](./codeforces/870/B.cpp) | `greedy` `*1200` | Nov/13/2022 19:25 | 
 1273 | [B - Array Decrements](https://codeforces.com/contest/1690/problem/B) | [GNU C++20 (64)](./codeforces/1690/B.cpp) | `greedy` `implementation` `*800` | Nov/12/2022 23:51 | 
