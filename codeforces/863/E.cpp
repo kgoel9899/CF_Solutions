@@ -21,7 +21,7 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-const int N = 6e5 + 5;
+const int N = 12e5 + 5;
 const int LOG = 20;
 int sparse[N][LOG];
 int query(int l, int r) {
