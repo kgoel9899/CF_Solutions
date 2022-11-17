@@ -1,85 +1,91 @@
+// not my solution
+// this is -> https://codeforces.com/contest/475/submission/178912775
+
 #include<bits/stdc++.h>
+/*
+*
+* Created By : Mostafa Mahmoud
+*
+*/
+#define sareeeee3 ios_base::sync_with_stdio(false);cout.tie(NULL);cin.tie(NULL);
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-// #define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
+#define ll long long
+#define F first
+#define S second
+const int N = 1e5 + 15;
+const ll mod = 1e9 + 9;
+#define deb(x) cout<<#x<<"="<<x<<"\n";
+ll tbl[N][30];
+ll LOG[N];
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
-
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
-
-const int N = 1e5 + 5;
-const int LOG = 18;
-int sparse[N][LOG];
-int v[N];
-int query(int l, int r) {
-    int len = r - l + 1;
-    int lg = log2(len);
-    return __gcd(sparse[l][lg], sparse[r - (1 << lg) + 1][lg]);
-}
-int binsearch(int start, int lo, int hi, int shouldbe)
-{
-    while(lo<hi)
-    {
-        int mid=(lo+hi+1)>>1;
-        if(query(start, mid)==shouldbe)
-            lo=mid;
-        else
-            hi=mid-1;
+void build(ll n, ll *a) {
+    for (int i = 0; i <n; ++i) {
+        tbl[i][0] = a[i];
     }
-    return lo;
+    for (int j = 1; (1 << j) <=n; ++j) {
+        for (int i = 0; i + (1 << j)<=n; ++i) {
+            tbl[i][j] = __gcd(tbl[i][j - 1], tbl[i + (1 << (j - 1))][j - 1]);
+        }
+    }
 }
 
-int32_t main() {
-    fast;
-    int tt = 1;
-    // cin >> tt;
-    while(tt--) {
-        int n;
-        cin >> n;
-        for(int i=1;i<=n;i++) {
-            cin >> v[i];
-            sparse[i][0] = v[i];
-        }
-        for(int j=1;j<LOG;j++) {
-            for(int i=1;i+(1<<(j-1))-1<=n;i++) {
-                sparse[i][j] = __gcd(sparse[i][j - 1], sparse[i + (1 << (j - 1))][j - 1]);
+
+ll query(ll L, ll R) {
+    if(R<L){
+        swap(R,L);
+    }
+    ll lg=LOG[R-L+1];
+    return __gcd(tbl[L][lg],tbl[R-((1<<(lg)))+1][lg]);
+}
+
+void result() {
+    ll n{},q{};
+    cin>>n;
+    ll a[n];
+    map<ll,ll>m;
+    for (int i = 0; i < n; ++i) {
+        cin>>a[i];
+    }
+    build(n,a);
+    for (int i = 0; i < n; ++i) {
+        ll r=i;
+        while (r<n){
+            ll GCD= query(i,r);
+            ll st = r, ed = n - 1;
+            while (st<=ed) {
+                ll mid = (st + ed) / 2;
+                if(query(i,mid)==GCD){
+                    st=mid+1;
+                }else{
+                    ed=mid-1;
+                }
             }
+            m[GCD]+=ed-r+1;
+            r=ed+1;
         }
-        map<int, long long> m;
-        for(int i=1;i<=n;i++)
-        {
-            int curgcd=v[i];
-            int curlo=i;
-            while(true)
-            {
-                int index=binsearch(i, curlo, n, curgcd);
-                m[curgcd]+=(index-curlo+1);
-                if(index==n)
-                    break;
-                curlo=index+1;
-                curgcd=query(i, curlo);
-            }
-        }
-        int q;
-        cin >> q;
-        while(q--) {
-            int num;
-            cin >> num;
-            cout << m[num] << endl;
-        }
+
+    }
+    cin>>q;
+    while (q--){
+        ll x{};
+        cin>>x;
+        cout<<m[x]<<"\n";
+    }
+
+}
+
+
+int main() {
+    sareeeee3
+    LOG[1]=0;
+    for (int i = 2; i <N; ++i) {
+        LOG[i]=LOG[i/2]+1;
+    }
+    ll tt = 1;
+//    cin >> tt;
+    for (int i = 0; i < tt; i++) {
+        result();
+//        cout << "\n";
     }
 }
