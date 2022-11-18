@@ -1,116 +1,55 @@
-#include<bits/stdc++.h>
+// editorial solution for now
+
+#include <bits/stdc++.h>
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
- 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
- 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
- 
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
- 
-int n, q;
-const int LOG = 25;
-vector<vector<int>> adj, up;
-vector<int> dist;
-void dfs(int curr, int par, int d) {
-    dist[curr] = d;
-    up[curr][0] = par;
-    for(auto i : adj[curr]) {
-        if(i == par) continue;
-        dfs(i, curr, d + 1);
-    }
+typedef long long ll;
+const int maxn = 1e5 + 17, lg = 17;
+
+int n, q, par[maxn][lg], h[maxn], ver[3];
+vector<int> g[maxn];
+void dfs(int v = 0){
+	for(int i = 1; i < lg; i++)
+		par[v][i] = par[ par[v][i - 1] ][i - 1];
+	for(auto u : g[v]){
+		h[u] = h[v] + 1;
+		par[u][0] = v;
+		dfs(u);
+	}
 }
-void fillUpTable() {
-    for(int j=1;j<LOG;j++) {
-        for(int i=1;i<=n;i++) {
-            int intermediate = up[i][j - 1];
-            if(intermediate != -1) up[i][j] = up[intermediate][j - 1];
-        }
-    }
+int lca(int v, int u){
+	if(h[v] > h[u])  swap(v, u);
+	for(int i = 0; i < lg; i++)
+		if(h[u] - h[v] >> i & 1)
+			u = par[u][i];
+	for(int i = lg - 1; i >= 0; i--)
+		if(par[v][i] != par[u][i])
+			v = par[v][i], u = par[u][i];
+	return v == u ? v : par[v][0];
 }
-int kthParent(int node, int k) {
-    for(int i=LOG-1;i>=0;i--) {
-        if(node == -1) break;
-        if(((k >> i) & 1) == 1) node = up[node][i];
-    }
-    return node;
+int calc(int f, int s, int t){
+	int ans = 0;
+	bool is1 = lca(f, s) == f, is2 = lca(f, t) == f;
+	if(is1 != is2)  return 1;
+	if(is1)
+		ans = max(ans, h[ lca(s, t) ] - h[ f ]);
+	else if(lca(f, s) != lca(f, t))
+		ans = max(ans, h[ f ] - max(h[ lca(f, s) ], h[ lca(f, t) ]));
+	else
+		ans = max(ans, h[ f ] + h[ lca(s, t) ] - 2 * h[ lca(f, t) ]);
+	return ans + 1;
 }
-int getLCA(int a, int b) {
-    if(dist[a] > dist[b]) swap(a, b);
-    b = kthParent(b, dist[b] - dist[a]);
-    if(a == b) return a;
-    for(int i=LOG-1;i>=0;i--) {
-        int par1 = up[a][i];
-        int par2 = up[b][i];
-        if(par1 != par2 && par1 != -1 && par2 != -1) {
-            a = par1;
-            b = par2;
-        }
-    }
-    return up[a][0];
-}
-int solve(int f, int s, int t) {
-    int lca1 = getLCA(f, s);
-    int lca2 = getLCA(f, t);
-    bool cond1 = lca1 == f;
-    bool cond2 = lca2 == f;
-    if(cond1 != cond2) {
-        // one of them is outside f's subtree
-        return 1;
-    } else {
-        if(cond1) {
-            // s, t lie in f's subtree
-            return dist[getLCA(s, t)] - dist[f] + 1;
-        } else {
-            if(lca1 != lca2) return dist[f] - max(dist[lca1], dist[lca2]) + 1;
-            else return dist[getLCA(s, t)] + dist[f] - 2 * dist[lca1] + 1;
-        }
-    }
-}
-int32_t main() {
-    fast;
-    int tt = 1;
-    // cin >> tt;
-    while(tt--) {
-        cin >> n >> q;
-        adj.clear();
-        adj.resize(n + 1);
-        for(int i=2;i<=n;i++) {
-            int a;
-            cin >> a;
-            adj[a].push_back(i);
-            adj[i].push_back(a);
-        }
-        dist.clear();
-        dist.resize(n + 1);
-        up.clear();
-        up.resize(n + 1, vector<int>(LOG, -1));
-        dfs(1, -1, 0);
-        fillUpTable();
-        while(q--) {
-            vector<int> v(3);
-            cin >> v[0] >> v[1] >> v[2];
-            int ans = 0;
-            for(int i=0;i<3;i++) {
-                int f = v[i];
-                int s = v[(i + 1) % 3];
-                int t = v[(i + 2) % 3];
-                ans = max(ans, solve(f, s, t));
-            }
-            cout << ans << endl;
-        }
-    }
+int main(){
+	ios::sync_with_stdio(0), cin.tie(0);
+	cin >> n >> q;
+	for(int i = 1, p; i < n; i++){
+		cin >> p, p--;
+		g[p].push_back(i);
+	}
+	dfs();
+	while(q--){
+		for(int i = 0; i < 3; i++)
+			cin >> ver[i], ver[i]--;
+		cout << max({calc(ver[0], ver[1], ver[2]), calc(ver[1], ver[0], ver[2]), calc(ver[2], ver[1], ver[0])}) << '\n';
+	}
+	return 0;
 }
