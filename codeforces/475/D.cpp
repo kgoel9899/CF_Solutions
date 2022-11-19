@@ -30,6 +30,23 @@ int query(int l, int r) {
     int lg = log2(len);
     return __gcd(sparse[l][lg], sparse[r - (1 << lg) + 1][lg]);
 }
+int binsearch(int start, int lo, int hi, int shouldbe)
+{
+    int ans = lo;
+    while(lo<=hi)
+    {
+        int mid=(lo+hi)/2;
+        if(query(start, mid)==shouldbe)
+        {
+            lo=mid + 1;
+            ans=mid;
+        }
+        else
+            hi=mid-1;
+    }
+    return ans;
+}
+
 int32_t main() {
     fast;
     int tt = 1;
@@ -50,17 +67,10 @@ int32_t main() {
         for(int i=0;i<n;i++)
         {
             int val = v[i];
-            int ind = i;
-            while(true) {
-                int beg = ind, end = n - 1;
-                int r = ind;
-                while(beg <= end) {
-                    int mid = (beg + end) / 2;
-                    if(query(i, mid) == val) {
-                        r = mid;
-                        beg = mid + 1;
-                    } else end = mid - 1;
-                }
+            int ind=i;
+            while(true)
+            {
+                int r=binsearch(i, ind, n-1, val);
                 m[val] += r - ind + 1;
                 if(r == n - 1) break;
                 ind = r + 1;
