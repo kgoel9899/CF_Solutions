@@ -47,22 +47,24 @@ int32_t main() {
             }
         }
         map<int, long long> m;
-        for(int i=0;i<n;i++) {
+        for(int i=0;i<n;i++)
+        {
+            int val = v[i];
             int ind = i;
-            while(ind < n) {
-                int val = query(i, ind);
+            while(true) {
                 int beg = ind, end = n - 1;
                 int r = ind;
                 while(beg <= end) {
                     int mid = (beg + end) / 2;
-                    int temp = query(i, mid);
-                    if(temp == val) {
+                    if(query(i, mid) == val) {
                         r = mid;
                         beg = mid + 1;
                     } else end = mid - 1;
                 }
                 m[val] += r - ind + 1;
+                if(r == n - 1) break;
                 ind = r + 1;
+                val = query(i, ind);
             }
         }
         int q;
