@@ -32,19 +32,15 @@ int query(int l, int r) {
 }
 int binsearch(int start, int lo, int hi, int shouldbe)
 {
-    int ans = lo;
-    while(lo<=hi)
+    while(lo<hi)
     {
         int mid=(lo+hi+1)>>1;
         if(query(start, mid)==shouldbe)
-        {
-            lo=mid + 1;
-            ans=mid;
-        }
+            lo=mid;
         else
             hi=mid-1;
     }
-    return ans;
+    return lo;
 }
 
 int32_t main() {
