@@ -35,7 +35,7 @@ int binsearch(int start, int lo, int hi, int shouldbe)
     int ans = lo;
     while(lo<=hi)
     {
-        int mid=(lo+hi)/2;
+        int mid=(lo+hi+1)>>1;
         if(query(start, mid)==shouldbe)
         {
             lo=mid + 1;
