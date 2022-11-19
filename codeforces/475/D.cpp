@@ -2,7 +2,7 @@
 using namespace std;
 #define MOD 1000000007
 #define mod 998244353
-#define int long long
+// #define int long long
 #define setpres cout << fixed << setprecision(10)
 #define all(x) (x).begin(), (x).end()
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -46,7 +46,7 @@ int32_t main() {
                 sparse[i][j] = __gcd(sparse[i][j - 1], sparse[i + (1 << (j - 1))][j - 1]);
             }
         }
-        map<int, int> m;
+        map<int, long long> m;
         for(int i=0;i<n;i++) {
             int ind = i;
             while(ind < n) {
