@@ -24,10 +24,10 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 const int N = 1e5 + 5;
 const int LOG = 18;
 int sparse[N][LOG];
-int logs[N], v[N];
+int v[N];
 int query(int l, int r) {
     int len = r - l + 1;
-    int lg = logs[len];
+    int lg = log2(len);
     return __gcd(sparse[l][lg], sparse[r - (1 << lg) + 1][lg]);
 }
 int32_t main() {
@@ -40,9 +40,6 @@ int32_t main() {
         for(int i=0;i<n;i++) {
             cin >> v[i];
             sparse[i][0] = v[i];
-        }
-        for(int i=2;i<=n;i++) {
-            logs[i] = logs[i / 2] + 1;
         }
         for(int j=1;j<LOG;j++) {
             for(int i=0;i+(1<<(j-1))-1<n;i++) {
