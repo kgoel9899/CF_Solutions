@@ -66,15 +66,16 @@ int32_t main() {
         map<int, long long> m;
         for(int i=0;i<n;i++)
         {
-            int val = v[i];
-            int ind=i;
+            int curgcd=v[i];
+            int curlo=i;
             while(true)
             {
-                int r=binsearch(i, ind, n-1, val);
-                m[val] += r - ind + 1;
-                if(r == n - 1) break;
-                ind = r + 1;
-                val = query(i, ind);
+                int index=binsearch(i, curlo, n-1, curgcd);
+                m[curgcd]+=(index-curlo+1);
+                if(index==n-1)
+                    break;
+                curlo=index+1;
+                curgcd=query(i, curlo);
             }
         }
         int q;
