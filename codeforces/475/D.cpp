@@ -54,25 +54,25 @@ int32_t main() {
     while(tt--) {
         int n;
         cin >> n;
-        for(int i=0;i<n;i++) {
+        for(int i=1;i<=n;i++) {
             cin >> v[i];
             sparse[i][0] = v[i];
         }
         for(int j=1;j<LOG;j++) {
-            for(int i=0;i+(1<<(j-1))-1<n;i++) {
+            for(int i=1;i+(1<<(j-1))-1<=n;i++) {
                 sparse[i][j] = __gcd(sparse[i][j - 1], sparse[i + (1 << (j - 1))][j - 1]);
             }
         }
         map<int, long long> m;
-        for(int i=0;i<n;i++)
+        for(int i=1;i<=n;i++)
         {
             int curgcd=v[i];
             int curlo=i;
             while(true)
             {
-                int index=binsearch(i, curlo, n-1, curgcd);
+                int index=binsearch(i, curlo, n, curgcd);
                 m[curgcd]+=(index-curlo+1);
-                if(index==n-1)
+                if(index==n)
                     break;
                 curlo=index+1;
                 curgcd=query(i, curlo);
