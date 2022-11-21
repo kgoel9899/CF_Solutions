@@ -28,7 +28,7 @@ void propagate(int l, int r, int node, vector<int>& lazy) {
     }
     lazy[node] = 0;
 }
-void build(int l, int r, int node, vector<int>& v, vector<vector<int>>& tree) {
+void build(int l, int r, int node, vector<vector<int>>& tree, vector<int>& v) {
     if(l == r) {
         for(int i=0;i<25;i++) {
             if(((v[l] >> i) & 1) == 1) tree[node][i]++;
@@ -36,8 +36,8 @@ void build(int l, int r, int node, vector<int>& v, vector<vector<int>>& tree) {
         return;
     }
     int mid = (l + r) / 2;
-    build(l, mid, 2 * node, v, tree);
-    build(mid + 1, r, 2 * node + 1, v, tree);
+    build(l, mid, 2 * node, tree, v);
+    build(mid + 1, r, 2 * node + 1, tree, v);
     for(int i=0;i<25;i++) {
         tree[node][i] = tree[2 * node][i] + tree[2 * node + 1][i];
     }
@@ -49,6 +49,7 @@ void update(int l, int r, int node, int ql, int qr, int val, vector<vector<int>>
         }
         propagate(l, r, node, lazy);
     }
+    if(l > qr || r < ql) return;
     if(l >= ql && r <= qr) {
         for(int i=0;i<25;i++) {
             if(((val >> i) & 1) == 1) tree[node][i] = (r - l + 1) - tree[node][i];
@@ -57,7 +58,6 @@ void update(int l, int r, int node, int ql, int qr, int val, vector<vector<int>>
         propagate(l, r, node, lazy);
         return;
     }
-    if(l > qr || r < ql) return;
     int mid = (l + r) / 2;
     update(l, mid, 2 * node, ql, qr, val, tree, lazy);
     update(mid + 1, r, 2 * node + 1, ql, qr, val, tree, lazy);
@@ -72,6 +72,7 @@ int query(int l, int r, int node, int ql, int qr, vector<vector<int>>& tree, vec
         }
         propagate(l, r, node, lazy);
     }
+    if(l > qr || r < ql) return 0;
     if(l >= ql && r <= qr) {
         int ans = 0;
         for(int i=0;i<25;i++) {
@@ -79,10 +80,12 @@ int query(int l, int r, int node, int ql, int qr, vector<vector<int>>& tree, vec
         }
         return ans;
     }
-    if(l > qr || r < ql) return 0;
     int mid = (l + r) / 2;
     int left = query(l, mid, 2 * node, ql, qr, tree, lazy);
     int right = query(mid + 1, r, 2 * node + 1, ql, qr, tree, lazy);
+    for(int i=0;i<25;i++) {
+        tree[node][i] = tree[2 * node][i] + tree[2 * node + 1][i];
+    }
     return left + right;
 }
 int32_t main() {
@@ -98,19 +101,20 @@ int32_t main() {
         }
         vector<vector<int>> tree(4 * n, vector<int>(25));
         vector<int> lazy(4 * n);
+        build(0, n - 1, 1, tree, v);
         int m;
         cin >> m;
-        build(0, n - 1, 1, v, tree);
         while(m--) {
             int t, l, r;
             cin >> t >> l >> r;
             l--;
             r--;
-            if(t == 2) {
-                int x;
-                cin >> x;
-                update(0, n - 1, 1, l, r, x, tree, lazy);
-            } else cout << query(0, n - 1, 1, l, r, tree, lazy) << endl;
+            if(t == 1) cout << query(0, n - 1, 1, l, r, tree, lazy) << endl;
+            else {
+                int val;
+                cin >> val;
+                update(0, n - 1, 1, l, r, val, tree, lazy);
+            }
         }
     }
 }
