@@ -19662,6 +19662,24 @@
     ],
     "timestamp": "Nov/15/2022 23:18"
   },
+  "CF182058573": {
+    "contest_id": 482,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\482\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Interesting Array",
+    "problem_url": "https://codeforces.com/contest/482/problem/B",
+    "submission_id": "CF182058573",
+    "submission_url": "https://codeforces.com/contest/482/submission/182058573",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "trees",
+      "*1800"
+    ],
+    "timestamp": "Nov/22/2022 02:22"
+  },
   "CF182059065": {
     "contest_id": 52,
     "language": "GNU C++20 (64)",

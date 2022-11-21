@@ -21,21 +21,23 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-void build(int l, int r, int node, vector<int>& v, vector<int>& tree) {
+void build(int l, int r, int node, vector<int>& tree, vector<int>& v) {
     if(l == r) {
         tree[node] = v[l];
         return;
     }
     int mid = (l + r) / 2;
-    build(l, mid, 2 * node, v, tree);
-    build(mid + 1, r, 2 * node + 1, v, tree);
-    tree[node] = tree[2 * node] & tree[2 * node + 1];
+    build(l, mid, 2 * node, tree, v);
+    build(mid + 1, r, 2 * node + 1, tree, v);
+    tree[node] = (tree[2 * node] & tree[2 * node + 1]);
 }
-int query(int l, int r, int node, int st, int end, vector<int>& tree) {
-    if(l > end || r < st) return (1ll << 32) - 1;
-    if(st <= l && r <= end) return tree[node];
+int query(int l, int r, int node, int ql, int qr, vector<int>& tree) {
+    if(l > qr || r < ql) return -1;
+    if(l >= ql && r <= qr) return tree[node];
     int mid = (l + r) / 2;
-    return query(l, mid, 2 * node, st, end, tree) & query(mid + 1, r, 2 * node + 1, st, end, tree);
+    int left = query(l, mid, 2 * node, ql, qr, tree);
+    int right = query(mid + 1, r, 2 * node + 1, ql, qr, tree);
+    return (left & right);
 }
 int32_t main() {
     fast;
@@ -50,7 +52,7 @@ int32_t main() {
             v[i][0]--;
             v[i][1]--;
         }
-        vector<int> ans(n);
+        vector<int> ans(n), tree(4 * n);
         for(int i=0;i<32;i++) {
             vector<int> pref(n + 1);
             for(int j=0;j<m;j++) {
@@ -66,13 +68,10 @@ int32_t main() {
                 if(pref[j]) ans[j] |= (1ll << i);
             }
         }
-        dbg(ans);
-        vector<int> tree(4 * n);
-        build(0, n - 1, 1, ans, tree);
+        build(0, n - 1, 1, tree, ans);
         int ok = 1;
         for(int i=0;i<m;i++) {
-            int curr = query(0, n - 1, 1, v[i][0], v[i][1], tree);
-            if(curr != v[i][2]) {
+            if(query(0, n - 1, 1, v[i][0], v[i][1], tree) != v[i][2]) {
                 ok = 0;
                 break;
             }
