@@ -13,24 +13,25 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1289 | [C - Thermostat](https://codeforces.com/contest/1759/problem/C) | [GNU C++20 (64)](./codeforces/1759/C.cpp) | `greedy` `math` `shortest paths` `*1100` | Dec/04/2022 16:37 | 
-1288 | [A - Life of a Flower](https://codeforces.com/contest/1591/problem/A) | [GNU C++20 (64)](./codeforces/1591/A.cpp) | `implementation` `*800` | Dec/03/2022 23:07 | 
-1287 | [A - Round Down the Price](https://codeforces.com/contest/1702/problem/A) | [GNU C++20 (64)](./codeforces/1702/A.cpp) | `constructive algorithms` `*800` | Dec/03/2022 00:13 | 
-1286 | [B - Remove Prefix](https://codeforces.com/contest/1714/problem/B) | [GNU C++20 (64)](./codeforces/1714/B.cpp) | `data structures` `greedy` `implementation` `*800` | Dec/01/2022 23:35 | 
-1285 | [B - Elimination of a Ring](https://codeforces.com/contest/1761/problem/B) | [GNU C++20 (64)](./codeforces/1761/B.cpp) | `constructive algorithms` `greedy` `implementation` `*1000` | Nov/30/2022 23:51 | 
-1284 | [B - Doremy's Perfect Math Class](https://codeforces.com/contest/1764/problem/B) | [GNU C++20 (64)](./codeforces/1764/B.cpp) | `math` `number theory` `*900` | Nov/29/2022 23:46 | 
-1283 | [B - XOR = Average](https://codeforces.com/contest/1758/problem/B) | [GNU C++20 (64)](./codeforces/1758/B.cpp) | `constructive algorithms` `*900` | Nov/28/2022 23:53 | 
-1282 | [D - Tanya and Password](https://codeforces.com/contest/508/problem/D) | [GNU C++20 (64)](./codeforces/508/D.cpp) | `dfs and similar` `graphs` `*2500` | Nov/27/2022 03:47 | 
-1281 | [D - Challenging Valleys](https://codeforces.com/contest/1760/problem/D) | [GNU C++20 (64)](./codeforces/1760/D.cpp) | `implementation` `two pointers` `*1000` | Nov/26/2022 16:10 | 
-1280 | [D2 - Prefix-Suffix Palindrome (Hard version)](https://codeforces.com/contest/1326/problem/D2) | [GNU C++20 (64)](./codeforces/1326/D2.cpp) | `binary search` `greedy` `hashing` `string suffix structures` `strings` `*1800` | Nov/26/2022 16:01 | 
-1279 | [D1 - Prefix-Suffix Palindrome (Easy version)](https://codeforces.com/contest/1326/problem/D1) | [GNU C++20 (64)](./codeforces/1326/D1.cpp) | `hashing` `string suffix structures` `strings` `*1500` | Nov/26/2022 16:01 | 
-1278 | [D - Letter Picking](https://codeforces.com/contest/1728/problem/D) | [GNU C++20 (64)](./codeforces/1728/D.cpp) | `constructive algorithms` `dp` `games` `two pointers` `*1800` | Nov/25/2022 23:23 | 
-1277 | [C - Subsequences](https://codeforces.com/contest/597/problem/C) | [GNU C++20 (64)](./codeforces/597/C.cpp) | `data structures` `dp` `*1900` | Nov/25/2022 19:30 | 
-1276 | [E - Binary Inversions](https://codeforces.com/contest/1760/problem/E) | [GNU C++20 (64)](./codeforces/1760/E.cpp) | `data structures` `greedy` `math` `*1100` | Nov/25/2022 14:13 | 
-1275 | [F - Quests](https://codeforces.com/contest/1760/problem/F) | [GNU C++20 (64)](./codeforces/1760/F.cpp) | `binary search` `greedy` `sortings` `*1500` | Nov/24/2022 23:55 | 
-1274 | [C - Thor](https://codeforces.com/contest/705/problem/C) | [GNU C++20 (64)](./codeforces/705/C.cpp) | `brute force` `data structures` `implementation` `*1600` | Nov/24/2022 18:41 | 
-1273 | [E - Hanoi Factory](https://codeforces.com/contest/777/problem/E) | [GNU C++20 (64)](./codeforces/777/E.cpp) | `brute force` `data structures` `dp` `greedy` `sortings` `*2000` | Nov/24/2022 17:10 | 
-1272 | [G - SlavicG's Favorite Problem](https://codeforces.com/contest/1760/problem/G) | [GNU C++20 (64)](./codeforces/1760/G.cpp) | `bitmasks` `dfs and similar` `graphs` `*1700` | Nov/23/2022 10:41 | 
+1290 | [C - Thermostat](https://codeforces.com/contest/1759/problem/C) | [GNU C++20 (64)](./codeforces/1759/C.cpp) | `greedy` `math` `shortest paths` `*1100` | Dec/04/2022 16:37 | 
+1289 | [A - Life of a Flower](https://codeforces.com/contest/1591/problem/A) | [GNU C++20 (64)](./codeforces/1591/A.cpp) | `implementation` `*800` | Dec/03/2022 23:07 | 
+1288 | [A - Round Down the Price](https://codeforces.com/contest/1702/problem/A) | [GNU C++20 (64)](./codeforces/1702/A.cpp) | `constructive algorithms` `*800` | Dec/03/2022 00:13 | 
+1287 | [B - Remove Prefix](https://codeforces.com/contest/1714/problem/B) | [GNU C++20 (64)](./codeforces/1714/B.cpp) | `data structures` `greedy` `implementation` `*800` | Dec/01/2022 23:35 | 
+1286 | [B - Elimination of a Ring](https://codeforces.com/contest/1761/problem/B) | [GNU C++20 (64)](./codeforces/1761/B.cpp) | `constructive algorithms` `greedy` `implementation` `*1000` | Nov/30/2022 23:51 | 
+1285 | [B - Doremy's Perfect Math Class](https://codeforces.com/contest/1764/problem/B) | [GNU C++20 (64)](./codeforces/1764/B.cpp) | `math` `number theory` `*900` | Nov/29/2022 23:46 | 
+1284 | [B - XOR = Average](https://codeforces.com/contest/1758/problem/B) | [GNU C++20 (64)](./codeforces/1758/B.cpp) | `constructive algorithms` `*900` | Nov/28/2022 23:53 | 
+1283 | [D - Tanya and Password](https://codeforces.com/contest/508/problem/D) | [GNU C++20 (64)](./codeforces/508/D.cpp) | `dfs and similar` `graphs` `*2500` | Nov/27/2022 03:47 | 
+1282 | [D - Challenging Valleys](https://codeforces.com/contest/1760/problem/D) | [GNU C++20 (64)](./codeforces/1760/D.cpp) | `implementation` `two pointers` `*1000` | Nov/26/2022 16:10 | 
+1281 | [D2 - Prefix-Suffix Palindrome (Hard version)](https://codeforces.com/contest/1326/problem/D2) | [GNU C++20 (64)](./codeforces/1326/D2.cpp) | `binary search` `greedy` `hashing` `string suffix structures` `strings` `*1800` | Nov/26/2022 16:01 | 
+1280 | [D1 - Prefix-Suffix Palindrome (Easy version)](https://codeforces.com/contest/1326/problem/D1) | [GNU C++20 (64)](./codeforces/1326/D1.cpp) | `hashing` `string suffix structures` `strings` `*1500` | Nov/26/2022 16:01 | 
+1279 | [D - Letter Picking](https://codeforces.com/contest/1728/problem/D) | [GNU C++20 (64)](./codeforces/1728/D.cpp) | `constructive algorithms` `dp` `games` `two pointers` `*1800` | Nov/25/2022 23:23 | 
+1278 | [C - Subsequences](https://codeforces.com/contest/597/problem/C) | [GNU C++20 (64)](./codeforces/597/C.cpp) | `data structures` `dp` `*1900` | Nov/25/2022 19:30 | 
+1277 | [E - Binary Inversions](https://codeforces.com/contest/1760/problem/E) | [GNU C++20 (64)](./codeforces/1760/E.cpp) | `data structures` `greedy` `math` `*1100` | Nov/25/2022 14:13 | 
+1276 | [F - Quests](https://codeforces.com/contest/1760/problem/F) | [GNU C++20 (64)](./codeforces/1760/F.cpp) | `binary search` `greedy` `sortings` `*1500` | Nov/24/2022 23:55 | 
+1275 | [C - Thor](https://codeforces.com/contest/705/problem/C) | [GNU C++20 (64)](./codeforces/705/C.cpp) | `brute force` `data structures` `implementation` `*1600` | Nov/24/2022 18:41 | 
+1274 | [E - Hanoi Factory](https://codeforces.com/contest/777/problem/E) | [GNU C++20 (64)](./codeforces/777/E.cpp) | `brute force` `data structures` `dp` `greedy` `sortings` `*2000` | Nov/24/2022 17:10 | 
+1273 | [G - SlavicG's Favorite Problem](https://codeforces.com/contest/1760/problem/G) | [GNU C++20 (64)](./codeforces/1760/G.cpp) | `bitmasks` `dfs and similar` `graphs` `*1700` | Nov/23/2022 10:41 | 
+1272 | [C - Circular RMQ](https://codeforces.com/contest/52/problem/C) | [GNU C++20 (64)](./codeforces/52/C.cpp) | `data structures` `*2200` | Nov/22/2022 02:30 | 
 1271 | [E - Turn Off The TV](https://codeforces.com/contest/863/problem/E) | [GNU C++20 (64)](./codeforces/863/E.cpp) | `data structures` `sortings` `*2000` | Nov/15/2022 23:18 | 
 1270 | [D - R2D2 and Droid Army](https://codeforces.com/contest/514/problem/D) | [GNU C++20 (64)](./codeforces/514/D.cpp) | `binary search` `data structures` `two pointers` `*2000` | Nov/14/2022 23:49 | 
 1269 | [C - Longest Regular Bracket Sequence](https://codeforces.com/contest/5/problem/C) | [GNU C++20 (64)](./codeforces/5/C.cpp) | `constructive algorithms` `data structures` `dp` `greedy` `sortings` `strings` `*1900` | Nov/13/2022 22:31 | 
