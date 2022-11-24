@@ -30,7 +30,7 @@ int query(int l, int r, int node, int st, int end, vector<int>& tree) {
 void update(int l, int r, int node, int ind, int val, vector<int>& tree) {
     if(ind < l || ind > r) return;
     if(l == r) {
-        tree[node] = val;
+        tree[node] += val;
         return;
     }
     int mid = (l + r) / 2;
@@ -60,7 +60,7 @@ int32_t main() {
                 while(!qq[x].empty()) {
                     auto f = qq[x].front();
                     qq[x].pop();
-                    update(0, q - 1, 1, f, 0, tree);
+                    update(0, q - 1, 1, f, -1, tree);
                 }
             } else mx = max(mx, x);
             cout << query(0, q - 1, 1, mx + 1, q - 1, tree) << endl;
