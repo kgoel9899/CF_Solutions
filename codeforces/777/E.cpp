@@ -8,74 +8,74 @@ using namespace std;
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
 const int INF = 1e18;
-const int N = 2e5 + 5;
-vector<pair<pair<int, int>, int>> v, fin;
-int n, a, b, h;
-map<int, int> m;
-vector<int> bit(N);
-bool comp(pair<pair<int, int>, int> a, pair<pair<int, int>, int> b) {
-    if(a.first.second == b.first.second) {
-        return a.first.first > b.first.first;
-    }
-    return a.first.second > b.first.second;
+
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
+int query(int l, int r, int node, int st, int end, vector<int>& tree) {
+    if(l > end || r < st) return 0;
+    if(st <= l && r <= end) return tree[node];
+    int mid = (l + r) / 2;
+    return max(query(l, mid, 2 * node, st, end, tree), query(mid + 1, r, 2 * node + 1, st, end, tree));
 }
-void update(int ind, int val) {
-    while(ind < N) {
-        bit[ind] = max(bit[ind], val);
-        ind += (ind & (-ind));
+void update(int l, int r, int node, int ind, int val, vector<int>& tree) {
+    if(ind < l || ind > r) return;
+    if(l == r) {
+        tree[node] = val;
+        return;
     }
+    int mid = (l + r) / 2;
+    update(l, mid, 2 * node, ind, val, tree);
+    update(mid + 1, r, 2 * node + 1, ind, val, tree);
+    tree[node] = max(tree[2 * node], tree[2 * node + 1]);
 }
-int query(int ind) {
-    int ans = -INF;
-    while(ind > 0) {
-        ans = max(ans, bit[ind]);
-        ind -= (ind & (-ind));
-    }
-    return ans;
+bool compare(vector<int>& a, vector<int>& b) {
+    if(a[1] != b[1]) return a[1] > b[1];
+    return a[0] > b[0];
 }
 int32_t main() {
     fast;
-    int t = 1;
-    // cin >> t;
-    while(t--) {
+    int tt = 1;
+    // cin >> tt;
+    while(tt--) {
+        int n;
         cin >> n;
+        vector<vector<int>> v(n, vector<int>(3));
         for(int i=0;i<n;i++) {
-            cin >> a >> b >> h;
-            v.push_back({{a, b}, h});
+            cin >> v[i][0] >> v[i][1] >> v[i][2];
         }
-        sort(all(v), comp);
-        pair<pair<int, int>, int> p = v[0];
-        for(int i=1;i<n;i++) {
-            if(v[i].first.second == v[i - 1].first.second) {
-                p.first.first = v[i].first.first;
-                p.second += v[i].second;
-            } else {
-                fin.push_back(p);
-                p = v[i];
-            }
+        sort(all(v), compare);
+        dbg(v);
+        set<int> s;
+        for(auto& i : v) {
+            s.insert(i[0]);
+            s.insert(i[1]);
         }
-        if(fin.size() != 0) {
-            pair<pair<int, int>, int> ch = fin.back();
-            if(ch != p) fin.push_back(p);
-        } else fin.push_back(p);
-        for(auto i : fin) {
-            m[i.first.first];
-            m[i.first.second];
+        map<int, int> m;
+        int rank = 0;
+        for(auto& i : s) {
+            m[i] = rank++;
         }
-        int rank = 1;
-        for(auto i : m) {
-            m[i.first] = rank++;
-        }
-        n = fin.size();
         for(int i=0;i<n;i++) {
-            fin[i].first.first = m[fin[i].first.first];
-            fin[i].first.second = m[fin[i].first.second];
+            v[i][0] = m[v[i][0]];
+            v[i][1] = m[v[i][1]];
         }
+        dbg(v);
+        vector<int> tree(4 * rank);
         int ans = 0;
         for(int i=0;i<n;i++) {
-            int curr = fin[i].second + query(fin[i].first.second - 1);
-            ans = max(ans, curr);
-            update(fin[i].first.first, curr);
+            int mx = query(0, rank - 1, 1, 0, v[i][1] - 1, tree);
+            ans = max(ans, v[i][2] + mx);
+            update(0, rank - 1, 1, v[i][0], v[i][2] + mx, tree);
         }
         cout << ans << endl;
     }
