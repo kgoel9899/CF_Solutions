@@ -80,7 +80,7 @@ int solve(int i, int j) {
         return dp[i][j] = 1;
     }
 
-    if((ans1 == 2 || ans2 == 2) && (ans3 == 2 || ans4 == 2)) {
+    if(ans1 == 2 || ans2 == 2 || ans3 == 2 || ans4 == 2) {
         // bob wins in atleast 1 scenario when Alice picks i or j
         return dp[i][j] = 2;
     }
