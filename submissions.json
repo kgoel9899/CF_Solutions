@@ -20440,6 +20440,23 @@
     ],
     "timestamp": "Dec/10/2022 23:56"
   },
+  "CF185217841": {
+    "contest_id": 1766,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1766\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Extremely Round",
+    "problem_url": "https://codeforces.com/contest/1766/problem/A",
+    "submission_id": "CF185217841",
+    "submission_url": "https://codeforces.com/contest/1766/submission/185217841",
+    "tags": [
+      "greedy",
+      "implementation",
+      "math"
+    ],
+    "timestamp": "Dec/14/2022 23:59"
+  },
   "CF185380469": {
     "contest_id": 1771,
     "language": "GNU C++20 (64)",
