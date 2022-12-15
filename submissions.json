@@ -20440,6 +20440,24 @@
     ],
     "timestamp": "Dec/10/2022 23:56"
   },
+  "CF185380469": {
+    "contest_id": 1771,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1771\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Hossam and Friends",
+    "problem_url": "https://codeforces.com/contest/1771/problem/B",
+    "submission_id": "CF185380469",
+    "submission_url": "https://codeforces.com/contest/1771/submission/185380469",
+    "tags": [
+      "binary search",
+      "constructive algorithms",
+      "dp",
+      "two pointers"
+    ],
+    "timestamp": "Dec/15/2022 23:55"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
