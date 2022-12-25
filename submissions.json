@@ -20678,6 +20678,27 @@
     ],
     "timestamp": "Dec/24/2022 23:40"
   },
+  "CF186650562": {
+    "contest_id": 1763,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1763\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Incinerate",
+    "problem_url": "https://codeforces.com/contest/1763/problem/B",
+    "submission_id": "CF186650562",
+    "submission_url": "https://codeforces.com/contest/1763/submission/186650562",
+    "tags": [
+      "binary search",
+      "brute force",
+      "data structures",
+      "implementation",
+      "math",
+      "sortings",
+      "*1200"
+    ],
+    "timestamp": "Dec/25/2022 14:48"
+  },
   "CF186815170": {
     "contest_id": 1774,
     "language": "GNU C++20 (64)",
