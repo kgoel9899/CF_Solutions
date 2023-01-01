@@ -20678,6 +20678,23 @@
     ],
     "timestamp": "Dec/24/2022 23:40"
   },
+  "CF187553570": {
+    "contest_id": 1717,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1717\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Madoka and Strange Thoughts",
+    "problem_url": "https://codeforces.com/contest/1717/problem/A",
+    "submission_id": "CF187553570",
+    "submission_url": "https://codeforces.com/contest/1717/submission/187553570",
+    "tags": [
+      "math",
+      "number theory",
+      "*800"
+    ],
+    "timestamp": "Jan/01/2023 23:57"
+  },
   "CF187649524": {
     "contest_id": 1711,
     "language": "GNU C++20 (64)",
