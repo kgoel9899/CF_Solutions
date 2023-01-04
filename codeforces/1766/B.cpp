@@ -30,17 +30,16 @@ int32_t main() {
         cin >> n;
         string s;
         cin >> s;
-        map<string, int> m;
-        int i = 0;
-        while(i + 1 < n) {
-            m[s.substr(i, 2)]++;
-            if(i + 2 < n && s[i] == s[i + 1] && s[i + 1] == s[i + 2]) i++;
-            i++;
-        }
+        set<string> st;
         int ok = 0;
-        for(auto& j : m) {
-            if(j.second > 1) ok = 1;
+        for(int i=0;i<n;i++) {
+            if(i + 1 < n && st.find(s.substr(i, 2)) != st.end()) {
+                ok = 1;
+                break;
+            }
+            if(i >= 1) st.insert(s.substr(i - 1, 2));
         }
+        dbg(st);
         if(ok) cout << "YES" << endl;
         else cout << "NO" << endl;
     }
