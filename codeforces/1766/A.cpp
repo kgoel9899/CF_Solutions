@@ -26,10 +26,16 @@ int32_t main() {
     int tt = 1;
     cin >> tt;
     while(tt--) {
-        string s;
-        cin >> s;
-        int n = s.size();
-        int ans = (n - 1) * 9 + (s[0] - '0');
+        int n;
+        cin >> n;
+        int ten = 10;
+        int ans = 0;
+        while(n >= ten) {
+            ans += 9;
+            ten *= 10;
+        }
+        ten /= 10;
+        ans += n / ten;
         cout << ans << endl;
     }
 }
