@@ -20678,6 +20678,22 @@
     ],
     "timestamp": "Dec/24/2022 23:40"
   },
+  "CF187907567": {
+    "contest_id": 1731,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1731\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Kill Demodogs",
+    "problem_url": "https://codeforces.com/contest/1731/problem/B",
+    "submission_id": "CF187907567",
+    "submission_url": "https://codeforces.com/contest/1731/submission/187907567",
+    "tags": [
+      "greedy",
+      "math"
+    ],
+    "timestamp": "Jan/04/2023 16:03"
+  },
   "CF187940395": {
     "contest_id": 1766,
     "language": "GNU C++20 (64)",
