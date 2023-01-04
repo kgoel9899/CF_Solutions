@@ -20678,6 +20678,23 @@
     ],
     "timestamp": "Dec/24/2022 23:40"
   },
+  "CF187941843": {
+    "contest_id": 1774,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1774\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Add Plus Minus Sign",
+    "problem_url": "https://codeforces.com/contest/1774/problem/A",
+    "submission_id": "CF187941843",
+    "submission_url": "https://codeforces.com/contest/1774/submission/187941843",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jan/04/2023 21:10"
+  },
   "CF187942183": {
     "contest_id": 1731,
     "language": "GNU C++20 (64)",
