@@ -32,11 +32,13 @@ int32_t main() {
         for(int i=0;i<n;i++) {
             cin >> v[i];
         }
-        int l = 0, h = 1e9;
+        int l = 0, r = 1e9;
         for(int i=1;i<n;i++) {
-            if(v[i] > v[i - 1]) h = min(h, (v[i] + v[i - 1]) >> 1);
-            if(v[i] < v[i - 1]) l = max(l, (v[i] + v[i - 1] + 1) >> 1);
+            int x = v[i - 1], y = v[i];
+            if(x < y) r = min(r, (x + y) / 2);
+            if(x > y) l = max(l, (x + y + 1) / 2);
         }
-        cout << (l > h ? -1 : l) << endl;
+        if(l <= r) cout << l << endl;
+        else cout << -1 << endl;
     }
 }
