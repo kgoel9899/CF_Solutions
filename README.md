@@ -13,10 +13,11 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1328 | [B - Incinerate](https://codeforces.com/contest/1763/problem/B) | [GNU C++20 (64)](./codeforces/1763/B.cpp) | `binary search` `brute force` `data structures` `implementation` `math` `sortings` `*1200` | Jan/07/2023 00:25 | 
-1327 | [D - Playoff](https://codeforces.com/contest/1767/problem/D) | [GNU C++20 (64)](./codeforces/1767/D.cpp) | `combinatorics` `constructive algorithms` `dp` `greedy` `math` `*1500` | Jan/06/2023 21:41 | 
-1326 | [B - Hossam and Friends](https://codeforces.com/contest/1771/problem/B) | [GNU C++20 (64)](./codeforces/1771/B.cpp) | `binary search` `constructive algorithms` `dp` `two pointers` `*1400` | Jan/06/2023 21:23 | 
-1325 | [C - Elemental Decompress](https://codeforces.com/contest/1768/problem/C) | [GNU C++20 (64)](./codeforces/1768/C.cpp) | `constructive algorithms` `greedy` `implementation` `sortings` | Jan/06/2023 15:45 | 
+1329 | [B - Incinerate](https://codeforces.com/contest/1763/problem/B) | [GNU C++20 (64)](./codeforces/1763/B.cpp) | `binary search` `brute force` `data structures` `implementation` `math` `sortings` `*1200` | Jan/07/2023 00:25 | 
+1328 | [D - Playoff](https://codeforces.com/contest/1767/problem/D) | [GNU C++20 (64)](./codeforces/1767/D.cpp) | `combinatorics` `constructive algorithms` `dp` `greedy` `math` `*1500` | Jan/06/2023 21:41 | 
+1327 | [B - Hossam and Friends](https://codeforces.com/contest/1771/problem/B) | [GNU C++20 (64)](./codeforces/1771/B.cpp) | `binary search` `constructive algorithms` `dp` `two pointers` `*1400` | Jan/06/2023 21:23 | 
+1326 | [C - Elemental Decompress](https://codeforces.com/contest/1768/problem/C) | [GNU C++20 (64)](./codeforces/1768/C.cpp) | `constructive algorithms` `greedy` `implementation` `sortings` | Jan/06/2023 15:45 | 
+1325 | [B - Quick Sort](https://codeforces.com/contest/1768/problem/B) | [GNU C++20 (64)](./codeforces/1768/B.cpp) | `greedy` `math` | Jan/05/2023 23:46 | 
 1324 | [E - Permutation Game](https://codeforces.com/contest/1772/problem/E) | [GNU C++20 (64)](./codeforces/1772/E.cpp) | `games` `*1700` | Jan/05/2023 01:14 | 
 1323 | [C - Even Subarrays](https://codeforces.com/contest/1731/problem/C) | [GNU C++20 (64)](./codeforces/1731/C.cpp) | `bitmasks` `brute force` `hashing` `math` `number theory` | Jan/05/2023 00:56 | 
 1322 | [B - Coloring](https://codeforces.com/contest/1774/problem/B) | [GNU C++20 (64)](./codeforces/1774/B.cpp) | `constructive algorithms` `greedy` `math` `*1500` | Jan/05/2023 00:17 | 
