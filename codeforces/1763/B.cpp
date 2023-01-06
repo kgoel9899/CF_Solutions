@@ -43,10 +43,10 @@ int32_t main() {
             if(v[i][1] <= 0) continue;
             if(i > 0) k -= v[i][0];
             dbg(i, k, v[i][0], v[i][1]);
-            // if(v[i][1] - k <= 0) {
-            //     sub += k;
-            //     continue;
-            // }
+            if(v[i][1] - k <= 0) {
+                sub += k;
+                continue;
+            }
             int beg = 1, end = v[i][1];
             int ans = 0;
             dbg(beg, end, k);
