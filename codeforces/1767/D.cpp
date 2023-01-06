@@ -30,15 +30,16 @@ int32_t main() {
         cin >> n;
         string s;
         cin >> s;
-        int z = 0, o = 0;
+        int one = 0, zero = 0;
         for(auto& i : s) {
-            if(i == '0') z++;
-            else o++;
+            if(i == '1') one++;
+            else zero++;
         }
-        int x = (1ll << o), y = (1ll << n) - (1ll << z) + 1;
-        while(x <= y) {
-            cout << x << " ";
-            x++;
+        int l = pow(2, one);
+        int r = pow(2, n) - (pow(2, zero) - 1);
+        for(int i=l;i<=r;i++) {
+            cout << i << " ";
         }
+        cout << endl;
     }
 }
