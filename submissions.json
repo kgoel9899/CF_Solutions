@@ -21039,6 +21039,24 @@
     ],
     "timestamp": "Jan/05/2023 01:14"
   },
+  "CF188196853": {
+    "contest_id": 1768,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1768\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Elemental Decompress",
+    "problem_url": "https://codeforces.com/contest/1768/problem/C",
+    "submission_id": "CF188196853",
+    "submission_url": "https://codeforces.com/contest/1768/submission/188196853",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "sortings"
+    ],
+    "timestamp": "Jan/06/2023 15:45"
+  },
   "CF188234093": {
     "contest_id": 1771,
     "language": "GNU C++20 (64)",
