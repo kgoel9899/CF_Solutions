@@ -1,43 +1,57 @@
-#pragma GCC optimize("Ofast,no-stack-protector,unroll-loops,no-stack-protector,fast-math")
-#include <bits/stdc++.h>
-#define ll long long
-#define ld long double
-#define IO ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0);
+#include<bits/stdc++.h>
 using namespace std;
-const int N = 1e5 + 5, M = 1e5 + 5;
+#define MOD 1000000007
+#define mod 998244353
+#define int long long
+#define setpres cout << fixed << setprecision(10)
+#define all(x) (x).begin(), (x).end()
+#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define endl "\n"
+const int INF = 1e18;
 
-int n, m;
-int mn[N];
-
-int main()
-{
-#ifndef ONLINE_JUDGE
-    freopen("input.in", "r", stdin);
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
 #endif
-    int t;
-    scanf("%d", &t);
-    while(t--){
-        scanf("%d %d", &n, &m);
-        for(int i = 1 ; i <= n ; ++i)
-            mn[i] = n;
-    
-        for(int i = 0 ; i < m ; ++i){
-            int x, y;
-            scanf("%d %d", &x, &y);
-            
-            if(x > y)
-                swap(x, y);
-                
-            mn[x] = min(mn[x], y - 1);
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
+int32_t main() {
+    fast;
+    int tt = 1;
+    cin >> tt;
+    while(tt--) {
+        int n, m;
+        cin >> n >> m;
+        vector<set<int>> v(n + 1);
+        for(int i=0;i<m;i++) {
+            int a, b;
+            cin >> a >> b;
+            v[a].insert(b);
+            v[b].insert(a);
         }
-    
-        for(int i = n - 1 ; i ; --i)
-            mn[i] = min(mn[i], mn[i + 1]);
-    
-        ll ans = n;
-        for(int i = 0 ; i < n ; ++i)
-            ans += (mn[i] - i);
-    
-        printf("%lld\n", ans);
+        vector<int> sz(n + 1);
+        for(int i=1;i<=n;i++) {
+            auto it = v[i].upper_bound(i);
+            int end;
+            if(it != v[i].end()) end = *it;
+            else end = n + 1;
+            sz[i] = end;
+        }
+        dbg(sz);
+        for(int i=n-1;i>=1;i--) {
+            sz[i] = min(sz[i], sz[i + 1]);
+        }
+        dbg(sz);
+        int ans = 0;
+        for(int i=1;i<=n;i++) {
+            ans += sz[i] - i;
+        }
+        cout << ans << endl;
     }
 }
