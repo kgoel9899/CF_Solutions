@@ -21175,6 +21175,24 @@
     ],
     "timestamp": "Jan/07/2023 00:25"
   },
+  "CF188346979": {
+    "contest_id": 1768,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1768\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Lucky Permutation",
+    "problem_url": "https://codeforces.com/contest/1768/problem/D",
+    "submission_id": "CF188346979",
+    "submission_url": "https://codeforces.com/contest/1768/submission/188346979",
+    "tags": [
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "greedy"
+    ],
+    "timestamp": "Jan/07/2023 22:42"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
