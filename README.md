@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1332 | [B - Matrix of Differences](https://codeforces.com/contest/1783/problem/B) | [GNU C++20 (64)](./codeforces/1783/B.cpp) | `constructive algorithms` | Jan/09/2023 23:57 | 
 1331 | [D - Valiant's New Map](https://codeforces.com/contest/1731/problem/D) | [GNU C++20 (64)](./codeforces/1731/D.cpp) | `binary search` `brute force` `data structures` `dp` `two pointers` `*1700` | Jan/08/2023 16:49 | 
 1330 | [D - Lucky Permutation](https://codeforces.com/contest/1768/problem/D) | [GNU C++20 (64)](./codeforces/1768/D.cpp) | `dfs and similar` `dsu` `graphs` `greedy` | Jan/07/2023 22:42 | 
 1329 | [B - Incinerate](https://codeforces.com/contest/1763/problem/B) | [GNU C++20 (64)](./codeforces/1763/B.cpp) | `binary search` `brute force` `data structures` `implementation` `math` `sortings` `*1200` | Jan/07/2023 00:25 | 
