@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1339 | [C - Interesting Sequence](https://codeforces.com/contest/1775/problem/C) | [GNU C++20 (64)](./codeforces/1775/C.cpp) | `bitmasks` `math` `*1600` | Jan/16/2023 22:40 | 
 1338 | [B - Gardener and the Array](https://codeforces.com/contest/1775/problem/B) | [GNU C++20 (64)](./codeforces/1775/B.cpp) | `bitmasks` `constructive algorithms` | Jan/15/2023 16:07 | 
 1337 | [B - Difference of GCDs](https://codeforces.com/contest/1708/problem/B) | [GNU C++20 (64)](./codeforces/1708/B.cpp) | `constructive algorithms` `math` `*1100` | Jan/15/2023 15:24 | 
 1336 | [C2 - Brain Network (medium)](https://codeforces.com/contest/690/problem/C2) | [GNU C++20 (64)](./codeforces/690/C2.cpp) | `dfs and similar` `graphs` `trees` `*1500` | Jan/13/2023 15:10 | 
