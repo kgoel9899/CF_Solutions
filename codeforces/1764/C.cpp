@@ -1,47 +1,41 @@
-#include<bits/stdc++.h>
+#include<cstdio>
+#include<cstring>
+#include<iostream>
+#include<algorithm>
+#define ch() getchar()
+#define pc(x) putchar(x)
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
-
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
-
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
-
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
-
-int32_t main() {
-    fast;
-    int tt = 1;
-    cin >> tt;
-    while(tt--) {
-        int n;
-        cin >> n;
-        vector<int> v(n);
-        for(int i=0;i<n;i++) {
-            cin >> v[i];
-        }
-        sort(all(v));
-        if(v[0] == v[n - 1]) {
-            cout << n / 2 << endl;
-            continue;
-        }
-        int ans = 0;
-        for(int i=0,j=0;i<n;i=j=j+1) {
-            while(j + 1 < n && v[j] == v[j + 1]) j++;
-            ans = max(ans, (n - 1 - j) * (j + 1));
-        }
-        cout << ans << endl;
-    }
+template<typename T>void read(T&x){
+	static char c;static int f;
+	for(f=1,c=ch();c<'0'||c>'9';c=ch())if(c=='-')f=-f;
+	for(x=0;c>='0'&&c<='9';c=ch()){x=x*10+(c&15);}x*=f;
+}
+template<typename T>void write(T x){
+	static char q[64];int cnt=0;
+	if(x==0)return pc('0'),void();
+	if(x<0)pc('-'),x=-x;
+	while(x)q[cnt++]=x%10+'0',x/=10;
+	while(cnt--)pc(q[cnt]);
+}
+const int maxn=200005;
+int a[maxn];
+int main(){
+	int t;read(t);
+	while(t--){
+		int n;read(n);
+		for(int i=1;i<=n;++i)
+			read(a[i]);
+		sort(a+1,a+n+1);
+		if(a[1]==a[n]){
+			write(n/2),pc('\n');
+			continue;
+		}
+		long long ans=0;
+		for(int l=1,r=1;l<=n;l=r=r+1){
+			while(r+1<=n&&a[r+1]==a[l])++r;
+			ans=max(ans,1ll*(n-r)*r);
+		}
+		write(ans),pc('\n');
+	}
+	return 0;
 }
