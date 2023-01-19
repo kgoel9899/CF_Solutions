@@ -21366,6 +21366,23 @@
     ],
     "timestamp": "Jan/16/2023 22:40"
   },
+  "CF189744895": {
+    "contest_id": 1779,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1779\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Least Prefix Sum",
+    "problem_url": "https://codeforces.com/contest/1779/problem/C",
+    "submission_id": "CF189744895",
+    "submission_url": "https://codeforces.com/contest/1779/submission/189744895",
+    "tags": [
+      "data structures",
+      "greedy",
+      "*1600"
+    ],
+    "timestamp": "Jan/19/2023 18:56"
+  },
   "CF189875740": {
     "contest_id": 1782,
     "language": "GNU C++20 (64)",
