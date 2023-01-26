@@ -21531,6 +21531,22 @@
     ],
     "timestamp": "Jan/24/2023 21:35"
   },
+  "CF190679820": {
+    "contest_id": 1792,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1792\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Stand-up Comedian",
+    "problem_url": "https://codeforces.com/contest/1792/problem/B",
+    "submission_id": "CF190679820",
+    "submission_url": "https://codeforces.com/contest/1792/submission/190679820",
+    "tags": [
+      "greedy",
+      "math"
+    ],
+    "timestamp": "Jan/26/2023 21:58"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
