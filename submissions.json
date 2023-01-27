@@ -21565,6 +21565,23 @@
     ],
     "timestamp": "Jan/26/2023 21:58"
   },
+  "CF190891199": {
+    "contest_id": 1790,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1790\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Premutation",
+    "problem_url": "https://codeforces.com/contest/1790/problem/C",
+    "submission_id": "CF190891199",
+    "submission_url": "https://codeforces.com/contest/1790/submission/190891199",
+    "tags": [
+      "brute force",
+      "implementation",
+      "math"
+    ],
+    "timestamp": "Jan/27/2023 23:55"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
