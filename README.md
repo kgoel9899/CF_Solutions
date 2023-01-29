@@ -13,8 +13,9 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1353 | [A - Polycarp and the Day of Pi](https://codeforces.com/contest/1790/problem/A) | [GNU C++20 (64)](./codeforces/1790/A.cpp) | `implementation` `math` `strings` | Jan/31/2023 22:40 | 
-1352 | [B - Taisia and Dice](https://codeforces.com/contest/1790/problem/B) | [GNU C++20 (64)](./codeforces/1790/B.cpp) | `greedy` `greedy` `math` | Jan/30/2023 23:45 | 
+1354 | [A - Polycarp and the Day of Pi](https://codeforces.com/contest/1790/problem/A) | [GNU C++20 (64)](./codeforces/1790/A.cpp) | `implementation` `math` `strings` | Jan/31/2023 22:40 | 
+1353 | [B - Taisia and Dice](https://codeforces.com/contest/1790/problem/B) | [GNU C++20 (64)](./codeforces/1790/B.cpp) | `greedy` `greedy` `math` | Jan/30/2023 23:45 | 
+1352 | [E - Vlad and a Pair of Numbers](https://codeforces.com/contest/1790/problem/E) | [GNU C++20 (64)](./codeforces/1790/E.cpp) | `bitmasks` `constructive algorithms` | Jan/29/2023 14:07 | 
 1351 | [D - Matryoshkas](https://codeforces.com/contest/1790/problem/D) | [GNU C++20 (64)](./codeforces/1790/D.cpp) | `data structures` `greedy` `sortings` | Jan/28/2023 12:33 | 
 1350 | [C - Premutation](https://codeforces.com/contest/1790/problem/C) | [GNU C++20 (64)](./codeforces/1790/C.cpp) | `brute force` `implementation` `math` | Jan/27/2023 23:55 | 
 1349 | [B - Stand-up Comedian](https://codeforces.com/contest/1792/problem/B) | [GNU C++20 (64)](./codeforces/1792/B.cpp) | `greedy` `math` | Jan/26/2023 21:58 | 
