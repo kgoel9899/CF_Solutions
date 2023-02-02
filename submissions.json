@@ -21649,6 +21649,22 @@
     ],
     "timestamp": "Jan/31/2023 22:40"
   },
+  "CF191752277": {
+    "contest_id": 1778,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1778\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "The Forbidden Permutation",
+    "problem_url": "https://codeforces.com/contest/1778/problem/B",
+    "submission_id": "CF191752277",
+    "submission_url": "https://codeforces.com/contest/1778/submission/191752277",
+    "tags": [
+      "greedy",
+      "math"
+    ],
+    "timestamp": "Feb/02/2023 23:54"
+  },
   "CF192052221": {
     "contest_id": 1791,
     "language": "GNU C++20 (64)",
