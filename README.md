@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1355 | [B - The Forbidden Permutation](https://codeforces.com/contest/1778/problem/B) | [GNU C++20 (64)](./codeforces/1778/B.cpp) | `greedy` `math` | Feb/05/2023 01:15 | 
+1356 | [B - The Forbidden Permutation](https://codeforces.com/contest/1778/problem/B) | [GNU C++20 (64)](./codeforces/1778/B.cpp) | `greedy` `math` | Feb/05/2023 01:15 | 
+1355 | [B - Number Factorization](https://codeforces.com/contest/1787/problem/B) | [GNU C++20 (64)](./codeforces/1787/B.cpp) | `greedy` `math` `number theory` `*1100` | Feb/05/2023 00:41 | 
 1354 | [A - Polycarp and the Day of Pi](https://codeforces.com/contest/1790/problem/A) | [GNU C++20 (64)](./codeforces/1790/A.cpp) | `implementation` `math` `strings` | Jan/31/2023 22:40 | 
 1353 | [B - Taisia and Dice](https://codeforces.com/contest/1790/problem/B) | [GNU C++20 (64)](./codeforces/1790/B.cpp) | `greedy` `greedy` `math` | Jan/30/2023 23:45 | 
 1352 | [E - Vlad and a Pair of Numbers](https://codeforces.com/contest/1790/problem/E) | [GNU C++20 (64)](./codeforces/1790/E.cpp) | `bitmasks` `constructive algorithms` | Jan/29/2023 14:07 | 
