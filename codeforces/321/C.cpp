@@ -49,7 +49,7 @@ void decompose(int curr, int cent, char c) {
     ans[centroid] = c;
     for(auto& i : adj[centroid]) {
         adj[i].erase(centroid);
-        decompose(i, centroid, c + 1);
+        decompose(i, curr, c + 1);
     }
 }
 int32_t main() {
