@@ -21935,6 +21935,22 @@
     ],
     "timestamp": "Feb/11/2023 23:58"
   },
+  "CF193421128": {
+    "contest_id": 1786,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1786\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Monsters (easy version)",
+    "problem_url": "https://codeforces.com/contest/1786/problem/C",
+    "submission_id": "CF193421128",
+    "submission_url": "https://codeforces.com/contest/1786/submission/193421128",
+    "tags": [
+      "greedy",
+      "sortings"
+    ],
+    "timestamp": "Feb/13/2023 10:48"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
