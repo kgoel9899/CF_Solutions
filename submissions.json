@@ -21968,6 +21968,22 @@
     ],
     "timestamp": "Feb/13/2023 10:48"
   },
+  "CF193624686": {
+    "contest_id": 1770,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1770\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Koxia and Permutation",
+    "problem_url": "https://codeforces.com/contest/1770/problem/B",
+    "submission_id": "CF193624686",
+    "submission_url": "https://codeforces.com/contest/1770/submission/193624686",
+    "tags": [
+      "constructive algorithms",
+      "*1000"
+    ],
+    "timestamp": "Feb/14/2023 21:44"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
