@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1372 | [C - Min Max Sort](https://codeforces.com/contest/1792/problem/C) | [GNU C++20 (64)](./codeforces/1792/C.cpp) | `binary search` `brute force` `greedy` `math` `two pointers` `*1500` | Feb/17/2023 16:52 | 
 1371 | [B - Ideal Point](https://codeforces.com/contest/1795/problem/B) | [GNU C++20 (64)](./codeforces/1795/B.cpp) | `geometry` `greedy` | Feb/16/2023 23:56 | 
 1370 | [B - Emordnilap](https://codeforces.com/contest/1777/problem/B) | [GNU C++20 (64)](./codeforces/1777/B.cpp) | `combinatorics` `greedy` `math` `*900` | Feb/15/2023 18:54 | 
 1369 | [B - Koxia and Permutation](https://codeforces.com/contest/1770/problem/B) | [GNU C++20 (64)](./codeforces/1770/B.cpp) | `constructive algorithms` `*1000` | Feb/14/2023 21:44 | 
