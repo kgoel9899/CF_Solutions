@@ -22132,6 +22132,24 @@
     ],
     "timestamp": "Feb/21/2023 10:08"
   },
+  "CF194667969": {
+    "contest_id": 1783,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1783\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Yet Another Tournament",
+    "problem_url": "https://codeforces.com/contest/1783/problem/C",
+    "submission_id": "CF194667969",
+    "submission_url": "https://codeforces.com/contest/1783/submission/194667969",
+    "tags": [
+      "binary search",
+      "greedy",
+      "sortings",
+      "*1700"
+    ],
+    "timestamp": "Feb/23/2023 17:15"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
