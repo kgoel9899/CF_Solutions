@@ -1,67 +1,104 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+#include <set>
+#include <map>
+#include <unordered_set>
+#include <unordered_map>
+#include <queue>
+#include <ctime>
+#include <cassert>
+#include <complex>
+#include <string>
+#include <cstring>
+#include <chrono>
+#include <random>
+#include <bitset>
+#include <array>
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#ifdef LOCAL
+	#define eprintf(...) {fprintf(stderr, __VA_ARGS__);fflush(stderr);}
 #else
-#define dbg(...)
+	#define eprintf(...) 42
 #endif
 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+using ll = long long;
+using ld = long double;
+using uint = unsigned int;
+using ull = unsigned long long;
+template<typename T>
+using pair2 = pair<T, T>;
+using pii = pair<int, int>;
+using pli = pair<ll, int>;
+using pll = pair<ll, ll>;
+mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
+ll myRand(ll B) {
+	return (ull)rng() % B;
+}
 
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+#define pb push_back
+#define mp make_pair
+#define all(x) (x).begin(),(x).end()
+#define fi first
+#define se second
 
-int32_t main() {
-    fast;
-    int tt = 1;
-    cin >> tt;
-    while(tt--) {
-        int n;
-        cin >> n;
-        vector<int> v(n);
-        map<int,int> m;
-        for(int i=0;i<n;i++) {
-            cin >> v[i];
-            m[v[i]]++;
-        }            
-        if(m.size() == 1) {
-            cout << 0 << endl;
-            continue;
-        }
-        if(m.begin()->first == 1) {
-            cout << -1 << endl;
-            continue;
-        }
-        vector<pair<int, int>> ans;
-        while(m.size() > 1) {
-            vector<vector<int>> curr;
-            for(int i=0;i<n;i++) {
-                curr.push_back({v[i], i});
-            }
-            sort(curr.begin(), curr.end());
-            for(int i=0;i<n;i++){
-                if(curr[0][0] == curr[i][0]) continue;
-                ans.push_back({curr[i][1], curr[0][1]});
-                v[curr[i][1]] = (v[curr[i][1]] + v[curr[0][1]] - 1) / v[curr[0][1]];
-            }
-            m.clear();
-            for(auto& i : v) {
-                m[i]++;
-            }
-        }
-        cout << ans.size() << endl;
-        for(auto& i : ans) {
-            cout << i.first + 1 << " " << i.second + 1 << endl;
-        }
-    }
+clock_t startTime;
+double getCurrentTime() {
+	return (double)(clock() - startTime) / CLOCKS_PER_SEC;
+}
+
+const int N = 10100;
+int n, ansSz;
+pii ans[N];
+int a[N];
+
+void solve() {
+	ansSz = 0;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++)
+		scanf("%d", &a[i]);
+	int l = a[0], r = a[0];
+	for (int i = 0; i < n; i++) {
+		l = min(l, a[i]);
+		r = max(r, a[i]);
+	}
+	if (l == r) {
+		printf("0\n");
+		return;
+	}
+	if (l == 1) {
+		printf("-1\n");
+		return;
+	}
+	while(true) {
+		int p = 0, q = 0;
+		for (int i = 0; i < n; i++) {
+			if (a[i] > a[p]) p = i;
+			if (a[i] < a[q]) q = i;
+		}
+		if (a[p] == a[q]) break;
+		assert(a[q] > 1);
+		ans[ansSz++] = mp(p + 1, q + 1);
+		a[p] = (a[p] + a[q] - 1) / a[q];
+		assert(a[p] > 1);
+	}
+	printf("%d\n", ansSz);
+	for (int i = 0; i < ansSz; i++)
+		printf("%d %d\n", ans[i].first, ans[i].second);
+}
+
+int main()
+{
+	startTime = clock();
+//	freopen("input.txt", "r", stdin);
+//	freopen("output.txt", "w", stdout);
+	int t;
+	scanf("%d", &t);
+	while(t--) solve();
+
+	return 0;
 }
