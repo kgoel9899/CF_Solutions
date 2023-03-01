@@ -22252,6 +22252,24 @@
     ],
     "timestamp": "Feb/28/2023 23:30"
   },
+  "CF195494433": {
+    "contest_id": 1799,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1799\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Equalize by Divide",
+    "problem_url": "https://codeforces.com/contest/1799/problem/B",
+    "submission_id": "CF195494433",
+    "submission_url": "https://codeforces.com/contest/1799/submission/195494433",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "math"
+    ],
+    "timestamp": "Mar/02/2023 00:54"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
