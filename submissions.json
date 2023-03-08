@@ -22414,6 +22414,24 @@
     ],
     "timestamp": "Mar/07/2023 23:58"
   },
+  "CF196512740": {
+    "contest_id": 1794,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1794\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Scoring Subsequences",
+    "problem_url": "https://codeforces.com/contest/1794/problem/C",
+    "submission_id": "CF196512740",
+    "submission_url": "https://codeforces.com/contest/1794/submission/196512740",
+    "tags": [
+      "binary search",
+      "greedy",
+      "math",
+      "two pointers"
+    ],
+    "timestamp": "Mar/08/2023 19:18"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
