@@ -22432,6 +22432,23 @@
     ],
     "timestamp": "Mar/08/2023 19:18"
   },
+  "CF196700534": {
+    "contest_id": 1750,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1750\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Complementary XOR",
+    "problem_url": "https://codeforces.com/contest/1750/problem/C",
+    "submission_id": "CF196700534",
+    "submission_url": "https://codeforces.com/contest/1750/submission/196700534",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Mar/09/2023 23:44"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
