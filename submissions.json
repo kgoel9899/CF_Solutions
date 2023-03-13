@@ -22507,6 +22507,23 @@
     ],
     "timestamp": "Mar/12/2023 15:16"
   },
+  "CF197266955": {
+    "contest_id": 1804,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1804\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Vaccination",
+    "problem_url": "https://codeforces.com/contest/1804/problem/B",
+    "submission_id": "CF197266955",
+    "submission_url": "https://codeforces.com/contest/1804/submission/197266955",
+    "tags": [
+      "greedy",
+      "implementation",
+      "two pointers"
+    ],
+    "timestamp": "Mar/13/2023 21:43"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
