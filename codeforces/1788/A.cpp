@@ -1,52 +1,83 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+#include <set>
+#include <map>
+#include <unordered_set>
+#include <unordered_map>
+#include <queue>
+#include <ctime>
+#include <cassert>
+#include <complex>
+#include <string>
+#include <cstring>
+#include <chrono>
+#include <random>
+#include <bitset>
+#include <array>
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#ifdef LOCAL
+	#define eprintf(...) {fprintf(stderr, __VA_ARGS__);fflush(stderr);}
 #else
-#define dbg(...)
+	#define eprintf(...) 42
 #endif
 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+using ll = long long;
+using ld = long double;
+using uint = unsigned int;
+using ull = unsigned long long;
+template<typename T>
+using pair2 = pair<T, T>;
+using pii = pair<int, int>;
+using pli = pair<ll, int>;
+using pll = pair<ll, ll>;
+mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
+ll myRand(ll B) {
+	return (ull)rng() % B;
+}
 
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+#define pb push_back
+#define mp make_pair
+#define all(x) (x).begin(),(x).end()
+#define fi first
+#define se second
 
-int32_t main() {
-    fast;
-    int tt = 1;
-    cin >> tt;
-    while(tt--) {
-        int n;
-        cin >> n;
-        vector<int> v(n);
-        int ct = 0;
-        for(int i=0;i<n;i++) {
-            cin >> v[i];
-            if(v[i] == 2) ct++;
-        }
-        if(ct % 2) {
-            cout << -1 << endl;
-            continue;
-        }
-        ct /= 2;
-        int ans = -1;
-        for(int i=0;i<n;i++) {
-            if(v[i] == 2) ct--;
-            if(ct == 0) {
-                ans = i;
-                break;
-            }
-        }
-        cout << ans + 1 << endl;
-    }
+clock_t startTime;
+double getCurrentTime() {
+	return (double)(clock() - startTime) / CLOCKS_PER_SEC;
+}
+
+void solve() {
+	int n;
+	vector<int> a;
+	scanf("%d", &n);
+	for (int i = 1; i <= n; i++) {
+		int x;
+		scanf("%d", &x);
+		if (x == 2) a.push_back(i);
+	}
+	int m = (int)a.size();
+	if (m & 1) {
+		printf("-1\n");
+	} else if (m == 0) {
+		printf("1\n");
+	} else {
+		printf("%d\n", a[m / 2 - 1]);
+	}
+}
+
+int main()
+{
+	startTime = clock();
+//	freopen("input.txt", "r", stdin);
+//	freopen("output.txt", "w", stdout);
+	int t;
+	scanf("%d", &t);
+	while(t--) solve();
+
+	return 0;
 }
