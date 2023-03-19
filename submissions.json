@@ -22613,6 +22613,23 @@
     ],
     "timestamp": "Mar/17/2023 23:59"
   },
+  "CF198080431": {
+    "contest_id": 1278,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1278\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "A and B",
+    "problem_url": "https://codeforces.com/contest/1278/problem/B",
+    "submission_id": "CF198080431",
+    "submission_url": "https://codeforces.com/contest/1278/submission/198080431",
+    "tags": [
+      "greedy",
+      "math",
+      "*1500"
+    ],
+    "timestamp": "Mar/19/2023 16:10"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
