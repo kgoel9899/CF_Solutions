@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1403 | [C - Berry Jam](https://codeforces.com/contest/1278/problem/C) | [GNU C++20 (64)](./codeforces/1278/C.cpp) | `data structures` `dp` `greedy` `implementation` `*1700` | Mar/20/2023 15:23 | 
 1402 | [B - A and B](https://codeforces.com/contest/1278/problem/B) | [GNU C++20 (64)](./codeforces/1278/B.cpp) | `greedy` `math` `*1500` | Mar/19/2023 16:10 | 
 1401 | [C - Binary Strings are Fun](https://codeforces.com/contest/1762/problem/C) | [GNU C++20 (64)](./codeforces/1762/C.cpp) | `combinatorics` `math` `*1400` | Mar/18/2023 15:13 | 
 1400 | [B - Make Array Good](https://codeforces.com/contest/1762/problem/B) | [GNU C++20 (64)](./codeforces/1762/B.cpp) | `constructive algorithms` `implementation` `number theory` `sortings` `*1100` | Mar/17/2023 23:59 | 
