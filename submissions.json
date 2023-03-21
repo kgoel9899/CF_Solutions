@@ -22666,6 +22666,23 @@
     ],
     "timestamp": "Mar/20/2023 15:23"
   },
+  "CF198450164": {
+    "contest_id": 1807,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1807\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Find and Replace",
+    "problem_url": "https://codeforces.com/contest/1807/problem/C",
+    "submission_id": "CF198450164",
+    "submission_url": "https://codeforces.com/contest/1807/submission/198450164",
+    "tags": [
+      "greedy",
+      "implementation",
+      "strings"
+    ],
+    "timestamp": "Mar/21/2023 11:54"
+  },
   "CF198606284": {
     "contest_id": 1807,
     "language": "GNU C++20 (64)",
