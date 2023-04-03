@@ -39,7 +39,9 @@ int32_t main() {
             int x = v[l], y = v[r];
             if(x == y) {
                 int tx = l, ty = r;
+                dbg(l, r);
                 int left = 0, last_temp = last;
+                dbg(last, x);
                 while(tx <= ty) {
                     if(v[tx] > last) {
                         left++;
@@ -56,14 +58,20 @@ int32_t main() {
                         ty--;
                     } else break;
                 }
+                dbg(left, right);
+                if(max(left, right) == 0) break;
                 if(left >= right) ans += string(left, 'L');
                 else ans += string(right, 'R');
+                dbg("here");
                 break;
             }
             int mn = min(x, y);
             int mx = max(x, y);
-            if(last > mx) break;
-            else if(last < mn) {
+            if(last > mx) {
+                l++;
+                r--;
+                break;
+            } else if(last < mn) {
                 if(x < y) {
                     last = x;
                     l++;
@@ -74,6 +82,7 @@ int32_t main() {
                     ans += "R";
                 }
             } else {
+                dbg(last, mn, mx);
                 if(x < y && y != last) {
                     last = y;
                     ans += "R";
@@ -84,6 +93,7 @@ int32_t main() {
                     l++;
                 } else break;
             }
+            dbg(l, r, ans);
         }
         cout << ans.size() << endl;
         cout << ans << endl;
