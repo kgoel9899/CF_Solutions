@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1420 | [E - Living Sequence](https://codeforces.com/contest/1811/problem/E) | [GNU C++20 (64)](./codeforces/1811/E.cpp) | `binary search` `dp` `math` `number theory` `*1500` | Apr/07/2023 22:58 | 
+1421 | [E - Living Sequence](https://codeforces.com/contest/1811/problem/E) | [GNU C++20 (64)](./codeforces/1811/E.cpp) | `binary search` `dp` `math` `number theory` `*1500` | Apr/07/2023 22:58 | 
+1420 | [C - Place for a Selfie](https://codeforces.com/contest/1805/problem/C) | [GNU C++20 (64)](./codeforces/1805/C.cpp) | `binary search` `data structures` `geometry` `math` | Apr/06/2023 13:37 | 
 1419 | [C - Restore the Array](https://codeforces.com/contest/1811/problem/C) | [GNU C++20 (64)](./codeforces/1811/C.cpp) | `constructive algorithms` `greedy` | Apr/05/2023 22:45 | 
 1418 | [E - Minimum Array](https://codeforces.com/contest/1157/problem/E) | [GNU C++20 (64)](./codeforces/1157/E.cpp) | `binary search` `data structures` `greedy` `*1700` | Apr/04/2023 12:33 | 
 1417 | [C2 - Increasing Subsequence (hard version)](https://codeforces.com/contest/1157/problem/C2) | [GNU C++20 (64)](./codeforces/1157/C2.cpp) | `greedy` `*1700` | Apr/03/2023 15:03 | 
