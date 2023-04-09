@@ -21,7 +21,8 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-int solve(int l, int r, int a, int b, vector<int>& v) {
+vector<int> v;
+int solve(int l, int r, int a, int b) {
     int ind1 = lower_bound(all(v), l) - v.begin();
     int ind2 = upper_bound(all(v), r) - v.begin();
     ind2--;
@@ -31,7 +32,7 @@ int solve(int l, int r, int a, int b, vector<int>& v) {
     else op1 = a;
     if(l == r || tot == 0) return op1;
     int mid = (l + r) / 2;
-    int op2 = solve(l, mid, a, b, v) + solve(mid + 1, r, a, b, v);
+    int op2 = solve(l, mid, a, b) + solve(mid + 1, r, a, b);
     return min(op1, op2);
 }
 int32_t main() {
@@ -41,11 +42,12 @@ int32_t main() {
     while(tt--) {
         int n, k, a, b;
         cin >> n >> k >> a >> b;
-        vector<int> v(k);
+        v.clear();
+        v.resize(k);
         for(int i=0;i<k;i++) {
             cin >> v[i];
         }
         sort(all(v));
-        cout << solve(1, (1ll << n), a, b, v) << endl;
+        cout << solve(1, (1ll << n), a, b) << endl;
     }
 }
