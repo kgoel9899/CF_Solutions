@@ -22,16 +22,16 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 int n, m;
-int dp[10][1001];
-int solve(int i, int diff) {
-    if(i == m) return 1;
-    if(dp[i][diff] != -1) return dp[i][diff];
+int dp[25][1001];
+int solve(int curr, int last) {
+    if(curr == 2 * m) return 1;
+    if(dp[curr][last] != -1) return dp[curr][last];
     int ans = 0;
-    for(int j=0;j<=diff;j++) {
-        ans += (solve(i + 1, j) * (diff - j + 1)) % MOD;
+    for(int i=last;i<=n;i++) {
+        ans += solve(curr + 1, i);
         ans %= MOD;
     }
-    return dp[i][diff] = ans;
+    return dp[curr][last] = ans;
 }
 int32_t main() {
     fast;
@@ -40,6 +40,6 @@ int32_t main() {
     while(tt--) {
         cin >> n >> m;
         memset(dp, -1, sizeof dp);
-        cout << solve(0, n - 1) << endl;
+        cout << solve(0, 1) << endl;
     }
 }
