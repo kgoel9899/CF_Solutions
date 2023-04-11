@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1425 | [C - Two Arrays](https://codeforces.com/contest/1288/problem/C) | [GNU C++20 (64)](./codeforces/1288/C.cpp) | `combinatorics` `dp` `*1600` | Apr/12/2023 00:42 | 
+1426 | [C - Two Arrays](https://codeforces.com/contest/1288/problem/C) | [GNU C++20 (64)](./codeforces/1288/C.cpp) | `combinatorics` `dp` `*1600` | Apr/12/2023 00:42 | 
+1425 | [C - Boredom](https://codeforces.com/contest/456/problem/C) | [GNU C++20 (64)](./codeforces/456/C.cpp) | `dp` `*1500` | Apr/11/2023 23:43 | 
 1424 | [A - Minimizing the String](https://codeforces.com/contest/1076/problem/A) | [GNU C++20 (64)](./codeforces/1076/A.cpp) | `greedy` `strings` `*1200` | Apr/11/2023 23:00 | 
 1423 | [B - Orac and Models](https://codeforces.com/contest/1350/problem/B) | [GNU C++20 (64)](./codeforces/1350/B.cpp) | `dp` `math` `number theory` `*1400` | Apr/10/2023 17:59 | 
 1422 | [B - Average Superhero Gang Power ](https://codeforces.com/contest/1111/problem/B) | [GNU C++20 (64)](./codeforces/1111/B.cpp) | `brute force` `implementation` `math` `*1700` | Apr/10/2023 14:58 | 

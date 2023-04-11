@@ -23110,6 +23110,22 @@
     ],
     "timestamp": "Apr/11/2023 23:00"
   },
+  "CF201732404": {
+    "contest_id": 456,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\456\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Boredom",
+    "problem_url": "https://codeforces.com/contest/456/problem/C",
+    "submission_id": "CF201732404",
+    "submission_url": "https://codeforces.com/contest/456/submission/201732404",
+    "tags": [
+      "dp",
+      "*1500"
+    ],
+    "timestamp": "Apr/11/2023 23:43"
+  },
   "CF201740334": {
     "contest_id": 1288,
     "language": "GNU C++20 (64)",
