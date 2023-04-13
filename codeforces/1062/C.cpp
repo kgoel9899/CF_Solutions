@@ -49,11 +49,8 @@ int32_t main() {
             int x = pref[r];
             if(l) x -= pref[l - 1];
             int y = (r - l + 1) - x;
-            int ans = modRecursive(2, x, MOD) - 1 + MOD;
-            ans %= MOD;
-            int ans1 = modRecursive(2, y, MOD) - 1 + MOD;
-            ans1 %= MOD;
-            ans += ans * ans1;
+            int ans = modRecursive(2, x, MOD) - 1;
+            ans *= modRecursive(2, y, MOD);
             ans %= MOD;
             cout << ans << endl;
         }
