@@ -32,7 +32,7 @@ int32_t main() {
         dp[0][1] = 1;
         int flag = 1;
         for(int i=1;i<=n;i++) {
-            dp[flag][0] = (dp[flag ^ 1][1] + 2 * dp[flag ^ 1][0]) % MOD;
+            dp[flag][0] = (dp[flag ^ 1][1] + (2 * dp[flag ^ 1][0]) % MOD) % MOD;
             dp[flag][1] = (3 * dp[flag ^ 1][0]) % MOD;
             flag ^= 1;
         }
