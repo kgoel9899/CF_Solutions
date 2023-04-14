@@ -38,5 +38,8 @@ int32_t main() {
         }
         flag ^= 1;
         cout << dp[flag][1] << endl;
+
+        // dp.resize(n, vector<int>(2, -1));
+        // cout << solve(0, n, 1) << endl;
     }
 }
