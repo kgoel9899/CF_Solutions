@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1430 | [A - Points on the line](https://codeforces.com/contest/940/problem/A) | [GNU C++20 (64)](./codeforces/940/A.cpp) | `brute force` `greedy` `sortings` `*1200` | Apr/16/2023 14:49 | 
+1431 | [A - Points on the line](https://codeforces.com/contest/940/problem/A) | [GNU C++20 (64)](./codeforces/940/A.cpp) | `brute force` `greedy` `sortings` `*1200` | Apr/16/2023 14:49 | 
+1430 | [D - Fun with Integers](https://codeforces.com/contest/1062/problem/D) | [GNU C++20 (64)](./codeforces/1062/D.cpp) | `dfs and similar` `graphs` `implementation` `math` `*1800` | Apr/15/2023 14:02 | 
 1429 | [E - Tetrahedron](https://codeforces.com/contest/166/problem/E) | [GNU C++20 (64)](./codeforces/166/E.cpp) | `dp` `math` `matrices` `*1500` | Apr/14/2023 17:23 | 
 1428 | [C - Banh-mi](https://codeforces.com/contest/1062/problem/C) | [GNU C++20 (64)](./codeforces/1062/C.cpp) | `greedy` `implementation` `math` `*1600` | Apr/14/2023 00:12 | 
 1427 | [B - Math](https://codeforces.com/contest/1062/problem/B) | [GNU C++20 (64)](./codeforces/1062/B.cpp) | `greedy` `math` `number theory` `*1500` | Apr/12/2023 11:56 | 
