@@ -15,6 +15,7 @@ const int INF = 1e18;
 #define dbg(...)
 #endif
 
+
 template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
 template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
 
@@ -24,18 +25,14 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 int n, k, z;
 vector<int> v;
 vector<vector<vector<int>>> dp;
-int solve(int curr, int left, bool move_left) {
-    int left_done = z - left;
-    int moves = curr + left_done * 2;
-    // cout << curr << " " << left << " " << move_left << " " << moves << endl;
+int solve(int curr, int left, int moves, bool move_left) {
     if(moves == k) return 0;
-    assert(moves < k);
     if(dp[curr][left][move_left] != -1) return dp[curr][left][move_left];
-    if(move_left) return dp[curr][left][move_left] = v[curr + 1] + solve(curr + 1, left, false);
+    if(move_left) return dp[curr][left][move_left] = v[curr + 1] + solve(curr + 1, left, moves + 1, false);
     else {
-        int op1 = v[curr + 1] + solve(curr + 1, left, false);
+        int op1 = v[curr + 1] + solve(curr + 1, left, moves + 1, false);
         int op2 = 0;
-        if(curr > 0 && left > 0) op2 = v[curr - 1] + solve(curr - 1, left - 1, true);
+        if(curr > 0 && left > 0) op2 = v[curr - 1] + solve(curr - 1, left - 1, moves + 1, true);
         return dp[curr][left][move_left] = max(op1, op2);
     }
 }
@@ -52,7 +49,7 @@ int32_t main() {
         }
         dp.clear();
         dp.resize(n + 1, vector<vector<int>>(z + 1, vector<int>(2, -1)));
-        cout << v[0] + solve(0, z, false) << endl;
+        cout << v[0] + solve(0, z, 0, false) << endl;
     }
 }
 // 1 - 2 - 3 - 2 - 3 - 4 - 3 - 4
