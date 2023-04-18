@@ -36,6 +36,7 @@ int32_t main() {
         double R, x1, y1, x2, y2;
         cin >> R >> x1 >> y1 >> x2 >> y2;
         if(outside(R, x1, y1, x2, y2)) cout << x1 << " " << y1 << " " << R << endl;
+        else if(x1 == x2 && y1 == y2) cout << x1 + R / 2 << " " << y1 << " " << R / 2 << endl;
         else {
             dbg(y2 - y1);
             dbg(x2 - x1);
