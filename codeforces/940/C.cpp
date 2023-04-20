@@ -17,7 +17,15 @@ int32_t main()
         st.insert(it);
     char first=*(st.begin());
     char last=*(--st.end());
-    if(k>n) cout << s << string(k - n, *st.begin()) << endl;
+    if(k>n)
+    {
+        cout<<s;
+        for(int i=1;i<=k-n;i++)
+        {
+            cout<<*(st.begin());
+        }
+        return 0;
+    }
     else
     {
         for(int i=k-1;i>=0;i--)
