@@ -34,18 +34,25 @@ int32_t main() {
         for(auto& i : s) {
             st.insert(i);
         }
-        if(k > n) cout << s << string(k - n, *st.begin()) << endl;
-        else {
-            char first = *(st.begin());
-            char last=*(--st.end());
-            for(int i=k-1;i>=0;i--) {
-                if(s[i] != last) {
-                    s[i] = *(st.upper_bound(s[i]));
+        char first=*(st.begin());
+        char last=*(--st.end());
+        if(k>n) cout << s << string(k - n, *st.begin()) << endl;
+        else
+        {
+            for(int i=k-1;i>=0;i--)
+            {
+                if(s[i]!=last)
+                {
+                    s[i]=*(st.upper_bound(s[i]));
                     break;
                 }
-                s[i] = first;
+                else
+                {
+                    s[i]=first;
+                }
             }
-            cout << s.substr(0, k) << endl;
+            cout<<s.substr(0, k);
         }
+        return 0;
     }
 } 
