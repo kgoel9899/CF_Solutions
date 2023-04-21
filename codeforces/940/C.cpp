@@ -37,7 +37,7 @@ int32_t main() {
         if(k > n) cout << s << string(k - n, *st.begin()) << endl;
         else {
             char first = *(st.begin());
-            char last = *(st.rbegin());
+            char last=*(--st.end());
             for(int i=k-1;i>=0;i--) {
                 if(s[i] != last) {
                     s[i] = *(st.upper_bound(s[i]));
