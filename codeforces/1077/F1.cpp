@@ -25,12 +25,12 @@ int n, k, x;
 vector<int> v;
 vector<vector<vector<int>>> dp;
 int solve(int curr, int done, int last) {
-    if(curr == n) {
-        if(done == x && n - last <= k) return 0;
-        else return -INF;
-    }
     if(done > x) return -INF;
     if(curr - last > k) return -INF;
+    if(curr == n) {
+        if(done == x) return 0;
+        else return -INF;
+    }
     if(dp[curr][done][last + 1] != -1) return dp[curr][done][last + 1];
     return dp[curr][done][last + 1] = max(solve(curr + 1, done, last), v[curr] + solve(curr + 1, done + 1, curr));
 }

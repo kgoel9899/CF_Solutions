@@ -23603,6 +23603,22 @@
     ],
     "timestamp": "Apr/22/2023 23:49"
   },
+  "CF203141291": {
+    "contest_id": 1077,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1077\\F1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F1",
+    "problem_name": "Pictures with Kittens (easy version)",
+    "problem_url": "https://codeforces.com/contest/1077/problem/F1",
+    "submission_id": "CF203141291",
+    "submission_url": "https://codeforces.com/contest/1077/submission/203141291",
+    "tags": [
+      "dp",
+      "*1900"
+    ],
+    "timestamp": "Apr/23/2023 16:55"
+  },
   "CF203142199": {
     "contest_id": 1637,
     "language": "GNU C++20 (64)",
