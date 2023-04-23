@@ -64,10 +64,7 @@ int32_t main() {
         dbg(s);
         dp.clear();
         dp.resize(n + 5, vector<int>(n + 5, -1));
-        for(int i=0;i<=k;i++) {
-            dbg("here");
-            ans = min(ans, solve(n, i));
-        }
+        ans = min(ans, solve(n, k));
         cout << ans << endl;
     }
 }
