@@ -32,7 +32,6 @@ int32_t main() {
         for(int i=0;i<n;i++) {
             cin >> v[i];
         }
-        // find LIS
         vector<int> dp1(n, 1);
         for(int i=1;i<n;i++) {
             for(int j=i-1;j>=0;j--) {
@@ -42,7 +41,6 @@ int32_t main() {
         dbg(dp1);
         reverse(all(v));
         dbg(v);
-        // find LDS in reversed input (this basically means we are finding the LIS from ith index to n of original input)
         vector<int> dp2(n, 1);
         for(int i=1;i<n;i++) {
             for(int j=i-1;j>=0;j--) {
