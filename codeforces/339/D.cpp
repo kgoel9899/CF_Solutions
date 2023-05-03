@@ -56,7 +56,6 @@ int32_t main() {
         for(int i=0;i<tot;i++) {
             cin >> v[i];
         }
-        dbg(v);
         vector<int> tree(2 * tot);
         build(0, tot - 1, 1, v, tree, n % 2 == 0);
         dbg(tree);
