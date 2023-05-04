@@ -1,4 +1,3 @@
-// https://codeforces.com/contest/52/problem/C
 #include<bits/stdc++.h>
 using namespace std;
 #define MOD 1000000007
