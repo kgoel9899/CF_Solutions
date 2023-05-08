@@ -24087,6 +24087,22 @@
     ],
     "timestamp": "May/05/2023 15:56"
   },
+  "CF205135790": {
+    "contest_id": 1102,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1102\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Doors Breaking and Repairing",
+    "problem_url": "https://codeforces.com/contest/1102/problem/C",
+    "submission_id": "CF205135790",
+    "submission_url": "https://codeforces.com/contest/1102/submission/205135790",
+    "tags": [
+      "games",
+      "*1200"
+    ],
+    "timestamp": "May/08/2023 20:53"
+  },
   "CF205261927": {
     "contest_id": 1102,
     "language": "GNU C++20 (64)",
