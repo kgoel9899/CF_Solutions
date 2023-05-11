@@ -56,6 +56,7 @@ int32_t main() {
                 o++;
             }
         }
+        dbg(s);
         for(int i=n-1;i>=0;i--) {
             if(s[i] == '2') continue;
             if(s[i] == '1') {
@@ -77,5 +78,54 @@ int32_t main() {
             }
         }
         cout << s << endl;
+        // if(z == n / 3 && o == n / 3) {
+        //     cout << s << endl;
+        //     continue;
+        // }
+        // if(z == n / 3) {
+        //     for(int i=n-1;i>=0&&o>n/3;i--) {
+        //         if(s[i] == '1') {
+        //             s[i] = '2';
+        //             o--;
+        //         }
+        //     }
+        //     for(int i=0;i<n&&t>n/3;i++) {
+        //         if(s[i] == '2') {
+        //             s[i] = '1';
+        //             t--;
+        //         }
+        //     }
+        // } else if(o == n / 3) {
+        //     for(int i=n-1;i>=0&&z>n/3;i--) {
+        //         if(s[i] == '0') {
+        //             s[i] = '2';
+        //             z--;
+        //         }
+        //     }
+        //     for(int i=0;i<n&&t>n/3;i++) {
+        //         if(s[i] == '2') {
+        //             s[i] = '0';
+        //             t--;
+        //         }
+        //     }
+        // } else if(t == n / 3) {
+        //     for(int i=n-1;i>=0&&z>n/3;i--) {
+        //         if(s[i] == '0') {
+        //             s[i] = '1';
+        //             o--;
+        //         }
+        //     }
+        //     for(int i=0;i<n&&o>n/3;i++) {
+        //         if(s[i] == '1') {
+        //             s[i] = '0';
+        //             o--;
+        //         }
+        //     }
+        // } else {
+
+        //     cout << "here" << endl;
+        //     continue;
+        // }
+        // cout << s << endl;
     }
 }
