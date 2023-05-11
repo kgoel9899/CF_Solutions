@@ -78,14 +78,10 @@ int32_t main() {
         for(int i=0;i<n;i++) {
             int big = query(0, n - 1, 1, v[i] + 1, n - 1, tree);
             int small = query(0, n - 1, 1, 0, v[i] - 1, tree2);
-            dbg(big);
-            dbg(small);
             ans += big * small;
             update(0, n - 1, 1, v[i], 1, tree);
             update(0, n - 1, 1, v[i], 0, tree2);
-            dbg(tree);
-            dbg(tree2);
         }
         cout << ans << endl;
     }
-}
+} 
