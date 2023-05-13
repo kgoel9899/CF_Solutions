@@ -36,11 +36,21 @@ int32_t main() {
             cout << 1 << endl;
             continue;
         }
+        int diff = 0;
+        for(int i=1;i<n;i++) {
+            diff += abs(v[i] - v[i - 1]);
+        }
+        if(diff == 0) {
+            cout << 1 << endl;
+            continue;
+        }
+        // dbg(diff);
         vector<int> un;
         for(auto& i : v) {
             if(un.empty() || un.back() != i) un.push_back(i);
         }
         n = un.size();
+        // dbg(n, un);
         int ans = 1, i = 0;
         while(i < n - 1) {
             dbg(i);
@@ -49,7 +59,6 @@ int32_t main() {
             while(j < n - 1 && un[j] < un[j + 1]) {
                 j++;
             }
-            dbg(j);
             if(j != i) {
                 i = j;
                 continue;
@@ -57,6 +66,7 @@ int32_t main() {
             while(j < n - 1 && un[j] > un[j + 1]) {
                 j++;
             }
+            // dbg(j);
             i = j;
         }
         cout << ans << endl;
