@@ -2,12 +2,12 @@
 using namespace std;
 #define MOD 1000000007
 #define mod 998244353
-// #define int long long
+#define int long long
 #define setpres cout << fixed << setprecision(10)
 #define all(x) (x).begin(), (x).end()
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
-// const int INF = 1e18;
+const int INF = 1e18;
 
 #ifdef DEBUG
 #define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
@@ -27,7 +27,7 @@ int solve(int curr, int n, int mask, int k, vector<int>& v) {
     if(dp[curr][mask] != -1) return dp[curr][mask];
     int op1 = solve(curr + 1, n, mask, k, v);
     int op2 = solve(curr + 1, n, mask & v[curr], k, v);
-    return dp[curr][mask] = ((long long) op1 + op2) % MOD;
+    return dp[curr][mask] = (op1 + op2) % MOD;
 }
 int32_t main() {
     fast;
