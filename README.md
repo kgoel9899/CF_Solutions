@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1466 | [G - Hits Different](https://codeforces.com/contest/1829/problem/G) | [GNU C++20 (64)](./codeforces/1829/G.cpp) | `data structures` `dp` `implementation` `math` `*1600` | May/19/2023 00:10 | 
 1465 | [C - Subsequences](https://codeforces.com/contest/597/problem/C) | [GNU C++20 (64)](./codeforces/597/C.cpp) | `data structures` `dp` `*1900` | May/17/2023 23:06 | 
 1464 | [D - Rorororobot](https://codeforces.com/contest/1709/problem/D) | [GNU C++20 (64)](./codeforces/1709/D.cpp) | `binary search` `data structures` `greedy` `math` `*1700` | May/17/2023 22:39 | 
 1463 | [A - Thor](https://codeforces.com/contest/704/problem/A) | [GNU C++20 (64)](./codeforces/704/A.cpp) | `brute force` `data structures` `implementation` `*1600` | May/17/2023 22:27 | 
