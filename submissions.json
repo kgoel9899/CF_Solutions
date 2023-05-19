@@ -24519,6 +24519,23 @@
     ],
     "timestamp": "May/19/2023 00:10"
   },
+  "CF206429174": {
+    "contest_id": 863,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\863\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Turn Off The TV",
+    "problem_url": "https://codeforces.com/contest/863/problem/E",
+    "submission_id": "CF206429174",
+    "submission_url": "https://codeforces.com/contest/863/submission/206429174",
+    "tags": [
+      "data structures",
+      "sortings",
+      "*2000"
+    ],
+    "timestamp": "May/19/2023 15:09"
+  },
   "CF206528771": {
     "contest_id": 482,
     "language": "GNU C++20 (64)",
