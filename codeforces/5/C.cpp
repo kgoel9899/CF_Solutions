@@ -47,4 +47,4 @@ int32_t main() {
         if(len == 0) cout << "0 1" << endl;
         else cout << len << " " << ct << endl;
     }
-}
+} 
