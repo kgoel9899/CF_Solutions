@@ -70,4 +70,3 @@ int32_t main() {
         }
     }
 }
-// https://codeforces.com/contest/641/submission/17496644 - ST solution
