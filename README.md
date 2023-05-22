@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1470 | [A - Linova and Kingdom](https://codeforces.com/contest/1336/problem/A) | [GNU C++20 (64)](./codeforces/1336/A.cpp) | `dfs and similar` `dp` `greedy` `sortings` `trees` `*1600` | May/23/2023 00:48 | 
 1469 | [E - Little Artem and Time Machine](https://codeforces.com/contest/669/problem/E) | [GNU C++20 (64)](./codeforces/669/E.cpp) | `data structures` `*2000` | May/21/2023 15:28 | 
 1468 | [E - Round Dance](https://codeforces.com/contest/1833/problem/E) | [GNU C++20 (64)](./codeforces/1833/E.cpp) | `dsu` `graphs` `shortest paths` | May/21/2023 14:49 | 
 1467 | [D - Flipper](https://codeforces.com/contest/1833/problem/D) | [GNU C++20 (64)](./codeforces/1833/D.cpp) | `brute force` `constructive algorithms` | May/20/2023 14:02 | 
