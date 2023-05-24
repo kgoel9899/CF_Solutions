@@ -59,4 +59,4 @@ int32_t main() {
         if(n == 1) ans = 0;
         cout << ans << endl;
     }
-}
+} 
