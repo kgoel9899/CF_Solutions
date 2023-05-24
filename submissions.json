@@ -24747,6 +24747,26 @@
     ],
     "timestamp": "May/23/2023 00:48"
   },
+  "CF207011246": {
+    "contest_id": 1805,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1805\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "A Wide, Wide Graph",
+    "problem_url": "https://codeforces.com/contest/1805/problem/D",
+    "submission_id": "CF207011246",
+    "submission_url": "https://codeforces.com/contest/1805/submission/207011246",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "graphs",
+      "greedy",
+      "trees",
+      "*1800"
+    ],
+    "timestamp": "May/24/2023 12:04"
+  },
   "CF207045316": {
     "contest_id": 1593,
     "language": "GNU C++20 (64)",
