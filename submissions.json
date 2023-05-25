@@ -24846,6 +24846,28 @@
     ],
     "timestamp": "May/24/2023 18:59"
   },
+  "CF207106988": {
+    "contest_id": 1833,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1833\\G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Ksyusha and Chinchilla",
+    "problem_url": "https://codeforces.com/contest/1833/problem/G",
+    "submission_id": "CF207106988",
+    "submission_url": "https://codeforces.com/contest/1833/submission/207106988",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "dp",
+      "dsu",
+      "greedy",
+      "implementation",
+      "trees",
+      "*1800"
+    ],
+    "timestamp": "May/25/2023 11:40"
+  },
   "CF207142122": {
     "contest_id": 369,
     "language": "GNU C++20 (64)",
