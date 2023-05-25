@@ -23,19 +23,19 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 
 int n;
 vector<vector<pair<int, int>>> adj;
-unordered_map<int, set<int>> m;
 vector<int> ans;
 bool dfs(int curr, int par) {
-    bool ok = false;
-    for(auto i : adj[curr]) {
+    int ct = 0;
+    for(auto& i : adj[curr]) {
         if(i.first == par) continue;
-        ok |= dfs(i.first, curr);
+        bool down = dfs(i.first, curr);
+        ct += down;
+        if(i.second == 2 && !down) {
+            ans.push_back(i.first);
+            ct++;
+        }
     }
-    if(ok) return ok;
-    if(m[curr].find(par) != m[curr].end()) {
-        ans.push_back(curr);
-        return true;
-    } else return false;
+    return ct;
 }
 int32_t main() {
     fast;
@@ -45,21 +45,16 @@ int32_t main() {
         cin >> n;
         adj.clear();
         adj.resize(n + 1);
-        m.clear();
         for(int i=0;i<n-1;i++) {
             int a, b, c;
             cin >> a >> b >> c;
             adj[a].push_back({b, c});
             adj[b].push_back({a, c});
-            if(c == 2) {
-                m[a].insert(b);
-                m[b].insert(a);
-            }
         }
         ans.clear();
-        dfs(1, -1);
+        dfs(1, 0);
         cout << ans.size() << endl;
-        for(auto i : ans) {
+        for(auto& i : ans) {
             cout << i << " ";
         }
         cout << endl;
