@@ -24846,6 +24846,24 @@
     ],
     "timestamp": "May/24/2023 18:59"
   },
+  "CF207402899": {
+    "contest_id": 930,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\930\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Peculiar apple-tree",
+    "problem_url": "https://codeforces.com/contest/930/problem/A",
+    "submission_id": "CF207402899",
+    "submission_url": "https://codeforces.com/contest/930/submission/207402899",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "trees",
+      "*1500"
+    ],
+    "timestamp": "May/27/2023 01:58"
+  },
   "CF207403650": {
     "contest_id": 1037,
     "language": "GNU C++20 (64)",
