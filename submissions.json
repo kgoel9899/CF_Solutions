@@ -24942,6 +24942,23 @@
     ],
     "timestamp": "May/27/2023 02:12"
   },
+  "CF207469978": {
+    "contest_id": 1837,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1837\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Bracket Coloring",
+    "problem_url": "https://codeforces.com/contest/1837/problem/D",
+    "submission_id": "CF207469978",
+    "submission_url": "https://codeforces.com/contest/1837/submission/207469978",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "greedy"
+    ],
+    "timestamp": "May/27/2023 18:07"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",

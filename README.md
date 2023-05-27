@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1477 | [D - Bracket Coloring](https://codeforces.com/contest/1837/problem/D) | [GNU C++20 (64)](./codeforces/1837/D.cpp) | `constructive algorithms` `data structures` `greedy` | May/27/2023 18:07 | 
 1476 | [D - Valid BFS?](https://codeforces.com/contest/1037/problem/D) | [GNU C++20 (64)](./codeforces/1037/D.cpp) | `dfs and similar` `graphs` `shortest paths` `trees` `*1700` | May/27/2023 02:12 | 
 1475 | [A - Peculiar apple-tree](https://codeforces.com/contest/930/problem/A) | [GNU C++20 (64)](./codeforces/930/A.cpp) | `dfs and similar` `graphs` `trees` `*1500` | May/27/2023 01:58 | 
 1474 | [C - Andryusha and Colored Balloons](https://codeforces.com/contest/780/problem/C) | [GNU C++20 (64)](./codeforces/780/C.cpp) | `dfs and similar` `graphs` `greedy` `trees` `*1600` | May/26/2023 12:44 | 
