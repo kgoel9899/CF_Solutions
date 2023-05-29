@@ -24979,6 +24979,26 @@
     ],
     "timestamp": "May/28/2023 16:46"
   },
+  "CF207720133": {
+    "contest_id": 522,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\522\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Reposts",
+    "problem_url": "https://codeforces.com/contest/522/problem/A",
+    "submission_id": "CF207720133",
+    "submission_url": "https://codeforces.com/contest/522/submission/207720133",
+    "tags": [
+      "*special problem",
+      "dfs and similar",
+      "dp",
+      "graphs",
+      "trees",
+      "*1200"
+    ],
+    "timestamp": "May/29/2023 12:01"
+  },
   "CF207892580": {
     "contest_id": 1837,
     "language": "GNU C++20 (64)",
