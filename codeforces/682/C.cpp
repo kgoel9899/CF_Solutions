@@ -33,12 +33,13 @@ void dfs(int curr, int par) {
     }
 }
 void dfs2(int curr, int par, int here) {
-    // if(curr != 1) {
+    if(curr != 1) {
         if(here > nums[curr]) {
             ans += sub[curr];
+            dbg(here, curr, ans);
             return;
         }
-    // }
+    }
     for(auto& i : adj[curr]) {
         if(i.first == par) continue;
         dfs2(i.first, curr, max(0ll, here + i.second));
@@ -63,9 +64,11 @@ int32_t main() {
             adj[a].push_back({i, b});
             adj[i].push_back({a, b});
         }
+        dbg(adj);
         sub.clear();
         sub.resize(n + 1);
         dfs(1, 0);
+        dbg(sub);
         ans = 0;
         dfs2(1, 0, 0);
         cout << ans << endl;
