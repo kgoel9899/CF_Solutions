@@ -33,10 +33,12 @@ void dfs(int curr, int par) {
     }
 }
 void dfs2(int curr, int par, int here) {
-    if(here > nums[curr]) {
-        ans += sub[curr];
-        return;
-    }
+    // if(curr != 1) {
+        if(here > nums[curr]) {
+            ans += sub[curr];
+            return;
+        }
+    // }
     for(auto& i : adj[curr]) {
         if(i.first == par) continue;
         dfs2(i.first, curr, max(0ll, here + i.second));
