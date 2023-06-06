@@ -24,7 +24,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout
 const int LOG = 22;
 int n;
 vector<int> parent;
-vector<vector<int>> adj;
+vector<vector<int>> adj, up;
 void dfs(int curr, int par, vector<int>& dist) {
     parent[curr] = par;
     for(auto& i : adj[curr]) {
@@ -32,6 +32,50 @@ void dfs(int curr, int par, vector<int>& dist) {
         dist[i] = 1 + dist[curr];
         dfs(i, curr, dist);
     }
+}
+void fill0thParent(int curr, int par) {
+    up[curr][0] = par;
+    for(auto i : adj[curr]) {
+        if(i == par) continue;
+        fill0thParent(i, curr);
+    }
+}
+void fillUpTable() {
+    for(int j=1;j<LOG;j++) {
+        for(int i=1;i<=n;i++) {
+            int intermediate = up[i][j - 1];
+            if(intermediate != -1) up[i][j] = up[intermediate][j - 1];
+        }
+    }
+}
+vector<int> dist;
+void calcDistFromRoot(int curr, int par, int lvl) {
+    dist[curr] = lvl;
+    for(auto i : adj[curr]) {
+        if(i == par) continue;
+        calcDistFromRoot(i, curr, lvl + 1);
+    }
+}
+int kthParent(int node, int k) {
+    for(int i=LOG-1;i>=0;i--) {
+        if((k >> i) & 1) node = up[node][i];
+    }
+    return node;
+}
+int getLCA(int a, int b) {
+    if(dist[a] > dist[b]) swap(a, b); // make sure b is always deeper
+    b = kthParent(b, dist[b] - dist[a]);
+    // now a and b are at same level
+    if(a == b) return a; // edge case
+    for(int i=LOG-1;i>=0;i--) {
+        int par1 = up[a][i];
+        int par2 = up[b][i];
+        if(par1 != par2 && par1 != -1 && par2 != -1) {
+            a = par1;
+            b = par2;
+        }
+    }
+    return up[a][0];
 }
 int32_t main() {
     fast;
@@ -41,20 +85,23 @@ int32_t main() {
         cin >> n;
         adj.clear();
         adj.resize(n + 1);
+        up.clear();
+        up.resize(n + 1, vector<int>(LOG, -1));
+        dist.clear();
+        dist.resize(n + 1);
         for(int i=0;i<n-1;i++) {
             int a, b;
             cin >> a >> b;
             adj[a].push_back(b);
             adj[b].push_back(a);
         }
-        parent.clear();
-        parent.resize(n + 1);
-        vector<int> dist1(n + 1);
-        dfs(1, 0, dist1);
+        fill0thParent(1, -1);
+        fillUpTable();
+        calcDistFromRoot(1, -1, 0);
         int a, d1 = 0;
         for(int i=1;i<=n;i++) {
-            if(dist1[i] > d1) {
-                d1 = dist1[i];
+            if(dist[i] > d1) {
+                d1 = dist[i];
                 a = i;
             }
         }
