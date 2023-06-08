@@ -21,6 +21,7 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
+// SCC
 int n, m;
 vector<int> v, order, vis, comp;
 vector<vector<int>> adj, adj_rev;
