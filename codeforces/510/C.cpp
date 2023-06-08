@@ -71,4 +71,4 @@ int32_t main() {
             else cout << "Impossible" << endl;
         }
     }
-}
+} 
