@@ -25,6 +25,7 @@ int n, m, k, tin, st, endd;
 vector<int> par, enter;
 vector<vector<int>> adj;
 bool dfs(int curr, int parent) {
+    dbg(curr);
     par[curr] = parent;
     enter[curr] = tin;
     tin++;
@@ -64,7 +65,10 @@ int32_t main() {
         for(int i=1;i<=n;i++) {
             if(par[i] == -1) {
                 tin = 1;
-                if(dfs(i, 0)) break;
+                if(dfs(i, 0)) {
+                    dbg("here");
+                    break;
+                }
             }
         }
         dbg(par);
