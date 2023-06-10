@@ -21,15 +21,18 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
+int n, k;
+vector<int> d;
+map<int, vector<int>> m;
 int32_t main() {
     fast;
     int tt = 1;
     // cin >> tt;
     while(tt--) {
-        int n, k;
         cin >> n >> k;
-        vector<int> d(n + 1);
-        map<int, vector<int>> m;
+        d.clear();
+        d.resize(n + 1);
+        m.clear();
         for(int i=1;i<=n;i++) {
             cin >> d[i];
             m[d[i]].push_back(i);
