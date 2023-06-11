@@ -34,9 +34,7 @@ void dfs(int curr) {
         for(auto& j : child[i]) child[curr].insert(j);
     }
     child[curr].insert({sub[curr], curr});
-    // centroid = first node such that its subtree size is >= ceil(n / 2)
-    pair<int, int> p = {(sub[curr] + 1) / 2, 0};
-    cent[curr] = child[curr].lower_bound(p)->second;
+    cent[curr] = child[curr].lower_bound({(sub[curr] + 1) / 2, 0})->second;
 }
 int32_t main() {
     fast;
