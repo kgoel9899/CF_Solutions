@@ -25546,6 +25546,25 @@
     ],
     "timestamp": "Jun/10/2023 18:39"
   },
+  "CF209314145": {
+    "contest_id": 685,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\685\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Kay and Snowflake",
+    "problem_url": "https://codeforces.com/contest/685/problem/B",
+    "submission_id": "CF209314145",
+    "submission_url": "https://codeforces.com/contest/685/submission/209314145",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "dp",
+      "trees",
+      "*1900"
+    ],
+    "timestamp": "Jun/11/2023 23:57"
+  },
   "CF209317506": {
     "contest_id": 20,
     "language": "GNU C++20 (64)",
