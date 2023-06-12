@@ -31,21 +31,31 @@ bool compare(pair<int, int>& a, pair<int, int>& b) {
     return x > y;
 }
 int dfs(int curr, int paths) {
-    if(adj[curr].size() == 0) return paths * s[curr];
+    if(adj[curr].size() == 0) {
+        dbg(curr, paths); return paths * s[curr];
+    }
+    dbg("###### ", curr, paths);
     if(dp[curr].find(paths) != dp[curr].end()) return dp[curr][paths];
     vector<pair<int, int>> v;
     int ct = adj[curr].size();
     for(auto& i : adj[curr]) {
-        pair<int, int> here = {dfs(i, floor(paths * 1.0 / ct)), dfs(i, ceil(paths * 1.0  / ct))};
+        pair<int, int> here;
+        dbg("1111111", i, curr);
+        here.first = dfs(i, floor(paths * 1.0 / ct));
+        dbg("2222222", i, curr);
+        here.second = dfs(i, ceil(paths * 1.0  / ct));
+        dbg(curr, paths, here);
         v.push_back(here);
     }
     sort(all(v), compare);
     int extra = paths % ct;
     int ans = 0;
+    assert(ct == v.size());
     for(int i=0;i<ct;i++) {
         if(i < extra) ans += v[i].second;
         else ans += v[i].first;
     }
+    dbg(ans, curr, paths);
     return dp[curr][paths] = ans + paths * s[curr];
 }
 int32_t main() {
@@ -61,6 +71,7 @@ int32_t main() {
             cin >> p;
             adj[p].push_back(i);
         }
+        dbg(adj);
         s.clear();
         s.resize(n + 1);
         for(int i=1;i<=n;i++) {
