@@ -68,4 +68,4 @@ int32_t main() {
             cout << endl;
         } else cout << "NO" << endl;
     }
-}
+} 
