@@ -25546,6 +25546,24 @@
     ],
     "timestamp": "Jun/10/2023 18:39"
   },
+  "CF209696708": {
+    "contest_id": 1840,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1840\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Binary Cafe",
+    "problem_url": "https://codeforces.com/contest/1840/problem/B",
+    "submission_id": "CF209696708",
+    "submission_url": "https://codeforces.com/contest/1840/submission/209696708",
+    "tags": [
+      "bitmasks",
+      "combinatorics",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Jun/15/2023 00:09"
+  },
   "CF209754982": {
     "contest_id": 1831,
     "language": "GNU C++20 (64)",
