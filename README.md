@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1494 | [B - Keep it Beautiful](https://codeforces.com/contest/1841/problem/B) | [GNU C++20 (64)](./codeforces/1841/B.cpp) | `implementation` `*1000` | Jun/16/2023 23:28 | 
+1495 | [B - Keep it Beautiful](https://codeforces.com/contest/1841/problem/B) | [GNU C++20 (64)](./codeforces/1841/B.cpp) | `implementation` `*1000` | Jun/16/2023 23:28 | 
+1494 | [C - Copil Copac Draws Trees](https://codeforces.com/contest/1831/problem/C) | [GNU C++20 (64)](./codeforces/1831/C.cpp) | `dfs and similar` `dp` `graphs` `trees` `*1400` | Jun/15/2023 16:47 | 
 1493 | [C - Restore Graph](https://codeforces.com/contest/404/problem/C) | [GNU C++20 (64)](./codeforces/404/C.cpp) | `dfs and similar` `graphs` `sortings` `*1800` | Jun/10/2023 18:39 | 
 1492 | [D - Cycle in Graph](https://codeforces.com/contest/263/problem/D) | [GNU C++20 (64)](./codeforces/263/D.cpp) | `dfs and similar` `graphs` `*1800` | Jun/10/2023 18:20 | 
 1491 | [D - Substring](https://codeforces.com/contest/919/problem/D) | [GNU C++20 (64)](./codeforces/919/D.cpp) | `dfs and similar` `dp` `graphs` `*1700` | Jun/10/2023 17:28 | 
