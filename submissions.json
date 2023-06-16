@@ -25546,6 +25546,22 @@
     ],
     "timestamp": "Jun/10/2023 18:39"
   },
+  "CF209892333": {
+    "contest_id": 1841,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1841\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Keep it Beautiful",
+    "problem_url": "https://codeforces.com/contest/1841/problem/B",
+    "submission_id": "CF209892333",
+    "submission_url": "https://codeforces.com/contest/1841/submission/209892333",
+    "tags": [
+      "implementation",
+      "*1000"
+    ],
+    "timestamp": "Jun/16/2023 23:28"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
