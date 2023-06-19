@@ -93,4 +93,4 @@ int32_t main() {
         }
         cout << cost << " " << ways << endl;
     }
-}
+} 
