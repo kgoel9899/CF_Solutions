@@ -21,7 +21,6 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-// MST
 int n, m;
 int G, S;
 vector<int> par, sz;
@@ -65,6 +64,7 @@ int solve() {
         }
     }
     curr = temp;
+    // if(G == 1000000000) cout << ct << "#";
     if(ct != n - 1) return INF;
     return here;
 }
@@ -87,8 +87,13 @@ int32_t main() {
         int ans = INF;
         for(auto& i : edges) {
             curr.push_back(i);
+            // dbg(solve());
+            dbg(G, S);
+            dbg(i[0]);
+            // dbg(G * i[0] + S * solve());
             int ss = solve();
             if(ss == INF) continue;
+            // if(G == 1000000000) assert(0);
             ans = min(ans, G * i[0] + S * ss);
             dbg(ans);
         }
