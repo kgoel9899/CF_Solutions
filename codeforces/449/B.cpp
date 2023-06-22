@@ -35,11 +35,15 @@ int32_t main() {
             adj[a].push_back({b, c});
             adj[b].push_back({a, c});
         }
+        dbg(adj);
         priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> pq;
         for(int i=0;i<k;i++) {
             int s, y;
             cin >> s >> y;
             pq.push({y, s, 1});
+        }
+        for(auto& i : adj[1]) {
+            // pq.push({i.second, i.first, 0});
         }
         pq.push({0, 1, 0});
         vector<int> dist(n + 1, INF);
@@ -48,16 +52,19 @@ int32_t main() {
         while(!pq.empty()) {
             auto f = pq.top();
             pq.pop();
+            // dbg(f[2], f[1], f[0], dist[f[1]]);
             if(f[2]) {
                 if(f[0] < dist[f[1]]) {
                     used++;
                     dist[f[1]] = f[0];
                 } else continue;
-            } else if(dist[f[1]] != f[0]) continue;
+            }
+            else if(dist[f[1]] != f[0]) continue;
             dbg(f[0], f[1], dist[f[1]]);
             for(auto& i : adj[f[1]]) {
                 if(i.second + f[0] < dist[i.first]) {
                     dist[i.first] = i.second + f[0];
+                    dbg(dist[i.first]);
                     pq.push({dist[i.first], i.first, 0});
                 }
             }
