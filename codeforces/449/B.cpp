@@ -62,7 +62,7 @@ int32_t main() {
                 }
             }
         }
-        dbg(dist); 
+        dbg(dist);
         cout << k - used << endl;
     }
 }
