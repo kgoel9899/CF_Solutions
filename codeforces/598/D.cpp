@@ -79,4 +79,4 @@ int32_t main() {
             cout << res[x][y] << endl;
         }
     }
-}
+} 
