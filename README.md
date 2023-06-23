@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1502 | [E - President and Roads](https://codeforces.com/contest/567/problem/E) | [GNU C++20 (64)](./codeforces/567/E.cpp) | `dfs and similar` `graphs` `hashing` `shortest paths` `*2200` | Jun/23/2023 22:06 | 
 1501 | [D - Two Paths](https://codeforces.com/contest/14/problem/D) | [GNU C++20 (64)](./codeforces/14/D.cpp) | `dfs and similar` `dp` `graphs` `shortest paths` `trees` `two pointers` `*1900` | Jun/18/2023 22:06 | 
 1500 | [D - Chloe and pleasant prizes](https://codeforces.com/contest/743/problem/D) | [GNU C++20 (64)](./codeforces/743/D.cpp) | `dfs and similar` `dp` `graphs` `trees` `*1800` | Jun/17/2023 23:58 | 
 1499 | [B - Keep it Beautiful](https://codeforces.com/contest/1841/problem/B) | [GNU C++20 (64)](./codeforces/1841/B.cpp) | `implementation` `*1000` | Jun/16/2023 23:28 | 
