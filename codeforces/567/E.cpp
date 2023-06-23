@@ -68,8 +68,11 @@ int32_t main() {
             int a = i[0], b = i[1], c = i[2];
             int here_dist = dist1[a].first + c + dist2[b].first;
             int change = here_dist - mn + 1;
-            if(here_dist == mn && (dist1[a].second * dist2[b].second) % mod == dist1[t].second) cout << "YES" << endl;
-            else if(change >= c) cout << "NO" << endl;
+            if(here_dist == mn && (dist1[a].second * dist2[b].second) % mod == dist1[t].second) {
+                cout << "YES" << endl;
+                continue;
+            }
+            if(change >= c) cout << "NO" << endl;
             else cout << "CAN " << change << endl;
         }
     }

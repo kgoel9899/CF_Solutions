@@ -25810,6 +25810,25 @@
     ],
     "timestamp": "Jun/18/2023 22:06"
   },
+  "CF210785922": {
+    "contest_id": 567,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\567\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "President and Roads",
+    "problem_url": "https://codeforces.com/contest/567/problem/E",
+    "submission_id": "CF210785922",
+    "submission_url": "https://codeforces.com/contest/567/submission/210785922",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "hashing",
+      "shortest paths",
+      "*2200"
+    ],
+    "timestamp": "Jun/23/2023 22:06"
+  },
   "CF210785961": {
     "contest_id": 567,
     "language": "GNU C++20 (64)",
