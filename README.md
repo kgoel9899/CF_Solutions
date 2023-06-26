@@ -13,17 +13,18 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1516 | [B - Sort the Subarray](https://codeforces.com/contest/1821/problem/B) | [GNU C++20 (64)](./codeforces/1821/B.cpp) | `brute force` `greedy` `*1100` | Jul/03/2023 16:37 | 
-1515 | [B - Come Together](https://codeforces.com/contest/1845/problem/B) | [GNU C++20 (64)](./codeforces/1845/B.cpp) | `geometry` `implementation` `math` | Jul/03/2023 16:09 | 
-1514 | [G - Path Queries](https://codeforces.com/contest/1213/problem/G) | [GNU C++20 (64)](./codeforces/1213/G.cpp) | `divide and conquer` `dsu` `graphs` `sortings` `trees` `*1800` | Jul/01/2023 21:27 | 
-1513 | [B - Work Group](https://codeforces.com/contest/533/problem/B) | [GNU C++20 (64)](./codeforces/533/B.cpp) | `dfs and similar` `dp` `graphs` `strings` `trees` `*2000` | Jul/01/2023 01:58 | 
-1512 | [B - Fix a Tree](https://codeforces.com/contest/698/problem/B) | [GNU C++20 (64)](./codeforces/698/B.cpp) | `constructive algorithms` `dfs and similar` `dsu` `graphs` `trees` `*1700` | Jun/30/2023 13:32 | 
-1511 | [B - Maximum Strength](https://codeforces.com/contest/1834/problem/B) | [GNU C++20 (64)](./codeforces/1834/B.cpp) | `greedy` `math` `*1000` | Jun/29/2023 23:55 | 
-1510 | [E - Sausage Maximization](https://codeforces.com/contest/282/problem/E) | [GNU C++20 (64)](./codeforces/282/E.cpp) | `bitmasks` `data structures` `trees` `*2200` | Jun/28/2023 17:21 | 
-1509 | [D - Vasiliy's Multiset](https://codeforces.com/contest/706/problem/D) | [GNU C++20 (64)](./codeforces/706/D.cpp) | `binary search` `bitmasks` `data structures` `trees` `*1800` | Jun/28/2023 14:13 | 
-1508 | [C - Tenzing and Balls](https://codeforces.com/contest/1842/problem/C) | [GNU C++20 (64)](./codeforces/1842/C.cpp) | `dp` `*1500` | Jun/27/2023 19:03 | 
-1507 | [D - Prefixes and Suffixes](https://codeforces.com/contest/432/problem/D) | [GNU C++20 (64)](./codeforces/432/D.cpp) | `dp` `string suffix structures` `strings` `two pointers` `*2000` | Jun/27/2023 14:16 | 
-1506 | [B - Password](https://codeforces.com/contest/126/problem/B) | [GNU C++20 (64)](./codeforces/126/B.cpp) | `binary search` `dp` `hashing` `string suffix structures` `strings` `*1700` | Jun/27/2023 14:03 | 
+1517 | [B - Sort the Subarray](https://codeforces.com/contest/1821/problem/B) | [GNU C++20 (64)](./codeforces/1821/B.cpp) | `brute force` `greedy` `*1100` | Jul/03/2023 16:37 | 
+1516 | [B - Come Together](https://codeforces.com/contest/1845/problem/B) | [GNU C++20 (64)](./codeforces/1845/B.cpp) | `geometry` `implementation` `math` | Jul/03/2023 16:09 | 
+1515 | [G - Path Queries](https://codeforces.com/contest/1213/problem/G) | [GNU C++20 (64)](./codeforces/1213/G.cpp) | `divide and conquer` `dsu` `graphs` `sortings` `trees` `*1800` | Jul/01/2023 21:27 | 
+1514 | [B - Work Group](https://codeforces.com/contest/533/problem/B) | [GNU C++20 (64)](./codeforces/533/B.cpp) | `dfs and similar` `dp` `graphs` `strings` `trees` `*2000` | Jul/01/2023 01:58 | 
+1513 | [B - Fix a Tree](https://codeforces.com/contest/698/problem/B) | [GNU C++20 (64)](./codeforces/698/B.cpp) | `constructive algorithms` `dfs and similar` `dsu` `graphs` `trees` `*1700` | Jun/30/2023 13:32 | 
+1512 | [B - Maximum Strength](https://codeforces.com/contest/1834/problem/B) | [GNU C++20 (64)](./codeforces/1834/B.cpp) | `greedy` `math` `*1000` | Jun/29/2023 23:55 | 
+1511 | [E - Sausage Maximization](https://codeforces.com/contest/282/problem/E) | [GNU C++20 (64)](./codeforces/282/E.cpp) | `bitmasks` `data structures` `trees` `*2200` | Jun/28/2023 17:21 | 
+1510 | [D - Vasiliy's Multiset](https://codeforces.com/contest/706/problem/D) | [GNU C++20 (64)](./codeforces/706/D.cpp) | `binary search` `bitmasks` `data structures` `trees` `*1800` | Jun/28/2023 14:13 | 
+1509 | [C - Tenzing and Balls](https://codeforces.com/contest/1842/problem/C) | [GNU C++20 (64)](./codeforces/1842/C.cpp) | `dp` `*1500` | Jun/27/2023 19:03 | 
+1508 | [D - Prefixes and Suffixes](https://codeforces.com/contest/432/problem/D) | [GNU C++20 (64)](./codeforces/432/D.cpp) | `dp` `string suffix structures` `strings` `two pointers` `*2000` | Jun/27/2023 14:16 | 
+1507 | [B - Password](https://codeforces.com/contest/126/problem/B) | [GNU C++20 (64)](./codeforces/126/B.cpp) | `binary search` `dp` `hashing` `string suffix structures` `strings` `*1700` | Jun/27/2023 14:03 | 
+1506 | [B - Tenzing and Books](https://codeforces.com/contest/1842/problem/B) | [GNU C++20 (64)](./codeforces/1842/B.cpp) | `bitmasks` `greedy` `math` `*1100` | Jun/26/2023 23:10 | 
 1505 | [E - Tracking Segments](https://codeforces.com/contest/1843/problem/E) | [GNU C++20 (64)](./codeforces/1843/E.cpp) | `binary search` `brute force` `data structures` `two pointers` | Jun/24/2023 23:54 | 
 1504 | [E - President and Roads](https://codeforces.com/contest/567/problem/E) | [GNU C++20 (64)](./codeforces/567/E.cpp) | `dfs and similar` `graphs` `hashing` `shortest paths` `*2200` | Jun/23/2023 22:06 | 
 1503 | [E - Shortest Path](https://codeforces.com/contest/59/problem/E) | [GNU C++20 (64)](./codeforces/59/E.cpp) | `graphs` `shortest paths` `*2000` | Jun/23/2023 20:59 | 
