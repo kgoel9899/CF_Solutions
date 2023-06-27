@@ -26103,6 +26103,26 @@
     ],
     "timestamp": "Jun/24/2023 23:54"
   },
+  "CF211218786": {
+    "contest_id": 126,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\126\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Password",
+    "problem_url": "https://codeforces.com/contest/126/problem/B",
+    "submission_id": "CF211218786",
+    "submission_url": "https://codeforces.com/contest/126/submission/211218786",
+    "tags": [
+      "binary search",
+      "dp",
+      "hashing",
+      "string suffix structures",
+      "strings",
+      "*1700"
+    ],
+    "timestamp": "Jun/27/2023 14:03"
+  },
   "CF211219968": {
     "contest_id": 432,
     "language": "GNU C++20 (64)",
