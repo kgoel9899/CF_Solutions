@@ -22,13 +22,13 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
 const int tot = 2;
-const int N = 30;
+const int N = 31;
 struct Node {
     vector<int> next;
-    int ct;
+    int leaf;
     Node() {
         next.resize(tot, -1);
-        ct = 0;
+        leaf = 0;
     }
     // left child = 0
     // right child = 1
@@ -43,16 +43,31 @@ void add_string(int num) {
             trie.emplace_back();
         }
         curr = trie[curr].next[b];
-        trie[curr].ct++;
     }
+    trie[curr].leaf++;
 }
 void remove_string(int num) {
     int curr = 0;
+    vector<pair<int, int>> v;
+    v.push_back({0, 0});
     for(int i=N;i>=0;i--) {
         int b = ((num >> i) & 1);
         assert(trie[curr].next[b] != -1);
         curr = trie[curr].next[b];
-        trie[curr].ct--;
+        v.push_back({curr, b});
+    }
+    assert(trie[curr].leaf);
+    trie[curr].leaf--;
+    if(trie[curr].leaf >= 1) return;
+    reverse(all(v));
+    dbg(v);
+    int sz = v.size();
+    for(int i=0;i<sz-1;i++) {
+        curr = v[i].first;
+        if(trie[curr].next[0] == -1 && trie[curr].next[1] == -1) {
+            assert(trie[v[i + 1].first].next[v[i].second] == curr);
+            trie[v[i + 1].first].next[v[i].second] = -1;
+        }
     }
 }
 int max_xor(int num) {
@@ -60,11 +75,14 @@ int max_xor(int num) {
     for(int i=N;i>=0;i--) {
         int b = ((num >> i) & 1);
         if(curr == -1) return ans;
-        if(trie[curr].next[b ^ 1] == -1 || trie[trie[curr].next[b ^ 1]].ct == 0) curr = trie[curr].next[b];
+        // dbg(b, curr);
+        if(trie[curr].next[b ^ 1] == -1) curr = trie[curr].next[b];
         else {
             ans += (1 << i);
             curr = trie[curr].next[b ^ 1];
         }
+        // dbg(b, curr);
+        // break;
     }
     return ans;
 }
@@ -86,4 +104,4 @@ int32_t main() {
             else cout << max(num, max_xor(num)) << endl;
         }
     }
-} 
+}
