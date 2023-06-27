@@ -26103,6 +26103,25 @@
     ],
     "timestamp": "Jun/24/2023 23:54"
   },
+  "CF211219968": {
+    "contest_id": 432,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\432\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Prefixes and Suffixes",
+    "problem_url": "https://codeforces.com/contest/432/problem/D",
+    "submission_id": "CF211219968",
+    "submission_url": "https://codeforces.com/contest/432/submission/211219968",
+    "tags": [
+      "dp",
+      "string suffix structures",
+      "strings",
+      "two pointers",
+      "*2000"
+    ],
+    "timestamp": "Jun/27/2023 14:16"
+  },
   "CF211248252": {
     "contest_id": 1842,
     "language": "GNU C++20 (64)",
