@@ -26103,6 +26103,23 @@
     ],
     "timestamp": "Jun/24/2023 23:54"
   },
+  "CF211540699": {
+    "contest_id": 1834,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1834\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Maximum Strength",
+    "problem_url": "https://codeforces.com/contest/1834/problem/B",
+    "submission_id": "CF211540699",
+    "submission_url": "https://codeforces.com/contest/1834/submission/211540699",
+    "tags": [
+      "greedy",
+      "math",
+      "*1000"
+    ],
+    "timestamp": "Jun/29/2023 23:55"
+  },
   "CF211586083": {
     "contest_id": 698,
     "language": "GNU C++20 (64)",
