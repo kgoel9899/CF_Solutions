@@ -33,5 +33,5 @@ int32_t main() {
             cout << "white" << endl;
             cout << 1 << " " << 2 << endl;
         }
-    }
+    } 
 }
