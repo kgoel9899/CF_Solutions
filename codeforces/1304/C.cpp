@@ -1,52 +1,39 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
+const int MAX_N = 100;
 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+int t[MAX_N], lo[MAX_N], hi[MAX_N];
 
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
-
-bool good(int x, int y, int l, int h) {
-    if(l > y || h < x) return false;
-    return true;
-}
-int32_t main() {
-    fast;
-    int tt = 1;
-    cin >> tt;
-    while(tt--) {
-        int n, m;
-        cin >> n >> m;
-        int x = m, y = m, ok = 1, prev = 0;
-        for(int i=0;i<n;i++) {
-            int t, l, h;
-            cin >> t >> l >> h;
-            int diff = t - prev;
-            x -= diff;
-            y += diff;
-            prev = t;
-            dbg(x, y);
-            if(!ok) continue;
-            if(!good(x, y, l, h)) ok = 0;
-            x = max(x, l);
-            y = min(y, h);
-        }
-        if(ok) cout << "YES" << endl;
-        else cout << "NO" << endl;
-    }
+int main()
+{
+	int tc;
+	cin >> tc;
+	while (tc--)
+	{
+		int n, m, i;
+		cin >> n >> m;
+		for (i = 0; i < n; i++)
+			cin >> t[i] >> lo[i] >> hi[i];
+		int prev = 0;
+		int mn = m, mx = m;
+		bool flag = true;
+		for (i = 0; i < n; i++)
+		{
+			mx += t[i] - prev;
+			mn -= t[i] - prev;
+			if (mx < lo[i] || mn > hi[i])
+			{
+				flag = false;
+				break;
+			}
+			mx = min(mx, hi[i]);
+			mn = max(mn, lo[i]);
+			prev = t[i];
+		}
+		if (flag)
+			cout << "YES\n";
+		else
+			cout << "NO\n";
+	}
 }
