@@ -26749,6 +26749,23 @@
     ],
     "timestamp": "Jul/13/2023 19:17"
   },
+  "CF213751460": {
+    "contest_id": 1846,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1846\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Rudolph and Christmas Tree",
+    "problem_url": "https://codeforces.com/contest/1846/problem/D",
+    "submission_id": "CF213751460",
+    "submission_url": "https://codeforces.com/contest/1846/submission/213751460",
+    "tags": [
+      "constructive algorithms",
+      "geometry",
+      "math"
+    ],
+    "timestamp": "Jul/14/2023 14:45"
+  },
   "CF213936683": {
     "contest_id": 1846,
     "language": "GNU C++20 (64)",
