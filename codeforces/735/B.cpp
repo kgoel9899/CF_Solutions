@@ -1,49 +1,70 @@
-#include<bits/stdc++.h>
+#pragma GCC optimize("O2")
+#pragma GCC target("avx,avx2,fma")
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
+using namespace __gnu_pbds;
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
+#define ll     long long
+#define test   int tt; cin>>tt; while(tt--)
+#define ff     first
+#define ss     second
+#define pb     push_back
+#define ppb    pop_back
+#define pf     push_front
+#define ppf    pop_front
 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+template <typename T> using Ordered_Set_Tree =
+        tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+template <typename T> using Ordered_Multiset_Tree =
+        tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+///DEBUG
+void _Print(int t) {cerr << t;}
+void _Print(string t) {cerr << t;}
+void _Print(char t) {cerr << t;}
+void _Print(long long t) {cerr << t;}
+void _Print(double t) {cerr << t;}
+void _Print(unsigned long long t) {cerr << t;}
 
-int32_t main() {
-    fast;
-    int tt = 1;
-    // cin >> tt;
-    while(tt--) {
-        int n, n1, n2;
-        cin >> n >> n1 >> n2;
-        vector<int> v(n);
-        for(int i=0;i<n;i++) {
-            cin >> v[i];
-        }
-        sort(all(v));
-        if(n1 > n2) swap(n1, n2);
-        setpres;
-        double ans1 = 0, ans2 = 0;
-        int ct = 0;
-        for(int i=n-1;i>=0&&ct<n1;i--,ct++) {
-            ans1 += v[i];
-        }
-        ct = 0;
-        for(int i=n-1-n1;i>=0&&ct<n2;i--,ct++) {
-            ans2 += v[i];
-        }
-        cout << ans1 / n1 + ans2 / n2 << endl;
-    }
+template <class T, class V> void _Print(pair <T, V> &p);
+template <class T> void _Print(vector <T> &v);
+template <class T, class V> void _Print(T *v, V sz);
+template <class T, class V, class P> void _Print(T *v, V sz, P sm);
+template <class T> void _Print(set <T> &v);
+template <class T, class V> void _Print(map <T, V> &v);
+template <class T> void _Print(multiset <T> &v);
+
+template <class T, class V> void _Print(pair <T, V> &p) {cerr << "{"; _Print(p.ff); cerr << ","; _Print(p.ss); cerr << "}\n\n";}
+template <class T> void _Print(vector <T> &v) {cerr << "[ "; for (T i : v) {_Print(i); cerr << " ";} cerr << "]\n\n";}
+template <class T, class V> void _Print(T *v, V sz) {cerr << "[ "; for(int i=0; i<sz; i++) {_Print(v[i]); cerr << " ";} cerr << "]\n\n";}
+template <class T, class V, class P> void _Print(T *v, V sz, P sm) {cerr << "[\n"; for(int i=0; i<sz; i++) { for(int j=0; j<sm; j++) {_Print(v[i][j]); cerr << " ";} cerr << "\n";} cerr << "]\n\n";}
+template <class T> void _Print(set <T> &v) {cerr << "[ "; for (T i : v) {_Print(i); cerr << " ";} cerr << "]\n\n";}
+template <class T> void _Print(multiset <T>& v) {cerr << "[ "; for (T i : v) {_Print(i); cerr << " ";} cerr << "]\n\n";}
+template <class T, class V> void _Print(map <T, V> &v) {cerr << "[ "; for (auto i : v) {_Print(i); cerr << " ";} cerr << "]\n\n";}
+///DEBUG
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    int n, a, b;
+    cin>>n>>a>>b;
+
+    int arr[n];
+    for(auto &e: arr)
+        cin>>e;
+
+    sort(arr, arr+n);
+
+    if(a<b)     swap(a, b);
+
+    cout<<fixed<<setprecision(16);
+
+    cout<<(accumulate(arr+n-b, arr+n, 0ll)*1.00)/b +
+                    (accumulate(arr+n-b-a, arr+n-b, 0ll)*1.00)/a<<endl;
 }
