@@ -25,21 +25,26 @@ int32_t main() {
     fast;
     int tt = 1;
     cin >> tt;
+    int x = 1;
     while(tt--) {
     	int n;
     	cin >> n;
     	vector<int> v(n);
+        // if(x == 274) cout << n << "#";
     	for(int i=0;i<n;i++) {
     		cin >> v[i];
+            // if(x == 274) cout << v[i] << "#";
     	}
     	int val = v[0];
     	for(int i=1;i<n;i++) {
     		val &= v[i];
     	}
+        x++;
     	if(val) {
     		cout << 1 << endl;
     		continue;
     	}
+        dbg(val);
     	val = v[0];
     	int ans = 0;
     	for(int i=0;i<n;i++) {
@@ -50,6 +55,8 @@ int32_t main() {
     			val = v[i + 1];
     		}
     	}
+        dbg(val, ans);
+    	// if(val && ans > 1) ans--;
     	cout << ans << endl;
     }
 }
