@@ -26890,6 +26890,24 @@
     ],
     "timestamp": "Jul/19/2023 16:24"
   },
+  "CF214945062": {
+    "contest_id": 1850,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1850\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Balanced Round",
+    "problem_url": "https://codeforces.com/contest/1850/problem/D",
+    "submission_id": "CF214945062",
+    "submission_url": "https://codeforces.com/contest/1850/submission/214945062",
+    "tags": [
+      "brute force",
+      "greedy",
+      "implementation",
+      "sortings"
+    ],
+    "timestamp": "Jul/21/2023 23:26"
+  },
   "CF215062613": {
     "contest_id": 1850,
     "language": "GNU C++20 (64)",
