@@ -26890,6 +26890,23 @@
     ],
     "timestamp": "Jul/19/2023 16:24"
   },
+  "CF215062613": {
+    "contest_id": 1850,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1850\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Cardboard for Pictures",
+    "problem_url": "https://codeforces.com/contest/1850/problem/E",
+    "submission_id": "CF215062613",
+    "submission_url": "https://codeforces.com/contest/1850/submission/215062613",
+    "tags": [
+      "binary search",
+      "implementation",
+      "math"
+    ],
+    "timestamp": "Jul/22/2023 20:44"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
