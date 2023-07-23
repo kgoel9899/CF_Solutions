@@ -26961,6 +26961,25 @@
     ],
     "timestamp": "Jul/22/2023 20:44"
   },
+  "CF215223945": {
+    "contest_id": 1850,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1850\\F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "We Were Both Children",
+    "problem_url": "https://codeforces.com/contest/1850/problem/F",
+    "submission_id": "CF215223945",
+    "submission_url": "https://codeforces.com/contest/1850/submission/215223945",
+    "tags": [
+      "brute force",
+      "implementation",
+      "math",
+      "number theory",
+      "*1300"
+    ],
+    "timestamp": "Jul/23/2023 21:01"
+  },
   "CF215365512": {
     "contest_id": 1826,
     "language": "GNU C++20 (64)",
