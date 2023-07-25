@@ -26961,6 +26961,25 @@
     ],
     "timestamp": "Jul/22/2023 20:44"
   },
+  "CF215540033": {
+    "contest_id": 1826,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1826\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Trust Nobody",
+    "problem_url": "https://codeforces.com/contest/1826/problem/A",
+    "submission_id": "CF215540033",
+    "submission_url": "https://codeforces.com/contest/1826/submission/215540033",
+    "tags": [
+      "brute force",
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1200"
+    ],
+    "timestamp": "Jul/25/2023 20:34"
+  },
   "CF215717211": {
     "contest_id": 1851,
     "language": "GNU C++20 (64)",
