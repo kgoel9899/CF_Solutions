@@ -1,101 +1,92 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <set>
+#include <map>
+
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
+typedef long long ll;
 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+ll n;
 
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
-
-int32_t main() {
-    fast;
-    int tt = 1;
-    cin >> tt;
-    while(tt--) {
-        int n;
-        cin >> n;
-        vector<int> v(n - 1);
-        for(int i=0;i<n-1;i++) {
-            cin >> v[i];
-        }
-        map<int, int> m;
-        m[v[0]] = 1;
-        int ok = 1, ct = 0;
-        for(int i=1;i<n-1;i++) {
-            int d = v[i] - v[i - 1];
-            m[d]++;
-            if(m[d] > 2) {
-                ok = 0;
-                break;
-            }
-            if(m[d] == 2) ct++;
-            if(ct > 1) {
-                ok = 0;
-                break;
-            }
-        }
-        if(!ok) {
-            cout << "NO" << endl;
-            continue;
-        }
-        auto it = m.upper_bound(n);
-        dbg(m);
-        if(it != m.end()) {
-            auto it1 = it;
-            it1++;
-            if(it1 != m.end() || ct) {
-                cout << "NO" << endl;
-                continue;
-            }
-        }
-        set<int> tot;
-        for(int i=1;i<=n;i++) {
-            tot.insert(i);
-        }
-        for(auto& i : m) {
-            if(i.first <= n && tot.find(i.first) != tot.end()) tot.erase(i.first);
-        }
-        dbg(tot);
-        assert(tot.size() <= 2);
-        if(tot.size() == 1) {
-            if(*tot.begin() <= n) cout << "YES" << endl;
-            else cout << "NO" << endl;
-            // continue;
-        } else if(tot.size() == 2) {
-            int s = 0;
-            for(auto& i : tot) {
-                s += i;
-            }
-            if(it != m.end()) {
-                if(it->first == s) cout << "YES" << endl;
-                else cout << "NO" << endl;
-            } else {
-                assert(ct == 1);
-                int num = -1;
-                for(auto& i : m) {
-                    if(i.second == 2) {
-                        num = i.first;
-                        break;
-                    }
-                }
-                assert(num != -1);
-                if(num == s) cout << "YES" << endl;
-                else cout << "NO" << endl;
-            }
+bool isPermutation(vector<ll> a) {
+    for (int i = 0; i < n; ++i) {
+        if (a[i] <= 0 || a[i] > n) {
+            return false;
         }
     }
+    set<ll> s(a.begin(), a.end());
+    return s.size() == n;
+}
+
+vector<ll> prefSumToArray(vector<ll> p) {
+    vector<ll> res(n);
+    res[0] = p[0];
+    for (int i = 1; i < n; ++i) {
+        res[i] = p[i] - p[i - 1];
+    }
+    return res;
+}
+
+void solve() {
+    cin >> n;
+    vector<ll> a(n - 1);
+    for (int i = 0; i + 1 < n; ++i) {
+        cin >> a[i];
+    }
+    ll x = n * (n + 1) / 2;
+    if (a.back() != x) {
+        a.push_back(x);
+        vector<ll> b = prefSumToArray(a);
+        if (isPermutation(b)) {
+            cout << "YES\n";
+        } else {
+            cout << "NO\n";
+        }
+        return;
+    }
+    map<ll, int> cnt;
+    cnt[a[0]]++;
+    for (int i = 1; i < n - 1; ++i) {
+        cnt[a[i] - a[i - 1]]++;
+    }
+    vector<int> cntGt1;
+    for (auto p: cnt) {
+        if (p.second > 1) {
+            cntGt1.push_back(p.first);
+        }
+    }
+    if (cntGt1.size() > 1) {
+        cout << "NO\n";
+        return;
+    }
+    if (cntGt1.size() == 1) {
+        int x1 = cntGt1[0];
+        if (cnt[x1] > 2) {
+            cout << "NO\n";
+            return;
+        }
+    }
+    vector<int> cnt0;
+    for (int i = 1; i <= n; ++i) {
+        if (cnt[i] == 0) {
+            cnt0.push_back(i);
+        }
+    }
+    if (cnt0.size() != 2) {
+        cout << "NO\n";
+        return;
+    }
+    cout << "YES\n";
+}
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0), cout.tie(0);
+    int t;
+    cin >> t;
+    for (int _ = 0; _ < t; ++_) {
+        solve();
+    }
+    return 0;
 }
