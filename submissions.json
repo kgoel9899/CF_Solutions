@@ -26961,6 +26961,25 @@
     ],
     "timestamp": "Jul/22/2023 20:44"
   },
+  "CF216352457": {
+    "contest_id": 1855,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1855\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Longest Divisors Interval",
+    "problem_url": "https://codeforces.com/contest/1855/problem/B",
+    "submission_id": "CF216352457",
+    "submission_url": "https://codeforces.com/contest/1855/submission/216352457",
+    "tags": [
+      "brute force",
+      "combinatorics",
+      "greedy",
+      "math",
+      "number theory"
+    ],
+    "timestamp": "Jul/29/2023 23:57"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
