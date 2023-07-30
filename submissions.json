@@ -27099,6 +27099,25 @@
     ],
     "timestamp": "Jul/29/2023 23:57"
   },
+  "CF216497763": {
+    "contest_id": 1846,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1846\\E2.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E2",
+    "problem_name": "Rudolf and Snowflakes (hard version)",
+    "problem_url": "https://codeforces.com/contest/1846/problem/E2",
+    "submission_id": "CF216497763",
+    "submission_url": "https://codeforces.com/contest/1846/submission/216497763",
+    "tags": [
+      "binary search",
+      "brute force",
+      "implementation",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Jul/31/2023 01:56"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
