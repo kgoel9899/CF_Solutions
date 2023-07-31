@@ -56,6 +56,9 @@ int32_t main() {
         for(int i=1;i<=n;i++) {
             if(in[i] == 0) q.push(i);
         }
+        dbg(adj);
+        dbg(in);
+        dbg(cost);
         while(!q.empty()) {
             auto f = q.front();
             q.pop();
@@ -67,6 +70,7 @@ int32_t main() {
                     q.push(i);
                 }
             }
+            dbg(cost);
         }
         for(int i=1;i<=n;i++) {
             cout << min(v[i], cost[i]) << " ";
