@@ -27137,6 +27137,24 @@
     ],
     "timestamp": "Jul/31/2023 01:56"
   },
+  "CF216573132": {
+    "contest_id": 1851,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1851\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Nastya and Potions",
+    "problem_url": "https://codeforces.com/contest/1851/problem/E",
+    "submission_id": "CF216573132",
+    "submission_url": "https://codeforces.com/contest/1851/submission/216573132",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "graphs",
+      "sortings"
+    ],
+    "timestamp": "Jul/31/2023 17:41"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
