@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1550 | [B - Vika and the Bridge](https://codeforces.com/contest/1848/problem/B) | [GNU C++20 (64)](./codeforces/1848/B.cpp) | `binary search` `data structures` `greedy` `implementation` `math` `sortings` `*1200` | Aug/04/2023 23:54 | 
 1549 | [H - The Third Letter](https://codeforces.com/contest/1850/problem/H) | [GNU C++20 (64)](./codeforces/1850/H.cpp) | `dfs and similar` `dsu` `graphs` `greedy` `implementation` `*1700` | Aug/03/2023 23:56 | 
 1548 | [G - The Morning Star](https://codeforces.com/contest/1850/problem/G) | [GNU C++20 (64)](./codeforces/1850/G.cpp) | `combinatorics` `data structures` `geometry` `implementation` `math` `sortings` `*1500` | Aug/02/2023 20:27 | 
 1547 | [C1 - Dual (Easy Version)](https://codeforces.com/contest/1855/problem/C1) | [GNU C++20 (64)](./codeforces/1855/C1.cpp) | `constructive algorithms` | Aug/01/2023 23:57 | 
