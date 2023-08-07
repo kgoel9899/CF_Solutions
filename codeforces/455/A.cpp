@@ -42,4 +42,4 @@ int32_t main() {
         }
         cout << dp[N - 1] << endl;
     }
-}
+} 
