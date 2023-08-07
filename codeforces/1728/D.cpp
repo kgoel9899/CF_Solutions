@@ -79,10 +79,9 @@ int solve(int i, int j) {
         // Alice wins after picking j and no matter what Bob chooses afterwards (i or j - 1)
         return dp[i][j] = 1;
     }
-    
+
     if((ans1 == 2 || ans2 == 2) && (ans3 == 2 || ans4 == 2)) {
         // bob wins in atleast 1 scenario when Alice picks i or j
-        assert(ans1 + ans2 + ans3 + ans4 == 8);
         return dp[i][j] = 2;
     }
 

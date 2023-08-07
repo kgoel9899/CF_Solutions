@@ -27250,6 +27250,25 @@
     ],
     "timestamp": "Aug/04/2023 23:54"
   },
+  "CF217742265": {
+    "contest_id": 1728,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1728\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Letter Picking",
+    "problem_url": "https://codeforces.com/contest/1728/problem/D",
+    "submission_id": "CF217742265",
+    "submission_url": "https://codeforces.com/contest/1728/submission/217742265",
+    "tags": [
+      "constructive algorithms",
+      "dp",
+      "games",
+      "two pointers",
+      "*1800"
+    ],
+    "timestamp": "Aug/07/2023 22:40"
+  },
   "CF217749604": {
     "contest_id": 455,
     "language": "GNU C++20 (64)",
