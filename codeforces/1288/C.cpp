@@ -42,4 +42,4 @@ int32_t main() {
         memset(dp, -1, sizeof dp);
         cout << solve(0, 1) << endl;
     }
-}
+} 
