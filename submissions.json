@@ -27475,6 +27475,25 @@
     ],
     "timestamp": "Aug/09/2023 14:16"
   },
+  "CF218208434": {
+    "contest_id": 1845,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1845\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Strong Password",
+    "problem_url": "https://codeforces.com/contest/1845/problem/C",
+    "submission_id": "CF218208434",
+    "submission_url": "https://codeforces.com/contest/1845/submission/218208434",
+    "tags": [
+      "binary search",
+      "dp",
+      "greedy",
+      "strings",
+      "*1400"
+    ],
+    "timestamp": "Aug/10/2023 23:59"
+  },
   "CF218391449": {
     "contest_id": 1856,
     "language": "GNU C++20 (64)",
