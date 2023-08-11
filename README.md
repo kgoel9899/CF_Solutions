@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1556 | [C - Strong Password](https://codeforces.com/contest/1845/problem/C) | [GNU C++20 (64)](./codeforces/1845/C.cpp) | `binary search` `dp` `greedy` `strings` `*1400` | Aug/12/2023 00:26 | 
+1557 | [C - Strong Password](https://codeforces.com/contest/1845/problem/C) | [GNU C++20 (64)](./codeforces/1845/C.cpp) | `binary search` `dp` `greedy` `strings` `*1400` | Aug/12/2023 00:26 | 
+1556 | [C - To Become Max](https://codeforces.com/contest/1856/problem/C) | [GNU C++20 (64)](./codeforces/1856/C.cpp) | `binary search` `brute force` `data structures` `dp` | Aug/12/2023 00:00 | 
 1555 | [D - Strong Vertices](https://codeforces.com/contest/1857/problem/D) | [GNU C++20 (64)](./codeforces/1857/D.cpp) | `math` `sortings` `trees` | Aug/09/2023 14:16 | 
 1554 | [C - Assembly via Minimums](https://codeforces.com/contest/1857/problem/C) | [GNU C++20 (64)](./codeforces/1857/C.cpp) | `greedy` `sortings` | Aug/08/2023 23:38 | 
 1553 | [C - Two Arrays](https://codeforces.com/contest/1288/problem/C) | [GNU C++20 (64)](./codeforces/1288/C.cpp) | `combinatorics` `dp` `*1600` | Aug/08/2023 22:44 | 
