@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1559 | [B - Olya and Game with Arrays](https://codeforces.com/contest/1859/problem/B) | [GNU C++20 (64)](./codeforces/1859/B.cpp) | `constructive algorithms` `greedy` `math` `sortings` | Aug/13/2023 15:44 | 
 1558 | [C - Vampiric Powers, anyone?](https://codeforces.com/contest/1847/problem/C) | [GNU C++20 (64)](./codeforces/1847/C.cpp) | `bitmasks` `brute force` `dp` `greedy` `*1400` | Aug/12/2023 21:00 | 
 1557 | [C - Strong Password](https://codeforces.com/contest/1845/problem/C) | [GNU C++20 (64)](./codeforces/1845/C.cpp) | `binary search` `dp` `greedy` `strings` `*1400` | Aug/12/2023 00:26 | 
 1556 | [C - To Become Max](https://codeforces.com/contest/1856/problem/C) | [GNU C++20 (64)](./codeforces/1856/C.cpp) | `binary search` `brute force` `data structures` `dp` | Aug/12/2023 00:00 | 
