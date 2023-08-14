@@ -27604,6 +27604,24 @@
     ],
     "timestamp": "Aug/13/2023 15:44"
   },
+  "CF218764328": {
+    "contest_id": 1389,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1389\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Array Walk",
+    "problem_url": "https://codeforces.com/contest/1389/problem/B",
+    "submission_id": "CF218764328",
+    "submission_url": "https://codeforces.com/contest/1389/submission/218764328",
+    "tags": [
+      "brute force",
+      "dp",
+      "greedy",
+      "*1600"
+    ],
+    "timestamp": "Aug/14/2023 13:43"
+  },
   "CF218764335": {
     "contest_id": 1249,
     "language": "GNU C++20 (64)",
