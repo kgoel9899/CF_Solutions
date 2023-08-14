@@ -52,4 +52,4 @@ int32_t main() {
             cout << min(dp1[i], dp2[i]) << " ";
         }
     }
-}
+} 
