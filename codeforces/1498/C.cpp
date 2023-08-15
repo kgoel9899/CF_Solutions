@@ -41,4 +41,4 @@ int32_t main() {
         dp.resize(n, vector<vector<int>>(k + 1, vector<int>(2, -1)));
         cout << solve(0, k, 1) << endl;
     }
-}
+} 
