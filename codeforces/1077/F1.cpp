@@ -51,4 +51,4 @@ int32_t main() {
         if(ans < 0) cout << -1 << endl;
         else cout << ans << endl;
     }
-}
+} 
