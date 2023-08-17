@@ -60,4 +60,4 @@ int32_t main() {
         }
         if(!ok) cout << -1 << endl;
     }
-}
+} 
