@@ -19,14 +19,11 @@ int main() {
         cin >> t >> q;
         queue<pair<int, int>> unblock;
         for (int i = 0; i < q; ++i) {
-            int done = 0;
             while (!unblock.empty() && unblock.front().first == i) {
-                assert(!done);
                 if (s[0][unblock.front().second] != s[1][unblock.front().second]) {
                     ++bad;
                 }
                 unblock.pop();
-                done = 1;
             }
             int type;
             cin >> type;
