@@ -13,9 +13,10 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1564 | [B - Kill `Em All](https://codeforces.com/contest/1238/problem/B) | [GNU C++20 (64)](./codeforces/1238/B.cpp) | `greedy` `sortings` `*1300` | Aug/20/2023 23:53 | 
-1563 | [A - Cipher Shifer](https://codeforces.com/contest/1840/problem/A) | [GNU C++20 (64)](./codeforces/1840/A.cpp) | `implementation` `strings` `two pointers` `*800` | Aug/20/2023 23:14 | 
-1562 | [D - Flood Fill](https://codeforces.com/contest/1114/problem/D) | [GNU C++20 (64)](./codeforces/1114/D.cpp) | `dp` `*1900` | Aug/20/2023 23:08 | 
+1565 | [B - Kill `Em All](https://codeforces.com/contest/1238/problem/B) | [GNU C++20 (64)](./codeforces/1238/B.cpp) | `greedy` `sortings` `*1300` | Aug/20/2023 23:53 | 
+1564 | [A - Cipher Shifer](https://codeforces.com/contest/1840/problem/A) | [GNU C++20 (64)](./codeforces/1840/A.cpp) | `implementation` `strings` `two pointers` `*800` | Aug/20/2023 23:14 | 
+1563 | [D - Flood Fill](https://codeforces.com/contest/1114/problem/D) | [GNU C++20 (64)](./codeforces/1114/D.cpp) | `dp` `*1900` | Aug/20/2023 23:08 | 
+1562 | [E - Character Blocking](https://codeforces.com/contest/1840/problem/E) | [GNU C++20 (64)](./codeforces/1840/E.cpp) | `data structures` `hashing` `implementation` `*1600` | Aug/18/2023 13:20 | 
 1561 | [F - Spy-string](https://codeforces.com/contest/1360/problem/F) | [GNU C++20 (64)](./codeforces/1360/F.cpp) | `bitmasks` `brute force` `constructive algorithms` `dp` `hashing` `strings` `*1700` | Aug/17/2023 23:39 | 
 1560 | [F1 - Pictures with Kittens (easy version)](https://codeforces.com/contest/1077/problem/F1) | [GNU C++20 (64)](./codeforces/1077/F1.cpp) | `dp` `*1900` | Aug/17/2023 23:30 | 
 1559 | [B - Greenhouse Effect](https://codeforces.com/contest/269/problem/B) | [GNU C++20 (64)](./codeforces/269/B.cpp) | `dp` `*1700` | Aug/17/2023 21:45 | 
