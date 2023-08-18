@@ -1,74 +1,63 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+ 
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
-
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
-
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
-
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
-
-int32_t main() {
-    fast;
-    int tt = 1;
-    cin >> tt;
-    while(tt--) {
-        string s1, s2;
-        cin >> s1 >> s2;
-        int n = s1.size();
+ 
+int main() {
+    int x;
+    cin >> x;
+    while (x--) {
+        vector<string> s(2);
+        cin >> s[0] >> s[1];
+        int n = s[0].size();
+        int bad = 0;
+        for (int i = 0; i < n; ++i) {
+            if (s[0][i] != s[1][i]) {
+                ++bad;
+            }
+        }
         int t, q;
         cin >> t >> q;
-        int diff = 0;
-        for(int i=0;i<n;i++) {
-            if(s1[i] != s2[i]) diff++;
-        }
-        map<int, int> block;
-        for(int i=1;i<=q;i++) {
-            if(block.find(i - t) != block.end()) {
-                int ind = block[i - t];
-                if(s1[ind] != s2[ind]) diff++;
+        queue<pair<int, int>> unblock;
+        for (int i = 0; i < q; ++i) {
+            int done = 0;
+            while (!unblock.empty() && unblock.front().first == i) {
+                assert(!done);
+                if (s[0][unblock.front().second] != s[1][unblock.front().second]) {
+                    ++bad;
+                }
+                unblock.pop();
+                done = 1;
             }
             int type;
             cin >> type;
-            if(type == 1) {
-                int ind;
-                cin >> ind;
-                ind--;
-                block[i] = ind;
-                if(s1[ind] != s2[ind]) diff--;
-            } else if(type == 2) {
-                int x, ind1, y, ind2;
-                cin >> x >> ind1 >> y >> ind2;
-                ind1--;
-                ind2--;
-                diff -= (s1[ind1] != s2[ind1]);
-                diff -= (s1[ind2] != s2[ind2]);
-                if(x == 1) {
-                    if(y == 1) swap(s1[ind1], s1[ind2]);
-                    else swap(s1[ind1], s2[ind2]);
-                } else {
-                    if(y == 1) swap(s2[ind1], s1[ind2]);
-                    else swap(s2[ind1], s2[ind2]);
+            if (type == 1) {
+                int pos;
+                cin >> pos;
+                if (s[0][pos - 1] != s[1][pos - 1]) {
+                    --bad;
                 }
-                diff += (s1[ind1] != s2[ind1]);
-                diff += (s1[ind2] != s2[ind2]);
+                unblock.emplace(i + t, pos - 1);
+            } else if (type == 2) {
+                int num1, pos1, num2, pos2;
+                cin >> num1 >> pos1 >> num2 >> pos2;
+                --num1; --pos1; --num2; --pos2;
+                if (s[num1][pos1] != s[1 ^ num1][pos1]) {
+                    --bad;
+                }
+                if (s[num2][pos2] != s[1 ^ num2][pos2]) {
+                    --bad;
+                }
+                swap(s[num1][pos1], s[num2][pos2]);
+                if (s[num1][pos1] != s[1 ^ num1][pos1]) {
+                    ++bad;
+                }
+                if (s[num2][pos2] != s[1 ^ num2][pos2]) {
+                    ++bad;
+                }
             } else {
-                if(diff == 0) cout << "YES" << endl;
-                else cout << "NO" << endl;
+                cout << (!bad ? "YES" : "NO") << "\n";
             }
         }
     }
+    return 0;
 }
