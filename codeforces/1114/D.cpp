@@ -45,4 +45,4 @@ int32_t main() {
         memset(dp, -1, sizeof dp);
         cout << min(solve(0, n - 1, 0), solve(0, n - 1, 1)) << endl;
     }
-}
+} 
