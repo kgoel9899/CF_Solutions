@@ -27938,6 +27938,23 @@
     ],
     "timestamp": "Aug/20/2023 23:53"
   },
+  "CF219831291": {
+    "contest_id": 1238,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1238\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Prime Subtraction",
+    "problem_url": "https://codeforces.com/contest/1238/problem/A",
+    "submission_id": "CF219831291",
+    "submission_url": "https://codeforces.com/contest/1238/submission/219831291",
+    "tags": [
+      "math",
+      "number theory",
+      "*900"
+    ],
+    "timestamp": "Aug/21/2023 23:53"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
