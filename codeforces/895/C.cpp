@@ -53,8 +53,8 @@ int solve(int curr, int mask) {
     if(curr == N) return !mask;
     if(dp[curr][mask] != -1) return dp[curr][mask];
     if(m[curr] == 0) return dp[curr][mask] = solve(curr + 1, mask);
-    int new_mask = get(curr, mask); // if we take idx'th element odd number of times
-    int ct = modRecursive(2, m[curr] - 1, MOD); // number of ways of picking odd/even number of idx'th element
+    int new_mask = get(curr, mask);
+    int ct = modRecursive(2, m[curr] - 1, MOD);
     int op1 = ((long long)ct * solve(curr + 1, new_mask)) % MOD;
     int op2 = ((long long)ct * solve(curr + 1, mask)) % MOD;
     return dp[curr][mask] = ((long long)op1 + op2) % MOD;
@@ -82,4 +82,4 @@ int32_t main() {
         ans %= MOD;
         cout << ans << endl;
     }
-}
+} 
