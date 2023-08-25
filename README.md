@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1569 | [B - Divine Array](https://codeforces.com/contest/1602/problem/B) | [GNU C++20 (64)](./codeforces/1602/B.cpp) | `constructive algorithms` `implementation` `*1100` | Aug/25/2023 23:42 | 
 1568 | [A - Payment Without Change](https://codeforces.com/contest/1256/problem/A) | [GNU C++20 (64)](./codeforces/1256/A.cpp) | `math` `*1000` | Aug/23/2023 22:24 | 
 1567 | [A - New Year Garland](https://codeforces.com/contest/1279/problem/A) | [GNU C++20 (64)](./codeforces/1279/A.cpp) | `math` `*900` | Aug/22/2023 23:03 | 
 1566 | [A - Prime Subtraction](https://codeforces.com/contest/1238/problem/A) | [GNU C++20 (64)](./codeforces/1238/A.cpp) | `math` `number theory` `*900` | Aug/21/2023 23:53 | 
