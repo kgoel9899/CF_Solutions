@@ -28057,6 +28057,23 @@
     ],
     "timestamp": "Aug/25/2023 23:42"
   },
+  "CF220491019": {
+    "contest_id": 1857,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1857\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Power of Points",
+    "problem_url": "https://codeforces.com/contest/1857/problem/E",
+    "submission_id": "CF220491019",
+    "submission_url": "https://codeforces.com/contest/1857/submission/220491019",
+    "tags": [
+      "math",
+      "sortings",
+      "*1500"
+    ],
+    "timestamp": "Aug/26/2023 15:16"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
