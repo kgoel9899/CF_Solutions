@@ -67,4 +67,4 @@ int32_t main() {
             cout << tree[1] << endl;
         }
     }
-}
+} 
