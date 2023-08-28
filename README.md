@@ -13,10 +13,11 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1574 | [D - Pashmak and Parmida's problem](https://codeforces.com/contest/459/problem/D) | [GNU C++20 (64)](./codeforces/459/D.cpp) | `data structures` `divide and conquer` `sortings` `*1800` | Aug/29/2023 11:56 | 
-1573 | [A - Knight Tournament](https://codeforces.com/contest/356/problem/A) | [GNU C++20 (64)](./codeforces/356/A.cpp) | `data structures` `dsu` `*1500` | Aug/29/2023 00:22 | 
-1572 | [E - Enemy is weak](https://codeforces.com/contest/61/problem/E) | [GNU C++20 (64)](./codeforces/61/E.cpp) | `data structures` `trees` `*1900` | Aug/28/2023 23:01 | 
-1571 | [D - Xenia and Bit Operations](https://codeforces.com/contest/339/problem/D) | [GNU C++20 (64)](./codeforces/339/D.cpp) | `data structures` `trees` `*1700` | Aug/28/2023 21:26 | 
+1575 | [D - Pashmak and Parmida's problem](https://codeforces.com/contest/459/problem/D) | [GNU C++20 (64)](./codeforces/459/D.cpp) | `data structures` `divide and conquer` `sortings` `*1800` | Aug/29/2023 11:56 | 
+1574 | [A - Knight Tournament](https://codeforces.com/contest/356/problem/A) | [GNU C++20 (64)](./codeforces/356/A.cpp) | `data structures` `dsu` `*1500` | Aug/29/2023 00:22 | 
+1573 | [E - Enemy is weak](https://codeforces.com/contest/61/problem/E) | [GNU C++20 (64)](./codeforces/61/E.cpp) | `data structures` `trees` `*1900` | Aug/28/2023 23:01 | 
+1572 | [D - Xenia and Bit Operations](https://codeforces.com/contest/339/problem/D) | [GNU C++20 (64)](./codeforces/339/D.cpp) | `data structures` `trees` `*1700` | Aug/28/2023 21:26 | 
+1571 | [B - Swap and Reverse](https://codeforces.com/contest/1864/problem/B) | [GNU C++20 (64)](./codeforces/1864/B.cpp) | `constructive algorithms` `greedy` `sortings` `strings` | Aug/28/2023 15:07 | 
 1570 | [A - Increasing and Decreasing](https://codeforces.com/contest/1864/problem/A) | [GNU C++20 (64)](./codeforces/1864/A.cpp) | `constructive algorithms` `implementation` `math` | Aug/28/2023 00:00 | 
 1569 | [E - Power of Points](https://codeforces.com/contest/1857/problem/E) | [GNU C++20 (64)](./codeforces/1857/E.cpp) | `math` `sortings` `*1500` | Aug/26/2023 15:16 | 
 1568 | [B - Divine Array](https://codeforces.com/contest/1602/problem/B) | [GNU C++20 (64)](./codeforces/1602/B.cpp) | `constructive algorithms` `implementation` `*1100` | Aug/25/2023 23:42 | 
