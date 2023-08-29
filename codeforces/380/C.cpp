@@ -77,4 +77,4 @@ int32_t main() {
             cout << query(0, n - 1, 1, l, r, tree).mx << endl;
         }
     }
-}
+} 
