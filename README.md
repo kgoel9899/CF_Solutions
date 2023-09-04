@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1581 | [C - Best Binary String](https://codeforces.com/contest/1837/problem/C) | [GNU C++20 (64)](./codeforces/1837/C.cpp) | `constructive algorithms` `greedy` `*1000` | Sep/04/2023 23:52 | 
 1580 | [B - MKnez's ConstructiveForces Task](https://codeforces.com/contest/1779/problem/B) | [GNU C++20 (64)](./codeforces/1779/B.cpp) | `constructive algorithms` `math` `*900` | Sep/03/2023 23:58 | 
 1579 | [B - Restore the Weather](https://codeforces.com/contest/1833/problem/B) | [GNU C++20 (64)](./codeforces/1833/B.cpp) | `greedy` `sortings` `*900` | Sep/02/2023 23:56 | 
 1578 | [B - Two Binary Strings](https://codeforces.com/contest/1861/problem/B) | [GNU C++20 (64)](./codeforces/1861/B.cpp) | `constructive algorithms` `dp` `greedy` | Sep/01/2023 23:58 | 
