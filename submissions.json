@@ -28366,6 +28366,21 @@
     ],
     "timestamp": "Sep/06/2023 23:57"
   },
+  "CF222415775": {
+    "contest_id": 1872,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1872\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "The Corridor or There and Back Again",
+    "problem_url": "https://codeforces.com/contest/1872/problem/B",
+    "submission_id": "CF222415775",
+    "submission_url": "https://codeforces.com/contest/1872/submission/222415775",
+    "tags": [
+      "implementation"
+    ],
+    "timestamp": "Sep/08/2023 13:01"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
