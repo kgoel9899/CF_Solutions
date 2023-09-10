@@ -13,8 +13,9 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1586 | [C - Subsequences](https://codeforces.com/contest/597/problem/C) | [GNU C++20 (64)](./codeforces/597/C.cpp) | `data structures` `dp` `*1900` | Sep/11/2023 00:39 | 
-1585 | [C - Longest Regular Bracket Sequence](https://codeforces.com/contest/5/problem/C) | [GNU C++20 (64)](./codeforces/5/C.cpp) | `constructive algorithms` `data structures` `dp` `greedy` `sortings` `strings` `*1900` | Sep/11/2023 00:24 | 
+1587 | [C - Subsequences](https://codeforces.com/contest/597/problem/C) | [GNU C++20 (64)](./codeforces/597/C.cpp) | `data structures` `dp` `*1900` | Sep/11/2023 00:39 | 
+1586 | [C - Longest Regular Bracket Sequence](https://codeforces.com/contest/5/problem/C) | [GNU C++20 (64)](./codeforces/5/C.cpp) | `constructive algorithms` `data structures` `dp` `greedy` `sortings` `strings` `*1900` | Sep/11/2023 00:24 | 
+1585 | [D - New Year Concert](https://codeforces.com/contest/1632/problem/D) | [GNU C++20 (64)](./codeforces/1632/D.cpp) | `binary search` `data structures` `greedy` `math` `number theory` `two pointers` `*2000` | Sep/10/2023 23:55 | 
 1584 | [D - Plus Minus Permutation](https://codeforces.com/contest/1872/problem/D) | [GNU C++20 (64)](./codeforces/1872/D.cpp) | `math` | Sep/09/2023 14:25 | 
 1583 | [B - The Corridor or There and Back Again](https://codeforces.com/contest/1872/problem/B) | [GNU C++20 (64)](./codeforces/1872/B.cpp) | `implementation` | Sep/08/2023 13:01 | 
 1582 | [B - Tea with Tangerines](https://codeforces.com/contest/1735/problem/B) | [GNU C++20 (64)](./codeforces/1735/B.cpp) | `greedy` `math` `*900` | Sep/07/2023 23:53 | 
