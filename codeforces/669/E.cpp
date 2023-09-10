@@ -50,7 +50,7 @@ int32_t main() {
             int a, t, x;
             cin >> a >> t >> x;
             v.push_back({a, t, x});
-            mp[t];
+            mp[t] = 0;
         }
         n = v.size();
         int rank = 1;
@@ -70,3 +70,4 @@ int32_t main() {
         }
     }
 }
+// https://codeforces.com/contest/641/submission/17496644 - ST solution
