@@ -52,13 +52,14 @@ int32_t main() {
         vector<vector<int>> tree(k + 1, vector<int>(4 * n)), dp(n, vector<int>(k + 1));
         int ans = 0;
         for(int i=0;i<n;i++) {
-            update(0, n - 1, 1, v[i], 1, tree[0]);
+            update(0, n - 1, 1, v[i], 1, tree[0]); // setting 1 to index v[i]
             dp[i][0] = 1;
             for(int j=1;j<=k;j++) {
                 dp[i][j] = query(0, n - 1, 1, 0, v[i] - 1, tree[j - 1]);
-                update(0, n - 1, 1, v[i], dp[i][j], tree[j]);
+                update(0, n - 1, 1, v[i], dp[i][j], tree[j]); // setting dp[i][j] to index v[i] to indicate dp[i][j] v[i]'s are present
             }
-            ans += dp[i][k];
+            ans += dp[i][k]; // ith index .. ending with k + 1 seq
+            dbg(i, ans);
         }
         cout << ans << endl;
     }
