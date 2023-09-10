@@ -30,15 +30,17 @@ int32_t main() {
         cin >> s;
         int n = s.size();
         vector<int> dp(n);
-        for(int i=1;i<n;i++) {
-            if(s[i] == ')') {
-                if(s[i - 1] == '(') dp[i] = 2 + (i - 2 >= 0 ? dp[i - 2] : 0);
-                else if(i - dp[i - 1] - 1 >= 0 && s[i - dp[i - 1] - 1] == '(') dp[i] = dp[i - 1] + 2 + (i - dp[i - 1] - 2 >= 0 ? dp[i - dp[i - 1] - 2] : 0);
-            }
-        }
-        dbg(dp);
+        stack<int> st;
         int len = 0, ct = 0;
         for(int i=0;i<n;i++) {
+            if(s[i] == '(') {
+                st.push(i);
+                continue;
+            }
+            if(st.empty()) continue;
+            int j = st.top();
+            st.pop();
+            dp[i] = i - j + 1 + (j ? dp[j - 1] : 0);
             if(dp[i] > len) {
                 len = dp[i];
                 ct = 1;
@@ -47,4 +49,4 @@ int32_t main() {
         if(len == 0) cout << "0 1" << endl;
         else cout << len << " " << ct << endl;
     }
-} 
+}
