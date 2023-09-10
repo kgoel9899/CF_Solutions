@@ -66,4 +66,4 @@ int32_t main() {
             cout << query(0, q - 1, 1, mx + 1, q - 1, tree) << endl;
         }
     }
-} 
+}  
