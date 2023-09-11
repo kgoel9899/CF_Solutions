@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1588 | [B - 2D Traveling](https://codeforces.com/contest/1869/problem/B) | [GNU C++20 (64)](./codeforces/1869/B.cpp) | `geometry` `math` `shortest paths` | Sep/11/2023 21:30 | 
 1587 | [E - Little Artem and Time Machine](https://codeforces.com/contest/669/problem/E) | [GNU C++20 (64)](./codeforces/669/E.cpp) | `data structures` `*2000` | Sep/11/2023 00:48 | 
 1586 | [C - Subsequences](https://codeforces.com/contest/597/problem/C) | [GNU C++20 (64)](./codeforces/597/C.cpp) | `data structures` `dp` `*1900` | Sep/11/2023 00:39 | 
 1585 | [C - Longest Regular Bracket Sequence](https://codeforces.com/contest/5/problem/C) | [GNU C++20 (64)](./codeforces/5/C.cpp) | `constructive algorithms` `data structures` `dp` `greedy` `sortings` `strings` `*1900` | Sep/11/2023 00:24 | 
