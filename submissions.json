@@ -28544,6 +28544,23 @@
     ],
     "timestamp": "Sep/11/2023 21:30"
   },
+  "CF223064771": {
+    "contest_id": 1867,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1867\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "XOR Palindromes",
+    "problem_url": "https://codeforces.com/contest/1867/problem/B",
+    "submission_id": "CF223064771",
+    "submission_url": "https://codeforces.com/contest/1867/submission/223064771",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "strings"
+    ],
+    "timestamp": "Sep/12/2023 15:13"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
