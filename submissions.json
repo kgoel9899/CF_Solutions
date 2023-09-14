@@ -28597,6 +28597,23 @@
     ],
     "timestamp": "Sep/14/2023 00:02"
   },
+  "CF223393756": {
+    "contest_id": 1675,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1675\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Make It Increasing",
+    "problem_url": "https://codeforces.com/contest/1675/problem/B",
+    "submission_id": "CF223393756",
+    "submission_url": "https://codeforces.com/contest/1675/submission/223393756",
+    "tags": [
+      "greedy",
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Sep/14/2023 23:27"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
