@@ -28614,6 +28614,24 @@
     ],
     "timestamp": "Sep/14/2023 23:27"
   },
+  "CF223526133": {
+    "contest_id": 1543,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1543\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Customising the Track",
+    "problem_url": "https://codeforces.com/contest/1543/problem/B",
+    "submission_id": "CF223526133",
+    "submission_url": "https://codeforces.com/contest/1543/submission/223526133",
+    "tags": [
+      "combinatorics",
+      "greedy",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Sep/15/2023 23:57"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
