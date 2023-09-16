@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1593 | [B - Special Permutation](https://codeforces.com/contest/1612/problem/B) | [GNU C++20 (64)](./codeforces/1612/B.cpp) | `constructive algorithms` `greedy` `*900` | Sep/16/2023 23:50 | 
 1592 | [B - Customising the Track](https://codeforces.com/contest/1543/problem/B) | [GNU C++20 (64)](./codeforces/1543/B.cpp) | `combinatorics` `greedy` `math` `*900` | Sep/15/2023 23:57 | 
 1591 | [B - Make It Increasing](https://codeforces.com/contest/1675/problem/B) | [GNU C++20 (64)](./codeforces/1675/B.cpp) | `greedy` `implementation` `*900` | Sep/14/2023 23:27 | 
 1590 | [A - Wizard of Orz](https://codeforces.com/contest/1467/problem/A) | [GNU C++20 (64)](./codeforces/1467/A.cpp) | `constructive algorithms` `greedy` `math` `*900` | Sep/14/2023 00:02 | 
