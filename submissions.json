@@ -28649,6 +28649,26 @@
     ],
     "timestamp": "Sep/16/2023 23:50"
   },
+  "CF223709758": {
+    "contest_id": 1593,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1593\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Make it Divisible by 25",
+    "problem_url": "https://codeforces.com/contest/1593/problem/B",
+    "submission_id": "CF223709758",
+    "submission_url": "https://codeforces.com/contest/1593/submission/223709758",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "greedy",
+      "math",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Sep/17/2023 15:34"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
