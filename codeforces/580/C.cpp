@@ -69,4 +69,4 @@ int32_t main() {
         dbg(d);
         cout << ans << endl;
     }
-} 
+}  
