@@ -52,4 +52,4 @@ int32_t main() {
         if(ok) cout << "Yes" << endl;
         else cout << "No" << endl;
     }
-}
+} 
