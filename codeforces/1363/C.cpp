@@ -42,4 +42,4 @@ int32_t main() {
         if((n - 2) % 2 == 0) cout << "Ayush" << endl;
         else cout << "Ashish" << endl;
     }
-}
+} 
