@@ -1,53 +1,39 @@
 #include<bits/stdc++.h>
+
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
+void solveTest() {
+    int a, b, c;
+    cin >> a >> b >> c;
 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
-
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
-
-int32_t main() {
-    fast;
-    int tt = 1;
-    cin >> tt;
-    while(tt--) {
-        int a, b, c;
-        cin >> a >> b >> c;
-        int d = b - a;
-        int req = b + d;
-        if(req && req % c == 0 && req / c > 0) {
-            cout << "YES" << endl;
-            continue;
-        }
-        d = c - b;
-        req = b - d;
-        if(req && req % a == 0 && req / a > 0) {
-            cout << "YES" << endl;
-            continue;
-        }
-        d = c - a;
-        if(d % 2) {
-            cout << "NO" << endl;
-            continue;
-        }
-        d /= 2;
-        req = a + d;
-        if(req && req % b == 0 && req / b > 0) cout << "YES" << endl;
-        else cout << "NO" << endl;
+    int new_a = b - (c - b);
+    if(new_a >= a && new_a % a == 0 && new_a != 0) {
+        cout << "YES\n";
+        return;
     }
+
+    int new_b = a + (c - a)/2;
+    if(new_b >= b && (c-a)%2 == 0 && new_b % b == 0 && new_b != 0) {
+        cout << "YES\n";
+        return;
+    }
+
+    int new_c = a + 2*(b - a);
+    if(new_c >= c && new_c % c == 0 && new_c != 0) {
+        cout << "YES\n";
+        return;
+    }
+
+    cout << "NO\n";
+    return;
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0);
+    int tt;
+    cin >> tt;
+    while(tt--)
+        solveTest();
+    return 0;
 }
