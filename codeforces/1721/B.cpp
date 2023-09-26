@@ -1,37 +1,60 @@
-#include<bits/stdc++.h>
+#include <algorithm>
+#include <array>
+#include <bitset>
+#include <cassert>
+#include <chrono>
+#include <cmath>
+#include <cstring>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <set>
+#include <vector>
 using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
+// http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0200r0.html
+template<class Fun> class y_combinator_result {
+    Fun fun_;
+public:
+    template<class T> explicit y_combinator_result(T &&fun): fun_(std::forward<T>(fun)) {}
+    template<class ...Args> decltype(auto) operator()(Args &&...args) { return fun_(std::ref(*this), std::forward<Args>(args)...); }
+};
+template<class Fun> decltype(auto) y_combinator(Fun &&fun) { return y_combinator_result<std::decay_t<Fun>>(std::forward<Fun>(fun)); }
+
 
 template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
 template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
 
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+void dbg_out() { cerr << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
+#ifdef NEAL_DEBUG
+#define dbg(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
 
-int32_t main() {
-    fast;
-    int tt = 1;
-    cin >> tt;
-    while(tt--) {
-        int n, m, x, y, d;
-        cin >> n >> m >> x >> y >> d;
-        if(x + d >= n && x - d <= 1) cout << -1 << endl;
-        else if(y + d >= m && y - d <= 1) cout << -1 << endl;
-        else if(y + d >= m && x + d >= n) cout << -1 << endl;
-        else if(y - d <= 1 && x - d <= 1) cout << -1 << endl;
-        else cout << n + m - 2 << endl;
-    }
+
+void run_case() {
+    int N, M, SX, SY, D;
+    cin >> N >> M >> SX >> SY >> D;
+    bool top_ok = SX - 1 > D && M - SY > D;
+    bool bottom_ok = N - SX > D && SY - 1 > D;
+    cout << (top_ok || bottom_ok ? N + M - 2 : -1) << '\n';
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+#ifndef NEAL_DEBUG
+    cin.tie(nullptr);
+#endif
+
+    int tests;
+    cin >> tests;
+
+    while (tests-- > 0)
+        run_case();
 }
