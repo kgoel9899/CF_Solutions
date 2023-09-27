@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1603 | [D - Cow and Snacks](https://codeforces.com/contest/1209/problem/D) | [GNU C++20 (64)](./codeforces/1209/D.cpp) | `dfs and similar` `dsu` `graphs` `*1700` | Sep/28/2023 02:03 | 
+1604 | [D - Cow and Snacks](https://codeforces.com/contest/1209/problem/D) | [GNU C++20 (64)](./codeforces/1209/D.cpp) | `dfs and similar` `dsu` `graphs` `*1700` | Sep/28/2023 02:03 | 
+1603 | [A - Regular Bracket Sequence](https://codeforces.com/contest/1469/problem/A) | [GNU C++20 (64)](./codeforces/1469/A.cpp) | `constructive algorithms` `greedy` `*1000` | Sep/28/2023 01:52 | 
 1602 | [B - Deadly Laser](https://codeforces.com/contest/1721/problem/B) | [GNU C++20 (64)](./codeforces/1721/B.cpp) | `implementation` `*1000` | Sep/27/2023 00:05 | 
 1601 | [A - Koxia and Whiteboards](https://codeforces.com/contest/1770/problem/A) | [GNU C++20 (64)](./codeforces/1770/A.cpp) | `brute force` `greedy` `*1000` | Sep/25/2023 18:07 | 
 1600 | [B - Count the Number of Pairs](https://codeforces.com/contest/1800/problem/B) | [GNU C++20 (64)](./codeforces/1800/B.cpp) | `greedy` `strings` `*1000` | Sep/24/2023 15:51 | 
