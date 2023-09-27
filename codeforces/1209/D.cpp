@@ -21,15 +21,15 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-int n, m, ans, temp;
+int n, k, ct;
 vector<int> vis;
-vector<set<int>> adj;
-void dfs(int curr, int par) {
+vector<vector<int>> adj;
+void dfs(int curr) {
     vis[curr] = 1;
+    ct++;
     for(auto& i : adj[curr]) {
-        if(i == par) continue;
-        if(vis[i]) temp++;
-        else dfs(i, curr);
+        if(vis[i]) continue;
+        dfs(i);
     }
 }
 int32_t main() {
@@ -37,26 +37,24 @@ int32_t main() {
     int tt = 1;
     // cin >> tt;
     while(tt--) {
-        cin >> n >> m;
+        cin >> n >> k;
         adj.clear();
         adj.resize(n + 1);
-        ans = 0;
-        for(int i=0;i<m;i++) {
+        for(int i=0;i<k;i++) {
             int a, b;
             cin >> a >> b;
-            if(adj[a].find(b) != adj[a].end()) {
-                ans++;
-                continue;
-            }
-            adj[a].insert(b);
-            adj[b].insert(a);
+            adj[a].push_back(b);
+            adj[b].push_back(a);
         }
         vis.clear();
         vis.resize(n + 1);
-        temp = 0;
+        int ans = 0;
         for(int i=1;i<=n;i++) {
-            if(!vis[i]) dfs(i, -1);
+            if(vis[i]) continue;
+            ct = 0;
+            dfs(i);
+            ans += ct - 1;
         }
-        cout << ans + temp / 2 << endl;
+        cout << k - ans << endl;
     }
 }
