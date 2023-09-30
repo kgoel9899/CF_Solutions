@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1605 | [A - Even But Not Even](https://codeforces.com/contest/1291/problem/A) | [GNU C++20 (64)](./codeforces/1291/A.cpp) | `greedy` `math` `strings` `*900` | Sep/30/2023 21:12 | 
 1604 | [D - Cow and Snacks](https://codeforces.com/contest/1209/problem/D) | [GNU C++20 (64)](./codeforces/1209/D.cpp) | `dfs and similar` `dsu` `graphs` `*1700` | Sep/28/2023 02:03 | 
 1603 | [A - Regular Bracket Sequence](https://codeforces.com/contest/1469/problem/A) | [GNU C++20 (64)](./codeforces/1469/A.cpp) | `constructive algorithms` `greedy` `*1000` | Sep/28/2023 01:52 | 
 1602 | [B - Deadly Laser](https://codeforces.com/contest/1721/problem/B) | [GNU C++20 (64)](./codeforces/1721/B.cpp) | `implementation` `*1000` | Sep/27/2023 00:05 | 
