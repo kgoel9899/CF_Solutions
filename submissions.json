@@ -29191,6 +29191,24 @@
     ],
     "timestamp": "Oct/01/2023 23:56"
   },
+  "CF226487841": {
+    "contest_id": 1593,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1593\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Save More Mice",
+    "problem_url": "https://codeforces.com/contest/1593/problem/C",
+    "submission_id": "CF226487841",
+    "submission_url": "https://codeforces.com/contest/1593/submission/226487841",
+    "tags": [
+      "binary search",
+      "greedy",
+      "greedy",
+      "*1000"
+    ],
+    "timestamp": "Oct/03/2023 23:59"
+  },
   "CF226488528": {
     "contest_id": 1027,
     "language": "GNU C++20 (64)",
