@@ -66,4 +66,4 @@ int32_t main() {
         }
         cout << s.size() << endl;
     }
-}
+} 
