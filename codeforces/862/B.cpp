@@ -58,4 +58,4 @@ int32_t main() {
         }
         cout << x * y - (n - 1) << endl;
     }
-}
+} 
