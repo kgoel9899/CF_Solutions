@@ -29371,6 +29371,21 @@
     ],
     "timestamp": "Oct/07/2023 01:22"
   },
+  "CF227007174": {
+    "contest_id": 1878,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1878\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Vasilije in Cacak",
+    "problem_url": "https://codeforces.com/contest/1878/problem/C",
+    "submission_id": "CF227007174",
+    "submission_url": "https://codeforces.com/contest/1878/submission/227007174",
+    "tags": [
+      "math"
+    ],
+    "timestamp": "Oct/07/2023 17:47"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
