@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1617 | [D - 1D Eraser](https://codeforces.com/contest/1873/problem/D) | [GNU C++20 (64)](./codeforces/1873/D.cpp) | `greedy` `implementation` `two pointers` `*800` | Oct/12/2023 01:00 | 
+1618 | [D - 1D Eraser](https://codeforces.com/contest/1873/problem/D) | [GNU C++20 (64)](./codeforces/1873/D.cpp) | `greedy` `implementation` `two pointers` `*800` | Oct/12/2023 01:00 | 
+1617 | [C - Target Practice](https://codeforces.com/contest/1873/problem/C) | [GNU C++20 (64)](./codeforces/1873/C.cpp) | `implementation` `math` `*800` | Oct/12/2023 00:53 | 
 1616 | [A - Sum of Three](https://codeforces.com/contest/1886/problem/A) | [GNU C++20 (64)](./codeforces/1886/A.cpp) | `brute force` `constructive algorithms` `math` | Oct/09/2023 23:52 | 
 1615 | [B - Greg and Graph](https://codeforces.com/contest/295/problem/B) | [GNU C++20 (64)](./codeforces/295/B.cpp) | `dp` `graphs` `shortest paths` `*1700` | Oct/09/2023 00:19 | 
 1614 | [A - Goals of Victory](https://codeforces.com/contest/1877/problem/A) | [GNU C++20 (64)](./codeforces/1877/A.cpp) | `math` | Oct/08/2023 23:59 | 
