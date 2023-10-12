@@ -29506,6 +29506,23 @@
     ],
     "timestamp": "Oct/12/2023 01:00"
   },
+  "CF227803391": {
+    "contest_id": 1873,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1873\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Building an Aquarium",
+    "problem_url": "https://codeforces.com/contest/1873/problem/E",
+    "submission_id": "CF227803391",
+    "submission_url": "https://codeforces.com/contest/1873/submission/227803391",
+    "tags": [
+      "binary search",
+      "sortings",
+      "*1100"
+    ],
+    "timestamp": "Oct/12/2023 17:16"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
