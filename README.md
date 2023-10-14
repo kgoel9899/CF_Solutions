@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1619 | [D - Restructuring Company](https://codeforces.com/contest/566/problem/D) | [GNU C++20 (64)](./codeforces/566/D.cpp) | `data structures` `dsu` `*1900` | Oct/14/2023 15:37 | 
+1620 | [D - Restructuring Company](https://codeforces.com/contest/566/problem/D) | [GNU C++20 (64)](./codeforces/566/D.cpp) | `data structures` `dsu` `*1900` | Oct/14/2023 15:37 | 
+1619 | [G - ABBC or BACB](https://codeforces.com/contest/1873/problem/G) | [GNU C++20 (64)](./codeforces/1873/G.cpp) | `constructive algorithms` `greedy` `*1500` | Oct/14/2023 14:54 | 
 1618 | [E - Building an Aquarium](https://codeforces.com/contest/1873/problem/E) | [GNU C++20 (64)](./codeforces/1873/E.cpp) | `binary search` `sortings` `*1100` | Oct/12/2023 17:16 | 
 1617 | [D - 1D Eraser](https://codeforces.com/contest/1873/problem/D) | [GNU C++20 (64)](./codeforces/1873/D.cpp) | `greedy` `implementation` `two pointers` `*800` | Oct/12/2023 01:00 | 
 1616 | [C - Target Practice](https://codeforces.com/contest/1873/problem/C) | [GNU C++20 (64)](./codeforces/1873/C.cpp) | `implementation` `math` `*800` | Oct/12/2023 00:53 | 
