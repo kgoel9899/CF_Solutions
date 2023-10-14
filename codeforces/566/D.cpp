@@ -59,13 +59,13 @@ int32_t main() {
             cin >> t >> x >> y;
             if(t == 1) union_sets(x, y);
             else if(t == 2) {
-                auto it1 = s.lower_bound(x);
-                auto it2 = s.upper_bound(y);
-                while(it1 != it2) {
-                    dbg(x, *it1);
-                    union_sets(x, *it1);
-                    if(*it1 == x) it1++;
-                    else it1 = s.erase(it1);
+                while(true) {
+                    auto it = s.lower_bound(x);
+                    if(it == s.end() || *it > y) break;
+                    union_sets(*it, y);
+                    dbg(*it, y);
+                    if(*it == y) break;
+                    s.erase(*it);
                 }
                 dbg(s);
             } else {
