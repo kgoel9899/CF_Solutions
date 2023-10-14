@@ -8,48 +8,66 @@ using namespace std;
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n"
 const int INF = 1e18;
-const int N = 2e5 + 5;
-vector<int> par(N), sizee(N);
-set<int> s;
-int find_set(int v) {
-    if(v == par[v]) return v;
-    return par[v] = find_set(par[v]);
+
+#ifdef DEBUG
+#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+
+void dbg_out() { cout << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+
+vector<int> par, sz;
+void make_set(int u) {
+    par[u] = u;
+    sz[u] = 1;
 }
-void union_sets(int a, int b) {
-    a = find_set(a);
-    b = find_set(b);
-    if(a != b) {
-        if(sizee[a] < sizee[b]) swap(a, b);
-        par[b] = a;
-        sizee[a] += sizee[b];
-    }
+int find_set(int u) {
+    if(par[u] == u) return u;
+    return par[u] = find_set(par[u]);
+}
+void union_sets(int u, int v) {
+    u = find_set(u);
+    v = find_set(v);
+    if(u == v) return;
+    if(sz[u] < sz[v]) swap(u, v);
+    par[v] = u;
+    sz[u] += sz[v];
 }
 int32_t main() {
     fast;
-    int t = 1;
-    // cin >> t;
-    while(t--) {
+    int tt = 1;
+    // cin >> tt;
+    while(tt--) {
         int n, q;
         cin >> n >> q;
+        par.clear();
+        par.resize(n + 1);
+        sz.clear();
+        sz.resize(n + 1);
+        set<int> s;
         for(int i=1;i<=n;i++) {
-            par[i] = i;
-            sizee[i] = 1;
+            make_set(i);
             s.insert(i);
         }
         while(q--) {
-            int type, x, y;
-            cin >> type >> x >> y;
-            if(type == 1) union_sets(x, y);
-            else if(type == 2) {
-                while(true) {
-                    auto it = s.lower_bound(x);
-                    if(it == s.end() || *it > y) break;
-                    else {
-                        union_sets(*it, y);
-                        if(*it == y) break;
-                        s.erase(*it);
-                    }
+            int t, x, y;
+            cin >> t >> x >> y;
+            if(t == 1) union_sets(x, y);
+            else if(t == 2) {
+                auto it1 = s.lower_bound(x);
+                auto it2 = s.upper_bound(y);
+                while(it1 != it2) {
+                    dbg(x, *it1);
+                    union_sets(x, *it1);
+                    if(*it1 == x) it1++;
+                    else it1 = s.erase(it1);
                 }
+                dbg(s);
             } else {
                 if(find_set(x) == find_set(y)) cout << "YES" << endl;
                 else cout << "NO" << endl;
@@ -57,3 +75,7 @@ int32_t main() {
         }
     }
 }
+// 10 3
+// 2 5 10
+// 2 1 6
+// 3 1 10
