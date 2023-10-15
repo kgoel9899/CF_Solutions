@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1622 | [D - Divide and Equalize](https://codeforces.com/contest/1881/problem/D) | [GNU C++20 (64)](./codeforces/1881/D.cpp) | `math` `number theory` | Oct/15/2023 17:23 | 
 1621 | [D - Restructuring Company](https://codeforces.com/contest/566/problem/D) | [GNU C++20 (64)](./codeforces/566/D.cpp) | `data structures` `dsu` `*1900` | Oct/14/2023 15:37 | 
 1620 | [G - ABBC or BACB](https://codeforces.com/contest/1873/problem/G) | [GNU C++20 (64)](./codeforces/1873/G.cpp) | `constructive algorithms` `greedy` `*1500` | Oct/14/2023 14:54 | 
 1619 | [F - Money Trees](https://codeforces.com/contest/1873/problem/F) | [GNU C++20 (64)](./codeforces/1873/F.cpp) | `binary search` `greedy` `math` `two pointers` `*1300` | Oct/14/2023 14:32 | 
