@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1625 | [C - Make it Alternating](https://codeforces.com/contest/1879/problem/C) | [GNU C++20 (64)](./codeforces/1879/C.cpp) | `combinatorics` `dp` `greedy` `*1300` | Oct/17/2023 23:59 | 
 1624 | [B - Shoe Shuffling](https://codeforces.com/contest/1691/problem/B) | [GNU C++20 (64)](./codeforces/1691/B.cpp) | `constructive algorithms` `greedy` `implementation` `two pointers` `*1000` | Oct/16/2023 21:41 | 
 1623 | [C - Perfect Square](https://codeforces.com/contest/1881/problem/C) | [GNU C++20 (64)](./codeforces/1881/C.cpp) | `brute force` `implementation` | Oct/16/2023 13:48 | 
 1622 | [D - Divide and Equalize](https://codeforces.com/contest/1881/problem/D) | [GNU C++20 (64)](./codeforces/1881/D.cpp) | `math` `number theory` | Oct/15/2023 17:23 | 
