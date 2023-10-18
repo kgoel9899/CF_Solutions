@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1627 | [E - Block Sequence](https://codeforces.com/contest/1881/problem/E) | [GNU C++20 (64)](./codeforces/1881/E.cpp) | `dp` | Oct/19/2023 01:20 | 
 1626 | [C - Make it Alternating](https://codeforces.com/contest/1879/problem/C) | [GNU C++20 (64)](./codeforces/1879/C.cpp) | `combinatorics` `dp` `greedy` `*1300` | Oct/18/2023 00:39 | 
 1625 | [A - Hongcow Builds A Nation](https://codeforces.com/contest/744/problem/A) | [GNU C++20 (64)](./codeforces/744/A.cpp) | `dfs and similar` `graphs` `*1500` | Oct/17/2023 20:11 | 
 1624 | [C - Hongcow Builds A Nation](https://codeforces.com/contest/745/problem/C) | [GNU C++20 (64)](./codeforces/745/C.cpp) | `constructive algorithms` `dfs and similar` `graphs` `*1500` | Oct/17/2023 20:10 | 
