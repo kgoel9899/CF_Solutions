@@ -29751,6 +29751,25 @@
     ],
     "timestamp": "Oct/18/2023 00:39"
   },
+  "CF228671837": {
+    "contest_id": 17,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\17\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Hierarchy",
+    "problem_url": "https://codeforces.com/contest/17/problem/B",
+    "submission_id": "CF228671837",
+    "submission_url": "https://codeforces.com/contest/17/submission/228671837",
+    "tags": [
+      "dfs and similar",
+      "dsu",
+      "greedy",
+      "shortest paths",
+      "*1500"
+    ],
+    "timestamp": "Oct/18/2023 17:32"
+  },
   "CF228716679": {
     "contest_id": 1881,
     "language": "GNU C++20 (64)",

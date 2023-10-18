@@ -21,23 +21,6 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
-vector<int> par, sz;
-void make_set(int u) {
-    par[u] = u;
-    sz[u] = 1;
-}
-int find_set(int u) {
-    if(u == par[u]) return u;
-    return par[u] = find_set(par[u]);
-}
-void union_sets(int u, int v) {
-    u = find_set(u);
-    v = find_set(v);
-    if(u == v) return;
-    if(sz[v] < sz[u]) swap(u, v);
-    sz[u] += sz[v];
-    par[v] = par[u];
-}
 int32_t main() {
     fast;
     int tt = 1;
@@ -45,41 +28,24 @@ int32_t main() {
     while(tt--) {
         int n;
         cin >> n;
-        par.clear();
-        par.resize(n + 1);
-        sz.clear();
-        sz.resize(n + 1);
-        for(int i=1;i<=n;i++) {
-            int num;
-            cin >> num;
-            make_set(i);
+        vector<int> v(n);
+        for(int i=0;i<n;i++) {
+            cin >> v[i];
         }
+        vector<int> dist(n + 1, INF);
         int m;
         cin >> m;
-        vector<pair<int, pair<int, int>>> edges;
         while(m--) {
             int a, b, c;
             cin >> a >> b >> c;
-            edges.push_back({c, {a, b}});
+            dist[b] = min(dist[b], c);
         }
-        sort(all(edges));
-        dbg(edges);
-        vector<int> sup(n + 1);
-        int ans = 0;
-        for(auto& i : edges) {
-            int w = i.first;
-            int a = i.second.first;
-            int b = i.second.second;
-            if(find_set(a) == find_set(b) || sup[b]) continue;
-            ans += w;
-            union_sets(a, b);
-            sup[b] = 1;
-        }
-        set<int> check;
+        int root = 0, ans = 0;
         for(int i=1;i<=n;i++) {
-            check.insert(find_set(i));
+            if(dist[i] == INF) root++;
+            else ans += dist[i];
         }
-        if(check.size() == 1) cout << ans << endl;
-        else cout << -1 << endl;
+        if(root >= 2) cout << -1 << endl;
+        else cout << ans << endl;
     }
 }
