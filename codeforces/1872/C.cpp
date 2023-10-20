@@ -1,52 +1,33 @@
-#include<bits/stdc++.h>
-using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
+// https://codeforces.com/contest/1872/submission/222227406
+#include <bits/stdc++.h>
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
+using i64 = long long;
 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
-
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
-
-int32_t main() {
-    fast;
-    int tt = 1;
-    cin >> tt;
-    while(tt--) {
-        int l, r;
-        cin >> l >> r;
-        if(r <= 3) {
-            cout << -1 << endl;
-            continue;
-        }
-        if(r - l >= 2) {
-            int temp = (r - (r % 2)) / 2;
-            cout << temp << " " << temp << endl;
-        } else if(r - l == 1) {
-            if(l % 2 == 0) cout << l / 2 << " " << l / 2 << endl;
-            else cout << r / 2 << " " << r / 2 << endl;
-        } else {
-            int ans = -1;
-            for(int i=2;i*i<=l;i++) {
-                if(l % i == 0) {
-                    ans = i;
-                }
+void solve() {
+    int l, r;
+    std::cin >> l >> r;
+    
+    for (int i = std::max(4, l); i <= r; i++) {
+        for (int j = 2; j * j <= i; j++) {
+            if (i % j == 0) {
+                std::cout << j << " " << i - j << "\n";
+                return;
             }
-            if(ans == -1) cout << -1 << endl;
-            else cout << ans << " " << l - ans << endl;
         }
     }
+    std::cout << -1 << "\n";
+}
+
+int main() {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    
+    int t;
+    std::cin >> t;
+    
+    while (t--) {
+        solve();
+    }
+    
+    return 0;
 }
