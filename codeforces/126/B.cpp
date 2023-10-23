@@ -57,4 +57,4 @@ int32_t main() {
             else cout << s.substr(0, pi[pi[n - 1] - 1]) << endl;
         }
     }
-}
+} 
