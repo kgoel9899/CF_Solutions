@@ -30,16 +30,31 @@ int32_t main() {
         cin >> n >> k;
         string s;
         cin >> s;
+        if(n - k == 1) {
+            cout << "YES" << endl;
+            continue;
+        }
         map<int, int> m;
         for(auto& i : s) {
             m[i]++;
         }
-        int odd = 0;
+        int odd = 0, yes = 0;
         for(auto& i : m) {
-            if(i.second % 2) odd++;
+            if(i.second % 2) {
+                odd++;
+                yes = 1;
+            }
         }
         odd = max(0ll, odd - 1);
-        if(odd > k) cout << "NO" << endl;
-        else cout << "YES" << endl;
+        if(odd > k) {
+            cout << "NO" << endl;
+            continue;
+        }
+        k -= odd;
+        dbg(k, yes);
+        if(k % 2) cout << "YES" << endl;
+        else if(k % 2 == 0) cout << "YES" << endl;
+        else if(k == 0) cout << "YES" << endl;
+        else cout << "NO" << endl;
     }
 }
