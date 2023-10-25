@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1634 | [C - Raspberries](https://codeforces.com/contest/1883/problem/C) | [GNU C++20 (64)](./codeforces/1883/C.cpp) | `dp` `math` | Oct/25/2023 16:32 | 
 1633 | [B - Chemistry](https://codeforces.com/contest/1883/problem/B) | [GNU C++20 (64)](./codeforces/1883/B.cpp) | `strings` | Oct/24/2023 21:16 | 
 1632 | [B - Password](https://codeforces.com/contest/126/problem/B) | [GNU C++20 (64)](./codeforces/126/B.cpp) | `binary search` `dp` `hashing` `string suffix structures` `strings` `*1700` | Oct/23/2023 23:43 | 
 1631 | [E - Eating Queries](https://codeforces.com/contest/1676/problem/E) | [GNU C++20 (64)](./codeforces/1676/E.cpp) | `binary search` `greedy` `sortings` `*1100` | Oct/23/2023 23:40 | 
