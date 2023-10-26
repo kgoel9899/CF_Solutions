@@ -29992,6 +29992,23 @@
     ],
     "timestamp": "Oct/25/2023 16:32"
   },
+  "CF229918450": {
+    "contest_id": 1884,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1884\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Simple Design",
+    "problem_url": "https://codeforces.com/contest/1884/problem/A",
+    "submission_id": "CF229918450",
+    "submission_url": "https://codeforces.com/contest/1884/submission/229918450",
+    "tags": [
+      "brute force",
+      "greedy",
+      "math"
+    ],
+    "timestamp": "Oct/27/2023 00:00"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
