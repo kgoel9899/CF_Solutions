@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1639 | [A - Competitive Programmer](https://codeforces.com/contest/1266/problem/A) | [GNU C++20 (64)](./codeforces/1266/A.cpp) | `chinese remainder theorem` `math` `*1000` | Oct/30/2023 23:54 | 
 1638 | [B - MEXor Mixup](https://codeforces.com/contest/1567/problem/B) | [GNU C++20 (64)](./codeforces/1567/B.cpp) | `bitmasks` `greedy` `*1000` | Oct/29/2023 23:11 | 
 1637 | [B - String LCM](https://codeforces.com/contest/1473/problem/B) | [GNU C++20 (64)](./codeforces/1473/B.cpp) | `brute force` `math` `number theory` `strings` `*1000` | Oct/28/2023 23:57 | 
 1636 | [B - GCD Length](https://codeforces.com/contest/1511/problem/B) | [GNU C++20 (64)](./codeforces/1511/B.cpp) | `constructive algorithms` `math` `number theory` `*1100` | Oct/28/2023 00:11 | 
