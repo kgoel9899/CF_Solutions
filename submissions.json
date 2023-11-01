@@ -30098,6 +30098,25 @@
     ],
     "timestamp": "Oct/30/2023 23:54"
   },
+  "CF230870783": {
+    "contest_id": 1515,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1515\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Phoenix and Puzzle",
+    "problem_url": "https://codeforces.com/contest/1515/problem/B",
+    "submission_id": "CF230870783",
+    "submission_url": "https://codeforces.com/contest/1515/submission/230870783",
+    "tags": [
+      "brute force",
+      "geometry",
+      "math",
+      "number theory",
+      "*1000"
+    ],
+    "timestamp": "Nov/01/2023 23:58"
+  },
   "CF230881301": {
     "contest_id": 1476,
     "language": "GNU C++20 (64)",
