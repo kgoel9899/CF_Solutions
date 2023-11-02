@@ -29,9 +29,13 @@ int32_t main() {
     while(tt--) {
         int n, k;
         cin >> n >> k;
-        if(n >= k) cout << 1 + (n % k != 0) << endl;
-        else {
-            cout << (k + n - 1) / n << endl;
+        if(n >= k) {
+            // if(n % k == 0) cout << 1 << endl;
+            // else cout << 2 << endl;
+            cout << 1 + (n % k != 0) << endl;
+        } else {
+            if(k % n == 0) cout << k / n << endl;
+            else cout << (k + n - 1) / n << endl;
         }
         xx++;
     }
