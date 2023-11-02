@@ -25,10 +25,14 @@ int32_t main() {
     fast;
     int tt = 1;
     cin >> tt;
+    int xx = 1;
     while(tt--) {
         int n, k;
         cin >> n >> k;
         if(n >= k) cout << 1 + (n % k != 0) << endl;
-        else cout << (k + n - 1) / n << endl;
+        else {
+            cout << (k + n - 1) / n << endl;
+        }
+        xx++;
     }
 }
