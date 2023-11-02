@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1640 | [B - Maximum Cost Deletion](https://codeforces.com/contest/1550/problem/B) | [GNU C++20 (64)](./codeforces/1550/B.cpp) | `greedy` `math` `*1000` | Nov/02/2023 23:54 | 
+1641 | [B - Maximum Cost Deletion](https://codeforces.com/contest/1550/problem/B) | [GNU C++20 (64)](./codeforces/1550/B.cpp) | `greedy` `math` `*1000` | Nov/02/2023 23:54 | 
+1640 | [A - K-divisible Sum](https://codeforces.com/contest/1476/problem/A) | [GNU C++20 (64)](./codeforces/1476/A.cpp) | `binary search` `constructive algorithms` `greedy` `math` `*1000` | Nov/02/2023 23:47 | 
 1639 | [A - Competitive Programmer](https://codeforces.com/contest/1266/problem/A) | [GNU C++20 (64)](./codeforces/1266/A.cpp) | `chinese remainder theorem` `math` `*1000` | Oct/30/2023 23:54 | 
 1638 | [B - MEXor Mixup](https://codeforces.com/contest/1567/problem/B) | [GNU C++20 (64)](./codeforces/1567/B.cpp) | `bitmasks` `greedy` `*1000` | Oct/29/2023 23:11 | 
 1637 | [B - String LCM](https://codeforces.com/contest/1473/problem/B) | [GNU C++20 (64)](./codeforces/1473/B.cpp) | `brute force` `math` `number theory` `strings` `*1000` | Oct/28/2023 23:57 | 
