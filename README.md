@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1643 | [B - Assigning to Classes](https://codeforces.com/contest/1300/problem/B) | [GNU C++20 (64)](./codeforces/1300/B.cpp) | `greedy` `implementation` `sortings` `*1000` | Nov/04/2023 01:30 | 
 1642 | [B - Maximum Cost Deletion](https://codeforces.com/contest/1550/problem/B) | [GNU C++20 (64)](./codeforces/1550/B.cpp) | `greedy` `math` `*1000` | Nov/02/2023 23:54 | 
 1641 | [A - K-divisible Sum](https://codeforces.com/contest/1476/problem/A) | [GNU C++20 (64)](./codeforces/1476/A.cpp) | `binary search` `constructive algorithms` `greedy` `math` `*1000` | Nov/02/2023 23:47 | 
 1640 | [B - Phoenix and Puzzle](https://codeforces.com/contest/1515/problem/B) | [GNU C++20 (64)](./codeforces/1515/B.cpp) | `brute force` `geometry` `math` `number theory` `*1000` | Nov/01/2023 23:58 | 
