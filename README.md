@@ -13,8 +13,9 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1647 | [D - Traps](https://codeforces.com/contest/1684/problem/D) | [GNU C++20 (64)](./codeforces/1684/D.cpp) | `constructive algorithms` `greedy` `sortings` `*1700` | Nov/11/2023 01:08 | 
-1646 | [A - Secret Sport](https://codeforces.com/contest/1894/problem/A) | [GNU C++20 (64)](./codeforces/1894/A.cpp) | `implementation` `strings` `*800` | Nov/11/2023 00:12 | 
+1648 | [D - Traps](https://codeforces.com/contest/1684/problem/D) | [GNU C++20 (64)](./codeforces/1684/D.cpp) | `constructive algorithms` `greedy` `sortings` `*1700` | Nov/11/2023 01:08 | 
+1647 | [A - Secret Sport](https://codeforces.com/contest/1894/problem/A) | [GNU C++20 (64)](./codeforces/1894/A.cpp) | `implementation` `strings` `*800` | Nov/11/2023 00:12 | 
+1646 | [A - Nastia and Nearly Good Numbers](https://codeforces.com/contest/1521/problem/A) | [GNU C++20 (64)](./codeforces/1521/A.cpp) | `constructive algorithms` `math` `number theory` `*1000` | Nov/07/2023 23:59 | 
 1645 | [A - Shovels and Swords](https://codeforces.com/contest/1366/problem/A) | [GNU C++20 (64)](./codeforces/1366/A.cpp) | `binary search` `greedy` `math` `*1100` | Nov/05/2023 23:58 | 
 1644 | [B - Moamen and k-subarrays](https://codeforces.com/contest/1557/problem/B) | [GNU C++20 (64)](./codeforces/1557/B.cpp) | `greedy` `sortings` `*1100` | Nov/05/2023 00:05 | 
 1643 | [B - Assigning to Classes](https://codeforces.com/contest/1300/problem/B) | [GNU C++20 (64)](./codeforces/1300/B.cpp) | `greedy` `implementation` `sortings` `*1000` | Nov/04/2023 01:30 | 
