@@ -30299,6 +30299,23 @@
     ],
     "timestamp": "Nov/05/2023 23:58"
   },
+  "CF232283606": {
+    "contest_id": 1894,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1894\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Secret Sport",
+    "problem_url": "https://codeforces.com/contest/1894/problem/A",
+    "submission_id": "CF232283606",
+    "submission_url": "https://codeforces.com/contest/1894/submission/232283606",
+    "tags": [
+      "implementation",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Nov/11/2023 00:12"
+  },
   "CF232291505": {
     "contest_id": 1684,
     "language": "GNU C++20 (64)",
