@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1649 | [A - Filling Shapes](https://codeforces.com/contest/1182/problem/A) | [GNU C++20 (64)](./codeforces/1182/A.cpp) | `dp` `math` `*1000` | Nov/15/2023 00:01 | 
 1648 | [D - Traps](https://codeforces.com/contest/1684/problem/D) | [GNU C++20 (64)](./codeforces/1684/D.cpp) | `constructive algorithms` `greedy` `sortings` `*1700` | Nov/11/2023 01:08 | 
 1647 | [A - Secret Sport](https://codeforces.com/contest/1894/problem/A) | [GNU C++20 (64)](./codeforces/1894/A.cpp) | `implementation` `strings` `*800` | Nov/11/2023 00:12 | 
 1646 | [A - Nastia and Nearly Good Numbers](https://codeforces.com/contest/1521/problem/A) | [GNU C++20 (64)](./codeforces/1521/A.cpp) | `constructive algorithms` `math` `number theory` `*1000` | Nov/07/2023 23:59 | 
