@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1651 | [A - Superhero Transformation](https://codeforces.com/contest/1111/problem/A) | [GNU C++20 (64)](./codeforces/1111/A.cpp) | `implementation` `strings` `*1000` | Nov/16/2023 23:59 | 
 1650 | [B - Minor Reduction](https://codeforces.com/contest/1626/problem/B) | [GNU C++20 (64)](./codeforces/1626/B.cpp) | `greedy` `strings` `*1100` | Nov/15/2023 19:44 | 
 1649 | [A - Filling Shapes](https://codeforces.com/contest/1182/problem/A) | [GNU C++20 (64)](./codeforces/1182/A.cpp) | `dp` `math` `*1000` | Nov/15/2023 00:01 | 
 1648 | [D - Traps](https://codeforces.com/contest/1684/problem/D) | [GNU C++20 (64)](./codeforces/1684/D.cpp) | `constructive algorithms` `greedy` `sortings` `*1700` | Nov/11/2023 01:08 | 
