@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1652 | [A - Mike and palindrome](https://codeforces.com/contest/798/problem/A) | [GNU C++20 (64)](./codeforces/798/A.cpp) | `brute force` `constructive algorithms` `strings` `*1000` | Nov/17/2023 17:15 | 
 1651 | [A - Superhero Transformation](https://codeforces.com/contest/1111/problem/A) | [GNU C++20 (64)](./codeforces/1111/A.cpp) | `implementation` `strings` `*1000` | Nov/16/2023 23:59 | 
 1650 | [B - Minor Reduction](https://codeforces.com/contest/1626/problem/B) | [GNU C++20 (64)](./codeforces/1626/B.cpp) | `greedy` `strings` `*1100` | Nov/15/2023 19:44 | 
 1649 | [A - Filling Shapes](https://codeforces.com/contest/1182/problem/A) | [GNU C++20 (64)](./codeforces/1182/A.cpp) | `dp` `math` `*1000` | Nov/15/2023 00:01 | 
