@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1660 | [B - Delete from the Left](https://codeforces.com/contest/1005/problem/B) | [GNU C++20 (64)](./codeforces/1005/B.cpp) | `brute force` `implementation` `strings` `*900` | Dec/15/2023 00:01 | 
 1659 | [A - Burenka Plays with Fractions](https://codeforces.com/contest/1720/problem/A) | [GNU C++20 (64)](./codeforces/1720/A.cpp) | `math` `number theory` `*900` | Dec/13/2023 23:34 | 
 1658 | [C - Removal of Unattractive Pairs](https://codeforces.com/contest/1907/problem/C) | [GNU C++20 (64)](./codeforces/1907/C.cpp) | `constructive algorithms` `greedy` `math` `strings` `*1100` | Dec/12/2023 23:02 | 
 1657 | [B - YetnotherrokenKeoard](https://codeforces.com/contest/1907/problem/B) | [GNU C++20 (64)](./codeforces/1907/B.cpp) | `data structures` `implementation` `strings` `*1000` | Dec/12/2023 00:27 | 
