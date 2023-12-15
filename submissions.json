@@ -30599,6 +30599,23 @@
     ],
     "timestamp": "Dec/15/2023 00:01"
   },
+  "CF237346045": {
+    "contest_id": 1900,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1900\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Laura and Operations",
+    "problem_url": "https://codeforces.com/contest/1900/problem/B",
+    "submission_id": "CF237346045",
+    "submission_url": "https://codeforces.com/contest/1900/submission/237346045",
+    "tags": [
+      "dp",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Dec/15/2023 18:57"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
