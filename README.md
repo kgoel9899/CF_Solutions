@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1662 | [B - Points on Plane](https://codeforces.com/contest/1809/problem/B) | [GNU C++20 (64)](./codeforces/1809/B.cpp) | `binary search` `greedy` `math` `*1000` | Dec/17/2023 02:16 | 
 1661 | [B - Laura and Operations](https://codeforces.com/contest/1900/problem/B) | [GNU C++20 (64)](./codeforces/1900/B.cpp) | `dp` `math` `*900` | Dec/15/2023 18:57 | 
 1660 | [B - Delete from the Left](https://codeforces.com/contest/1005/problem/B) | [GNU C++20 (64)](./codeforces/1005/B.cpp) | `brute force` `implementation` `strings` `*900` | Dec/15/2023 00:01 | 
 1659 | [A - Burenka Plays with Fractions](https://codeforces.com/contest/1720/problem/A) | [GNU C++20 (64)](./codeforces/1720/A.cpp) | `math` `number theory` `*900` | Dec/13/2023 23:34 | 
