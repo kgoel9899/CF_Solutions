@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1664 | [B - Red and Blue](https://codeforces.com/contest/1469/problem/B) | [GNU C++20 (64)](./codeforces/1469/B.cpp) | `dp` `greedy` `*1000` | Dec/18/2023 22:50 | 
 1663 | [B - Reverse Sort](https://codeforces.com/contest/1605/problem/B) | [GNU C++20 (64)](./codeforces/1605/B.cpp) | `greedy` `sortings` `*1000` | Dec/17/2023 23:18 | 
 1662 | [B - Points on Plane](https://codeforces.com/contest/1809/problem/B) | [GNU C++20 (64)](./codeforces/1809/B.cpp) | `binary search` `greedy` `math` `*1000` | Dec/17/2023 02:16 | 
 1661 | [B - Laura and Operations](https://codeforces.com/contest/1900/problem/B) | [GNU C++20 (64)](./codeforces/1900/B.cpp) | `dp` `math` `*900` | Dec/15/2023 18:57 | 
