@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1670 | [A - Party](https://codeforces.com/contest/115/problem/A) | [GNU C++20 (64)](./codeforces/115/A.cpp) | `dfs and similar` `graphs` `trees` `*900` | Dec/24/2023 15:50 | 
 1669 | [F - Alex's whims](https://codeforces.com/contest/1899/problem/F) | [GNU C++20 (64)](./codeforces/1899/F.cpp) | `constructive algorithms` `graphs` `greedy` `shortest paths` `trees` `*1600` | Dec/23/2023 21:09 | 
 1668 | [B - Begginer's Zelda](https://codeforces.com/contest/1905/problem/B) | [GNU C++20 (64)](./codeforces/1905/B.cpp) | `greedy` `trees` | Dec/22/2023 21:30 | 
 1667 | [A - Add and Divide](https://codeforces.com/contest/1485/problem/A) | [GNU C++20 (64)](./codeforces/1485/A.cpp) | `brute force` `greedy` `math` `number theory` `*1000` | Dec/22/2023 00:00 | 
