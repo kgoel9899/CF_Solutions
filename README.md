@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1672 | [B - 3-palindrome](https://codeforces.com/contest/805/problem/B) | [GNU C++20 (64)](./codeforces/805/B.cpp) | `constructive algorithms` `*1000` | Dec/28/2023 00:00 | 
 1671 | [D - Sum in the tree](https://codeforces.com/contest/1099/problem/D) | [GNU C++20 (64)](./codeforces/1099/D.cpp) | `constructive algorithms` `trees` `*1600` | Dec/26/2023 23:47 | 
 1670 | [A - Party](https://codeforces.com/contest/115/problem/A) | [GNU C++20 (64)](./codeforces/115/A.cpp) | `dfs and similar` `graphs` `trees` `*900` | Dec/24/2023 15:50 | 
 1669 | [F - Alex's whims](https://codeforces.com/contest/1899/problem/F) | [GNU C++20 (64)](./codeforces/1899/F.cpp) | `constructive algorithms` `graphs` `greedy` `shortest paths` `trees` `*1600` | Dec/23/2023 21:09 | 
