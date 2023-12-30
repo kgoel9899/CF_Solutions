@@ -30824,6 +30824,24 @@
     ],
     "timestamp": "Dec/28/2023 23:56"
   },
+  "CF239724527": {
+    "contest_id": 1915,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1915\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Unnatural Language Processing",
+    "problem_url": "https://codeforces.com/contest/1915/problem/D",
+    "submission_id": "CF239724527",
+    "submission_url": "https://codeforces.com/contest/1915/submission/239724527",
+    "tags": [
+      "dp",
+      "greedy",
+      "implementation",
+      "strings"
+    ],
+    "timestamp": "Dec/31/2023 00:55"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",

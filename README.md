@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1674 | [D - Unnatural Language Processing](https://codeforces.com/contest/1915/problem/D) | [GNU C++20 (64)](./codeforces/1915/D.cpp) | `dp` `greedy` `implementation` `strings` | Dec/31/2023 00:55 | 
 1673 | [A - Tricky Sum](https://codeforces.com/contest/598/problem/A) | [GNU C++20 (64)](./codeforces/598/A.cpp) | `math` `*900` | Dec/28/2023 23:56 | 
 1672 | [B - 3-palindrome](https://codeforces.com/contest/805/problem/B) | [GNU C++20 (64)](./codeforces/805/B.cpp) | `constructive algorithms` `*1000` | Dec/28/2023 00:00 | 
 1671 | [D - Sum in the tree](https://codeforces.com/contest/1099/problem/D) | [GNU C++20 (64)](./codeforces/1099/D.cpp) | `constructive algorithms` `trees` `*1600` | Dec/26/2023 23:47 | 
