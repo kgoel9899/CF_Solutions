@@ -1,63 +1,162 @@
-#include<bits/stdc++.h>
-using namespace std;
-#define MOD 1000000007
-#define mod 998244353
-#define int long long
-#define setpres cout << fixed << setprecision(10)
-#define all(x) (x).begin(), (x).end()
-#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
-const int INF = 1e18;
+#pragma GCC optimize("O2")
+#pragma GCC optimize("Ofast")
+#pragma GCC target("avx,avx2,fma")
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
 
-#ifdef DEBUG
-#define dbg(...) cout << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+using namespace std;
+using namespace __gnu_pbds;
+
+#define ll     long long
+#define _test   int _TEST; cin>>_TEST; while(_TEST--)
+#define ff     first
+#define ss     second
+#define pb     push_back
+#define ppb    pop_back
+#define pf     push_front
+#define ppf    pop_front
+
+template <typename T> using Ordered_Set_Tree =
+        tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+template <typename T> using Ordered_Multiset_Tree =
+        tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;
+
+template <typename A, typename B> ostream& operator<<(ostream& s, const pair<A, B>& self) {s << self.first << ' ' << self.second << '\n'; return s; }
+template <typename A, typename B> ostream& operator<<(ostream& s, const vector<pair<A, B>>& self) { for (auto &[a, b] : self) { s << a << ' ' << b << '\n'; } return s; }
+template <typename A, typename B> ostream& operator<<(ostream& s, const set<pair<A, B>>& self) { for (auto &[a, b] : self) { s << a << ' ' << b << '\n'; } return s; }
+template <typename A, typename B> ostream& operator<<(ostream& s, const multiset<pair<A, B>>& self) { for (auto &[a, b] : self) { s << a << ' ' << b << '\n'; } return s; }
+template <typename A, typename B, typename C> ostream& operator<<(ostream& s, tuple<A, B, C>& self) { s << get<0>(self) << ' ' << get<1>(self) << ' ' << get<2>(self); return s; }
+template <typename A, typename B, typename C, typename D> ostream& operator<<(ostream& s, tuple<A, B, C, D>& self) { s << get<0>(self) << ' ' << get<1>(self) << ' ' << get<2>(self) << ' ' << get<3>(self); return s; }
+template <typename T> ostream& operator<<(ostream& s, const vector<T>& self) { for (auto &e : self) { s << e << ' '; } return s; }
+template <typename T> ostream& operator<<(ostream& s, const set<T>& self) { for (auto &e : self) { s << e << ' '; } return s; }
+template <typename T> ostream& operator<<(ostream& s, const multiset<T>& self) { for (auto &e : self) { s << e << ' '; } return s; }
+template <typename A, typename B> ostream& operator<<(ostream& s, const map<A, B>& self) { for (auto &[a, b] : self) { s << a << ' ' << b << '\n'; } return s; }
+template <typename A, typename B> ostream& operator<<(ostream& s, const unordered_map<A, B>& self) { for (auto &[a, b] : self) { s << a << ' ' << b << '\n'; } return s; }
+template <typename A, typename B> istream& operator>>(istream& s, pair<A, B>& self) { s >> self.first >> self.second; return s; }
+template <typename A, typename B, typename C> istream& operator>>(istream& s, tuple<A, B, C>& self) { s >> get<0>(self) >> get<1>(self) >> get<2>(self); return s; }
+template <typename A, typename B, typename C, typename D> istream& operator>>(istream& s, tuple<A, B, C, D>& self) { s >> get<0>(self) >> get<1>(self) >> get<2>(self) >> get<3>(self); return s; }
+template <typename T> istream& operator>>(istream& s, vector<T>& self) { for (size_t i = 0; i < self.size(); ++i) { s >> self[i]; } return s; }
+
+#ifdef ONLINE_JUDGE
+#define debug
+#define _Print
 #else
-#define dbg(...)
+#define debug __debug
+#define _Print __Print
 #endif
 
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+///DEBUG
+void __Print(int t) {cerr << t;}
+void __Print(string t) {cerr << t;}
+void __Print(char t) {cerr << t;}
+void __Print(long long t) {cerr << t;}
+void __Print(double t) {cerr << t;}
+void __Print(unsigned long long t) {cerr << t;}
 
-void dbg_out() { cout << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
+template <class T, class V> void __Print(pair <T, V> &p);
+template <class T> void __Print(list <T> &v);
+template <class T> void __Print(vector <T> &v);
+template <class T> void __Print(deque <T> &v);
+template <class T, class V> void __Print(T *v, V sz);
+template <class T, class V, class P> void __Print(T *v, V sz, P sm);
+template <class T> void __Print(set <T> &v);
+template <class T, class V> void __Print(map <T, V> &v);
+template <class T> void __Print(multiset <T> &v);
 
-int32_t main() {
-    fast;
-    int tt = 1;
-    cin >> tt;
-    while(tt--) {
+template <class T, class V> void __Print(pair <T, V> &p) {cerr << "{"; __Print(p.ff); cerr << ","; __Print(p.ss); cerr << "}\n\n";}
+template <class T> void __Print(list <T> &v) {cerr << "[ "; for (T i : v) {__Print(i); cerr << " ";} cerr << "]\n\n";}
+template <class T> void __Print(vector <T> &v) {cerr << "[ "; for (T i : v) {__Print(i); cerr << " ";} cerr << "]\n\n";}
+template <class T> void __Print(deque <T> &v) {cerr << "[ "; for (T i : v) {__Print(i); cerr << " ";} cerr << "]\n\n";}
+template <class T, class V> void __Print(T *v, V sz) {cerr << "[ "; for(int i=0; i<sz; i++) {__Print(v[i]); cerr << " ";} cerr << "]\n\n";}
+template <class T, class V, class P> void __Print(T *v, V sz, P sm) {cerr << "[\n"; for(int i=0; i<sz; i++) { for(int j=0; j<sm; j++) {__Print(v[i][j]); cerr << " ";} cerr << "\n";} cerr << "]\n\n";}
+template <class T> void __Print(set <T> &v) {cerr << "[ "; for (T i : v) {__Print(i); cerr << " ";} cerr << "]\n\n";}
+template <class T> void __Print(unordered_set <T> &v) {cerr << "[ "; for (T i : v) {__Print(i); cerr << " ";} cerr << "]\n\n";}
+template <class T> void __Print(multiset <T>& v) {cerr << "[ "; for (T i : v) {__Print(i); cerr << " ";} cerr << "]\n\n";}
+template <class T, class V> void __Print(map <T, V> &v) {cerr << "[ "; for (auto i : v) {__Print(i); cerr << " ";} cerr << "]\n\n";}
+template <class T, class V> void __Print(unordered_map <T, V> &v) {cerr << "[ "; for (auto i : v) {__Print(i); cerr << " ";} cerr << "]\n\n";}
+
+#define __debug(...) debug_out(vec_splitter(#__VA_ARGS__), 0, __LINE__, __VA_ARGS__)
+vector<string> vec_splitter(string s)
+{
+    s += ',';
+    vector<string> res;
+    while(!s.empty())
+    {
+        res.push_back(s.substr(0, s.find(',')));
+        s = s.substr(s.find(',') + 1);
+    }
+    return res;
+}
+void debug_out(vector<string> __attribute__ ((unused)) args, __attribute__ ((unused)) int idx, __attribute__ ((unused)) int LINE_NUM) { cerr << endl; }
+template <typename Head, typename... Tail> void debug_out(vector<string> args, int idx, int LINE_NUM, Head H, Tail... T)
+{
+    if(idx > 0) cerr << ", "; else cerr << "Line(" << LINE_NUM << ") ";
+    stringstream ss; ss << H;
+    cerr << args[idx] << " = " << ss.str();
+    debug_out(args, idx + 1, LINE_NUM, T...);
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    ///freopen("input.txt", "r", stdin);
+    ///freopen("output.txt", "w", stdout);
+
+    _test
+    {
         int n;
-        cin >> n;
-        vector<int> v(n);
-        map<int, vector<int>> m;
-        for(int i=0;i<n;i++) {
-            cin >> v[i];
-            m[v[i]].push_back(i);
+        cin>>n;
+
+        vector<int> a(n);
+        cin>>a;
+
+        map<int, int> mp;
+
+        int c = 0;
+
+        int x=-1, y=-1;
+
+        for(auto e: a)
+        {
+            mp[e]++;
+            c += (mp[e] == 2);
+
+            if(mp[e]>1 && x==-1)      x = e;
+            else if(mp[e]>1 && x!=e)  y = e;
         }
-        vector<int> ans(n, 1);
-        int ct = 0;
-        for(auto& i : m) {
-            int sz = i.second.size();
-            if(sz == 1) continue;
-            ct++;
-            ans[i.second[0]] = 1;
-            if(ct == 1) {
-                for(int j=1;j<sz;j++) {
-                    ans[i.second[j]] = 2;
-                }
-            } else {
-                for(int j=1;j<sz;j++) {
-                    ans[i.second[j]] = 3;
-                }
-            }
-        }
-        if(ct < 2) {
-            cout << -1 << endl;
+
+        if(c < 2)
+        {
+            cout<<-1<<"\n";
             continue;
         }
-        for(auto& i : ans) {
-            cout << i << " ";
+
+        mp[x] = mp[y] = 1;
+
+        debug(x, y);
+
+        for(auto e: a)
+        {
+            if(e == x)
+            {
+                if(mp[e])       cout<<1<<" ";
+                else            cout<<2<<" ";
+                mp[e] = 0;
+            }
+            else if(e == y)
+            {
+                if(mp[e])       cout<<1<<" ";
+                else            cout<<3<<" ";
+                mp[e] = 0;
+            }
+            else
+                cout<<3<<" ";
         }
-        cout << endl;
+
+        cout<<"\n";
     }
 }
