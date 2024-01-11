@@ -31031,6 +31031,27 @@
     ],
     "timestamp": "Jan/11/2024 00:06"
   },
+  "CF241206681": {
+    "contest_id": 1732,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1732\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Bestie",
+    "problem_url": "https://codeforces.com/contest/1732/problem/A",
+    "submission_id": "CF241206681",
+    "submission_url": "https://codeforces.com/contest/1732/submission/241206681",
+    "tags": [
+      "brute force",
+      "combinatorics",
+      "constructive algorithms",
+      "implementation",
+      "math",
+      "number theory",
+      "*1000"
+    ],
+    "timestamp": "Jan/12/2024 00:07"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",

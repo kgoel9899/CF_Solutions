@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1684 | [A - Bestie](https://codeforces.com/contest/1732/problem/A) | [GNU C++20 (64)](./codeforces/1732/A.cpp) | `brute force` `combinatorics` `constructive algorithms` `implementation` `math` `number theory` `*1000` | Jan/12/2024 00:07 | 
 1683 | [B - Two Out of Three](https://codeforces.com/contest/1894/problem/B) | [GNU C++20 (64)](./codeforces/1894/B.cpp) | `constructive algorithms` `*1000` | Jan/11/2024 00:06 | 
 1682 | [B - Swap and Delete](https://codeforces.com/contest/1913/problem/B) | [GNU C++20 (64)](./codeforces/1913/B.cpp) | `strings` `*1000` | Jan/10/2024 00:02 | 
 1681 | [B - Erase First or Second Letter](https://codeforces.com/contest/1917/problem/B) | [GNU C++20 (64)](./codeforces/1917/B.cpp) | `brute force` `combinatorics` `data structures` `dp` `strings` `*1100` | Jan/04/2024 23:56 | 
