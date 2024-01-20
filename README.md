@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1691 | [B - Summation Game](https://codeforces.com/contest/1920/problem/B) | [GNU C++20 (64)](./codeforces/1920/B.cpp) | `games` `greedy` `math` `sortings` `*1100` | Jan/20/2024 22:40 | 
 1690 | [B - Forming Triangles](https://codeforces.com/contest/1922/problem/B) | [GNU C++20 (64)](./codeforces/1922/B.cpp) | `combinatorics` `constructive algorithms` `math` `*1200` | Jan/19/2024 22:14 | 
 1689 | [D - Very Different Array](https://codeforces.com/contest/1921/problem/D) | [GNU C++20 (64)](./codeforces/1921/D.cpp) | `data structures` `greedy` `sortings` `two pointers` `*1100` | Jan/18/2024 19:49 | 
 1688 | [C - Sending Messages](https://codeforces.com/contest/1921/problem/C) | [GNU C++20 (64)](./codeforces/1921/C.cpp) | `greedy` `math` `*900` | Jan/17/2024 18:53 | 
