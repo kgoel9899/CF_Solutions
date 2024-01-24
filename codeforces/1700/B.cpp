@@ -21,6 +21,12 @@ template<typename T_container, typename T = typename enable_if<!is_same<T_contai
 void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 
+bool all9(string& s) {
+    for(auto& i : s) {
+        if(i != '9') return false;
+    }
+    return true;
+}
 int32_t main() {
     fast;
     int tt = 1;
