@@ -31274,6 +31274,23 @@
     ],
     "timestamp": "Jan/26/2024 21:28"
   },
+  "CF243678442": {
+    "contest_id": 767,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\767\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Snacktower",
+    "problem_url": "https://codeforces.com/contest/767/problem/A",
+    "submission_id": "CF243678442",
+    "submission_url": "https://codeforces.com/contest/767/submission/243678442",
+    "tags": [
+      "data structures",
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Jan/28/2024 01:57"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
