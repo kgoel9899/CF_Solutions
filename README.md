@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1697 | [A - Shuffle Hashing](https://codeforces.com/contest/1278/problem/A) | [GNU C++20 (64)](./codeforces/1278/A.cpp) | `brute force` `implementation` `strings` `*1000` | Jan/29/2024 00:01 | 
 1696 | [A - Snacktower](https://codeforces.com/contest/767/problem/A) | [GNU C++20 (64)](./codeforces/767/A.cpp) | `data structures` `implementation` `*1100` | Jan/28/2024 01:57 | 
 1695 | [B - Perfect Number](https://codeforces.com/contest/919/problem/B) | [GNU C++20 (64)](./codeforces/919/B.cpp) | `binary search` `brute force` `dp` `implementation` `number theory` `*1100` | Jan/26/2024 21:28 | 
 1694 | [B - Sifid and Strange Subsequences](https://codeforces.com/contest/1529/problem/B) | [GNU C++20 (64)](./codeforces/1529/B.cpp) | `greedy` `math` `sortings` `*1100` | Jan/25/2024 22:06 | 
