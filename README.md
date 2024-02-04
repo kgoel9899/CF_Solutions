@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1704 | [B - The Eternal Immortality](https://codeforces.com/contest/869/problem/B) | [GNU C++20 (64)](./codeforces/869/B.cpp) | `math` `*1100` | Feb/04/2024 15:37 | 
 1703 | [B - Passwords](https://codeforces.com/contest/721/problem/B) | [GNU C++20 (64)](./codeforces/721/B.cpp) | `implementation` `math` `sortings` `strings` `*1100` | Feb/04/2024 00:12 | 
 1702 | [B - The number on the board](https://codeforces.com/contest/835/problem/B) | [GNU C++20 (64)](./codeforces/835/B.cpp) | `greedy` `*1100` | Feb/02/2024 12:11 | 
 1701 | [A - Joysticks](https://codeforces.com/contest/651/problem/A) | [GNU C++20 (64)](./codeforces/651/A.cpp) | `dp` `greedy` `implementation` `math` `*1100` | Feb/01/2024 19:34 | 
