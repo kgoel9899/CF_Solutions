@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1705 | [B - Proper Nutrition](https://codeforces.com/contest/898/problem/B) | [GNU C++20 (64)](./codeforces/898/B.cpp) | `brute force` `implementation` `number theory` `*1100` | Feb/06/2024 15:44 | 
+1706 | [B - Proper Nutrition](https://codeforces.com/contest/898/problem/B) | [GNU C++20 (64)](./codeforces/898/B.cpp) | `brute force` `implementation` `number theory` `*1100` | Feb/06/2024 15:44 | 
+1705 | [B - Kalindrome Array](https://codeforces.com/contest/1610/problem/B) | [GNU C++20 (64)](./codeforces/1610/B.cpp) | `greedy` `two pointers` `*1100` | Feb/05/2024 12:45 | 
 1704 | [B - The Eternal Immortality](https://codeforces.com/contest/869/problem/B) | [GNU C++20 (64)](./codeforces/869/B.cpp) | `math` `*1100` | Feb/04/2024 15:37 | 
 1703 | [B - Passwords](https://codeforces.com/contest/721/problem/B) | [GNU C++20 (64)](./codeforces/721/B.cpp) | `implementation` `math` `sortings` `strings` `*1100` | Feb/04/2024 00:12 | 
 1702 | [B - The number on the board](https://codeforces.com/contest/835/problem/B) | [GNU C++20 (64)](./codeforces/835/B.cpp) | `greedy` `*1100` | Feb/02/2024 12:11 | 
