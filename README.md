@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1707 | [B - Dorms War](https://codeforces.com/contest/1670/problem/B) | [GNU C++20 (64)](./codeforces/1670/B.cpp) | `brute force` `implementation` `strings` `*1100` | Feb/08/2024 22:11 | 
 1706 | [B - Proper Nutrition](https://codeforces.com/contest/898/problem/B) | [GNU C++20 (64)](./codeforces/898/B.cpp) | `brute force` `implementation` `number theory` `*1100` | Feb/06/2024 15:44 | 
 1705 | [B - Kalindrome Array](https://codeforces.com/contest/1610/problem/B) | [GNU C++20 (64)](./codeforces/1610/B.cpp) | `greedy` `two pointers` `*1100` | Feb/05/2024 12:45 | 
 1704 | [B - The Eternal Immortality](https://codeforces.com/contest/869/problem/B) | [GNU C++20 (64)](./codeforces/869/B.cpp) | `math` `*1100` | Feb/04/2024 15:37 | 
