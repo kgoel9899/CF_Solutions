@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1709 | [B - Non-Coprime Partition](https://codeforces.com/contest/1038/problem/B) | [GNU C++20 (64)](./codeforces/1038/B.cpp) | `constructive algorithms` `math` `*1100` | Feb/09/2024 21:19 | 
 1708 | [B - Dorms War](https://codeforces.com/contest/1670/problem/B) | [GNU C++20 (64)](./codeforces/1670/B.cpp) | `brute force` `implementation` `strings` `*1100` | Feb/08/2024 22:11 | 
 1707 | [B - Weird Subtraction Process](https://codeforces.com/contest/946/problem/B) | [GNU C++20 (64)](./codeforces/946/B.cpp) | `math` `number theory` `*1100` | Feb/07/2024 17:17 | 
 1706 | [B - Proper Nutrition](https://codeforces.com/contest/898/problem/B) | [GNU C++20 (64)](./codeforces/898/B.cpp) | `brute force` `implementation` `number theory` `*1100` | Feb/06/2024 15:44 | 
