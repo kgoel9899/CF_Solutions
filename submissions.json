@@ -31520,6 +31520,23 @@
     ],
     "timestamp": "Feb/09/2024 21:19"
   },
+  "CF245750850": {
+    "contest_id": 1559,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1559\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Mocha and Hiking",
+    "problem_url": "https://codeforces.com/contest/1559/problem/C",
+    "submission_id": "CF245750850",
+    "submission_url": "https://codeforces.com/contest/1559/submission/245750850",
+    "tags": [
+      "constructive algorithms",
+      "graphs",
+      "*1200"
+    ],
+    "timestamp": "Feb/10/2024 23:06"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
