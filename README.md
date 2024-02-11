@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1711 | [B - Creating the Contest](https://codeforces.com/contest/1029/problem/B) | [GNU C++20 (64)](./codeforces/1029/B.cpp) | `dp` `greedy` `math` `*1200` | Feb/11/2024 19:22 | 
 1710 | [C - Mocha and Hiking](https://codeforces.com/contest/1559/problem/C) | [GNU C++20 (64)](./codeforces/1559/C.cpp) | `constructive algorithms` `graphs` `*1200` | Feb/10/2024 23:06 | 
 1709 | [B - Non-Coprime Partition](https://codeforces.com/contest/1038/problem/B) | [GNU C++20 (64)](./codeforces/1038/B.cpp) | `constructive algorithms` `math` `*1100` | Feb/09/2024 21:19 | 
 1708 | [B - Dorms War](https://codeforces.com/contest/1670/problem/B) | [GNU C++20 (64)](./codeforces/1670/B.cpp) | `brute force` `implementation` `strings` `*1100` | Feb/08/2024 22:11 | 
