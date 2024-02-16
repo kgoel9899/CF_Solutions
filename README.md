@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1712 | [E - Anna and the Valentine's Day Gift](https://codeforces.com/contest/1931/problem/E) | [GNU C++20 (64)](./codeforces/1931/E.cpp) | `games` `greedy` `math` `sortings` `*1400` | Feb/24/2024 15:55 | 
+1713 | [E - Anna and the Valentine's Day Gift](https://codeforces.com/contest/1931/problem/E) | [GNU C++20 (64)](./codeforces/1931/E.cpp) | `games` `greedy` `math` `sortings` `*1400` | Feb/24/2024 15:55 | 
+1712 | [D - Divisible Pairs](https://codeforces.com/contest/1931/problem/D) | [GNU C++20 (64)](./codeforces/1931/D.cpp) | `combinatorics` `math` `number theory` `*1300` | Feb/16/2024 21:07 | 
 1711 | [B - Creating the Contest](https://codeforces.com/contest/1029/problem/B) | [GNU C++20 (64)](./codeforces/1029/B.cpp) | `dp` `greedy` `math` `*1200` | Feb/11/2024 19:22 | 
 1710 | [C - Mocha and Hiking](https://codeforces.com/contest/1559/problem/C) | [GNU C++20 (64)](./codeforces/1559/C.cpp) | `constructive algorithms` `graphs` `*1200` | Feb/10/2024 23:06 | 
 1709 | [B - Non-Coprime Partition](https://codeforces.com/contest/1038/problem/B) | [GNU C++20 (64)](./codeforces/1038/B.cpp) | `constructive algorithms` `math` `*1100` | Feb/09/2024 21:19 | 
