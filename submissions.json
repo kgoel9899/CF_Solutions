@@ -31643,6 +31643,25 @@
     ],
     "timestamp": "Feb/24/2024 15:55"
   },
+  "CF248217095": {
+    "contest_id": 1932,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1932\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "LR-remainders",
+    "problem_url": "https://codeforces.com/contest/1932/problem/C",
+    "submission_id": "CF248217095",
+    "submission_url": "https://codeforces.com/contest/1932/submission/248217095",
+    "tags": [
+      "brute force",
+      "data structures",
+      "implementation",
+      "math",
+      "two pointers"
+    ],
+    "timestamp": "Feb/25/2024 15:55"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
