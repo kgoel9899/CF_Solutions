@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1718 | [C - Vlad and a Sum of Sum of Digits](https://codeforces.com/contest/1926/problem/C) | [GNU C++20 (64)](./codeforces/1926/C.cpp) | `dp` `implementation` | Feb/26/2024 19:09 | 
 1717 | [C - LR-remainders](https://codeforces.com/contest/1932/problem/C) | [GNU C++20 (64)](./codeforces/1932/C.cpp) | `brute force` `data structures` `implementation` `math` `two pointers` | Feb/25/2024 15:55 | 
 1716 | [E - Anna and the Valentine's Day Gift](https://codeforces.com/contest/1931/problem/E) | [GNU C++20 (64)](./codeforces/1931/E.cpp) | `games` `greedy` `math` `sortings` `*1400` | Feb/24/2024 15:55 | 
 1715 | [D - Divisible Pairs](https://codeforces.com/contest/1931/problem/D) | [GNU C++20 (64)](./codeforces/1931/D.cpp) | `combinatorics` `math` `number theory` `*1300` | Feb/16/2024 21:07 | 
