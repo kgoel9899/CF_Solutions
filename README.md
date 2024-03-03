@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1721 | [B - Chaya Calendar](https://codeforces.com/contest/1932/problem/B) | [GNU C++20 (64)](./codeforces/1932/B.cpp) | `number theory` | Mar/04/2024 22:16 | 
+1722 | [B - Chaya Calendar](https://codeforces.com/contest/1932/problem/B) | [GNU C++20 (64)](./codeforces/1932/B.cpp) | `number theory` | Mar/04/2024 22:16 | 
+1721 | [B - Yet Another Coin Problem](https://codeforces.com/contest/1934/problem/B) | [GNU C++20 (64)](./codeforces/1934/B.cpp) | `brute force` `dp` `greedy` `math` | Mar/03/2024 23:10 | 
 1720 | [D - Vlad and Division](https://codeforces.com/contest/1926/problem/D) | [GNU C++20 (64)](./codeforces/1926/D.cpp) | `bitmasks` `greedy` | Mar/01/2024 19:07 | 
 1719 | [C - Turtle Fingers: Count the Values of k](https://codeforces.com/contest/1933/problem/C) | [GNU C++20 (64)](./codeforces/1933/C.cpp) | `brute force` `implementation` `math` `number theory` | Feb/29/2024 14:09 | 
 1718 | [C - Vlad and a Sum of Sum of Digits](https://codeforces.com/contest/1926/problem/C) | [GNU C++20 (64)](./codeforces/1926/C.cpp) | `dp` `implementation` | Feb/26/2024 19:09 | 
