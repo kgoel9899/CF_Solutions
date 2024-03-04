@@ -31712,6 +31712,21 @@
     ],
     "timestamp": "Mar/01/2024 19:07"
   },
+  "CF249628683": {
+    "contest_id": 1932,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces\\1932\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Chaya Calendar",
+    "problem_url": "https://codeforces.com/contest/1932/problem/B",
+    "submission_id": "CF249628683",
+    "submission_url": "https://codeforces.com/contest/1932/submission/249628683",
+    "tags": [
+      "number theory"
+    ],
+    "timestamp": "Mar/04/2024 22:16"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
