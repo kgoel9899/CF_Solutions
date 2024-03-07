@@ -31745,6 +31745,22 @@
     ],
     "timestamp": "Mar/04/2024 22:16"
   },
+  "CF250112895": {
+    "contest_id": 1935,
+    "language": "C++20 (GCC 11-64)",
+    "path": "codeforces\\1935\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Informatics in MAC",
+    "problem_url": "https://codeforces.com/contest/1935/problem/B",
+    "submission_id": "CF250112895",
+    "submission_url": "https://codeforces.com/contest/1935/submission/250112895",
+    "tags": [
+      "constructive algorithms",
+      "*1200"
+    ],
+    "timestamp": "Mar/07/2024 22:50"
+  },
   "CF250254471": {
     "contest_id": 1923,
     "language": "C++20 (GCC 11-64)",
