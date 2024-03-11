@@ -13,13 +13,14 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1729 | [D - Seraphim the Owl](https://codeforces.com/contest/1945/problem/D) | [C++17 (GCC 7-32)](./codeforces/1945/D.cpp) | `dp` `greedy` | Mar/22/2024 00:08 | 
-1728 | [C - Left and Right Houses](https://codeforces.com/contest/1945/problem/C) | [C++17 (GCC 7-32)](./codeforces/1945/C.cpp) | `brute force` | Mar/20/2024 16:21 | 
-1727 | [C - Arrow Path](https://codeforces.com/contest/1948/problem/C) | [C++17 (GCC 7-32)](./codeforces/1948/C.cpp) | `brute force` `constructive algorithms` `dfs and similar` `dp` `graphs` `shortest paths` | Mar/17/2024 15:04 | 
-1726 | [C - Penalty](https://codeforces.com/contest/1553/problem/C) | [C++17 (GCC 7-32)](./codeforces/1553/C.cpp) | `bitmasks` `brute force` `dp` `greedy` `*1200` | Mar/15/2024 16:28 | 
-1725 | [B - A Balanced Problemset?](https://codeforces.com/contest/1925/problem/B) | [C++17 (GCC 7-32)](./codeforces/1925/B.cpp) | `brute force` `greedy` `math` `number theory` `*1200` | Mar/14/2024 16:11 | 
-1724 | [E - Rudolf and k Bridges](https://codeforces.com/contest/1941/problem/E) | [C++17 (GCC 7-32)](./codeforces/1941/E.cpp) | `binary search` `data structures` `dp` `two pointers` `*1600` | Mar/14/2024 00:04 | 
-1723 | [D - Rudolf and the Ball Game](https://codeforces.com/contest/1941/problem/D) | [C++17 (GCC 7-32)](./codeforces/1941/D.cpp) | `dfs and similar` `dp` `implementation` `*1200` | Mar/12/2024 17:54 | 
+1730 | [D - Seraphim the Owl](https://codeforces.com/contest/1945/problem/D) | [C++17 (GCC 7-32)](./codeforces/1945/D.cpp) | `dp` `greedy` | Mar/22/2024 00:08 | 
+1729 | [C - Left and Right Houses](https://codeforces.com/contest/1945/problem/C) | [C++17 (GCC 7-32)](./codeforces/1945/C.cpp) | `brute force` | Mar/20/2024 16:21 | 
+1728 | [C - Arrow Path](https://codeforces.com/contest/1948/problem/C) | [C++17 (GCC 7-32)](./codeforces/1948/C.cpp) | `brute force` `constructive algorithms` `dfs and similar` `dp` `graphs` `shortest paths` | Mar/17/2024 15:04 | 
+1727 | [C - Penalty](https://codeforces.com/contest/1553/problem/C) | [C++17 (GCC 7-32)](./codeforces/1553/C.cpp) | `bitmasks` `brute force` `dp` `greedy` `*1200` | Mar/15/2024 16:28 | 
+1726 | [B - A Balanced Problemset?](https://codeforces.com/contest/1925/problem/B) | [C++17 (GCC 7-32)](./codeforces/1925/B.cpp) | `brute force` `greedy` `math` `number theory` `*1200` | Mar/14/2024 16:11 | 
+1725 | [E - Rudolf and k Bridges](https://codeforces.com/contest/1941/problem/E) | [C++17 (GCC 7-32)](./codeforces/1941/E.cpp) | `binary search` `data structures` `dp` `two pointers` `*1600` | Mar/14/2024 00:04 | 
+1724 | [D - Rudolf and the Ball Game](https://codeforces.com/contest/1941/problem/D) | [C++17 (GCC 7-32)](./codeforces/1941/D.cpp) | `dfs and similar` `dp` `implementation` `*1200` | Mar/12/2024 17:54 | 
+1723 | [C - Rudolf and the Ugly String](https://codeforces.com/contest/1941/problem/C) | [C++17 (GCC 7-32)](./codeforces/1941/C.cpp) | `dp` `greedy` `strings` `*900` | Mar/11/2024 22:29 | 
 1722 | [B - Chaya Calendar](https://codeforces.com/contest/1932/problem/B) | [GNU C++20 (64)](./codeforces/1932/B.cpp) | `number theory` | Mar/04/2024 22:16 | 
 1721 | [B - Yet Another Coin Problem](https://codeforces.com/contest/1934/problem/B) | [GNU C++20 (64)](./codeforces/1934/B.cpp) | `brute force` `dp` `greedy` `math` | Mar/03/2024 23:10 | 
 1720 | [D - Vlad and Division](https://codeforces.com/contest/1926/problem/D) | [GNU C++20 (64)](./codeforces/1926/D.cpp) | `bitmasks` `greedy` | Mar/01/2024 19:07 | 
