@@ -13,10 +13,11 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1726 | [D - Seraphim the Owl](https://codeforces.com/contest/1945/problem/D) | [C++17 (GCC 7-32)](./codeforces/1945/D.cpp) | `dp` `greedy` | Mar/22/2024 00:08 | 
-1725 | [C - Left and Right Houses](https://codeforces.com/contest/1945/problem/C) | [C++17 (GCC 7-32)](./codeforces/1945/C.cpp) | `brute force` | Mar/20/2024 16:21 | 
-1724 | [C - Arrow Path](https://codeforces.com/contest/1948/problem/C) | [C++17 (GCC 7-32)](./codeforces/1948/C.cpp) | `brute force` `constructive algorithms` `dfs and similar` `dp` `graphs` `shortest paths` | Mar/17/2024 15:04 | 
-1723 | [C - Penalty](https://codeforces.com/contest/1553/problem/C) | [C++17 (GCC 7-32)](./codeforces/1553/C.cpp) | `bitmasks` `brute force` `dp` `greedy` `*1200` | Mar/15/2024 16:28 | 
+1727 | [D - Seraphim the Owl](https://codeforces.com/contest/1945/problem/D) | [C++17 (GCC 7-32)](./codeforces/1945/D.cpp) | `dp` `greedy` | Mar/22/2024 00:08 | 
+1726 | [C - Left and Right Houses](https://codeforces.com/contest/1945/problem/C) | [C++17 (GCC 7-32)](./codeforces/1945/C.cpp) | `brute force` | Mar/20/2024 16:21 | 
+1725 | [C - Arrow Path](https://codeforces.com/contest/1948/problem/C) | [C++17 (GCC 7-32)](./codeforces/1948/C.cpp) | `brute force` `constructive algorithms` `dfs and similar` `dp` `graphs` `shortest paths` | Mar/17/2024 15:04 | 
+1724 | [C - Penalty](https://codeforces.com/contest/1553/problem/C) | [C++17 (GCC 7-32)](./codeforces/1553/C.cpp) | `bitmasks` `brute force` `dp` `greedy` `*1200` | Mar/15/2024 16:28 | 
+1723 | [B - A Balanced Problemset?](https://codeforces.com/contest/1925/problem/B) | [C++17 (GCC 7-32)](./codeforces/1925/B.cpp) | `brute force` `greedy` `math` `number theory` `*1200` | Mar/14/2024 16:11 | 
 1722 | [B - Chaya Calendar](https://codeforces.com/contest/1932/problem/B) | [GNU C++20 (64)](./codeforces/1932/B.cpp) | `number theory` | Mar/04/2024 22:16 | 
 1721 | [B - Yet Another Coin Problem](https://codeforces.com/contest/1934/problem/B) | [GNU C++20 (64)](./codeforces/1934/B.cpp) | `brute force` `dp` `greedy` `math` | Mar/03/2024 23:10 | 
 1720 | [D - Vlad and Division](https://codeforces.com/contest/1926/problem/D) | [GNU C++20 (64)](./codeforces/1926/D.cpp) | `bitmasks` `greedy` | Mar/01/2024 19:07 | 
