@@ -31745,6 +31745,22 @@
     ],
     "timestamp": "Mar/04/2024 22:16"
   },
+  "CF252635145": {
+    "contest_id": 1945,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1945\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Seraphim the Owl",
+    "problem_url": "https://codeforces.com/contest/1945/problem/D",
+    "submission_id": "CF252635145",
+    "submission_url": "https://codeforces.com/contest/1945/submission/252635145",
+    "tags": [
+      "dp",
+      "greedy"
+    ],
+    "timestamp": "Mar/22/2024 00:08"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
