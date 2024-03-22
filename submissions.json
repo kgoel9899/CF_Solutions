@@ -31999,6 +31999,22 @@
     ],
     "timestamp": "Mar/22/2024 00:08"
   },
+  "CF252821585": {
+    "contest_id": 1946,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1946\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Maximum Sum",
+    "problem_url": "https://codeforces.com/contest/1946/problem/B",
+    "submission_id": "CF252821585",
+    "submission_url": "https://codeforces.com/contest/1946/submission/252821585",
+    "tags": [
+      "greedy",
+      "math"
+    ],
+    "timestamp": "Mar/23/2024 00:16"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
