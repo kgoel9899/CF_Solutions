@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1737 | [J - Send the Fool Further! (easy)](https://codeforces.com/contest/802/problem/J) | [C++17 (GCC 7-32)](./codeforces/802/J.cpp) | `dfs and similar` `graphs` `trees` `*1400` | Mar/23/2024 14:21 | 
 1736 | [B - Maximum Sum](https://codeforces.com/contest/1946/problem/B) | [C++17 (GCC 7-32)](./codeforces/1946/B.cpp) | `greedy` `math` | Mar/23/2024 00:16 | 
 1735 | [D - Seraphim the Owl](https://codeforces.com/contest/1945/problem/D) | [C++17 (GCC 7-32)](./codeforces/1945/D.cpp) | `dp` `greedy` | Mar/22/2024 00:08 | 
 1734 | [C - Left and Right Houses](https://codeforces.com/contest/1945/problem/C) | [C++17 (GCC 7-32)](./codeforces/1945/C.cpp) | `brute force` | Mar/20/2024 16:21 | 
