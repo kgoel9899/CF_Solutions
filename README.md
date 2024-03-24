@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1738 | [C - Anji's Binary Tree](https://codeforces.com/contest/1900/problem/C) | [C++17 (GCC 7-32)](./codeforces/1900/C.cpp) | `dfs and similar` `dp` `trees` `*1300` | Mar/24/2024 22:37 | 
 1737 | [J - Send the Fool Further! (easy)](https://codeforces.com/contest/802/problem/J) | [C++17 (GCC 7-32)](./codeforces/802/J.cpp) | `dfs and similar` `graphs` `trees` `*1400` | Mar/23/2024 14:21 | 
 1736 | [B - Maximum Sum](https://codeforces.com/contest/1946/problem/B) | [C++17 (GCC 7-32)](./codeforces/1946/B.cpp) | `greedy` `math` | Mar/23/2024 00:16 | 
 1735 | [D - Seraphim the Owl](https://codeforces.com/contest/1945/problem/D) | [C++17 (GCC 7-32)](./codeforces/1945/D.cpp) | `dp` `greedy` | Mar/22/2024 00:08 | 
