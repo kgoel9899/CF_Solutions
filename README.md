@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1740 | [B - Array Fix](https://codeforces.com/contest/1948/problem/B) | [C++17 (GCC 7-32)](./codeforces/1948/B.cpp) | `brute force` `dp` `greedy` `implementation` `*1100` | Mar/26/2024 23:49 | 
 1739 | [B - Equal XOR](https://codeforces.com/contest/1944/problem/B) | [C++17 (GCC 7-32)](./codeforces/1944/B.cpp) | `bitmasks` `constructive algorithms` `*1100` | Mar/26/2024 00:02 | 
 1738 | [C - Anji's Binary Tree](https://codeforces.com/contest/1900/problem/C) | [C++17 (GCC 7-32)](./codeforces/1900/C.cpp) | `dfs and similar` `dp` `trees` `*1300` | Mar/24/2024 22:37 | 
 1737 | [J - Send the Fool Further! (easy)](https://codeforces.com/contest/802/problem/J) | [C++17 (GCC 7-32)](./codeforces/802/J.cpp) | `dfs and similar` `graphs` `trees` `*1400` | Mar/23/2024 14:21 | 

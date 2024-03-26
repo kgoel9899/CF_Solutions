@@ -32081,6 +32081,25 @@
     ],
     "timestamp": "Mar/26/2024 00:02"
   },
+  "CF253393040": {
+    "contest_id": 1948,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1948\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Array Fix",
+    "problem_url": "https://codeforces.com/contest/1948/problem/B",
+    "submission_id": "CF253393040",
+    "submission_url": "https://codeforces.com/contest/1948/submission/253393040",
+    "tags": [
+      "brute force",
+      "dp",
+      "greedy",
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Mar/26/2024 23:49"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
