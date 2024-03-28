@@ -32117,6 +32117,23 @@
     ],
     "timestamp": "Mar/27/2024 22:28"
   },
+  "CF253834750": {
+    "contest_id": 1950,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1950\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Product of Binary Decimals",
+    "problem_url": "https://codeforces.com/contest/1950/problem/D",
+    "submission_id": "CF253834750",
+    "submission_url": "https://codeforces.com/contest/1950/submission/253834750",
+    "tags": [
+      "dp",
+      "implementation",
+      "number theory"
+    ],
+    "timestamp": "Mar/28/2024 23:19"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
