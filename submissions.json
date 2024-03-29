@@ -32134,6 +32134,22 @@
     ],
     "timestamp": "Mar/28/2024 23:19"
   },
+  "CF253979459": {
+    "contest_id": 1950,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1950\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Clock Conversion",
+    "problem_url": "https://codeforces.com/contest/1950/problem/C",
+    "submission_id": "CF253979459",
+    "submission_url": "https://codeforces.com/contest/1950/submission/253979459",
+    "tags": [
+      "implementation",
+      "math"
+    ],
+    "timestamp": "Mar/29/2024 23:01"
+  },
   "CF254322171": {
     "contest_id": 1950,
     "language": "C++17 (GCC 7-32)",
