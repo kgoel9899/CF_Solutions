@@ -13,8 +13,9 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1744 | [B - Collecting Game](https://codeforces.com/contest/1904/problem/B) | [C++17 (GCC 7-32)](./codeforces/1904/B.cpp) | `binary search` `dp` `greedy` `sortings` `two pointers` `*1100` | Apr/03/2024 21:10 | 
-1743 | [B - Binary Path](https://codeforces.com/contest/1937/problem/B) | [C++17 (GCC 7-32)](./codeforces/1937/B.cpp) | `dp` `greedy` `implementation` `*1300` | Apr/01/2024 15:38 | 
+1745 | [B - Collecting Game](https://codeforces.com/contest/1904/problem/B) | [C++17 (GCC 7-32)](./codeforces/1904/B.cpp) | `binary search` `dp` `greedy` `sortings` `two pointers` `*1100` | Apr/03/2024 21:10 | 
+1744 | [B - Binary Path](https://codeforces.com/contest/1937/problem/B) | [C++17 (GCC 7-32)](./codeforces/1937/B.cpp) | `dp` `greedy` `implementation` `*1300` | Apr/01/2024 15:38 | 
+1743 | [C - Clock Conversion](https://codeforces.com/contest/1950/problem/C) | [C++17 (GCC 7-32)](./codeforces/1950/C.cpp) | `implementation` `math` | Mar/31/2024 21:04 | 
 1742 | [D - Product of Binary Decimals](https://codeforces.com/contest/1950/problem/D) | [C++17 (GCC 7-32)](./codeforces/1950/D.cpp) | `dp` `implementation` `number theory` | Mar/28/2024 23:19 | 
 1741 | [B - Fireworks](https://codeforces.com/contest/1945/problem/B) | [C++17 (GCC 7-32)](./codeforces/1945/B.cpp) | `math` `number theory` `*900` | Mar/27/2024 22:28 | 
 1740 | [B - Array Fix](https://codeforces.com/contest/1948/problem/B) | [C++17 (GCC 7-32)](./codeforces/1948/B.cpp) | `brute force` `dp` `greedy` `implementation` `*1100` | Mar/26/2024 23:49 | 
