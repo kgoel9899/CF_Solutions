@@ -34,19 +34,23 @@ int32_t main() {
             v[i].second = i;
         }
         sort(all(v));
+        vector<int> pref(n);
+        pref[0] = v[0].first;
+        for(int i=1;i<n;i++) {
+            pref[i] = pref[i - 1] + v[i].first;
+        }
+        dbg(pref);
         vector<int> ans(n);
         int i = 0, j = 1;
-        int pref = 0;
         while(i < n) {
-            pref += v[i].first;
-            // dbg(i, curr, j, pref[j]);
+            int curr = pref[i];
+            dbg(i, curr, j, pref[j]);
             if(i == j) j++;
-            int curr = pref;
             while(j < n && curr >= v[j].first) {
                 curr += v[j].first;
                 j++;
             }
-            // dbg(i, j);
+            dbg(i, j);
             ans[v[i].second] = j;
             i++;
         }
