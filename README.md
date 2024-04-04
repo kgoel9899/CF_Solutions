@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1747 | [D - Find the Different Ones!](https://codeforces.com/contest/1927/problem/D) | [C++17 (GCC 7-32)](./codeforces/1927/D.cpp) | `binary search` `brute force` `data structures` `dp` `dsu` `greedy` `two pointers` `*1300` | Apr/04/2024 23:41 | 
 1746 | [C - Delete Two Elements](https://codeforces.com/contest/1598/problem/C) | [C++17 (GCC 7-32)](./codeforces/1598/C.cpp) | `data structures` `dp` `implementation` `math` `two pointers` `*1200` | Apr/03/2024 21:22 | 
 1745 | [B - Collecting Game](https://codeforces.com/contest/1904/problem/B) | [C++17 (GCC 7-32)](./codeforces/1904/B.cpp) | `binary search` `dp` `greedy` `sortings` `two pointers` `*1100` | Apr/03/2024 21:10 | 
 1744 | [B - Binary Path](https://codeforces.com/contest/1937/problem/B) | [C++17 (GCC 7-32)](./codeforces/1937/B.cpp) | `dp` `greedy` `implementation` `*1300` | Apr/01/2024 15:38 | 
