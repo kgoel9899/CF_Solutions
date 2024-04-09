@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1749 | [C - Weight of the System of Nested Segments](https://codeforces.com/contest/1650/problem/C) | [C++17 (GCC 7-32)](./codeforces/1650/C.cpp) | `greedy` `hashing` `implementation` `sortings` `*1200` | Apr/09/2024 23:58 | 
 1748 | [B - Progressive Square](https://codeforces.com/contest/1955/problem/B) | [C++17 (GCC 7-32)](./codeforces/1955/B.cpp) | `constructive algorithms` `sortings` | Apr/08/2024 22:27 | 
 1747 | [D - Find the Different Ones!](https://codeforces.com/contest/1927/problem/D) | [C++17 (GCC 7-32)](./codeforces/1927/D.cpp) | `binary search` `brute force` `data structures` `dp` `dsu` `greedy` `two pointers` `*1300` | Apr/04/2024 23:41 | 
 1746 | [C - Delete Two Elements](https://codeforces.com/contest/1598/problem/C) | [C++17 (GCC 7-32)](./codeforces/1598/C.cpp) | `data structures` `dp` `implementation` `math` `two pointers` `*1200` | Apr/03/2024 21:22 | 
