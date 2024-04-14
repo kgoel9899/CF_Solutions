@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1753 | [C - Closest Cities](https://codeforces.com/contest/1922/problem/C) | [C++17 (GCC 7-32)](./codeforces/1922/C.cpp) | `greedy` `implementation` `math` `*1300` | Apr/15/2024 00:35 | 
 1752 | [C - Lucky Numbers](https://codeforces.com/contest/630/problem/C) | [C++17 (GCC 7-32)](./codeforces/630/C.cpp) | `combinatorics` `math` `*1100` | Apr/13/2024 20:38 | 
 1751 | [B - Lecture Sleep](https://codeforces.com/contest/961/problem/B) | [C++17 (GCC 7-32)](./codeforces/961/B.cpp) | `data structures` `dp` `implementation` `two pointers` `*1200` | Apr/12/2024 00:31 | 
 1750 | [B - Upscaling](https://codeforces.com/contest/1950/problem/B) | [C++17 (GCC 7-32)](./codeforces/1950/B.cpp) | `implementation` | Apr/11/2024 00:06 | 
