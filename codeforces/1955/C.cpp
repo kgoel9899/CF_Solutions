@@ -36,8 +36,9 @@ int32_t main() {
         int ans = 0;
         while(l <= r && k > 1) {
             if(l == r) {
-                if(k >= v[l]) ans++;
-                l++; // to make it go out of range
+                k -= v[l];
+                if(k >= 0) ans++;
+                l++;
                 break;
             }
             int mn = min({v[l], v[r], k / 2});
@@ -55,7 +56,7 @@ int32_t main() {
             }
             dbg(l, r, k, ans);
         }
-        if(l <= r && k >= v[l]) ans++;
+        if(k && l <= r && v[l] == 1) ans++;
         cout << ans << endl;
     }
 }
