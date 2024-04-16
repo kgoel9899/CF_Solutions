@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1755 | [C - Inhabitant of the Deep Sea](https://codeforces.com/contest/1955/problem/C) | [C++17 (GCC 7-32)](./codeforces/1955/C.cpp) | `greedy` `implementation` `math` `*1300` | Apr/16/2024 17:40 | 
 1754 | [B - Inflation](https://codeforces.com/contest/1476/problem/B) | [C++17 (GCC 7-32)](./codeforces/1476/B.cpp) | `binary search` `brute force` `greedy` `math` `*1300` | Apr/15/2024 23:19 | 
 1753 | [C - Closest Cities](https://codeforces.com/contest/1922/problem/C) | [C++17 (GCC 7-32)](./codeforces/1922/C.cpp) | `greedy` `implementation` `math` `*1300` | Apr/15/2024 00:35 | 
 1752 | [C - Lucky Numbers](https://codeforces.com/contest/630/problem/C) | [C++17 (GCC 7-32)](./codeforces/630/C.cpp) | `combinatorics` `math` `*1100` | Apr/13/2024 20:38 | 

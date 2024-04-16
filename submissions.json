@@ -32389,6 +32389,24 @@
     ],
     "timestamp": "Apr/15/2024 23:19"
   },
+  "CF256908408": {
+    "contest_id": 1955,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1955\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Inhabitant of the Deep Sea",
+    "problem_url": "https://codeforces.com/contest/1955/problem/C",
+    "submission_id": "CF256908408",
+    "submission_url": "https://codeforces.com/contest/1955/submission/256908408",
+    "tags": [
+      "greedy",
+      "implementation",
+      "math",
+      "*1300"
+    ],
+    "timestamp": "Apr/16/2024 17:40"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
