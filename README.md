@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1759 | [B - Diameter of Graph](https://codeforces.com/contest/1581/problem/B) | [C++17 (GCC 7-32)](./codeforces/1581/B.cpp) | `constructive algorithms` `graphs` `greedy` `math` `*1200` | Apr/21/2024 22:54 | 
 1758 | [A - Contest Start](https://codeforces.com/contest/1539/problem/A) | [C++17 (GCC 7-32)](./codeforces/1539/A.cpp) | `combinatorics` `geometry` `greedy` `math` `*1000` | Apr/20/2024 12:36 | 
 1757 | [B - Strange List](https://codeforces.com/contest/1471/problem/B) | [C++17 (GCC 7-32)](./codeforces/1471/B.cpp) | `brute force` `greedy` `implementation` `math` `*1100` | Apr/19/2024 15:02 | 
 1756 | [C - Chat Ban](https://codeforces.com/contest/1612/problem/C) | [C++17 (GCC 7-32)](./codeforces/1612/C.cpp) | `binary search` `math` `*1300` | Apr/17/2024 12:02 | 
