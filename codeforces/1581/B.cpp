@@ -52,4 +52,4 @@ int32_t main() {
         }
         cout << "YES" << endl;
     }
-} 
+}
