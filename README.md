@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1761 | [B - Paranoid String](https://codeforces.com/contest/1694/problem/B) | [C++17 (GCC 7-32)](./codeforces/1694/B.cpp) | `constructive algorithms` `greedy` `*1200` | Apr/26/2024 17:18 | 
 1760 | [C - Boxes Packing](https://codeforces.com/contest/903/problem/C) | [C++17 (GCC 7-32)](./codeforces/903/C.cpp) | `greedy` `*1200` | Apr/22/2024 22:07 | 
 1759 | [B - Diameter of Graph](https://codeforces.com/contest/1581/problem/B) | [C++17 (GCC 7-32)](./codeforces/1581/B.cpp) | `constructive algorithms` `graphs` `greedy` `math` `*1200` | Apr/21/2024 22:54 | 
 1758 | [A - Contest Start](https://codeforces.com/contest/1539/problem/A) | [C++17 (GCC 7-32)](./codeforces/1539/A.cpp) | `combinatorics` `geometry` `greedy` `math` `*1000` | Apr/20/2024 12:36 | 
