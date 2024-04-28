@@ -47,4 +47,4 @@ int32_t main() {
         if(n % 2) cout << orig << " " << other << endl;
         else cout << other << " " << orig << endl;
     }
-}
+} 
