@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1765 | [C - Challenging Cliffs](https://codeforces.com/contest/1537/problem/C) | [C++17 (GCC 7-32)](./codeforces/1537/C.cpp) | `constructive algorithms` `greedy` `implementation` `math` `*1200` | Apr/29/2024 17:35 | 
 1764 | [B - Friendly Arrays](https://codeforces.com/contest/1870/problem/B) | [C++17 (GCC 7-32)](./codeforces/1870/B.cpp) | `bitmasks` `greedy` `math` `*1200` | Apr/27/2024 15:43 | 
 1763 | [B - Paranoid String](https://codeforces.com/contest/1694/problem/B) | [C++17 (GCC 7-32)](./codeforces/1694/B.cpp) | `constructive algorithms` `greedy` `*1200` | Apr/26/2024 17:18 | 
 1762 | [C - Long Multiplication](https://codeforces.com/contest/1954/problem/C) | [C++17 (GCC 7-32)](./codeforces/1954/C.cpp) | `greedy` `math` `number theory` `*1200` | Apr/25/2024 00:01 | 
