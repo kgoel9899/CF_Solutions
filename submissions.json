@@ -32641,6 +32641,24 @@
     ],
     "timestamp": "Apr/29/2024 17:35"
   },
+  "CF258838839": {
+    "contest_id": 1076,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1076\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Divisor Subtraction",
+    "problem_url": "https://codeforces.com/contest/1076/problem/B",
+    "submission_id": "CF258838839",
+    "submission_url": "https://codeforces.com/contest/1076/submission/258838839",
+    "tags": [
+      "implementation",
+      "math",
+      "number theory",
+      "*1200"
+    ],
+    "timestamp": "Apr/30/2024 15:54"
+  },
   "CF259004929": {
     "contest_id": 1257,
     "language": "C++17 (GCC 7-32)",
