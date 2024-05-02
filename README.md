@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1766 | [B - Chloe and the sequence ](https://codeforces.com/contest/743/problem/B) | [C++17 (GCC 7-32)](./codeforces/743/B.cpp) | `binary search` `bitmasks` `constructive algorithms` `implementation` `*1200` | May/03/2024 23:24 | 
+1767 | [B - Chloe and the sequence ](https://codeforces.com/contest/743/problem/B) | [C++17 (GCC 7-32)](./codeforces/743/B.cpp) | `binary search` `bitmasks` `constructive algorithms` `implementation` `*1200` | May/03/2024 23:24 | 
+1766 | [B - Vitamins](https://codeforces.com/contest/1042/problem/B) | [C++17 (GCC 7-32)](./codeforces/1042/B.cpp) | `bitmasks` `brute force` `dp` `implementation` `*1200` | May/02/2024 17:59 | 
 1765 | [C - Challenging Cliffs](https://codeforces.com/contest/1537/problem/C) | [C++17 (GCC 7-32)](./codeforces/1537/C.cpp) | `constructive algorithms` `greedy` `implementation` `math` `*1200` | Apr/29/2024 17:35 | 
 1764 | [B - Friendly Arrays](https://codeforces.com/contest/1870/problem/B) | [C++17 (GCC 7-32)](./codeforces/1870/B.cpp) | `bitmasks` `greedy` `math` `*1200` | Apr/28/2024 23:52 | 
 1763 | [B - Paranoid String](https://codeforces.com/contest/1694/problem/B) | [C++17 (GCC 7-32)](./codeforces/1694/B.cpp) | `constructive algorithms` `greedy` `*1200` | Apr/26/2024 17:18 | 
