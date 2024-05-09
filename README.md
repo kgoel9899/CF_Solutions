@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1772 | [A - Equator](https://codeforces.com/contest/962/problem/A) | [C++17 (GCC 7-32)](./codeforces/962/A.cpp) | `implementation` `*1300` | May/09/2024 21:58 | 
 1771 | [E - Queue Sort](https://codeforces.com/contest/1899/problem/E) | [C++17 (GCC 7-32)](./codeforces/1899/E.cpp) | `greedy` `implementation` `sortings` `*1300` | May/06/2024 00:10 | 
 1770 | [B - Two Cakes](https://codeforces.com/contest/911/problem/B) | [C++17 (GCC 7-32)](./codeforces/911/B.cpp) | `binary search` `brute force` `implementation` `*1200` | May/04/2024 22:18 | 
 1769 | [B - Chloe and the sequence ](https://codeforces.com/contest/743/problem/B) | [C++17 (GCC 7-32)](./codeforces/743/B.cpp) | `binary search` `bitmasks` `constructive algorithms` `implementation` `*1200` | May/03/2024 23:24 | 
