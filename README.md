@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1774 | [B - Fancy Coins](https://codeforces.com/contest/1860/problem/B) | [C++17 (GCC 7-32)](./codeforces/1860/B.cpp) | `binary search` `brute force` `greedy` `math` `*1200` | May/12/2024 15:20 | 
 1773 | [A - Equator](https://codeforces.com/contest/962/problem/A) | [C++17 (GCC 7-32)](./codeforces/962/A.cpp) | `implementation` `*1300` | May/09/2024 21:58 | 
 1772 | [D - Ice Cream Balls](https://codeforces.com/contest/1862/problem/D) | [C++17 (GCC 7-32)](./codeforces/1862/D.cpp) | `binary search` `combinatorics` `constructive algorithms` `math` `*1300` | May/06/2024 18:11 | 
 1771 | [E - Queue Sort](https://codeforces.com/contest/1899/problem/E) | [C++17 (GCC 7-32)](./codeforces/1899/E.cpp) | `greedy` `implementation` `sortings` `*1300` | May/06/2024 00:10 | 
