@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1776 | [B - Game with string](https://codeforces.com/contest/1104/problem/B) | [C++17 (GCC 7-32)](./codeforces/1104/B.cpp) | `data structures` `implementation` `math` `*1200` | May/17/2024 17:16 | 
 1775 | [B - Table Tennis](https://codeforces.com/contest/879/problem/B) | [C++17 (GCC 7-32)](./codeforces/879/B.cpp) | `data structures` `implementation` `*1200` | May/13/2024 14:15 | 
 1774 | [B - Fancy Coins](https://codeforces.com/contest/1860/problem/B) | [C++17 (GCC 7-32)](./codeforces/1860/B.cpp) | `binary search` `brute force` `greedy` `math` `*1200` | May/12/2024 15:20 | 
 1773 | [A - Equator](https://codeforces.com/contest/962/problem/A) | [C++17 (GCC 7-32)](./codeforces/962/A.cpp) | `implementation` `*1300` | May/09/2024 21:58 | 
