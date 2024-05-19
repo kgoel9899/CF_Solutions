@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1779 | [D - Binary Cut](https://codeforces.com/contest/1971/problem/D) | [C++17 (GCC 7-32)](./codeforces/1971/D.cpp) | `dp` `greedy` `implementation` `sortings` `strings` `*1100` | May/20/2024 00:00 | 
 1778 | [B - Cutting](https://codeforces.com/contest/998/problem/B) | [C++17 (GCC 7-32)](./codeforces/998/B.cpp) | `dp` `greedy` `sortings` `*1200` | May/18/2024 23:49 | 
 1777 | [B - Game with string](https://codeforces.com/contest/1104/problem/B) | [C++17 (GCC 7-32)](./codeforces/1104/B.cpp) | `data structures` `implementation` `math` `*1200` | May/17/2024 17:16 | 
 1776 | [B - StORage room](https://codeforces.com/contest/1903/problem/B) | [C++17 (GCC 7-32)](./codeforces/1903/B.cpp) | `bitmasks` `brute force` `constructive algorithms` `greedy` `*1200` | May/14/2024 17:23 | 
