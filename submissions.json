@@ -32899,6 +32899,26 @@
     ],
     "timestamp": "May/20/2024 00:00"
   },
+  "CF261923568": {
+    "contest_id": 1971,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1971\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Binary Cut",
+    "problem_url": "https://codeforces.com/contest/1971/problem/D",
+    "submission_id": "CF261923568",
+    "submission_url": "https://codeforces.com/contest/1971/submission/261923568",
+    "tags": [
+      "dp",
+      "greedy",
+      "implementation",
+      "sortings",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "May/20/2024 23:58"
+  },
   "CF261990145": {
     "contest_id": 1969,
     "language": "C++17 (GCC 7-32)",

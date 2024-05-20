@@ -36,4 +36,4 @@ int32_t main() {
         }
         cout << ans + 1 - good << endl;
     }
-}
+} 
