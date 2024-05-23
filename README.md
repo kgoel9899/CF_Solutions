@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1780 | [B - Rudolf and 121](https://codeforces.com/contest/1941/problem/B) | [C++17 (GCC 7-32)](./codeforces/1941/B.cpp) | `brute force` `dp` `greedy` `math` `*1000` | May/24/2024 13:55 | 
+1781 | [B - Rudolf and 121](https://codeforces.com/contest/1941/problem/B) | [C++17 (GCC 7-32)](./codeforces/1941/B.cpp) | `brute force` `dp` `greedy` `math` `*1000` | May/24/2024 13:55 | 
+1780 | [C - Assembly via Remainders](https://codeforces.com/contest/1968/problem/C) | [C++17 (GCC 7-32)](./codeforces/1968/C.cpp) | `constructive algorithms` `number theory` `*1000` | May/23/2024 23:58 | 
 1779 | [D - Binary Cut](https://codeforces.com/contest/1971/problem/D) | [C++17 (GCC 7-32)](./codeforces/1971/D.cpp) | `dp` `greedy` `implementation` `sortings` `strings` `*1100` | May/20/2024 00:00 | 
 1778 | [B - Cutting](https://codeforces.com/contest/998/problem/B) | [C++17 (GCC 7-32)](./codeforces/998/B.cpp) | `dp` `greedy` `sortings` `*1200` | May/18/2024 23:49 | 
 1777 | [B - Game with string](https://codeforces.com/contest/1104/problem/B) | [C++17 (GCC 7-32)](./codeforces/1104/B.cpp) | `data structures` `implementation` `math` `*1200` | May/17/2024 17:16 | 
