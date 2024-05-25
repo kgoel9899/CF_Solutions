@@ -32972,6 +32972,24 @@
     ],
     "timestamp": "May/24/2024 13:55"
   },
+  "CF262515959": {
+    "contest_id": 1927,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1927\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Choose the Different Ones!",
+    "problem_url": "https://codeforces.com/contest/1927/problem/C",
+    "submission_id": "CF262515959",
+    "submission_url": "https://codeforces.com/contest/1927/submission/262515959",
+    "tags": [
+      "brute force",
+      "greedy",
+      "math",
+      "*1000"
+    ],
+    "timestamp": "May/25/2024 19:13"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",

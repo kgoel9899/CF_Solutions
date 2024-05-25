@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1783 | [C - Choose the Different Ones!](https://codeforces.com/contest/1927/problem/C) | [C++17 (GCC 7-32)](./codeforces/1927/C.cpp) | `brute force` `greedy` `math` `*1000` | May/25/2024 19:13 | 
 1782 | [B - Rudolf and 121](https://codeforces.com/contest/1941/problem/B) | [C++17 (GCC 7-32)](./codeforces/1941/B.cpp) | `brute force` `dp` `greedy` `math` `*1000` | May/24/2024 13:55 | 
 1781 | [C - Assembly via Remainders](https://codeforces.com/contest/1968/problem/C) | [C++17 (GCC 7-32)](./codeforces/1968/C.cpp) | `constructive algorithms` `number theory` `*1000` | May/23/2024 23:58 | 
 1780 | [C - Minimizing the Sum](https://codeforces.com/contest/1969/problem/C) | [C++17 (GCC 7-32)](./codeforces/1969/C.cpp) | `dp` `implementation` `*1700` | May/21/2024 14:55 | 
