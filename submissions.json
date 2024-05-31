@@ -33007,6 +33007,25 @@
     ],
     "timestamp": "May/27/2024 21:59"
   },
+  "CF263540488": {
+    "contest_id": 1957,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1957\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "A BIT of a Construction",
+    "problem_url": "https://codeforces.com/contest/1957/problem/B",
+    "submission_id": "CF263540488",
+    "submission_url": "https://codeforces.com/contest/1957/submission/263540488",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Jun/01/2024 00:08"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
