@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1787 | [B - Choosing Cubes](https://codeforces.com/contest/1980/problem/B) | [C++17 (GCC 7-32)](./codeforces/1980/B.cpp) | `sortings` `sortings` | Jun/03/2024 23:39 | 
 1786 | [A - Vova and Train](https://codeforces.com/contest/1066/problem/A) | [C++17 (GCC 7-32)](./codeforces/1066/A.cpp) | `math` `*1100` | Jun/02/2024 23:17 | 
 1785 | [B - A BIT of a Construction](https://codeforces.com/contest/1957/problem/B) | [C++17 (GCC 7-32)](./codeforces/1957/B.cpp) | `bitmasks` `constructive algorithms` `greedy` `implementation` `*1100` | Jun/01/2024 00:08 | 
 1784 | [A - Carrot Cakes](https://codeforces.com/contest/799/problem/A) | [C++17 (GCC 7-32)](./codeforces/799/A.cpp) | `brute force` `implementation` `*1100` | May/27/2024 21:59 | 
