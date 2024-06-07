@@ -33058,6 +33058,22 @@
     ],
     "timestamp": "Jun/03/2024 23:39"
   },
+  "CF264632086": {
+    "contest_id": 1974,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1974\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Money Buys Happiness",
+    "problem_url": "https://codeforces.com/contest/1974/problem/E",
+    "submission_id": "CF264632086",
+    "submission_url": "https://codeforces.com/contest/1974/submission/264632086",
+    "tags": [
+      "dp",
+      "*1800"
+    ],
+    "timestamp": "Jun/07/2024 23:18"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
