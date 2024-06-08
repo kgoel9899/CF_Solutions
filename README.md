@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1789 | [E - Find the Car](https://codeforces.com/contest/1971/problem/E) | [C++17 (GCC 7-32)](./codeforces/1971/E.cpp) | `binary search` `math` `sortings` `*1500` | Jun/08/2024 23:48 | 
 1788 | [E - Money Buys Happiness](https://codeforces.com/contest/1974/problem/E) | [C++17 (GCC 7-32)](./codeforces/1974/E.cpp) | `dp` `*1800` | Jun/07/2024 23:18 | 
 1787 | [B - Choosing Cubes](https://codeforces.com/contest/1980/problem/B) | [C++17 (GCC 7-32)](./codeforces/1980/B.cpp) | `sortings` `sortings` | Jun/03/2024 23:39 | 
 1786 | [A - Vova and Train](https://codeforces.com/contest/1066/problem/A) | [C++17 (GCC 7-32)](./codeforces/1066/A.cpp) | `math` `*1100` | Jun/02/2024 23:17 | 
