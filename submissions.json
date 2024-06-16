@@ -33126,6 +33126,22 @@
     ],
     "timestamp": "Jun/15/2024 20:56"
   },
+  "CF266101688": {
+    "contest_id": 1985,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1985\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Manhattan Circle",
+    "problem_url": "https://codeforces.com/contest/1985/problem/D",
+    "submission_id": "CF266101688",
+    "submission_url": "https://codeforces.com/contest/1985/submission/266101688",
+    "tags": [
+      "implementation",
+      "math"
+    ],
+    "timestamp": "Jun/16/2024 23:51"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",

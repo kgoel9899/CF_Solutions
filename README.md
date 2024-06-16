@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1792 | [D - Manhattan Circle](https://codeforces.com/contest/1985/problem/D) | [C++17 (GCC 7-32)](./codeforces/1985/D.cpp) | `implementation` `math` | Jun/16/2024 23:51 | 
 1791 | [C - Good Prefixes](https://codeforces.com/contest/1985/problem/C) | [C++17 (GCC 7-32)](./codeforces/1985/C.cpp) | `greedy` | Jun/15/2024 20:56 | 
 1790 | [E - Nearly Shortest Repeating Substring](https://codeforces.com/contest/1950/problem/E) | [C++17 (GCC 7-32)](./codeforces/1950/E.cpp) | `brute force` `implementation` `number theory` `strings` `*1500` | Jun/10/2024 23:49 | 
 1789 | [E - Find the Car](https://codeforces.com/contest/1971/problem/E) | [C++17 (GCC 7-32)](./codeforces/1971/E.cpp) | `binary search` `math` `sortings` `*1500` | Jun/08/2024 23:48 | 
