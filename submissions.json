@@ -33142,6 +33142,27 @@
     ],
     "timestamp": "Jun/16/2024 23:51"
   },
+  "CF269070193": {
+    "contest_id": 1986,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces\\1986\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Mathematical Problem",
+    "problem_url": "https://codeforces.com/contest/1986/problem/D",
+    "submission_id": "CF269070193",
+    "submission_url": "https://codeforces.com/contest/1986/submission/269070193",
+    "tags": [
+      "brute force",
+      "dp",
+      "greedy",
+      "implementation",
+      "math",
+      "two pointers",
+      "*1400"
+    ],
+    "timestamp": "Jul/06/2024 17:52"
+  },
   "CF49908665": {
     "contest_id": 1114,
     "language": "GNU C++14",
