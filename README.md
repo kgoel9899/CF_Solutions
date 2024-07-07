@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1795 | [B - Substring and Subsequence](https://codeforces.com/contest/1989/problem/B) | [C++17 (GCC 7-32)](./codeforces/1989/B.cpp) | `brute force` `greedy` `strings` `*1200` | Jul/07/2024 23:53 | 
 1794 | [D - Mathematical Problem](https://codeforces.com/contest/1986/problem/D) | [C++17 (GCC 7-32)](./codeforces/1986/D.cpp) | `brute force` `dp` `greedy` `implementation` `math` `two pointers` `*1400` | Jul/06/2024 17:52 | 
 1793 | [E - Secret Box](https://codeforces.com/contest/1985/problem/E) | [C++17 (GCC 7-32)](./codeforces/1985/E.cpp) | `brute force` `combinatorics` `math` `*1200` | Jun/20/2024 21:39 | 
 1792 | [D - Manhattan Circle](https://codeforces.com/contest/1985/problem/D) | [C++17 (GCC 7-32)](./codeforces/1985/D.cpp) | `implementation` `math` | Jun/16/2024 23:51 | 
