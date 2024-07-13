@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1796 | [F - Non-academic Problem](https://codeforces.com/contest/1986/problem/F) | [C++17 (GCC 7-32)](./codeforces/1986/F.cpp) | `dfs and similar` `graphs` `trees` `*1900` | Jul/14/2024 12:15 | 
+1797 | [F - Non-academic Problem](https://codeforces.com/contest/1986/problem/F) | [C++17 (GCC 7-32)](./codeforces/1986/F.cpp) | `dfs and similar` `graphs` `trees` `*1900` | Jul/14/2024 12:15 | 
+1796 | [F - Chat Screenshots](https://codeforces.com/contest/1931/problem/F) | [C++17 (GCC 7-32)](./codeforces/1931/F.cpp) | `combinatorics` `dfs and similar` `graphs` `*1700` | Jul/13/2024 16:05 | 
 1795 | [B - Substring and Subsequence](https://codeforces.com/contest/1989/problem/B) | [C++17 (GCC 7-32)](./codeforces/1989/B.cpp) | `brute force` `greedy` `strings` `*1200` | Jul/07/2024 23:53 | 
 1794 | [D - Mathematical Problem](https://codeforces.com/contest/1986/problem/D) | [C++17 (GCC 7-32)](./codeforces/1986/D.cpp) | `brute force` `dp` `greedy` `implementation` `math` `two pointers` `*1400` | Jul/06/2024 17:52 | 
 1793 | [E - Secret Box](https://codeforces.com/contest/1985/problem/E) | [C++17 (GCC 7-32)](./codeforces/1985/E.cpp) | `brute force` `combinatorics` `math` `*1200` | Jun/20/2024 21:39 | 
