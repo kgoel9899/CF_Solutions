@@ -13,6 +13,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1799 | [D - Min Cost String](https://codeforces.com/contest/1511/problem/D) | [C++17 (GCC 7-32)](./codeforces/1511/D.cpp) | `brute force` `constructive algorithms` `graphs` `greedy` `strings` `*1600` | Jul/18/2024 00:01 | 
 1798 | [H1 - Maximize the Largest Component (Easy Version)](https://codeforces.com/contest/1985/problem/H1) | [C++17 (GCC 7-32)](./codeforces/1985/H1.cpp) | `brute force` `data structures` `dfs and similar` `dsu` `graphs` `implementation` `*1700` | Jul/15/2024 21:30 | 
 1797 | [F - Non-academic Problem](https://codeforces.com/contest/1986/problem/F) | [C++17 (GCC 7-32)](./codeforces/1986/F.cpp) | `dfs and similar` `graphs` `trees` `*1900` | Jul/14/2024 12:15 | 
 1796 | [F - Chat Screenshots](https://codeforces.com/contest/1931/problem/F) | [C++17 (GCC 7-32)](./codeforces/1931/F.cpp) | `combinatorics` `dfs and similar` `graphs` `*1700` | Jul/13/2024 16:05 | 
